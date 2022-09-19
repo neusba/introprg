@@ -4,17 +4,17 @@ $ mkdir carpeta/ : crea una carpeta anomenada carpeta/
 
 $ cd carpeta/ : canvia el directori actual a carpeta/
 
-$ cat fitxer :
+$ cat fitxer : Mostra en pantalla el contingut del fitxer
 
-$ gedit fitxer & : 
+$ gedit fitxer & : Obre un fitxer a l'editor de text Gedit i permet seguir utilitzant la terminal
 
-$ ls : 
+$ ls : Mostra els fitxers dins d'un directori
 
-$ rm fitxer : 
+$ rm fitxer : Esborra el fitxer seleccionat
 
 $ git init : Permet inicialitzar un repositori git
 
-$ git clone : clona
+$ git clone : clona l'àrea de treball remota al GitHub
 
 $ git status : dona informació sobre l'estat dels archius del repositori
 
