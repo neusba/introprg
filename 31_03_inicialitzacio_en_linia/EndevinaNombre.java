@@ -6,7 +6,7 @@
     public static void main(String[] args) {
         
         int numeroPensat = Integer.parseInt(args[0]);   // Declarem la variable i la inicialitzem en la mateixa línia.
-        System.out.print("El número pensat es ");
+        System.out.print("El número pensat és ");
         System.out.println(numeroPensat);
         
         // Declarem la segona variable que será el número que s'anirà transformant i la inicialitzem al multiplicar-la per 3.
@@ -30,6 +30,6 @@
         System.out.println(numero);
         
         // Comparem el resultat
-        System.out.println("A que el resultat es 2?");
+        System.out.println("A que el resultat és 2?");
     }
 }                 
