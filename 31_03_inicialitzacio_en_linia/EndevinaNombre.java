@@ -22,7 +22,7 @@
         // Dividim tot per 3
         numero = numero / 3;
         System.out.print("Un cop dividim per 3 queda ");
-        System.out.print(numero);
+        System.out.println(numero);
         
         // Restem el número pensat
         numero = numero - numeroPensat;
