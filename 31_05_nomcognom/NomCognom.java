@@ -14,7 +14,7 @@
         
         
         // obté el cognom
-        System.out.println("Cognom?");
+        System.out.println("Primer cognom?");
         String cognom = Entrada.readLine();
         
         //Mostra resultat
