@@ -1,17 +1,25 @@
+Neus Bravo Arias, 22/09/22
 Considerant els tipus de dades: enter, booleà, caracter, String i decimal, fes una declaració per cadascuna d'aquestes variables, amb un nom i un tipus adequats. Afegeix una inicialització.
 
 
 - La teva talla de sabates:
-    int talla = Integer.parseInt()
+    int tallaSabates = 39;
 
-- La data del teu aniversari
+- La data del teu aniversari:
+    date dataAniversari = 24/01/2000;
+    String dataAniversari = "24/01/2000";
 
-- El teu nom
+- El teu nom:
+    String nom = "Neus";
 
-- El color de fons del teu escriptori
+- El color de fons del teu escriptori:
+    String colorEscriptori = "marró";
 
-- Si t'agrada o no el gust de la llimona
+- Si t'agrada o no el gust de la llimona:
+    boolean mAgradaLlimona = true;
 
-- La lletra de la teva cançó preferida
+- La lletra de la teva cançó preferida:
+    String lletraCanço = "Sin ti yo me pierdo/nSin ti me siento veneno...";
 
-- La llista de pel·lícules i llibres que més t'han marcat
+- La llista de pel·lícules i llibres que més t'han marcat:
+    String llista = "Pel·lícules: Skvfwnlvk, Gsonvmwvl, Adsklvnlw./nLlibres: Gklsvnwlv, Dasvipkwa, Aasknbjawl.";
