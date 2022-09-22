@@ -1,0 +1,45 @@
+Neus Bravo Arias, 22/09/2022
+
+/* Escriu una expressió per cadascuna de les següents preguntes.
+ * Considera fer servir els operadors aritmètics i els relacionals vists als apunts. */
+ 
+1. La teva edat és superior als 18 anys:
+    int edat > 18;
+    edat >= 18 ;
+
+2. Tens menys de 5 germans:
+    cantitatGermans < 5;
+    5 <= cantitat Germans -> false
+
+3. La suma de 2 més 5 és igual a 7:
+    2 + 5 = 7;
+    int resultat = 5 + 2;
+
+4. La suma de 2 més 5 és diferent de 7:
+    2 + 5 != 7;
+    
+
+5. L'any que ve seràs major d'edat:
+    int edat = 17 + 1;
+    edat >= 18 -> true
+
+6. L'any passat encara no eres major d'edat:
+    edat = 18 - 1;
+    edat >= 18: false 
+
+7. Tens com a molt 35 companys a classe:
+    companys <= 35;
+    40 > companys: true
+
+8. Tens tants companys a classe com anys:
+    companys == edat;
+    companys + edat == companys * 2;
+
+9. El Renat té quatre potes:
+    potesRenat == 4;
+    potesRenat != 5;
+
+10. Estem a més de 28 graus:
+    graus >= 28: true
+    grausAhir = graus - 7;
+    
