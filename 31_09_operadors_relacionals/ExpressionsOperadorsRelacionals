@@ -9,7 +9,7 @@ Neus Bravo Arias, 22/09/2022
 
 2. Tens menys de 5 germans:
     cantitatGermans < 5;
-    5 <= cantitat Germans -> false
+    5 <= cantitat Germans == false;
 
 3. La suma de 2 més 5 és igual a 7:
     2 + 5 = 7;
@@ -17,19 +17,19 @@ Neus Bravo Arias, 22/09/2022
 
 4. La suma de 2 més 5 és diferent de 7:
     2 + 5 != 7;
-    2 + 5 = 7: false
+    2 + 5 = 7 == false;
 
 5. L'any que ve seràs major d'edat:
     int edat = 17 + 1;
-    edat >= 18 -> true
+    edat >= 18 == true;
 
 6. L'any passat encara no eres major d'edat:
     edat = 18 - 1;
-    edat >= 18: false 
+    edat >= 18 == false ;
 
 7. Tens com a molt 35 companys a classe:
     companys <= 35;
-    40 > companys: true
+    40 > companys: true;
 
 8. Tens tants companys a classe com anys:
     companys == edat;
