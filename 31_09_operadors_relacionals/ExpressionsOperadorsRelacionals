@@ -17,7 +17,7 @@ Neus Bravo Arias, 22/09/2022
 
 4. La suma de 2 més 5 és diferent de 7:
     2 + 5 != 7;
-    
+    2 + 5 = 7: false
 
 5. L'any que ve seràs major d'edat:
     int edat = 17 + 1;
