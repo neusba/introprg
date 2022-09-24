@@ -1,0 +1,30 @@
+/*En aquest exercici construiràs expressions de les següents afirmacions.
+ *Pots fer servir tots els operadors aritmètics, relacionals i els lògics &&, || i !. */
+ 
+1. La Clara és més jove que tu:
+    edatClara < edatTeva == true;
+
+2. La Clara i el Marc són més joves que tu:
+    edatClara < edatTeva && edatMarc < edatTeva;
+
+3. La Clara és més jove que tu i tu ets més jove que el Marc:
+    edatClara < edatTeva || edatTeva < edatMarc;
+
+4. La Clara no és més jove que el Marc:
+    boolean ClaraNoEsMesJoveQueMarc = edatClara > edatMarc;
+
+5. No és cert que el Marc sigui més jove que la Clara:
+    ! (ClaraNoEsMesJoveQueMarc);
+
+6. Ni el Marc és més jove que la Clara ni tu ets més jove que el Marc:
+    ! (edatMarc < edatClara) && ! (edatTeva < edatMarc);
+
+7. Tu ets més gran que la Clara i el Marc junts o bé la Clara i el Marc tenen la mateixa edat:
+    edatTeva > (edatClara + edatMarc) || edatClara == edatMarc;
+
+8. El pes del Marc és mayor al teu però menor al de la Clara:
+    pesMarc > pesTeu || pesMarc < pesClara;
+
+9. El pes de la Clara és superior al teu i al del Marc:
+    boolean PesClaraSuperiorAlsDos = pesClara > pesTeu && pesClara > pesMarc;
+    PesClaraSuperiorAlsDos > pesMarc == true;
