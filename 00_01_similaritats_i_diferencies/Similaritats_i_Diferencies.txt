@@ -1,0 +1,27 @@
+﻿SIMILARITATS I DIFERÈNCIES
+
+Neus Bravo Arias, 27/09/2022
+
+* Exercici en el que comparem la realització d’un mateix programa escrit en diferents llenguatges de programació i quin és l’objectiu general de l’activitat *
+
+P1. Què fa el programa?
+	El programa vol calcular l’àrea d’un cercle mitjançant els valors donats per l’usuari.
+
+P2. Elements comuns:
+	El print és un dels elements que es repeteix en tots els llenguatges, al igual que les variables 	
+	declarades radi i area.
+
+P3. Entrada/Sortida:
+	C: scanf i printf
+	Python: llegeix el radi mitjançant l’entrada donada per l’usuari i ho mostra amb el print.
+	Java: String linia = reader.readLine() i per mostrar amb l’ordre System.out.println().
+	Kotlin: per llegir val linia = reader.readLine() i per mostrar println().
+
+P4. Variables:
+	Altres variables són linia i radi amb el seu respectiu tipus de dada endevant. En cada 
+	llenguatge s’escriurá la variable d’una forma, poden ser: val, float, int…
+
+P5. Preferència:
+	Jo trobo Python el més interessant, ja que sembla bastant automàtic i pels pocs coneixements 	que tinc és molt fàcil d’utilitzar i d’aprendre.
+	
+
