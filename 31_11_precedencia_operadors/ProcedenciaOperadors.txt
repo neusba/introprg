@@ -6,20 +6,30 @@
 2. -5 * 4 + -3:
     ((-5) * 4) - 3 = -23
 
-3.(true && false)|| ! true:
-    Tenim true i false, després neguem true, per tant el resultat será False.
-
-4. (alse && (10 > 3))|| ! (4 > 5):
-    Tenim false i true(ja que 10 sí que es major que 3) i després neguem false(ja que 4 no és major que 5), per tant el restultat será True.
+3.(true && false) || !(true):
+    (1 * 0) || (-0) = 0 - 0 = 0 == false
     
+    true && false || false
+    false || false
+    false
 
-5. (false == (5 > 4)) && (false == ! true) || (false != true):
-    Trobem que false és igual que true(ja que 5 és mayor que 4) i que false és igual a la negació de true(per tant false). Després queda que false és diferent que true. Per tant el resultar eś False.
-
-6. (false != false) && (true == (10 < 2))|| !false:
-    Primer tenim que false és diferent de false per tant queda true i que true és igual a false(ja que 10 no és mayor que 2). Finalment neguem false per tant donara True.
+4. (false && (10 > 3)) || !(4 > 5): 
+    (0 * 1) + (-1) = 0 - 1 = -1 == true
     
-7. (8 > 3) == !false || !true == true:
-    True(ja que 8 és mayor que 3) és igual a true(negació de false). Després false és igual a la true. Resultat és true.
-
+    false && true || true
+    false || true
+    true
     
+5. ((false == (5 > 4)) && (false == !(true))) || (false != true):
+    false && false || true
+    0 * 0 + 1 = true
+
+
+6. ((false != false) && (true == (10 < 2))) || !(false): 
+    false && false || true
+    false || true
+    true
+    
+7. ((8 > 3) == !(false)) || !(true == true):
+    true || true 
+    true
