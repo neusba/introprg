@@ -1,6 +1,6 @@
 /* Programa que demani un número entre l'1 i el 7 a l'usuari i torni un dia de la setmana per pantalla */
 
-public class DiesSetmana {
+public class DiaSetmana { 
 	public static void main(String[] args) {
 		int numero = Integer.parseInt(args[0]);
 
