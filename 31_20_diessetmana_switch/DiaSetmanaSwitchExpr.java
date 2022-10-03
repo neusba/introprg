@@ -20,7 +20,7 @@ public class DiaSetmanaSwitchExpr {
 				break;
 			case 7: dayString = "Diumenge";
 				break;
-			default: dayString = "Día invàlid";
+			default: dayString = "Error";
 				 break;
 		}
 		System.out.println(dayString);
