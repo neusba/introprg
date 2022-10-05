@@ -14,6 +14,8 @@ public class MesosAnys {
 			System.out.println("Mes anterior " + (month -1) + "/" + year + " i mes següent " + 1 + "/" + (year + 1));
 		} else if (month > 1 && month < 12) {
 			System.out.println("Mes anterior " + (month - 1) + "/" + year + " i mes següent " + (month + 1) +  "/" + year);
-		}		
+		} else if (month == 1) {
+			System.out.println("Mes anterior " + 12 + "/" + (year - 1) + " i mes següent " + (month + 1) + "/" + year);
+		}	
 	}
 }
