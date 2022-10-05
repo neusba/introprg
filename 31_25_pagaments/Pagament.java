@@ -1,6 +1,6 @@
 /* Desenvolupem un programa que simuli una transacció en la que es paga una quantitat de € y depén del que l'usuari doni indica si sobran o si falten diners */
 
-public class Pagaments {
+public class Pagament {
 	public static void main(String[] args) {
 		System.out.println("Preu?");
 		int preu = Integer.parseInt(Entrada.readLine());
