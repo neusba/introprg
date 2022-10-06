@@ -1,6 +1,6 @@
 /* Programa que pregunta a l'usuari el nombre de fills que tè i segons la quantitat dona una resposta o una altre */
 
-public class NombreDeFills {
+public class Fills {
 	public static void main(String[] args) {
 		// Preguntem a l'usuari el nombre de fills
 		System.out.println("Quants fills tens?");
