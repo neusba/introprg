@@ -12,7 +12,7 @@ public class Semafor {
 		case "groc" -> "corre!";
 		case "vermell" -> "espera";
 		case "verd" -> "passa";
-		default -> "ves a l'oculista.";
+		default -> "ves a l'oculista";
 		};
 
 		System.out.println(resposta);
