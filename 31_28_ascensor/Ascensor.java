@@ -42,6 +42,16 @@ public class Ascensor {
 			} else if (boto.equals("baixar dos")) {
 				System.out.println("planta baixa");
 			}
+		} else if (pisActual.equals("sotan")) {
+			if (boto.equals("pujar un")) {
+				System.out.println("error");
+			} else if (boto.equals("pujar dos")) {
+				System.out.println("error");
+			} else if (boto.equals("baixar un")) {
+				System.out.println("error");
+			} else if (boto.equals("baixar dos")) {
+				System.out.println("error");
+			}
 		}
 	}
 }
