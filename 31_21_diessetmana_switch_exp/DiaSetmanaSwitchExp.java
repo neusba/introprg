@@ -3,10 +3,19 @@
 public class DiaSetmanaSwitchExp {
 	public static void main(String[] args) {
 	int number = Integer.parseInt(args[0]);
+		
+	String dayString = switch (number)  {
+			case 1 -> "Dilluns";
+			case 2 -> "Dimarts";
+			case 3 -> "Dimecres";
+			case 4 -> "Dijous";
+			case 5 -> "Divendres";
+			case 6 -> "Dissabte";
+			case 7 -> "Diumenge";
+			default -> "Error";
+			};
 
-		switch (number)  {
-			case 1: 'Dilluns';
-		};
+	System.out.println(dayString);
 	}
 }
 			
