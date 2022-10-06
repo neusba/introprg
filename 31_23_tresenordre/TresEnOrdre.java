@@ -11,9 +11,7 @@ public class TresEnOrdre {
 		System.out.println("Tercer?");
 		int tercer = Integer.parseInt(Entrada.readLine());
 
-		if (primer > segon && segon > tercer) {
-			System.out.println(tercer + "," + segon + " i " + primer);
-		} else if (
+		
 
 
 		
