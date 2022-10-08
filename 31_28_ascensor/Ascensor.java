@@ -21,6 +21,8 @@ public class Ascensor {
 				System.out.println("error");
 			} else if (boto.equals("baixar dos")) {
 				System.out.println("error");
+			} else {
+				System.out.println("error");
 			}
 		} else if (pisActual.equals("primer pis")) {
 			if (boto.equals("pujar un")) {
@@ -30,6 +32,8 @@ public class Ascensor {
 			} else if (boto.equals("baixar un")) {
 				System.out.println("planta baixa");
 			} else if (boto.equals("baixar dos")) {
+				System.out.println("error");
+			} else {
 				System.out.println("error");
 			}
 		} else if (pisActual.equals("segon pis")) {
@@ -41,8 +45,11 @@ public class Ascensor {
 				System.out.println("primer pis");
 			} else if (boto.equals("baixar dos")) {
 				System.out.println("planta baixa");
+			} else {
+				System.out.println("error");
 			}
-		
-		
+		} else {
+			System.out.println("error");
+		}		
 	}
 }
