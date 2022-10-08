@@ -17,6 +17,8 @@ public class TresEnOrdre {
 			if (primer > tercer) {
 				if (segon > tercer) {
 					System.out.println(tercer + ", " + segon + " i " + primer);
+				} else {
+					System.out.println(primer + ", " + tercer + " i " + segon);
 				}
 			} else {
 				System.out.println(segon + ", " + primer + " i " + tercer);
