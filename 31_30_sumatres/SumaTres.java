@@ -12,6 +12,8 @@ public class SumaTres {
 		valor = Integer.parseInt(Entrada.readLine());
 		if (valor >= 0) {
 			suma = suma + valor;
+		} else {
+			System.out.println("Has introduit un número negatiu");
 		}
 
 		// Demanem el segon valor a l'usuari
@@ -19,6 +21,8 @@ public class SumaTres {
 		valor = Integer.parseInt(Entrada.readLine());
 		if (valor >= 0) {
 			suma = suma + valor;
+		} else {
+			System.out.println("Has introduit un número negatiu");
 		}
 
 		// Demanem el tercer valor
@@ -26,6 +30,8 @@ public class SumaTres {
 		valor = Integer.parseInt(Entrada.readLine());
 		if (valor >= 0) {
 			suma = suma + valor;
+		} else {
+			System.out.println("Has introduit un número negatiu");
 		}
 
 		// Imprimim la suma total
