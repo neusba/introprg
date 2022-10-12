@@ -18,7 +18,7 @@ public class SumaNotes {
 			nota = Integer.parseInt(Entrada.readLine());
 		}
 		// Quan el bucli termini, imprimim la suma de les notes
-		System.out.println("La suma de les notes vàlides es " + sumaNotes);
+		System.out.println("La suma de les notes vàlides és " + sumaNotes);
 	}
 }
 		
