@@ -11,7 +11,7 @@ public class SumaNotes {
 		System.out.println("Introdueix una nota");
 		nota = Integer.parseInt(Entrada.readLine());
 		// Fiquem el bucle While
-		while (nota > 0 && nota < 100) {
+		while (nota >= 0 && nota < 100) {
 			sumaNotes = sumaNotes + nota;
 			// Ens torna a demanar un valor
 			System.out.println("Introdueix una nota");
