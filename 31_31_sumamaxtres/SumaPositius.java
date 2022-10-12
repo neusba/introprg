@@ -6,7 +6,11 @@ public class SumaPositius {
 		// Declarem la variable on anirà la suma i la variable del valor que donarà l'usuari
 		int valor = 0;
 		int suma = 0;
-	
+		
+		// Demanem valor a l'usuari
+		System.out.println("Introdueix un valor");
+		valor = Integer.parseInt(Entrada.readLine());
+
 		// Creem el bucle while
 		while (valor >= 0) {
 			suma = suma + valor;
