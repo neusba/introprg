@@ -8,7 +8,7 @@ public class Lloro {
 		String word = Entrada.readLine();
 		
 		// Iniciem el bucle while
-		while (word.isEmpty() == false || word.isBlank() == false) {	
+		while (word.isEmpty() == false && word.isBlank() == false) {	
 			System.out.println("El lloro repeteix: " + word);
 			// Tornem a demanar la paraula
 			System.out.println("El lloro espera la paraula:");
