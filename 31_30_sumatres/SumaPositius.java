@@ -8,7 +8,7 @@ public class SumaPositius {
 		int valor;
 
 		// Demanem el valor a l'usuari i el sumem en cas que sigui positiu
-		System.out.println("Introdueix el primer valor:");
+		System.out.println("Introdueix el primer valor");
 		valor = Integer.parseInt(Entrada.readLine());
 		if (valor >= 0) {
 			suma = suma + valor;
@@ -17,7 +17,7 @@ public class SumaPositius {
 		}
 
 		// Demanem el segon valor a l'usuari
-		System.out.println("Introdueix el segon valor:");
+		System.out.println("Introdueix el segon valor");
 		valor = Integer.parseInt(Entrada.readLine());
 		if (valor >= 0) {
 			suma = suma + valor;
@@ -26,7 +26,7 @@ public class SumaPositius {
 		}
 
 		// Demanem el tercer valor
-		System.out.println("Introdueix el tercer valor:");
+		System.out.println("Introdueix el tercer valor");
 		valor = Integer.parseInt(Entrada.readLine());
 		if (valor >= 0) {
 			suma = suma + valor;
@@ -35,6 +35,6 @@ public class SumaPositius {
 		}
 
 		// Imprimim la suma total
-		System.out.println("La suma total es: " + suma);
+		System.out.println("La suma total és " + suma);
 	}
 }
