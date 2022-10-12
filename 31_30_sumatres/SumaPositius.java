@@ -30,8 +30,6 @@ public class SumaPositius {
 		valor = Integer.parseInt(Entrada.readLine());
 		if (valor >= 0) {
 			suma = suma + valor;
-		} else {
-			System.out.println("Has introduit un número negatiu");
 		}
 
 		// Imprimim la suma total
