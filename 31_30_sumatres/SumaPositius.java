@@ -35,6 +35,6 @@ public class SumaPositius {
 		}
 
 		// Imprimim la suma total
-		System.out.println("La suma total és " + suma);
+		System.out.println("La suma és " + suma);
 	}
 }
