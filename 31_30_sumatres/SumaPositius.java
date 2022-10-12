@@ -1,6 +1,6 @@
 /* Programa que demana números a l'usuari i els va sumant sempre que siguin positius */
 
-public class SumaTres {
+public class SumaPositius {
 	public static void main(String[] args) {
 		
 		// Declarem l variable on es guardarà la suma i la que contendrà el valor que l'usuari introdueixi cada vegada
