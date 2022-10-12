@@ -12,7 +12,7 @@ public class QuantsParells {
 			System.out.println("Introdueix un valor");
 			valor = Integer.parseInt(Entrada.readLine());
 			// Creem una condició per anar contant els nombres parells 
-			if (valor % 2 == 0) {
+			if (valor % 2 == 0 && valor >= 0) {
 				contadorParells = contadorParells + 1; // (?)Añadir también los números negativos al contador de parells(?)
 			}
 		}
