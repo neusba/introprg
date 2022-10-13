@@ -4,7 +4,7 @@ public class EndevinaNombre {
 	public static void main(String[] args) {
 	
 	// Declarem les variables necessàries
-	int valor = 0; // Inicialitzem en cero per estalviar codi despŕes
+	int valor = Integer.parseInt(Entrada.readLine()); // Inicialitzem en cero per estalviar codi despŕes
 	
 	// Creem el bucle while
 	while (valor != 42) {
