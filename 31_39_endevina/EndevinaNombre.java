@@ -4,7 +4,7 @@ public class EndevinaNombre {
 	public static void main(String[] args) {
 	
 	// Demanem el valor a l'usuari
-	System.out.println("Ves introduïnt enters entre 1 i 100 fins que encertis el que jo he pensat");
+	System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
 	System.out.println("Introdueix un valor");
 	int valor = Integer.parseInt(Entrada.readLine()); // Inicialitzem en cero per estalviar codi despŕes
 	
