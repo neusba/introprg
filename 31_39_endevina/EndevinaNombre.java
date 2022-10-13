@@ -16,6 +16,8 @@ public class EndevinaNombre {
 			} else {
 				System.out.println("Has encertat!");
 			}
+			// Demanem el valor a l'usuari
+			valor = Integer.parseInt(Entrada.readLine());
 		}
 
 		// Si el bucle termina fem les dos condicions restants
