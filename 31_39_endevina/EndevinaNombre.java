@@ -12,9 +12,9 @@ public class EndevinaNombre {
 	while (valor != 42) {
 		// Creem les condicions del número donat i afegim la resposta corresponent
 		if (valor < 42) {
-			System.out.println("És més gran que " + 42);
+			System.out.println("És més gran que " + valor);
 		} else if (valor > 42) {
-			System.out.println("És més petit que " + 42);
+			System.out.println("És més petit que " + valor);
 		} else if (valor > 100) {
 			System.out.println("Com a màxim 100");
 		} else if (valor <= 0) {
