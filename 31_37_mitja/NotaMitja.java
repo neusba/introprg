@@ -5,7 +5,7 @@ public class NotaMitja {
 
 		// Declarem les variables necessàries
 		int nota = 0; // Inicialitzem en cero per estalviar repetir codi
-		int acumulador = - 1; // Acumulador de notes introduïdes
+		int acumulador = 0; // Acumulador de notes introduïdes
 		int suma = 0; // Variable per anar sumant totes les notes
 
 		// Creem el bucle while
