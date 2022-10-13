@@ -17,7 +17,7 @@ public class NotaMitja {
 			nota = Integer.parseInt(Entrada.readLine());
 		}
 		// Si la nota introduïda està fora del rang
-		if ((nota < 0 || nota > 100) && acumulador == 1) {
+		if ((nota < 0 || nota > 100) && acumulador == 0) {
 			System.out.println("Cap nota vàlida introduïda");
 		} else {
 			System.out.println("La mitja de les notes vàlides és " + (suma/acumulador));
