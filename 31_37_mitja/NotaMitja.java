@@ -18,7 +18,7 @@ public class NotaMitja {
 		}
 		
 		// Creem la condició en cas de que la nota introduïda sigui diferent
-		if ((valor < 0 || valor > 100) && acumulador == 1) {
+		if ((valor < 0 && valor > 100) && acumulador == 1) {
 			System.out.println("Cap nota vàlida introduïda");
 		} else {
 			// Si la nota introduïda no és negativa, llavors imprimim el missatge final
