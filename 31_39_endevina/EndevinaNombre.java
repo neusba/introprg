@@ -3,9 +3,10 @@
 public class EndevinaNombre {
 	public static void main(String[] args) {
 		// El nombre a encertar és el 42
-			
+		int valor;
+
 		System.out.println("Ves introduïnt enters entre 1 i 100 fins que encertis el que jo he pensat");
-		int valor = Integer.parseInt(Entrada.readLine());
+		valor = Integer.parseInt(Entrada.readLine());
 
 		while (valor >= 1 && valor <= 100) {
 			// Creem les condicions respondre a l'usuari segons la resposta
