@@ -1,6 +1,6 @@
 /* Programa que tè per defecte el nombre 42 i demana números a l'usuari fins que encerta, mostra missatges diferents segons si s'allunya o s'apropa o està fora de rang */
 
-public class Endevina {
+public class EndevinaNombre {
 	public static void main(String[] args) {
 		// El nombre a encertar és el 42
 			
