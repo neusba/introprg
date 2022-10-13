@@ -21,6 +21,7 @@ public class EndevinaNombre {
 			System.out.println("Com a mínim 1");
 		}
 		// Demanem el valor a l'usuari
+		System.out.println("Introdueix un valor");
 		valor = Integer.parseInt(Entrada.readLine());
 	}
 	// Si encerta el número, llavors;
