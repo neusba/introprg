@@ -5,6 +5,7 @@ public class EndevinaNombre {
 	
 	// Declarem les variables necessàries
 	System.out.println("Ves introduïnt enters entre 1 i 100	fins que encertis el que jo he pensat");
+	System.out.println("Introdueix un valor");
 	int valor = Integer.parseInt(Entrada.readLine()); // Inicialitzem en cero per estalviar codi despŕes
 	
 	// Creem el bucle while
