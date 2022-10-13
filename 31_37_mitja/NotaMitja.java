@@ -4,7 +4,7 @@ public class NotaMitja {
 	public static void main(String[] args) {
 
 		// Declarem les variables necessàries
-		int nota = 0; // Inicialitzem en cero per estalviar repetir codi
+		int nota = Integer.parseInt(Entrada.readLine()); // Inicialitzem en cero per estalviar repetir codi
 		int acumulador = 0; // Acumulador de notes introduïdes
 		int suma = 0; // Variable per anar sumant totes les notes
 
@@ -12,7 +12,7 @@ public class NotaMitja {
 		while (nota >= 0 && nota <= 100) {
 			suma = suma + nota;
 			acumulador = acumulador + 1;
-			// Demanem un altre vegada la nota
+			// Demanem la nota a l'usuari
 			System.out.println("Introdueix un valor");
 			nota = Integer.parseInt(Entrada.readLine());
 		}
