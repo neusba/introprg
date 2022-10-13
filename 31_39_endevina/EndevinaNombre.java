@@ -18,7 +18,7 @@ public class EndevinaNombre {
 		} else if (valor > 100) {
 			System.out.println("Com a màxim 100");
 		} else if (valor == 0) {
-			System.out.println("És més gran que " + 0);
+			System.out.println("Com a mínim 1");
 		}
 		// Demanem el valor a l'usuari
 		System.out.println("Introdueix un valor");
