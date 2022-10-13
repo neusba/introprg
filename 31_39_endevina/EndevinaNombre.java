@@ -1,37 +1,30 @@
-/* Programa que tè per defecte el nombre 42 i demana números a l'usuari fins que encerta, mostra missatges diferents segons si s'allunya o s'apropa o està fora de rang */
+/* Programa que repta als usuaris a endevinar el número 42 i segons el número que donin torna una resposta o una altra */
 
 public class EndevinaNombre {
 	public static void main(String[] args) {
-		// El nombre a encertar és el 42
-		
-		System.out.println("Ves introduïnt enters entre 1 i 100 fins que encertis el que jo he pensat");
-		int valor = Integer.parseInt(Entrada.readLine());
-
-		while (valor >= 1 && valor <= 100) {
-			// Creem les condicions respondre a l'usuari segons la resposta
-			if (valor < 42) {
-				System.out.println("És més gran que " + valor);
-			} else if (valor > 42) {
-				System.out.println("És més petit que " + valor);
-			} else {
-				System.out.println("Has encertat!");
-			}
-			// Demanem el valor a l'usuari
-			valor = Integer.parseInt(Entrada.readLine());
-		}
-
-		// Si el bucle termina fem el bucle negatiu
-
-		while (valor <= 0) {
-			System.out.println("Com a mínim 1");
-			
-			if (valor > 100) {
+	
+	// Declarem les variables necessàries
+	int valor = 0; // Inicialitzem en cero per estalviar codi despŕes
+	
+	// Creem el bucle while
+	while (valor != 42) {
+		// Creem les condicions del número donat i afegim la resposta corresponent
+		if (valor < 42) {
+			System.out.println("És més gran que " + 42);
+		} else if (valor > 42) {
+			System.out.println("És més petit que " + 42);
+		} else if (valor > 100) {
 			System.out.println("Com a màxim 100");
-			}
-			// Demanem valor a l'usuari
-			valor = Integer.parseInt(Entrada.readLine());
+		} else if (valor <= 0) {
+			System.out.println("Com a mínim 1");
 		}
+		// Demanem el valor a l'usuari
+		System.out.println("Ves introduïnt enters entre 1 i 100	fins que encertis el que jo he pensat");
+		valor = Integer.parseInt(Entrada.readLine());
+	}
+	// Si encerta el número, llavors;
+	System.out.println("Has encertat!");
 	}
 }
+		      
 
- 			// ESTA MAAAAAAAAAAAAAAAAAAL BORRAR TODO */
