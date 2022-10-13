@@ -11,7 +11,7 @@ public class EndevinaNombre {
 	// Creem el bucle while
 	while (valor != 42) {
 		// Creem les condicions del número donat i afegim la resposta corresponent
-		if (valor < 42) {
+		if (valor < 42 && valor > 0) {
 			System.out.println("És més gran que " + valor);
 		} else if (valor > 42) {
 			System.out.println("És més petit que " + valor);
