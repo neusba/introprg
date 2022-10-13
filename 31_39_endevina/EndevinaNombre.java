@@ -3,17 +3,16 @@
 public class EndevinaNombre {
 	public static void main(String[] args) {
 		// El nombre a encertar és el 42
-		int valor;
-
+		
 		System.out.println("Ves introduïnt enters entre 1 i 100 fins que encertis el que jo he pensat");
-		valor = Integer.parseInt(Entrada.readLine());
+		int valor = Integer.parseInt(Entrada.readLine());
 
 		while (valor >= 1 && valor <= 100) {
 			// Creem les condicions respondre a l'usuari segons la resposta
 			if (valor < 42) {
 				System.out.println("És més gran que " + valor);
 			} else if (valor > 42) {
-				System.out.println("ÉS més petit que " + valor);
+				System.out.println("És més petit que " + valor);
 			} else {
 				System.out.println("Has encertat!");
 			}
@@ -21,11 +20,16 @@ public class EndevinaNombre {
 			valor = Integer.parseInt(Entrada.readLine());
 		}
 
-		// Si el bucle termina fem les dos condicions restants
-		if (valor <= 0) {
+		// Si el bucle termina fem el bucle negatiu
+
+		while (valor <= 0) {
 			System.out.println("Com a mínim 1");
-		} else {
+			
+			if (valor > 100) {
 			System.out.println("Com a màxim 100");
+			}
+			// Demanem valor a l'usuari
+			valor = Integer.parseInt(Entrada.readLine());
 		}
 	}
 }
