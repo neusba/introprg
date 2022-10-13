@@ -20,8 +20,8 @@ public class NotaMitja {
 		// Creem la condició en cas de que la nota introduïda sigui diferent
 		if ((valor < 0 ||  valor > 100) && acumulador == 1) {
 			System.out.println("Cap nota vàlida introduïda");
-		} 
-		// Finalment, escribim el missatge de la nota mitja
-		System.out.println("La mitja de les notes vàlides és " + (suma/acumulador));
+		} else {
+		       System.out.println("La mitja de les notes vàlides és " + (suma/acumulador));
+	      }	       
 	}
 }
