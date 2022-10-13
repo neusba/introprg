@@ -11,15 +11,17 @@ public class EndevinaNombre {
 	// Creem el bucle while
 	while (valor != 42) {
 		// Creem les condicions del número donat i afegim la resposta corresponent
-		if (valor < 42 && valor > 0) {
-			System.out.println("És més gran que " + valor);
-		} else if (valor > 42) {
-			System.out.println("És més petit que " + valor);
-		} else if (valor > 100) {
-			System.out.println("Com a màxim 100");
+		if (valor > 0 && valor <= 100) {
+			if (valor < 42) {
+				System.out.println("És més gran que " + valor);
+			} else {
+				System.out.println("És més petit que " + valor);
+			}
 		} else if (valor == 0) {
 			System.out.println("Com a mínim 1");
-		}
+		} else if (valor > 100) {
+			System.out.println("Com a màxim 100");
+		}	
 		// Demanem el valor a l'usuari
 		System.out.println("Introdueix un valor");
 		valor = Integer.parseInt(Entrada.readLine());
