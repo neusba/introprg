@@ -4,7 +4,7 @@ public class SumaPositius {
 	public static void main(String[] args) {
 		
 		// Declarem la variable on anirà la suma i la variable del valor que donarà l'usuari
-		int valor = 0;
+		int valor;
 		int suma = 0;
 		
 		// Demanem valor a l'usuari
