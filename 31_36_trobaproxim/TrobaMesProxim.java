@@ -6,7 +6,7 @@ public class TrobaMesProxim {
                 int diferencia; // Diferencia de l'àncora amb el valor més pròxim
                 int diferenciaActual; // Diferencia de l'àncora amb el valor actual
  
-                System.out.println("Introdueix l'ancora");
+                System.out.println("Introdueix l'àncora");
                 int ancora = Integer.parseInt(Entrada.readLine());
                                                             
                 if (ancora <= 0) {
