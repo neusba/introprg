@@ -29,7 +29,7 @@ public class TrobaMesProxim {
 				valor = Integer.parseInt(Entrada.readLine());
 			}
 
-		System.out.println("EL valor introduït més pròxim a " + ancora + " és " + valorMesProxim);
+		System.out.println("El valor introduït més pròxim a " + ancora + " és " + valorMesProxim);
 		}
 	}
 }
