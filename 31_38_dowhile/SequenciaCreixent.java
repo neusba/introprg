@@ -4,12 +4,13 @@ public class SequenciaCreixent {
 	public static void main(String[] args) {
 
 		int sequencia = 0;
-		int valor = 1;
-		int valorAnterior;
+		System.out.println("Introdueix un valor");
+		int valor = Integer.parseInt(Entrada.readLine());
+		int valorAnterior; 
 		do {
 			sequencia = sequencia + 1;
-			valorAnterior = valor;
-			System.out.println("Introdueix un valor");
+			valorAnterior = valor; // Fiquem el valor introduït a una variable anterior abans de rebre el següent número
+			System.out.println("Introdueix un valor"); // Codi repetit :(
 			valor = Integer.parseInt(Entrada.readLine());
 
 		} while (valor > valorAnterior);
