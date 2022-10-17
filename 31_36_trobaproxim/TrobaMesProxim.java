@@ -35,7 +35,7 @@ public class TrobaMesProxim {
 				System.out.println("Introdueix un valor");
 				valor = Integer.parseInt(Entrada.readLine());
 			}
-		if (contador == 1) {
+		if (contador == 0) {
 			System.out.println("No s'ha introduït cap valor positiu");
 		} else {
 			System.out.println("El valor introduït més pròxim a " + ancora + " és " + valorMesProxim);
