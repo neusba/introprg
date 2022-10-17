@@ -13,12 +13,12 @@ public class TrobaMesProxim {
 
 		System.out.println("Introdueix l'àncora");
 		ancora = Integer.parseInt(Entrada.readLine());
-		diferencia = Math.abs(ancora - valorMesProxim);
 
 		if (ancora <= 0) {
 			System.out.println("Àncora no vàlida");
 		} else {
 			while (valor >= 0) {
+				diferencia = Math.abs(ancora - valorMesProxim);
 				contador = contador + 1;
 				diferenciaActual = Math.abs(ancora - valor);
 				if (diferenciaActual < diferencia) {
