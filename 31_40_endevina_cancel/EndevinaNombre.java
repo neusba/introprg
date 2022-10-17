@@ -8,8 +8,13 @@ public class EndevinaNombre {
 		System.out.println("Introdueix un valor");
 		String stringValor = Entrada.readLine();
 		
-		while (stringValor.equals("42") == false || stringValor.isEmpty() == false) {
+		while (stringValor.isEmpty() == false) {
 			int intValor = Integer.parseInt(stringValor);
+
+			if (intValor == 42) {
+				stringValor = Integer.toString(intValor);
+				break;
+			}
 			
 			if (intValor != 42) {
 				if (intValor > 0 && intValor <= 100) {
@@ -30,13 +35,12 @@ public class EndevinaNombre {
 			System.out.println("Introdueix un valor");
 			stringValor = Entrada.readLine();
 		}
-		if (stringValor.isEmpty() == true) {
-			System.out.println("Cancel·lat!");
-		} else if (stringValor.equals("42")) {
+		if (stringValor.equals("42")) { 
 			System.out.println("Has encertat!");
+		} else if (stringValor.isEmpty()) {
+			System.out.println("Cancel·lat!");
 		}
 	}
 }
-			
 				
 			
