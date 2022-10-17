@@ -4,20 +4,23 @@ public class TrobaMesProxim {
 	public static void main(String[] args) {
 
 		int ancora;
-		int valorMesProxim;
-		int valor = 1;
+		int valorMesProxim = 0;
+		int valor;
 		int contador = 0; // Acumulador de valores positivos
 		int diferencia;
-		int diferenciaActual;
-		valorMesProxim = valor; // Comencarà sent el primer valor introduït, 1 en aquest cas
+		int diferenciaActual; 
+		// valorMesProxim = valor;  Comencarà sent el primer valor introduït, 1 en aquest cas
 
 		System.out.println("Introdueix l'àncora");
 		ancora = Integer.parseInt(Entrada.readLine());
 
 		if (ancora <= 0) {
 			System.out.println("Àncora no vàlida");
-		} else {
-			while (valor >= 0) {
+		} else { 
+			System.out.println("Introdueix un valor");
+			valor = Integer.parseInt(Entrada.readLine());
+			while (valor >= 0) { 
+				valorMesProxim = valor;
 				diferencia = Math.abs(ancora - valorMesProxim);
 				contador = contador + 1;
 				diferenciaActual = Math.abs(ancora - valor);
