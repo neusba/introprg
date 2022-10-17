@@ -6,7 +6,7 @@ public class TrobaMesProxim {
 		int ancora;
 		int valorMesProxim;
 		int valor = 1;
-		int contador; // Acumulador de valores positivos
+		int contador = 0; // Acumulador de valores positivos
 		int diferencia;
 		int diferenciaActual;
 		valorMesProxim = valor; // Comencarà sent el primer valor introduït, 1 en aquest cas
@@ -19,17 +19,22 @@ public class TrobaMesProxim {
 			System.out.println("Àncora no vàlida");
 		} else {
 			while (valor >= 0) {
+				contador = contador + 1;
 				diferenciaActual = Math.abs(ancora - valor);
 				if (diferenciaActual < diferencia) {
 					valorMesProxim = valor;
 				} else if (diferenciaActual == diferencia && valor < valorMesProxim) {
 					valorMesProxim = valor;
 				} 
+
 				System.out.println("Introdueix un valor");
 				valor = Integer.parseInt(Entrada.readLine());
 			}
-
-		System.out.println("El valor introduït més pròxim a " + ancora + " és " + valorMesProxim);
+		if (contador == 1) {
+			System.out.println("no s'ha introduït cap valor positiu");
+		} else {
+			System.out.println("El valor introduït més pròxim a " + ancora + " és " + valorMesProxim);
+		}
 		}
 	}
 }
