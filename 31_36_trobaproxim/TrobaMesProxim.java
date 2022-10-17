@@ -4,7 +4,7 @@ public class TrobaMesProxim {
 	public static void main(String[] args) {
 
 		int ancora;
-		int valorMesProxim = 0;
+		int valorMesProxim;
 		int valor;
 		int contador = 0; // Acumulador de valores positivos
 		int diferencia;
@@ -19,7 +19,8 @@ public class TrobaMesProxim {
 		} else { 
 			System.out.println("Introdueix un valor");
 			valor = Integer.parseInt(Entrada.readLine());
-			while (valor >= 0) { 
+			valorMesProxim = valor;
+			while (valor >= 0) {
 				diferencia = Math.abs(ancora - valorMesProxim);
 				contador = contador + 1;
 				diferenciaActual = Math.abs(ancora - valor);
