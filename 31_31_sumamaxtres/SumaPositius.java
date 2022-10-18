@@ -11,7 +11,6 @@ public class SumaPositius {
 		System.out.println("Introdueix un valor");
 		valor = Integer.parseInt(Entrada.readLine());
 
-		// Creem el bucle while
 		while (valor >= 0) {
 			suma = suma + valor;
 			// Demanem altre valor a l'usuari
