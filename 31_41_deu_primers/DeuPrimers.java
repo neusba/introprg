@@ -1,6 +1,6 @@
 /* Programa que escrigui els primers 10 números naturals */
 
-public class NumerosNaturals{
+public class DeuPrimers {
 	public static void main(String[] args) {
 		
 		int contador = 0;
