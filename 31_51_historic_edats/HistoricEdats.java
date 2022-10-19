@@ -28,10 +28,10 @@ public class HistoricEdats {
 			                        System.out.println("Adéu " + nom);
 			                } else if (edat > 1) {
                        				System.out.println("El " + anyNaixement + " vau néixer");
-                      				System.out.println("El " + (anyNaixement + 1) + " tenieu 1 any");
+                      				System.out.println("El " + (anyNaixement + 1) + " teníeu 1 any");
 			          
                        				for (int i = anyNaixement + 2; i < anyActual; i++, edatRecorregut++) {
-				              		 System.out.println("El " + i + " tenieu " + edatRecorregut + " anys");
+				              		 System.out.println("El " + i + " teníeu " + edatRecorregut + " anys");
 						}
 						System.out.println("Adéu " + nom);
 					}
