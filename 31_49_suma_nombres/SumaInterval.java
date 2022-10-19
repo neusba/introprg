@@ -4,7 +4,7 @@ public class SumaInterval {
 	public static void main(String[] args) {
 		System.out.println("inici?");
 		int i = Integer.parseInt(Entrada.readLine());
-		System.out.println("inici?");
+		System.out.println("final?");
 		int f = Integer.parseInt(Entrada.readLine());
 		int suma = 0;
 
