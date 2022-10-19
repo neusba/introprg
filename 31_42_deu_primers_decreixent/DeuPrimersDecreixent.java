@@ -5,7 +5,7 @@ public class DeuPrimersDecreixent {
 		// Declarem la variable
 		int contador = 10;
 
-		// Creem el bucle while
+		// Creem el bucle while i finalitzem quan arriba a 1
 		while (contador >= 1) {
 			System.out.println(contador);
 			contador -= 1;
