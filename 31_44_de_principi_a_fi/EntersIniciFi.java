@@ -11,9 +11,9 @@ public class EntersIniciFi {
 		int salt = Integer.parseInt(Entrada.readLine());
 		
 		// Creem el bucle while i finaltzem quan arribi al valor final
-		while (valorInicial < valorFinal) {
-			valorInicial = valorInicial + salt;
+		while (valorInicial <= valorFinal) {
 			System.out.println(valorInicial);
+			valorInicial = valorInicial + salt;
 		}
 	}
 }
