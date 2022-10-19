@@ -3,14 +3,14 @@
 public class EntersIniciFi {
 	public static void main(String[] args) {
 		System.out.println("Valor inicial?");
-		for (int valorInicial = Integer.parseInt(Entrada.readLine());
-				System.out.println("Valor final?");
-				int valorFinal = Integer.parseInt(Entrada.readLine());
-				valorInicial < valorFinal;
-				System.out.println("Salt?");
-				int salt = Integer.parseInt(Entrada.readLine());
-				valorInicial += salt) {
-				System.out.prinln(valorInicial);
+		int valorInicial = Integer.parseInt(Entrada.readLine());
+		System.out.println("Valor final?");
+		int valorFinal = Integer.parseInt(Entrada.readLine());
+		System.out.println("Salt?");
+		int salt = Integer.parseInt(Entrada.readLine());
+
+		for (; valorInicial <= valorFinal; valorInicial += salt) {
+			System.out.println(valorInicial);
 		}
 	}
 }
