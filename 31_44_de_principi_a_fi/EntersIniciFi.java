@@ -12,8 +12,8 @@ public class EntersIniciFi {
 		
 		// Creem el bucle while i finaltzem quan arribi al valor final
 		while (valorInicial < valorFinal) {
-			System.out.println(valorInicial);
 			valorInicial = valorInicial + salt;
+			System.out.println(valorInicial);
 		}
 	}
 }
