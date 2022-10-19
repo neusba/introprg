@@ -1,3 +1,5 @@
+/* Programa que demana tres números positius i si un és negatiu mostra per pantalla la suma dels positius i finalitza */
+
 public class SumaPositius {
     public static void main(String[] args) {
 
