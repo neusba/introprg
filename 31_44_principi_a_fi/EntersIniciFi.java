@@ -9,7 +9,8 @@ public class EntersIniciFi {
 		int valorFinal = Integer.parseInt(Entrada.readLine());
 		System.out.println("Salt?");
 		int salt = Integer.parseInt(Entrada.readLine());
-
+		
+		// Creem el bucle while i finaltzem quan arribi al valor final
 		while (valorInicial < valorFinal) {
 			System.out.println(valorInicial);
 			valorInicial = valorInicial + salt;
