@@ -14,7 +14,7 @@ public class HistoricEdats {
                 int anyNaixement = anyActual - edat;
 
 		if (nom.isEmpty() || edat < 0 || anyActual < 1971) {
-			System.out.println("Entrada errònia");
+			System.out.println("Entrada incorrecta");
 		} else if (edat == 0) {
 			System.out.println("Adéu " + nom);
                 } else if (edat == 1) {
