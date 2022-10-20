@@ -8,7 +8,7 @@ public class EndevinaNombre {
                 System.out.println("Introdueix un valor");
                 String stringValor = Entrada.readLine();
 
-                while ((stringValor.isEmpty() == false) ^ (stringValor.isEmpty() == false && (stringValor.equals("42") == false))) { // Si la cadena no està buida, el bucle funcionarà
+                while (stringValor.equals("42") == false || stringValor.equals("") == false) { // Si la cadena no està buida, el bucle funcionarà
 			int intValor = Integer.parseInt(stringValor);
 			
 			if (intValor > 0 && intValor <= 100) {
@@ -28,9 +28,9 @@ public class EndevinaNombre {
                         System.out.println("Introdueix un valor");
                         stringValor = Entrada.readLine();
                 }
-                if (stringValor.isEmpty() == false && stringValor.equals("42")) { // Si la sortida del bucle és per el 42, mostrem que ha encertat i finalitzem
+                if (stringValor.equals("42")) { // Si la sortida del bucle és per el 42, mostrem que ha encertat i finalitzem
                         System.out.println("Has encertat!");
-                } else if (stringValor.isEmpty()) {
+                } else if (stringValor.equals("")) {
                         System.out.println("Cancel·lat!"); // Si la sortida del bucle es per cadena buida, cancel·lem
                 }
         }
