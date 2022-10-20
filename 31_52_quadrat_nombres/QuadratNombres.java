@@ -7,7 +7,7 @@ public class QuadratNombres {
 
 		for (int i = 1; i <= valorFinal; i++) {
 			for (int columna = 1; columna <= valorFinal; columna++) {
-				System.out.print(columna);
+				System.out.print(" "  + columna);
 			}
 			System.out.println();
 		}
