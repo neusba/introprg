@@ -8,10 +8,10 @@ public class EndevinaNombre {
                 System.out.println("Introdueix un valor");
                 String stringValor = Entrada.readLine();
 
-                while ( stringValor.isEmpty() == false && (stringValor.equals("42") == false)) { // Si la cadena no està buida, el bucle funcionarà
-                        int intValor = Integer.parseInt(stringValor); // Pasem de String a Int el valor que ens dona l'usuari per poder treballar amb expressions matemàtiques
+                while ( stringValor.isEmpty() == false && (stringValor.equals("42") == false)) { 
+                        int intValor = Integer.parseInt(stringValor); 
 
-                        if (intValor != 42) { // Les condicions per donar diferents respostes segons el valor introduït per l'usuari
+                        if (intValor != 42) { 
                                 if (intValor > 0 && intValor <= 100) {
                                         if (intValor < 42) {
                                                 System.out.println("És més gran que " + intValor);
@@ -29,10 +29,10 @@ public class EndevinaNombre {
                         stringValor = Entrada.readLine();
 		}
  
-                if (stringValor.equals("42")) { // Si la sortida del bucle és per el 42, mostrem que ha encertat i finalitzem
+                if (stringValor.equals("42")) { 
                         System.out.println("Has encertat!");
                 } else if (stringValor.isEmpty()) {
-                        System.out.println("Cancel·lat!"); // Si la sortida del bucle es per cadena buida, cancel·lem
+                        System.out.println("Cancel·lat!"); 
 		}	
 	}      
 }
