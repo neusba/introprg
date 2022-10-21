@@ -8,32 +8,36 @@ public class EndevinaNombre {
                 System.out.println("Introdueix un valor");
                 String stringValor = Entrada.readLine();
 
-                while (stringValor.equals("42") == false || stringValor.equals("") == false) { // Si la cadena no està buida, el bucle funcionarà
-			int intValor = Integer.parseInt(stringValor);
-			
-			if (intValor > 0 && intValor <= 100) {
-                        	if (intValor < 42) {
-                                	System.out.println("És més gran que " + intValor);
-                                } else {
-                                	System.out.println("És més petit que " + intValor);
-				}
-			} else if (intValor > 100) {
-                                System.out.println("Com a màxim 100");
-                        } else if (intValor <= 0) {
-                                System.out.println("Com a mínim 1");
-                        }
-			
-			stringValor = Integer.toString(intValor);
+                while (stringValor.isEmpty() == false) { // Si la cadena no està buida, el bucle funcionarà
+                        int intValor = Integer.parseInt(stringValor); // Pasem de String a Int el valor que ens dona l'usuari per poder treballar amb expressions matemàtiques
+
+                        if (intValor != 42) { // Les condicions per donar diferents respostes segons el valor introduït per l'usuari
+                                if (intValor > 0 && intValor <= 100) {
+                                        if (intValor < 42) {
+                                                System.out.println("És més gran que " + intValor);
+                                        } else {
+                                                System.out.println("És més petit que " + intValor);
+                                        }
+                                } else if (intValor > 100) {
+                                        System.out.println("Com a màxim 100");
+                                } else if (intValor <= 0) {
+                                        System.out.println("Com a mínim 1");
+                                }
+			}
+                   
+
+                        stringValor = Integer.toString(intValor); // Quan ja hem donat la resposta per pantalla, tornem a String per que el bucle pugui llegir-ho bè
 
                         System.out.println("Introdueix un valor");
                         stringValor = Entrada.readLine();
-                }
+			if (stringValor.equals("42")) {
+				stringValor = "";
+			}
+ 
                 if (stringValor.equals("42")) { // Si la sortida del bucle és per el 42, mostrem que ha encertat i finalitzem
                         System.out.println("Has encertat!");
-                } else if (stringValor.equals("")) {
+                } else if (stringValor.isEmpty()) {
                         System.out.println("Cancel·lat!"); // Si la sortida del bucle es per cadena buida, cancel·lem
                 }
-        }
+      
 }
-
-
