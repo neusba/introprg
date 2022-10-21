@@ -30,12 +30,12 @@ public class EndevinaNombre {
 
                         System.out.println("Introdueix un valor");
                         stringValor = Entrada.readLine();
+		}
  
                 if (stringValor.equals("42")) { // Si la sortida del bucle és per el 42, mostrem que ha encertat i finalitzem
                         System.out.println("Has encertat!");
                 } else if (stringValor.isEmpty()) {
                         System.out.println("Cancel·lat!"); // Si la sortida del bucle es per cadena buida, cancel·lem
-                }
 		}	
 	}      
 }
