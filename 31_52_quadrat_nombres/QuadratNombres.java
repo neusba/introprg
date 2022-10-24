@@ -1,4 +1,4 @@
-/* Programa que demani un enter positiu més gran que 0 i dibuixi un quadrat amb els nombres del 1 fins el valor de l'entrada */
+/* Programa que demani un enter positiu més gran que zero i dibuixi un quadrat amb els nombres del 1 fins el valor de l'entrada */
 
 public class QuadratNombres {
 	public static void main(String[] args) {

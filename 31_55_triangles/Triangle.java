@@ -4,6 +4,7 @@ public class Triangle {
 	public static void main(String[] args) {
 		System.out.println("quants?");
 		int numero = Integer.parseInt(Entrada.readLine());
-		
-		for (i = 0; i <= 9; i++) {
-			for(
+		int restador = 0;
+
+		for (int i = 9; i >= 0; i--) {
+			for (int j = 
