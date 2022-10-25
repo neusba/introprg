@@ -2,14 +2,19 @@
 
 public class QuadratNombres {
 	public static void main(String[] args) {
+
 		System.out.println("Valor final?");
 		int valorFinal = Integer.parseInt(Entrada.readLine());
 
-		for (int i = 1; i <= valorFinal; i++) {
-			for (int columna = 1; columna <= valorFinal; columna++) {
-				System.out.print(" "  + columna);
+		if (valorFinal <= 0) {
+			System.out.println("Valor inadequat");
+		} else {
+			for (int i = 1; i <= valorFinal; i++) {
+				for (int columna = 1; columna <= valorFinal; columna++) {
+					System.out.print(" "  + columna);
+				}
+				System.out.println();
 			}
-			System.out.println();
 		}
 	}
 }
