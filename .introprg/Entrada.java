@@ -15,7 +15,11 @@ public class Entrada {
      */
     public static String readLine() throws RuntimeException {
         try {
-            return reader.readLine();
+            String line = reader.readLine();
+            if (line == null) {
+                throw new RuntimeException("S'ha cridat massa cops Entrada.readLine()");
+            }
+            return line;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
