@@ -4,8 +4,10 @@ public class InformeString {
 	public static void main(String[] args) {
 		System.out.println("Text principal?");
 		String stringPrincipal = "String!";
+		System.out.println("stringPrincipal");
 		System.out.println("Text secundari?");
 		String stringSecundari = "string!";
+		System.out.println(stringSecundari);
 		System.out.println("Número positiu?");
 		int numero = Integer.parseInt(Entrada.readLine());
 
