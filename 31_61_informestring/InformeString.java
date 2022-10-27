@@ -13,7 +13,7 @@ public class InformeString {
 		System.out.print("\"String!\".length(): ");
 		System.out.println(stringPrincipal.length());
 
-		System.out.print("\"String!\".startswith(\"string!\"): ");
+		System.out.print("\"String!\".startsWith(\"string!\"): ");
 		System.out.println(stringPrincipal.startsWith(stringSecundari));
 
 		System.out.print("\"String!\".endsWith(\"string!\"): ");
