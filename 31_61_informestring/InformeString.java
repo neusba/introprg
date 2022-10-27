@@ -38,7 +38,7 @@ public class InformeString {
 		System.out.print("\"String!\".concat(\"string!\"): ");
 		System.out.println(stringPrincipal.concat(stringSecundari));
 		
-		System.out.print("\"String!\".repeat(): ");
+		System.out.print("\"String!\".repeat(3): ");
 		System.out.println(stringPrincipal.repeat(numero));
 
 		System.out.print("\"String!\".toUpperCase(): ");
