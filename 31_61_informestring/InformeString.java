@@ -31,7 +31,7 @@ public class InformeString {
 		System.out.print("\"String!\".isEmpty(): ");
 		System.out.println(stringPrincipal.isEmpty());
 		
-		System.out.print("\"String!\".charAt()): ");
+		System.out.print("\"String!\".charAt(numero)): ");
 		char ch = stringPrincipal.charAt(numero);
 		System.out.println(ch);
 		
