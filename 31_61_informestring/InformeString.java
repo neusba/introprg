@@ -36,7 +36,7 @@ public class InformeString {
 		String concat = stringP.format("\"%s\".concat(\"%s\"): ", stringP, stringS);
 		System.out.println(concat + stringP.concat(stringS));
 	
-		String repeat = stringP.format("\"%s\".repeat(\"%s\"): ", stringP, num);
+		String repeat = stringP.format("\"%s\".repeat(%s): ", stringP, num);
 		System.out.println(repeat + stringP.repeat(num));
 	
 		String toUpperCase = stringP.format("\"%s\".toUpperCase(): ", stringP);
