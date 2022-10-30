@@ -30,7 +30,7 @@ public class InformeString {
 		String empty = stringP.format("\"%s\".isEmpty(): ", stringP);
 		System.out.println(empty + stringP.isEmpty());
 	
-		String ch = stringP.format("\"%s\"charAt(\"num\"): ", stringP, num);
+		String ch = stringP.format("\"%s\"charAt(\"%s\"): ", stringP, num);
 		System.out.println(ch + stringP.charAt(num));
 	
 		String concat = stringP.format("\"%s\".concat(\"%s\"): ", stringP, stringS);
