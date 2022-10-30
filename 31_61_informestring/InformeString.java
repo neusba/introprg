@@ -36,13 +36,13 @@ public class InformeString {
 		String concat = stringP.format("\"%s\".concat(\"%s\"): ", stringP, stringS);
 		System.out.println(concat + stringP.concat(stringS));
 	
-		String repeat = stringP.format("\"%s\"repeat(\"num\"): ", stringP, num);
+		String repeat = stringP.format("\"%s\".repeat(\"num\"): ", stringP, num);
 		System.out.println(repeat + stringP.repeat(num));
 	
-		String toUpperCase = stringP.format("\"%s\"toUpperCase(): ", stringP);
+		String toUpperCase = stringP.format("\"%s\".toUpperCase(): ", stringP);
 		System.out.println(toUpperCase + stringP.toUpperCase());
 	
-		String toLowerCase = stringP.format("\"%s\"toLowerCase(): ", stringP);
+		String toLowerCase = stringP.format("\"%s\".toLowerCase(): ", stringP);
 		System.out.println(toLowerCase + stringP.toLowerCase());
 	}
 }
