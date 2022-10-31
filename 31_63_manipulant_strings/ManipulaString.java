@@ -5,9 +5,6 @@ public class ManipulaString {
 		System.out.println("Paraula?");
 		String paraula = Entrada.readLine();
 		
-		if (paraula.length() < 4) {
-			System.out.println("Caràcter invàlid");
-		} else {
 			// Longitud de la paraula
 			System.out.println("La longitud és " + paraula.length());
 
@@ -66,9 +63,7 @@ public class ManipulaString {
 			System.out.print(segonaMajus);
 				// Tercera lletra
 			char terceraMajus  = Character.toLowerCase(paraula.charAt(2));
-			System.out.print(terceraMajus + "\"");
-
-		}
+			System.out.print(terceraMajus + "\"");	
 			
 	}
 }
