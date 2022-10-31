@@ -13,6 +13,7 @@ public class LloroVocalMinuscules {
 			System.out.println("El lloro pregunta paraula que finalitzi per vocal en minúscules");
 			paraula = Entrada.readLine();
 		}
+		System.out.println("Adéu");
 	}
 }
 			
