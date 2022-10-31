@@ -17,7 +17,7 @@ public class InformeCaracter {
 		String identifierPart = string.format("Character.isJavaIdentifierPart(\'%s\'): ", string.charAt(0));
 	      	System.out.println(identifierPart+ Character.isJavaIdentifierPart(string.charAt(0)));
 		
-		String letter = string.format("Character.letter(\'%s\'): ", string.charAt(0));
+		String letter = string.format("Character.isletter(\'%s\'): ", string.charAt(0));
 	      	System.out.println(letter + Character.isLetter(string.charAt(0)));
 		
 		String lowerCase = string.format("Character.isLowerCase(\'%s\'): ", string.charAt(0));
