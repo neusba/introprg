@@ -54,7 +54,7 @@ public class ManipulaString {
 		System.out.print("La composició de quatre corregint majúscules és ");
 			// Última lletra
 		char ultimaMajus = Character.toUpperCase(paraula.charAt(paraula.length() - 1));
-		System.out.print("\"" + ultima);
+		System.out.print("\"" + ultimaMajus);
 			// Primera lletra
 		char primeraMajus = Character.toLowerCase(paraula.charAt(0));
 		System.out.print(primeraMajus);
