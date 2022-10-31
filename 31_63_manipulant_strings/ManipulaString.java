@@ -66,7 +66,7 @@ public class ManipulaString {
 			System.out.print(segonaMajus);
 				// Tercera lletra
 			char terceraMajus  = Character.toLowerCase(paraula.charAt(2));
-			System.out.print(terceraMajus);
+			System.out.print(terceraMajus + "\"");
 
 		}
 			
