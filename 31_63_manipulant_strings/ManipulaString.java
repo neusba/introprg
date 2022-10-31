@@ -39,7 +39,7 @@ public class ManipulaString {
 					// Quarta lletra
 				char quarta = Character.toLowerCase(paraula.charAt(3));
 				System.out.println(quarta + "\"");	
-			} else {
+			} else if (paraula.length() >= 4) {
 				// Composició formada per la darrera lletra de la paraula seguida de les tres primrees
 				System.out.print("La composició de quatre és ");
 					// Última lletra
