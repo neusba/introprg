@@ -4,6 +4,10 @@ public class InformeCaracter {
 	public static void main(String[] args) {
 		System.out.println("Caràcter?");
 		String string = Entrada.readLine();
+
+		if (string.isEmpty()) {
+			System.out.println("Caràcter buit");
+		}
 		
 		String getName = string.format("Character.getName(\'%s\'): ", string.charAt(0));
 	      	System.out.println(getName + Character.getName(string.charAt(0)));
