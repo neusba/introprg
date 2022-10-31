@@ -5,7 +5,7 @@ public class ManipulaString {
 		System.out.println("Paraula?");
 		String paraula = Entrada.readLine();
 		
-		if (paraula.isEmpty() || paraula.isBlank()) {
+		if (paraula.length() < 4) {
 			System.out.println("Caràcter invàlid");
 		} else {
 			// Longitud de la paraula
