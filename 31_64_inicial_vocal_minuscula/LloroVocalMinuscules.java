@@ -2,14 +2,14 @@
 
 public class LloroVocalMinuscules {
 	public static void main(String[] args) {
-		System.out.println("EL lloro pregunta paraula que comenci amb vocal en minúscules");
+		System.out.println("El lloro pregunta paraula que comenci amb vocal en minúscules");
 		String paraula = Entrada.readLine();
    		
 		while (!paraula.isEmpty() && !paraula.isBlank()) {
 			if (paraula.startsWith("a") || paraula.startsWith("e") || paraula.startsWith("i") || paraula.startsWith("o") || paraula.startsWith("u")) {
 				System.out.println("El lloro diu: " + paraula);
 			} 
-			System.out.println("EL lloro pregunta paraula que comenci amb vocal en minúscules");
+			System.out.println("El lloro pregunta paraula que comenci amb vocal en minúscules");
 			paraula = Entrada.readLine();
 		}
 		System.out.println("Adéu");
