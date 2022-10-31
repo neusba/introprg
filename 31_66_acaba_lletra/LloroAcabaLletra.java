@@ -9,9 +9,9 @@ public class LloroAcabaLletra {
 			char lletra = paraula.charAt(paraula.length() - 1);
 			String stringLletra = Character.toString(lletra);
 
-			if (!stringLletra.equalsIgnoreCase("a")) {
-				System.out.println("El lloro diu: " + paraula);
-			}
+				if (!stringLletra.equalsIgnoreCase("a") && !stringLletra.equalsIgnoreCase("e") && !stringLletra.equalsIgnoreCase("i") && !stringLletra.equalsIgnoreCase("o") && !stringLletra.equalsIgnoreCase("u")) { 
+					System.out.println("El lloro diu: " + paraula);
+				}
 		System.out.println("El lloro pregunta paraula que finalitzi per lletra no vocal");
 		paraula = Entrada.readLine();
 		}
