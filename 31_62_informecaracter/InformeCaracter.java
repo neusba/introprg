@@ -5,7 +5,7 @@ public class InformeCaracter {
 		System.out.println("Caràcter?");
 		String string = Entrada.readLine();
 
-		if (string.isEmpty()) {
+		if (string.isEmpty() || string.isBlank()) {
 			System.out.println("Caràcter buit");
 		}
 		
