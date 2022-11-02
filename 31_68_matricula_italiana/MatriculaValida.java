@@ -23,7 +23,7 @@ public class MatriculaValida {
 			} else {
 				String stringZero = Character.toString(zero);
 				String stringPrimer = Character.toString(primer);
-				if (stringZero.equals("Ç") || stringZero.equals("À") || stringZero.equals("Ñ") || stringZero.equals("ß") || stringZero.equals("I") || stringZero.equals("O") || stringZero.equals("Q") || stringZero.equals("U")) {
+				if (stringZero.equals("Ç") || stringZero.equals("À") || stringZero.equals("Ñ") || stringZero.equals("ß") || stringZero.equals("I") || stringZero.equals("O") || stringZero.equals("Q") || stringZero.equals("U") || stringPrimer.equals("Ç") || stringPrimer.equals("À") || stringPrimer.equals("Ñ") || stringPrimer.equals("ß") || stringPrimer.equals("I") || stringPrimer.equals("O") || stringPrimer.equals("Q") || stringPrimer.equals("U")) { // Hacer lo mismo pero con stringPrimer
 					System.out.println("No és una matrícula italiana vàlida");	
 				} else {
 					if (!Character.isDigit(segon) || !Character.isDigit(tercer) || !Character.isDigit(quart)) {
