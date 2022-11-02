@@ -19,8 +19,8 @@ public class SegonaIgualPenultima {
 				} else {
 					System.out.println("Segona diferent de penúltima");
 				}
-				text = Entrada.readLine();
 			}
+			text = Entrada.readLine();
 		}
 		System.out.println("Adéu");
 	}
