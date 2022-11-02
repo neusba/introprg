@@ -6,24 +6,25 @@ public class SegonaIgualPenultima {
 		String text = Entrada.readLine();
 		
 		while (!text.isEmpty() || !text.isBlank()) {
-			if (text.length() <= 2) {
-				System.out.println("Segona igual a penultima");
-			} else {
-				char segona = text.charAt(2);
-				char penultima = text.charAt(text.length() - 2);
-				String stringSegona = Character.toString(segona);
-				String stringPenultima = Character.toString(penultima);
-
-				if (stringSegona.equals(stringPenultima)) {
-					System.out.println("Segona igual a penultima");
-				} else {
-					System.out.println("Segona diferent a peniltima");
-				}
+			if (text.length() <= 1) {
+				System.out.println("Segona diferent de penúltima");
 			}
-				text = Entrada.readLine();
+
+			char segona = text.charAt(1);
+			char penultima = text.charAt(text.length() - 2);
+			String stringSegona = Character.toString(segona);
+			String stringPenultima = Character.toString(penultima);
+
+			if (stringSegona.equals(stringPenultima)) {
+				System.out.println("Segona igual a penúltima");
+			} else {
+				System.out.println("Segona diferent de penúltima");
+			}
+			text = Entrada.readLine();
 		}
 		System.out.println("Adéu");
 	}
 }
+			
 
 	
