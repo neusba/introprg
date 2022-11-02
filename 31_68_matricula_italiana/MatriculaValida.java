@@ -19,19 +19,21 @@ public class MatriculaValida {
 			char sise = matricula.charAt(6);
 
 			if (!Character.isLetter(zero) || !Character.isLetter(primer) || !Character.isUpperCase(zero) || !Character.isUpperCase(primer)) {
+				System.out.println("No és una matrícula italiana vàlida");
+			} else {
 				String stringZero = Character.toString(zero);
 				String stringPrimer = Character.toString(primer);
 				if (stringZero.equals("Ç") || stringZero.equals("À") || stringZero.equals("Ñ") || stringZero.equals("ß") || stringZero.equals("I") || stringZero.equals("O") || stringZero.equals("Q") || stringZero.equals("U")) {
-					System.out.println("No és una matrícula italiana vàlida");
-				}
-			} else {
-				if (!Character.isDigit(segon) || !Character.isDigit(tercer) || !Character.isDigit(quart)) {
-					System.out.println("No és una matrícula italiana vàlida");
+					System.out.println("No és una matrícula italiana vàlida");	
 				} else {
-					if (!Character.isLetter(cinque) || !Character.isLetter(sise) || !Character.isUpperCase(cinque) || !Character.isUpperCase(sise)) {
+					if (!Character.isDigit(segon) || !Character.isDigit(tercer) || !Character.isDigit(quart)) {
 						System.out.println("No és una matrícula italiana vàlida");
 					} else {
-						System.out.println("És una matrícula italiana vàlida");
+						if (!Character.isLetter(cinque) || !Character.isLetter(sise) || !Character.isUpperCase(cinque) || !Character.isUpperCase(sise)) {
+							System.out.println("No és una matrícula italiana vàlida");
+						} else {
+							System.out.println("És una matrícula italiana vàlida");
+						}
 					}
 				}
 			}
