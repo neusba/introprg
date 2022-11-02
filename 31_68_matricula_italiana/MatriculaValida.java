@@ -35,7 +35,7 @@ public class MatriculaValida {
 							String stringCinque = Character.toString(cinque);
 							String stringSise = Character.toString(sise);
 							if (stringCinque.equals("Ç") || stringCinque.equals("À") || stringCinque.equals("Ñ") || stringCinque.equals("ß") || stringCinque.equals("I") || stringCinque.equals("O") || stringCinque.equals("Q") || stringCinque.equals("U") || stringSise.equals("Ç") || stringSise.equals("À") || stringSise.equals("Ñ") || stringSise.equals("ß") || stringSise.equals("I") || stringSise.equals("O") || stringSise.equals("Q") || stringSise.equals("U")) {
-								System.out.println("No es una matrícula italiana vàlida");
+								System.out.println("No és una matrícula italiana vàlida");
 							} else {
 								System.out.println("És una matrícula italiana vàlida");
 							}	
