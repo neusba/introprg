@@ -18,7 +18,7 @@ public class MatriculaValida {
 			char cinque = matricula.charAt(5);
 			char sise = matricula.charAt(6);
 
-			if (!Character.isLetter(zero) || !Character.isLetter(primer)) {
+			if (!Character.isLetter(zero) || !Character.isLetter(primer) || !Character.isUpperCase(zero) || !Character.isUpperCase(primer)) {
 				System.out.println("No és una matrícula italiana vàlida");
 			} else {
 				if (!Character.isDigit(segon) || !Character.isDigit(tercer) || !Character.isDigit(quart)) {
