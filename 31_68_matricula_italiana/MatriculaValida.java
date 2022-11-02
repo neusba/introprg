@@ -19,7 +19,11 @@ public class MatriculaValida {
 			char sise = matricula.charAt(6);
 
 			if (!Character.isLetter(zero) || !Character.isLetter(primer) || !Character.isUpperCase(zero) || !Character.isUpperCase(primer)) {
-				System.out.println("No és una matrícula italiana vàlida");
+				String stringZero = Character.toString(zero);
+				String stringPrimer = Character.toString(primer);
+				if (stringZero.equals("Ç") || stringZero.equals("À") || stringZero.equals("Ñ") || stringZero.equals("ß") || stringZero.equals("I") || stringZero.equals("O") || stringZero.equals("Q") || stringZero.equals("U")) {
+					System.out.println("No és una matrícula italiana vàlida");
+				}
 			} else {
 				if (!Character.isDigit(segon) || !Character.isDigit(tercer) || !Character.isDigit(quart)) {
 					System.out.println("No és una matrícula italiana vàlida");
