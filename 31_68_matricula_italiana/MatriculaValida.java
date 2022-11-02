@@ -13,23 +13,23 @@ public class MatriculaValida {
 		char quart = matricula.charAt(4);
 		char cinque = matricula.charAt(5);
 		char sise = matricula.charAt(6);
-
-		if (!Character.isLetter(zero) || !Character.isLetter(primer)) {
+		
+		if (matricula.length() < 7) {
 			System.out.println("No és una matrícula italiana vàlida");
 		} else {
-			if (!Character.isDigit(segon) || !Character.isDigit(tercer) || !Character.isDigit(quart)) {
+			if (!Character.isLetter(zero) || !Character.isLetter(primer)) {
 				System.out.println("No és una matrícula italiana vàlida");
 			} else {
-				if (!Character.isLetter(cinque) || !Character.isLetter(sise)) {
+				if (!Character.isDigit(segon) || !Character.isDigit(tercer) || !Character.isDigit(quart)) {
 					System.out.println("No és una matrícula italiana vàlida");
 				} else {
-					System.out.println("És una matrícula italiana vàlida");
+					if (!Character.isLetter(cinque) || !Character.isLetter(sise)) {
+						System.out.println("No és una matrícula italiana vàlida");
+					} else {
+						System.out.println("És una matrícula italiana vàlida");
+					}
 				}
 			}
 		}
 	}
 }
-
-			       	
-
-
