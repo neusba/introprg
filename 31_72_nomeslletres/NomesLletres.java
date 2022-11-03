@@ -11,8 +11,8 @@ public class NomesLletres {
 					System.out.print(text.charAt(posicio) + ",");
 				} else if (posicio == text.length() - 1) {
 					System.out.print(" " + text.charAt(posicio));
-				} else {
-				       System.out.println(" " + text.charAt(posicio) + ",");
+				} else if ((posicio > 0) && (posicio < text.length() - 1)) {
+				       System.out.print(" " + text.charAt(posicio) + ",");
 				}
 		 			
 			}
