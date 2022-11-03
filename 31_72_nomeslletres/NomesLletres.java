@@ -5,12 +5,12 @@ public class NomesLletres {
 		System.out.println("Text?");
 		String text = Entrada.readLine();
 
-		for (int posicio=0; posicio <= text.length() - 1; posicio++) {
+		for (int posicio=0; posicio < text.length(); posicio++) {
 			if (Character.isLetter(text.charAt(posicio))) { 
 				if (posicio == 0) {
 					System.out.print(text.charAt(posicio) + ",");
 				} else if (posicio == text.length()) {
-					System.out.print("hola " + text.charAt(posicio));
+					System.out.print(" " + text.charAt(posicio));
 				} else {
 					System.out.print(" " + text.charAt(posicio) + ",");
 				}
