@@ -9,7 +9,7 @@ public class NomesLletres {
 			if (Character.isLetter(text.charAt(posicio))) { 
 				if (posicio == 0) {
 					System.out.print(text.charAt(posicio) + ",");
-				} else if (posicio == text.length()) {
+				} else if (posicio == text.length() - 1) {
 					System.out.print(" " + text.charAt(posicio));
 				} else {
 					System.out.print(" " + text.charAt(posicio) + ",");
