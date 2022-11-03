@@ -10,6 +10,8 @@ public class Parentitza {
 				System.out.print("(" + text.charAt(posicio) + ")");
 			} else if (Character.isWhitespace(text.charAt(posicio))) {
 				System.out.print(" ");
+			} else {
+				System.out.print(text.charAt(posicio));
 			}
 			
 		}
