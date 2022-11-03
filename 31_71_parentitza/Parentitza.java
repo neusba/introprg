@@ -7,7 +7,9 @@ public class Parentitza {
 		
 		for (int posicio=0; posicio <= text.length() - 1; posicio++) {
 			if (!Character.isWhitespace(text.charAt(posicio))) {
-				System.out.print(" (" + text.charAt(posicio) + ")");
+				if (Character.isDigit(text.charAt(posicio)) || Character.isLetter(text.charAt(posicio))) {
+					System.out.print("(" + text.charAt(posicio) + ")");
+				}
 			}
 		}
 	}
