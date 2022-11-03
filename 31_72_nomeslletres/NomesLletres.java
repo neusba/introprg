@@ -12,7 +12,7 @@ public class NomesLletres {
 				} else if (posicio == text.length() - 1) {
 					System.out.print(" " + text.charAt(posicio));
 				} else {
-				       System.out.println(text.charAt(posicio));
+				       System.out.println(" " + text.charAt(posicio) + ",");
 				}
 		 			
 			}
