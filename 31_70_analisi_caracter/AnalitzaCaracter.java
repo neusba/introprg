@@ -8,11 +8,11 @@ public class AnalitzaCaracter {
 		System.out.println("Posició?");
 		int posicio = Integer.parseInt(Entrada.readLine());
 		
-		if (posicio > text.length() || Math.abs(posicio) > text.length() - 1) {
+		if (posicio > text.length() - 1 || Math.abs(posicio) > text.length()) {
 			System.out.println("Fora de rang");
 		} else {
 			if (posicio < 0) {
-				posicio = text.length() + posicio;
+				posicio = text.length() + posicio; // Posició sempre és negativa perque està dins del if de negatius k
 			} 
 
 			char posicioText = text.charAt(posicio);
