@@ -10,8 +10,12 @@ public class MostraInterval {
 		int valorFinal = Integer.parseInt(Entrada.readLine());
 				
 		if (inici < 0 || valorFinal > text.length() - 1) {
-			if ((inici < 0 && valorFinal > text.length() - 1) || (inici > text.length() - 1 && valorFinal < 0)) {
+			if (inici < 0 && valorFinal > text.length() - 1) {
 				for (int a=0; a <= text.length() - 1; a++) {
+					System.out.println(text.charAt(a));
+				}
+			} else if (inici > text.length() - 1 && valorFinal < 0) {
+				for (int a=text.length() - 1; a >= 0; a--) {
 					System.out.println(text.charAt(a));
 				}
 			} else if (valorFinal > text.length() - 1) {
