@@ -10,20 +10,29 @@ public class MostraInterval {
 		int valorFinal = Integer.parseInt(Entrada.readLine());
 		
 		int valorInicial = 0;
-
-		if (inici <= valorFinal) {
+		
+		if (inici < 0 || valorFinal > text.length() - 1) {
+			if (inici < 0) {
+				for (int a=0; a <= valorFinal; a++) {
+					System.out.println(text.charAt(a));
+				}
+			} else if (valorFinal > text.length() - 1) {
+				for (; inici < text.length(); inici ++) {
+					System.out.println(text.charAt(inici));
+				}	
+			} else if (inici < 0 && valorFinal > text.length() - 1) {
+				for (int a=0; a <= text.length() - 1; a++) {
+					System.out.println(text.charAt(a));
+			}	
+		} else if (inici <= valorFinal) {
 			for (; inici <= valorFinal; inici++) {
 				System.out.println(text.charAt(inici));
 			}
 		} else if (inici > valorFinal) {
-			for (; inici >= valorFinal; inici--) {
+			for (; inici > valorFinal; inici--) {
 				System.out.println(text.charAt(inici));
 			}
-		} else if (inici < 0 || (valorFinal > text.length() - 1)) {
-			for (; inici <= valorFinal; inici++) {
-				System.out.println(text.charAt(inici));
-			}
+		}		
 		}
 	}
 }
-			
