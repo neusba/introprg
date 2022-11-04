@@ -28,7 +28,7 @@ public class MostraInterval {
 				System.out.println(text.charAt(inici));
 			}
 		} else if (inici > valorFinal) {
-			for (; inici > valorFinal; inici--) {
+			for (; inici >= valorFinal; inici--) {
 				System.out.println(text.charAt(inici));
 			}
 		
