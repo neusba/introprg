@@ -32,6 +32,11 @@ public class MostraInterval {
 				for (int a=text.length() - 1; a >= valorFinal; a--) {
 					System.out.println(text.charAt(a));
 				}
+			} else if (valorFinal < 0) {
+				int valorFinalAbsolut = Math.abs(valorFinal);
+				for (; inici <= valorFinalAbsolut; inici++) {
+					System.out.println(text.charAt(inici));
+				}	
 			} else {
 				for (; inici >= valorFinal; inici--) {
 					System.out.println(text.charAt(inici));
