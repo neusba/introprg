@@ -15,7 +15,7 @@ public class MostraInterval {
 					System.out.println(text.charAt(a));
 				}
 			} else if (inici > text.length() - 1 && valorFinal <= 0) {
-				for (int a=text.length() - 1; a >= 0; a--) {
+				for (int a=text.length() - 1; a > 0; a--) {
 					System.out.println(text.charAt(a));
 				}
 			} else if (valorFinal > text.length() - 1) {
