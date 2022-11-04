@@ -9,13 +9,13 @@ public class MostraInterval {
 		System.out.println("final?");
 		int valorFinal = Integer.parseInt(Entrada.readLine());
 				
-		if (inici < 0 || valorFinal >= text.length() - 1) {
+		if (inici < 0 || valorFinal > text.length() - 1) {
 			if (inici < 0) {
 				for (int a=0; a <= valorFinal; a++) {
 					System.out.println(text.charAt(a));
 				}
 			} else if (valorFinal > text.length() - 1) {
-				for (; inici < text.length(); inici ++) {
+				for (; inici < text.length() - 1; inici ++) {
 					System.out.println(text.charAt(inici));
 				}	
 			} else if (inici < 0 && valorFinal > text.length() - 1) {
