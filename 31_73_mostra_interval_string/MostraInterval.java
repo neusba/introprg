@@ -9,7 +9,7 @@ public class MostraInterval {
 		System.out.println("final?");
 		int valorFinal = Integer.parseInt(Entrada.readLine());
 		
-		if (inici < text.length() - 1) {
+		if (inici < 0) {
 			if (valorFinal >= 0 && valorFinal <= text.length() - 1) {
 				for (int i=0; i <= valorFinal; i++) {
 					System.out.println(text.charAt(i));
@@ -32,11 +32,11 @@ public class MostraInterval {
 		} else if (inici >= 0 && inici <= text.length() - 1) {
 			if (valorFinal >= 0 && valorFinal <= text.length() - 1) {
 				if (valorFinal >= inici) {
-					for (; inici >= valorFinal; inici--) {
+					for (; inici <= valorFinal; inici++) {
 						System.out.println(text.charAt(inici));
 					}
 				} else {
-					for (; inici <= valorFinal; inici++) {
+					for (; inici >= valorFinal; inici--) {
 						System.out.println(text.charAt(inici));
 					}
 				}
