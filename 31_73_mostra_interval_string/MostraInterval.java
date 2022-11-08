@@ -8,44 +8,47 @@ public class MostraInterval {
 		int inici = Integer.parseInt(Entrada.readLine());
 		System.out.println("final?");
 		int valorFinal = Integer.parseInt(Entrada.readLine());
-				
-		if (inici < 0 || valorFinal > text.length() - 1) {
-			if (inici < 0 && valorFinal > text.length() - 1) {
-				for (int a=0; a <= text.length() - 1; a++) {
-					System.out.println(text.charAt(a));
+		
+		if (inici < text.length() - 1) {
+			if (valorFinal >= 0 && valorFinal <= text.length() - 1) {
+				for (int i=0; i <= valorFinal; i++) {
+					System.out.println(text.charAt(i));
 				}
 			} else if (valorFinal > text.length() - 1) {
-				for (; inici < text.length(); inici ++) {
+				for (int i=0; i <= text.length() - 1; i++) {
+					System.out.println(text.charAt(i));
+				}
+			}
+		} else if (inici > text.length() - 1) {
+			if (valorFinal >= 0 && valorFinal <= text.length() - 1) {
+				for (int i=text.length() - 1; i >= valorFinal; i--) {
+					System.out.println(text.charAt(i));
+				}
+			} else if (valorFinal < text.length() - 1) {
+				for (int i=text.length() - 1; i >= 0; i--) {
+					System.out.println(text.charAt(i));
+				}
+			}
+		} else if (inici >= 0 && inici <= text.length() - 1) {
+			if (valorFinal >= 0 && valorFinal <= text.length() - 1) {
+				if (valorFinal < inici) {
+					for (; inici >= valorFinal; inici--) {
+						System.out.println(text.charAt(inici));
+					}
+				} else {
+					for (; inici <= valorFinal; inici++) {
+						System.out.println(text.charAt(inici));
+					}
+				}
+			} else if (valorFinal > text.length() - 1) {
+				for (; inici <= text.length() - 1; inici++) {
 					System.out.println(text.charAt(inici));
-				}	
-			} else if (inici < 0) {
-				for (int a=0; a <= valorFinal; a++) {
-					System.out.println(text.charAt(a));
 				}
-			}	
-		} else if (inici > text.length() - 1 || valorFinal < 0) {
-			for (int a=text.length() - 1; a > 0; a--) {
-				System.out.println(text.charAt(a));
-			}
-		} else if (inici <= valorFinal) {
-			for (; inici <= valorFinal; inici++) {
-				System.out.println(text.charAt(inici));
-			}
-		} else if (inici > valorFinal) {
-			if (inici > text.length() - 1) {
-				for (int a=text.length() - 1; a >= valorFinal; a--) {
-					System.out.println(text.charAt(a));
-				}
-			} else if (valorFinal < 0) {
+			} else if (valorFinal < text.length() - 1) {
 				for (; inici >= 0; inici--) {
 					System.out.println(text.charAt(inici));
 				}
-			} else {
-				for (; inici >= valorFinal; inici--) {
-					System.out.println(text.charAt(inici));
 			}
-			}
-		
 		}
 	}
 }

@@ -1,0 +1,20 @@
+set nocompatible 
+set hlsearch
+syntax on
+filetype plugin on
+set number 
+set incsearch
+set showmatch
+set ignorecase 
+set list
+set statusline
+set scrolloff=num
+set wrap
+set autoindent
+set smartindent
+set expandtab 'Dont use real tabs
+set cursorline
+vnoremap
+set clipboard
+set mouse
+
