@@ -10,11 +10,11 @@ public class CadenaContinua {
 		if (text.isEmpty() && text.isBlank()) {
 			System.out.println("error");
 		} else if (nombre > 1) {
-			int modul = nombre % (text.length() - 1);
+			int modul = nombre % (text.length());
 			if (modul == 0) {
 				System.out.println(text);
 			} else if (modul != 0) {
-				int repeat = nombre / (text.length() - 1);
+				int repeat = nombre / (text.length());
 				System.out.print(text.repeat(repeat));
 				for (int inici=0; inici <= modul; inici++) {
 					System.out.print(text.charAt(inici));
