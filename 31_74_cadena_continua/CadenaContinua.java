@@ -4,12 +4,12 @@ public class CadenaContinua {
 	public static void main(String[] args) {
 		System.out.println("Text?");
 		String text = Entrada.readLine();
-		System.out.println("Nombre?");
-		int nombre = Integer.parseInt(Entrada.readLine());
 		
 		if (text.isEmpty()) {
 			System.out.println("error");
 		} else {
+			System.out.println("Nombre?");
+			int nombre = Integer.parseInt(Entrada.readLine());
 			int modul = nombre % (text.length());
 			if (modul == 0) {
 				System.out.println(text);
