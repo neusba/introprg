@@ -7,9 +7,9 @@ public class CadenaContinua {
 		System.out.println("Nombre?");
 		int nombre = Integer.parseInt(Entrada.readLine());
 		
-		if (text.isBlank()) {
+		if (text.isEmpty()) {
 			System.out.println("error");
-		} else if (nombre > 1) {
+		} else {
 			int modul = nombre % (text.length());
 			if (modul == 0) {
 				System.out.println(text);
