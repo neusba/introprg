@@ -14,20 +14,17 @@ public class EsEnter {
 				for (int i=0; i <= stripText.length() - 1; i++) {
 					if (Character.isDigit(stripText.charAt(i))) {
 						System.out.println("És enter");
+					} else { 
+						int intStripText = Integer.parseInt(stripText);
+						intStripText = Math.abs(intStripText);
+						if (intStripText >= 0) {
+							System.out.println("És enter");
+						}
 					}
-				}
-			} else {
-				int intStripText = Integer.parseInt(stripText);
-				intStripText = Math.abs(intStripText);
-				if (intStripText >= 0) {
-					System.out.println("És enter");
 				}
 			}
 			text = Entrada.readLine();
 		}
 		System.out.println("Adéu");
 	}
-}
-					
-				
-				
+}	
