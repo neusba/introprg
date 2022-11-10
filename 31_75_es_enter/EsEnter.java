@@ -16,6 +16,12 @@ public class EsEnter {
 						System.out.println("És enter");
 					}
 				}
+			} else {
+				int intStripText = Integer.parseInt(stripText);
+				intStripText = Math.abs(intStripText);
+				if (intStripText >= 0) {
+					System.out.println("És enter");
+				}
 			}
 			text = Entrada.readLine();
 		}
