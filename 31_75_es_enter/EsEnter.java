@@ -19,7 +19,7 @@ public class EsEnter {
 				}
 				intStripDigitText = Integer.parseInt(stripDigitText);
 				if (intStripDigitText >= 0 || intStripDigitText < 0) {
-					System.out.println("És enter");
+					System.out.println("No és enter");
 				}	
 			}	
 			text = Entrada.readLine();
