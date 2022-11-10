@@ -11,8 +11,6 @@ public class EsEnter {
 			
 			if (Character.isLetter(stripText.charAt(0))) {
 				System.out.println("No és enter");
-			} else if (stripText.startsWith("+") || stripText.startsWith("-") || stripText.endsWith("+") || stripText.endsWith("-")) {
-				System.out.println("No és enter");		
 			} else {
 				for (int i=0; i < stripText.length(); i++) {
 					if (Character.isDigit(stripText.charAt(i))) {
