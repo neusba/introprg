@@ -10,7 +10,7 @@ public class CadenaContinua {
 		} else {
 			System.out.println("Nombre?");
 			int nombre = Integer.parseInt(Entrada.readLine());
-			if (nombre > 1) {
+			if (nombre >= 1) {
 				int modul = nombre % (text.length()); // Serán les lletres extres després de la paraula estàndar. 
 				int repeticio = nombre / text.length(); // La repetició és les vegades que es repetirà la paraula sencera per omplicar el recorregut dels caràcter demanats
 				if (modul == 0) {
