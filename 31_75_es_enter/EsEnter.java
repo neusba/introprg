@@ -1,6 +1,6 @@
 /* Programa que demana texts per entrada fins que rep un buit, quan no sigui buit ens dirà si és un nombre enter escrit amb dígits tot ignorant els espais extra a l'inici i al final del text i es pot acceptar el signe +/- */
 
-public class esEnter {
+public class EsEnter {
 	public static void main(String[] args) {
 		System.out.println("Introdueix texts (enter sol per finalitzat)");
 		String text = Entrada.readLine();
