@@ -5,7 +5,7 @@ public class EsEnter {
 		System.out.println("Introdueix texts (enter sol per finalitzar)");
 		String text = Entrada.readLine();
 
-		while (!text.isEmpty() || !text.isBlank()) {
+		while (!text.isEmpty()) {
 			String stripText = text.strip();
 			
 			if (Character.isLetter(stripText.charAt(0))) {
