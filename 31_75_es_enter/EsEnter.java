@@ -22,7 +22,7 @@ public class EsEnter {
 					System.out.println("És enter");
 				}
 			}
-			text = Entrada.readLine();
+		text = Entrada.readLine();
 		}
 		System.out.println("Adéu");
 	}
