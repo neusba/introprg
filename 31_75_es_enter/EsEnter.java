@@ -15,12 +15,11 @@ public class EsEnter {
 				for (int i=0; i < stripText.length(); i ++) {
 					if (Character.isDigit(stripText.charAt(i))) {
 						stripDigitText = stripDigitText + i;
-					}
-				}
+					}	
 				int intStripDigitText = Integer.parseInt(stripDigitText);
-				intStripDigitText = Math.abs(intStripDigitText);
 				if (intStripDigitText >= 0 || intStripDigitText < 0) {
 					System.out.println("És enter");
+				}
 				}
 			} else {
 				int stripTextEnter = Integer.parseInt(stripText);
