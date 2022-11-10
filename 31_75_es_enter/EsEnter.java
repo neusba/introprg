@@ -2,7 +2,7 @@
 
 public class EsEnter {
 	public static void main(String[] args) {
-		System.out.println("Introdueix texts (enter sol per finalitzat)");
+		System.out.println("Introdueix texts (enter sol per finalitzar)");
 		String text = Entrada.readLine();
 
 		while (!text.isEmpty()) {
