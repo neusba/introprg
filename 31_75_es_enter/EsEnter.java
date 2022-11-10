@@ -16,7 +16,7 @@ public class EsEnter {
 					if (Character.isDigit(stripText.charAt(i))) {
 						stripDigitText = stripDigitText + i;
 					}	
-				int intStripDigitText = Integer.parseInt(stripDigitText);
+				int intStripDigitText = Integer.valueOf(stripDigitText);
 				if (intStripDigitText >= 0 || intStripDigitText < 0) {
 					System.out.println("És enter");
 				}
