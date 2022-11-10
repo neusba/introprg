@@ -14,7 +14,7 @@ public class EsEnter {
 				String stripDigitText = " ";
 				for (int i=0; i < stripText.length(); i ++) {
 					if (Character.isDigit(stripText.charAt(i))) {
-						stripDigitText = stripDigitText + stripDigitText.charAt(i);
+						stripDigitText = stripDigitText + i;
 					}
 				}
 				int intStripDigitText = Integer.parseInt(stripDigitText);
