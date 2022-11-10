@@ -12,6 +12,7 @@ public class EsEnter {
 				System.out.println("No és enter");
 			} else {
 				int intStripText = Integer.parseInt(stripText);
+				intStripText = Math.abs(intStripText);
 				if (intStripText >= 0 || intStripText < 0) {
 					System.out.println("És enter");
 				}
