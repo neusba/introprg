@@ -16,11 +16,11 @@ public class EsEnter {
 					if (Character.isDigit(stripText.charAt(i))) {
 						stripDigitText = stripDigitText + i;
 					}
+				}
 				intStripDigitText = Integer.parseInt(stripDigitText);
 				if (intStripDigitText >= 0 || intStripDigitText < 0) {
 					System.out.println("És enter");
-				}
-				}
+				}	
 			}	
 			text = Entrada.readLine();
 		}
