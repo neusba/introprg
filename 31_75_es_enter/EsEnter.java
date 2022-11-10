@@ -10,9 +10,9 @@ public class EsEnter {
 			
 			if (Character.isLetter(stripText.charAt(0))) {
 				System.out.println("No és enter");
-			} else {
+			} else if (stripText.startsWith("+") || stripText.endsWith("-") || stripText.startsWith("-") || stripText.endsWith("+")) {
 				String stripDigitText = " ";
-				for (int i=0; i <= stripText.length() - 1; i++) {
+				for (int i=0; i < stripText.length(); i ++) {
 					if (Character.isDigit(stripText.charAt(i))) {
 						stripDigitText = stripDigitText + stripDigitText.charAt(i);
 					}
@@ -21,9 +21,13 @@ public class EsEnter {
 				if (intStripDigitText >= 0 || intStripDigitText < 0) {
 					System.out.println("És enter");
 				}
+			} else {
+				System.out.println("És enter");
 			}
-		text = Entrada.readLine();
+			text = Entrada.readLine();
 		}
 		System.out.println("Adéu");
 	}
 }
+
+					
