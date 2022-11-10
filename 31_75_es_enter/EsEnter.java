@@ -10,11 +10,11 @@ public class EsEnter {
 			
 			if (Character.isLetter(stripText.charAt(0))) {
 				System.out.println("No és enter");
-			} else {
-				int intStripText = Integer.parseInt(stripText);
-				intStripText = Math.abs(intStripText);
-				if (intStripText >= 0 || intStripText < 0) {
-					System.out.println("És enter");
+			} else if (stripText.startsWith("+") || stripText.endsWith("-") || stripText.startsWith("-") || stripText.endsWith("+")) {
+				for (int i=0; i <= stripText.length() - 1; i++) {
+					if (Character.isDigit(stripText.charAt(i))) {
+						System.out.println("És enter");
+					}
 				}
 			}
 			text = Entrada.readLine();
