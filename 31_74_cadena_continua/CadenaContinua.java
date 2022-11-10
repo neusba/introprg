@@ -10,17 +10,22 @@ public class CadenaContinua {
 		} else {
 			System.out.println("Nombre?");
 			int nombre = Integer.parseInt(Entrada.readLine());
-			int modul = nombre % (text.length());
-			if (modul == 0) {
-				System.out.println(text);
-			} else if (modul != 0) {
-				int repeat = nombre / (text.length());
-				System.out.print(text.repeat(repeat));
-				for (int inici=0; inici <= modul; inici++) {
-					System.out.print(text.charAt(inici));
+			if (nombre > 1) {
+				int modul = nombre % (text.length()); // Serán les lletres extres després de la paraula estàndar. 
+				int repeticio = nombre / text.length(); // La repetició és les vegades que es repetirà la paraula sencera per omplicar el recorregut dels caràcter demanats
+				if (modul == 0) {
+					System.out.print(text.repeat(repeticio)); // En aquest cas la repeticio la utilitzem per saber quantes vegades és la paraula sencera en tot el recorregut	
+				} else if (modul != 0) {
+					System.out.print(text.repeat(repeticio)); // En aquest cas la repeticio la utilitzem per saber quantes vegades és la paraula sencera en tot el recorregut
+					for (int inici=0; inici < modul; inici++) {
+						System.out.print(text.charAt(inici));
+					}
 				}
 			}
 		}
 	}
 }
+		
+	
+
 			
