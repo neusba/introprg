@@ -22,7 +22,10 @@ public class EsEnter {
 					System.out.println("És enter");
 				}
 			} else {
-				System.out.println("És enter");
+				int stripTextEnter = Integer.parseInt(stripText);
+				if (stripTextEnter >= 0 || stripTextEnter < 0) {
+					System.out.println("És enter");
+				}
 			}
 			text = Entrada.readLine();
 		}
