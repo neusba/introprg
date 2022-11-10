@@ -18,6 +18,7 @@ public class EsEnter {
 					}
 				}
 				intStripDigitText = Integer.parseInt(stripDigitText);
+				intStripDigitText = Math.abs(intStripDigitText);
 				if (intStripDigitText >= 0 || intStripDigitText < 0) {
 					System.out.println("És enter");
 				}	
