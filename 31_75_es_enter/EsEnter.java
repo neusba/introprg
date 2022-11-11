@@ -17,7 +17,9 @@ public class EsEnter {
 					System.out.println("No és enter");
 				}
 			} else {
-				System.out.println("No és enter");
+				int stripDigitText = Integer.parseInt(stripText);
+				stripDigitText = Math.abs(stripDigitText);
+				System.out.println("És enter");
 			}
 		text = Entrada.readLine();
 		}
