@@ -13,13 +13,19 @@ public class EsEnter {
 			} else if (Character.isDigit(stripText.charAt(0))) {
 				if (Character.isDigit(stripText.charAt(stripText.length() - 1))) {
 					System.out.println("És enter");
-				} else {
-					System.out.println("No és enter");
 				}
 			} else {
-				int stripDigitText = Integer.parseInt(stripText);
-				stripDigitText = Math.abs(stripDigitText);
-				System.out.println("És enter");
+				int contadorSignes = 0; // Afegeix un cada vegada que un caràcter és un número
+				for (int i=0; i < stripText.length(); i++) {
+					if (Character.isDigit(stripText.charAt(i))) {
+						contadorSignes += 1;
+					}
+				}
+				if (contadorSignes > 1) {
+					System.out.println("No és enter");
+				} else {
+					System.out.println("És enter");
+				}
 			}
 		text = Entrada.readLine();
 		}
