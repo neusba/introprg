@@ -21,10 +21,10 @@ public class EsEnter {
 						contadorSignes += 1;
 					}
 				}
-				if (contadorSignes > 1) {
-					System.out.println("No és enter");
-				} else {
+				if (contadorSignes <= 1) {
 					System.out.println("És enter");
+				} else {
+					System.out.println("No és enter");
 				}
 			}
 		text = Entrada.readLine();
