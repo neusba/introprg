@@ -5,27 +5,23 @@ public class ConteDarrer {
 		System.out.println("Introdueix texts (enter sol per finalitzar)");
 		String text = Entrada.readLine();
 		
-		int contadorText = 0;	
 		while (!text.isEmpty()) {
-			contadorText += 1;
-			if (contadorText == 1) {
-				System.out.println("bé");
-			} else {
-				char darreraLletra = text.charAt(text.length() - 1);
-				for (int i=0; i < text.length(); i++) {
-					if (text.charAt(i) == darreraLletra) {
-						System.out.println("bé");
-						text = Entrada.readLine();
-					} else {
-						break;
-					}
-				break;
+			char darreraLletra = text.charAt(text.length() - 1);
+			boolean conteLletra = false;
+			for (int i=0; i < text.length() - 1; i++) {
+				if (text.charAt(i) == darreraLletra) {
+					conteLletra = true;
+					break;
 				}
-			break;
 			}
-		break;
+			if (conteLletra) {
+				System.out.println("bé");
+				text = Entrada.readLine();
+			}
 		}
 		System.out.println("Adéu");
 	}
 }
-		
+
+					
+			
