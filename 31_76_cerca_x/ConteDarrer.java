@@ -10,15 +10,16 @@ public class ConteDarrer {
 			contadorText += 1;
 			if (contadorText == 1) {
 				System.out.println("bé");
-			}
-			char darreraLletra = text.charAt(text.length() - 1);
-			boolean conteLletra = false;
-			for (int i=0; i < text.length(); i ++) {
-				if (text.charAt(i) == darreraLletra) {
-					System.out.println("bé");
-					text = Entrada.readLine();
-				} else {
-					break;
+			} else {
+				char darreraLletra = text.charAt(text.length() - 1);
+				boolean conteLletra = false;
+				for (int i=0; i < text.length(); i ++) {
+					if (text.charAt(i) == darreraLletra) {
+						System.out.println("bé");
+						text = Entrada.readLine();
+					} else {
+						break;
+					}
 				}
 			}
 		}
