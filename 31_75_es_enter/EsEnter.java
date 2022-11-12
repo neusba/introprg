@@ -14,7 +14,7 @@ public class EsEnter {
 				if (Character.isLetter(stripText.charAt(i))) {
 					contadorLletres += 1;
 				}
-				if (Character.isDigit(stripText.charAt(i))) {
+				if (!Character.isDigit(stripText.charAt(i))) {
 					contadorSignes += 1;
 				}
 			}
@@ -23,9 +23,9 @@ public class EsEnter {
 			} else if (contadorLletres == 0) {
 				System.out.println("És enter");
 			} else if (contadorSignes > 1) {
-				System.out.println("És enter");
-			} else if (contadorSignes <= 1) { 
 				System.out.println("No és enter");
+			} else if (contadorSignes <= 1) { 
+				System.out.println("És enter");
 			}
 		text = Entrada.readLine();
 		}
