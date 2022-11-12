@@ -12,8 +12,7 @@ public class ConteDarrer {
 				System.out.println("bé");
 			} else {
 				char darreraLletra = text.charAt(text.length() - 1);
-				boolean conteLletra = false;
-				for (int i=0; i < text.length(); i ++) {
+				for (int i=0; i < text.length(); i++) {
 					if (text.charAt(i) == darreraLletra) {
 						System.out.println("bé");
 						text = Entrada.readLine();
