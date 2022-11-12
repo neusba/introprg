@@ -14,7 +14,7 @@ public class EsEnter {
 				if (Character.isLetter(stripText.charAt(i))) {
 					contadorLletres += 1;
 				}
-				if (!Character.isDigit(stripText.charAt(i))) {
+				if (!Character.isDigit(stripText.charAt(i)) && !Character.isLetter(stripText.charAt(i))) {
 					contadorSignes += 1;
 				}
 			}
