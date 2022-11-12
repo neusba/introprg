@@ -22,7 +22,7 @@ public class EsEnter {
 				System.out.println("No és enter");
 			} else if (contadorLletres == 0) {
 				System.out.println("És enter");
-			} else if (contadorSignes > 1) {
+			} else if (contadorSignes > 2) {
 				System.out.println("No és enter");
 			} else if (contadorSignes <= 1) { 
 				System.out.println("És enter");
