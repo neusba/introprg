@@ -8,24 +8,24 @@ public class EsEnter {
 		while (!text.isEmpty()) {
 			String stripText = text.strip();
 			
-			if (Character.isLetter(stripText.charAt(0))) {
+			int contadorLletres = 0; // Afegeix un cada vegada que un carácter és una lletra
+			int contadorSignes = 0; // Afegeix un cada vegada que un caràcter és un número
+			for (int i=0; i < stripText.length(); i++) {
+				if (Character.isLetter(stripText.charAt(i))) {
+					contadorLletres += 1;
+				}
+				if (Character.isDigit(stripText.charAt(i))) {
+					contadorSignes += 1;
+				}
+			}
+			if (contadorLletres >= 1) {
 				System.out.println("No és enter");
-			} else if (Character.isDigit(stripText.charAt(0))) {
-				if (Character.isDigit(stripText.charAt(stripText.length() - 1))) {
-					System.out.println("És enter");
-				}
+			} else if (contadorLletres == 0) {
+				System.out.println("És enter");
+			} else if (contadorSignes < 1) {
+				System.out.println("És enter");
 			} else {
-				int contadorSignes = 0; // Afegeix un cada vegada que un caràcter és un número
-				for (int i=0; i < stripText.length(); i++) {
-					if (Character.isDigit(stripText.charAt(i))) {
-						contadorSignes += 1;
-					}
-				}
-				if (contadorSignes > 1) {
-					System.out.println("És enter");
-				} else {
-					System.out.println("No és enter");
-				}
+				System.out.println("No és enter");
 			}
 		text = Entrada.readLine();
 		}
