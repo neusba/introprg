@@ -23,9 +23,9 @@ public class EsEnter {
 			} else if (contadorLletres == 0) {
 				System.out.println("És enter");
 			} else if (contadorSignes > 1) {
-				System.out.println("No és enter");
-			} else if (contadorSignes <= 1) { 
 				System.out.println("És enter");
+			} else if (contadorSignes <= 1) { 
+				System.out.println("No és enter");
 			}
 		text = Entrada.readLine();
 		}
