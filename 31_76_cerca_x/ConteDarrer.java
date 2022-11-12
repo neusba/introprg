@@ -19,8 +19,11 @@ public class ConteDarrer {
 					} else {
 						break;
 					}
+				break;
 				}
+			break;
 			}
+		break;
 		}
 		System.out.println("Adéu");
 	}
