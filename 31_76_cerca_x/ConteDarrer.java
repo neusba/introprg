@@ -10,8 +10,7 @@ public class ConteDarrer {
 			boolean conteLletra = false;
 			for (int i=0; i < text.length() - 1; i++) {
 				if (text.charAt(i) == darreraLletra) {
-					conteLletra = true;
-					break;
+					System.out.println("HOla");
 				}
 			}
 			if (conteLletra) {
