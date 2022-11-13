@@ -2,21 +2,4 @@
 # És MOLT IMPORTANT que no el modifiquis de cap manera o prgtest podria deixar de funcionar
 # En cas de modificació o eliminació accidental, parla amb el teu docent.
 #
-2022-10-13T17:15:51.514929,fail,_b+FfuYRFflVR,F)U+dGBR#ub#pFaa$$CFKxt)jYHwj~WMOr4baH87E^l&YEHg1*GdW*nZe(S4X>MUGGdVahH)J_6H#B56H#RUhV`MjEWMVimGcjQ_Gi5Y4Ib|?7G-5R{EM,H!,(,F,bH,~
-2022-10-13T17:17:23.500836,fail,ntIc70oI5IglH,GAv_eGBR#ub#pFaa$$CFKxt)jYHwj~WMOr4baH87E^l&YEHg1*GdW*nZe(S4X>MUGH8^E7G&yB8Gi5,8(S1,W;HZ2VKO#mV>dNpGC5*3EM_b,+FfuYR,FflVR,H!(Lb,HU
-2022-10-13T17:18:56.631271,fail,g1*GdW*nZe(S4X>MUGF*G<cVKif9Fkv}nH8f^1HaKBqFfunXH90XjIbt_vI5#shVKg{4EM_b+Ffu,Gc03fGBR#ub#pFaa$$CFKxt)jYHwj~WMOr4baH87E^l&YEH,YRFflVRH,!(O,dH,v
-2022-10-13T17:24:50.280086,fail,R#ub#pFaa$$CFKxt)jYHwj~WMOr4baH87E^l&YEHg1*GdW*nZe(S4X>MUGI5K53I5aUcV_`IAGGZ|^Ib<*~Wn(vCHD+NnGGjD2I5{*kGC46eEM_b+FfuYRFflVRH,G%RCgGB,!,?IcG,5
-2022-10-13T18:53:49.172755,fail,I5c81Ib=96V>L85WjQcnH),H7sLhGBR#ub#pFaa$$CFKxt)jYHwj~WMOr4baH87E^l&YEHg1*GdW*nZe(S4X>MUGH8V0cFfuVYG-PBr,LWmVlp*0IW;&jE,M_b+FfuY,RFflVRI5jg,fG,X
-2022-10-13T18:55:55.685163,fail,flVRI5,HY{UiGBR#ub#pFaa$$CFKxt)jYHwj~WMOr4baH87E^l&YEHg1*GdW*nZe(S4X>MUGF*P}6WivH0WnpACG&eLdWin=FW@0ciGi768Vq#@wGdDOkV=*~1EM_b+FfuYRF,jmi,G5
-2022-10-13T18:56:58.073996,fail,GBR#ub#pFaa$$CFKxt)jYHwj~WMOr4baH87E^l&,H!Ndj,YEHg1*GdW*nZe(S4X>MUGHfCirH#RddFl1pcFg,Y+WFfe5~Wi>NqVK6skW@TYxFfuYVFf(H{EM_b+Ffu,YRFflVRI5j,pjG,y
-2022-10-13T18:57:59.652198,fail,H#cErG-hUGIWlBsVl*;0I5A{nVm3EnWMpMyHD+OBIAS$6,I4omkGBR#ub#pFaa$$CFKxt)jYHwj~WMOr4baH87E^l&YEHg1*GdW*nZe(S4X>MUG,V=ypcEM_b,+Ff,uYR,Ff,lVRI5jskH,2
-2022-10-13T18:59:13.608102,fail,*GdW*nZe(S4X>MUGFlIS8HZn3cH85dfW->N8VPauqWMVcsWnnTfI5IF}GB-A4V`Dj,IV@vlGBR#ub#pFaa$$CFKxt)jYHwj~WMOr4baH87E^l&YEHg1,G,EM_b+FfuY,RFflVRI5,jvm,IR
-2022-10-13T18:59:44.652755,fail,(F~b98cPVJ>fSXDl-@Uo$y,F)%D+W->BvWp#5dVsc@2Z$N2fb82s4Ze,hWo~3;c4=;5EIDLjWH&Q1G%+|gGcqtRHa0RbV>U7~F*Y|dV`eZlH!)&0Fg9c~GAw2+GB7eSF)%S,RF*r3j,G,B*
-2022-10-13T19:00:28.461981,fail,eSF)%SR,F)=J-W->BvWp#5dVsc@2Z$N2fb82s4Ze(F~b98cPVJ>fSXDl-@Uo$yhWo~3;c4=;5EMze>HDWb3Fl90_VKg{mGG%5tFg9diWimN4W;iu5V`5`AV>dQ6V=QJYGB7,F*z,_W,F,);
-2022-10-13T19:01:43.985916,fail,>BvWp#5dVsc@2Z$N2fb82s4Ze(F~b98cPVJ>fSXDl-@Uo$yhWo~3;c4=;5EI2bVIX5*oHDhCCV>DwqWjQo4H928pWMyG9W;Ql8WiT)>GBq_YWGrSZGB7eSF)%SRF*z_X,F)}P;W-,G,C2
-2022-10-13T19:03:19.657874,fail,W->BvWp#5dVsc@,F*7V<,2Z$N2fb82s4Ze(F~b98cPVJ>fSXDl-@Uo$yhWo~3;c4=;5EM_udGB7w|F<~|{I5lKtWH&TsG-6~qGBh?eVq!2jF,)(2?V`MR5IV@%@GB,7eSF),%SRF*z_,Z,Ff,s
-2022-10-13T19:04:12.441626,fail,l-@Uo$yhWo~3;c4=;5EHPp+Wi>J}W@a%lIc7I7Ff?U3GGQ_|H8NsjG,F*Gb=W->BvWp#5dVsc@2Z$N2fb82s4Ze(F~b98cPVJ>fSXD,d4J4Gh;L}GcYkTW-MkbGB7eSF)%SRF*z_Z,H8,%
-2022-10-13T19:04:56.308820,fail,>BvWp#5dVsc@2Z$N2fb82s4Ze(F~b98cPVJ>fSXDl-@Uo$yhWo~3;c4=;5EHE=PW;iloFl1pdHDWR}GBsjiH)LTnGBIUlWMnuo,F*Ph>W-,HDfnpW;rx8WGrSZGB7eSF)%SRF*z_,aG,%^
-2022-10-13T19:05:53.846668,fail,5EHY#@V_`QpVq{@BIW;sgIbk_8WMg4DFk)e0W,F*Yn?W->BvWp#5dVsc@2Z$N2fb82s4Ze(F~b98cPVJ>fSXDl-@Uo$yhWo~3;c4=;,HdE6F*7hXF=I3_GAw2+,GB,7,eSF)%,SRF*z_b,Gd,2
-2022-10-13T19:10:57.106629,fail,SF)%SRF,F*ht@W->BvWp#5dVsc@2Z$N2fb82s4Ze(F~b98cPVJ>fSXDl-@Uo$yhWo~3;c4=;5EI4I2H8nXoW@2SzW;Hc6V>4kjG&p5uH)Jq2H(_EkFkv(^VqrL8Ff3*)GB7e,*z|XG,%)
-2022-10-13T19:11:57.549081,pass,hWo~3;c,F*qz^W->BvWp#5dVsc@2Z$N2fb82s4Ze(F~b98cPVJ>fSXDl-@Uo$y,4=;5EH*Y|HDNhpGhs3^I,5je5VKZShGd43fHe)h0F)?E}Vq#=BHfCcrH!N^,0GB,7eSF)%SRF*z|,Y,G,dB
+2022-11-13T22:47:12.840030,pass,b#rubX<;s,V`efkZe?|IE@E<Fc5gswWpiq8VQyq$,Ja%U_vF<&z|UuAA&Wp-(9VJu@bWM(-uWHvWsGC43bF*!LjWMnolW;S6pH8D3hFgGwZG%{m2Ff}Z2E,HW@MGBGeQ,IWaLaH#,Io
