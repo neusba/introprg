@@ -4,9 +4,9 @@ public class ConteDarrer {
 	public static void main(String[] args) {
 		System.out.println("Introdueix texts (enter sol per finalitzar)");
 		String text = Entrada.readLine();
-	
+		char darreraLletraAnterior = text.charAt(text.length() - 1);
+		int contadorText = 0;	
 		while (!text.isEmpty()) {
-			char darreraLletraAnterior = text.charAt(text.length() - 1);
 			boolean conteLletra = false;
 			for (int i=0; i < text.length(); i++) {
 				Character.toLowerCase(text.charAt(i));
@@ -21,6 +21,9 @@ public class ConteDarrer {
 			}
 		text = Entrada.readLine();
 		char darreraLletraNova = text.charAt(text.length() - 1);
+		if (contadorText > 2) {
+			darreraLletraAnterior = darreraLletraNova;
+		}
 		}
 		System.out.println("Adéu");
 	}
