@@ -19,6 +19,8 @@ public class ConteDarrer {
 			} else {
 				break;
 			}
+
+			text = Entrada.readLine();
 		}
 		System.out.println("Adéu");
 	}
