@@ -23,13 +23,15 @@ public class Endevina {
 				} else if (nombreDigit < 42) {
 					System.out.println("Massa petit");
 				} else {
-					System.out.println("Has encertat!");
+					System.out.println("Encertat!");
 					break;
 				}
 			}
 			System.out.println("Nombre?");
 			nombre = Entrada.readLine();
 		}
-		System.out.println("Cancel·lat!");
+		if (nombre.isEmpty()) {
+			System.out.println("Cancel·lat!");
+		}
 	}
 }
