@@ -4,13 +4,13 @@ public class ConteDarrer {
 	public static void main(String[] args) {
 		System.out.println("Introdueix texts (enter sol per finalitzar)");
 		String text = Entrada.readLine();
-		
+			
 		while (!text.isEmpty()) {
 			char darreraLletra = text.charAt(text.length() - 1);
 			boolean conteLletra = false;
 			for (int i=0; i < text.length(); i++) {
 				Character.toLowerCase(text.charAt(i));
-				if (text.charAt(i) == darreraLletra) {
+				if (text.charAt(i) ==  darreraLletra) {
 					conteLletra = true;
 				}
 			}
@@ -19,8 +19,8 @@ public class ConteDarrer {
 			} else {
 				break;
 			}
-
-			text = Entrada.readLine();
+		text = Entrada.readLine();
+		darreraLletra = text.charAt(text.length() - 1);
 		}
 		System.out.println("Adéu");
 	}
