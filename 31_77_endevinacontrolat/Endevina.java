@@ -13,7 +13,7 @@ public class Endevina {
 				}
 			}
 			if (conteLletres) {
-				System.out.println("Només Lletres");
+				System.out.println("Només nombres");
 			} else {
 				int nombreDigit = Integer.parseInt(nombre);
 				if (nombreDigit < 1 || nombreDigit > 100) {
