@@ -8,19 +8,21 @@ public class ConteDarrer {
 		while (!text.isEmpty()) {
 			char darreraLletra = text.charAt(text.length() - 1);
 			boolean conteLletra = false;
-			for (int i=0; i < text.length() - 1; i++) {
+			for (int i=0; i < text.length(); i++) {
+				Character.toLowerCase(text.charAt(i));
 				if (text.charAt(i) == darreraLletra) {
-					System.out.println("HOla");
+					conteLletra = true;
 				}
 			}
 			if (conteLletra) {
 				System.out.println("bé");
-				text = Entrada.readLine();
+			} else {
+				break;
 			}
+		text = Entrada.readLine();
 		}
 		System.out.println("Adéu");
 	}
 }
 
 					
-			
