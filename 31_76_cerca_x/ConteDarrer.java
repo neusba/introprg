@@ -4,12 +4,12 @@ public class ConteDarrer {
 	public static void main(String[] args) {
 		System.out.println("Introdueix texts (enter sol per finalitzar)");
 		String text = Entrada.readLine();
+		text = text.toLowerCase();
 		char darreraLletra = text.charAt(text.length() - 1);
 		int contadorText = 0;
 		
 		while (!text.isEmpty()) {
 			contadorText += 1;
-			text = text.toLowerCase();
 			boolean conteLletra = false;
 			for (int i=0; i < text.length(); i++) {
 				if (text.charAt(i) == darreraLletra) {
