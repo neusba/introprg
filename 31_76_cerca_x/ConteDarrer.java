@@ -7,7 +7,7 @@ public class ConteDarrer {
 		char darreraLletra = text.charAt(text.length() - 1);
 		int contadorText = 0;
 		
-		while (!text.isEmpty() || !text.isBlank()) {
+		while (!text.isEmpty()) {
 			contadorText += 1;
 			text = text.toLowerCase();
 			boolean conteLletra = false;
