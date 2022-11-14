@@ -23,7 +23,6 @@ public class ConteDarrer {
 			}
 			char darreraNovaLletra = text.charAt(text.length() - 1);	
 			text = Entrada.readLine();
-			text = text.toLowerCase();
 			if (contadorText >= 2) {
 				char auxiliar = darreraLletra;
 				darreraLletra = darreraNovaLletra;
