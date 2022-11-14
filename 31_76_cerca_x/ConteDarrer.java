@@ -5,10 +5,10 @@ public class ConteDarrer {
 		System.out.println("Introdueix texts (enter sol per finalitzar)");
 		String text = Entrada.readLine();
 		int contadorText = 0;
-		
 		char darreraLletra = text.charAt(text.length() - 1);
+		text = text.toLowerCase();
+
 		while (!text.isEmpty()) {
-			text = text.toLowerCase();
 			contadorText += 1;
 			boolean conteLletra = false;
 			for (int i=0; i < text.length(); i++) {
