@@ -14,6 +14,7 @@ public class VocalsMajuscules {
 				for (int j=0; j < vocals.length(); j++) {
 					if (text.charAt(i) == vocals.charAt(j)) {
 						letra = Character.toUpperCase(text.charAt(i));
+						break;
 					}
 				}
 			nouText = nouText + letra;
