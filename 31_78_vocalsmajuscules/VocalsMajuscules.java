@@ -4,7 +4,6 @@ public class VocalsMajuscules {
 	public static void main(String[] args) {
 		System.out.println("Text?");
 		String text = Entrada.readLine();
-		text = text.toLowerCase();
 		String vocals = "aeiou";
 		
 		for (int i=0; i < text.length(); i++) {
