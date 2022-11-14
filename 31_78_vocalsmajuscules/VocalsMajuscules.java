@@ -12,6 +12,7 @@ public class VocalsMajuscules {
 		for (int i=0; i < text.length(); i++) {
 			if (Character.isLetter(text.charAt(i))) {
 				for (int j=0; j < vocals.length(); j++) {
+					letra = text.charAt(i);
 					if (text.charAt(i) == vocals.charAt(j)) {
 						letra = Character.toUpperCase(text.charAt(i));
 						break;
