@@ -16,9 +16,9 @@ public class VocalsMajuscules {
 						letra = Character.toUpperCase(text.charAt(i));
 						break;
 					}
-				nouText = nouText + letra;
 				}
 			}
+			nouText = nouText + letra;
 		}
 		System.out.println(nouText);
 		}
