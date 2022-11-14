@@ -4,13 +4,16 @@ public class VocalsMajuscules {
 	public static void main(String[] args) {
 		System.out.println("Text?");
 		String text = Entrada.readLine();
+		text = text.toLowerCase();
 		String vocals = "aeiou";
-		
+
 		for (int i=0; i < text.length(); i++) {
 			if (Character.isLetter(text.charAt(i))) {
 				for (int j=0; j < vocals.length(); j++) {
 					if (text.charAt(i) == vocals.charAt(j)) {
+						// Hacer mayúscula la minúscula 
 						Character.toUpperCase(text.charAt(i));
+
 					}
 				}
 			}
@@ -18,5 +21,4 @@ public class VocalsMajuscules {
 		System.out.println(text);
 	}
 }
-
 		
