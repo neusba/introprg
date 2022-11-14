@@ -8,7 +8,7 @@ public class ConteDarrer {
 		char darreraLletra = text.charAt(text.length() - 1);
 		int contadorText = 0;
 		
-		while (!text.isEmpty()) {
+		while (!text.isEmpty() || !text.isBlank()) {
 			contadorText += 1;
 			boolean conteLletra = false;
 			for (int i=0; i < text.length(); i++) {
