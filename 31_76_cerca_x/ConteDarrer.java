@@ -11,6 +11,7 @@ public class ConteDarrer {
 			text = text.toLowerCase();
 		}
 		while (!text.isEmpty()) {
+			text = text.toLowerCase();
 			contadorText += 1;
 			boolean conteLletra = false;
 			for (int i=0; i < text.length(); i++) {
