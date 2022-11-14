@@ -17,8 +17,8 @@ public class VocalsMajuscules {
 						break;
 					}
 				}
-			}
 			nouText = nouText + letra;
+			}
 		}
 		System.out.println(nouText);
 		}
