@@ -21,7 +21,7 @@ public class ConteDarrer {
 				break;
 			}
 		text = Entrada.readLine();
-		if (contadorText > 2) {
+		if (contadorText >= 2) {
 			char darreraLletraNova = text.charAt(text.length() - 1);
 			darreraLletraAnterior = darreraLletraNova;
 		}
