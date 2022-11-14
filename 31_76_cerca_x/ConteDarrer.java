@@ -29,7 +29,8 @@ public class ConteDarrer {
 					darreraLletra = darreraNovaLletra;
 				}	
 			}
-		}	
-		System.out.println("Adéu");
+		} else {
+			System.out.println("Adéu");
+		}
 	}
 }				
