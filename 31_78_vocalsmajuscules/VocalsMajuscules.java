@@ -14,11 +14,11 @@ public class VocalsMajuscules {
 				for (int j=0; j < vocals.length(); j++) {
 					if (text.charAt(i) == vocals.charAt(j)) {
 						letra = Character.toUpperCase(text.charAt(i));
-						nouText = nouText + letra;
-						break;
 					}
 				}
+			nouText = nouText + letra;
 			}
+
 		}
 		System.out.println(nouText);
 		}
