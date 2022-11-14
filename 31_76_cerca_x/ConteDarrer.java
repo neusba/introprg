@@ -6,10 +6,9 @@ public class ConteDarrer {
 		String text = Entrada.readLine();
 		int contadorText = 0;
 
-
+		text = text.toLowerCase();
+		char darreraLletra = text.charAt(text.length() - 1);
 		while (!text.isEmpty()) {
-			text = text.toLowerCase();
-			char darreraLletra = text.charAt(text.length() - 1);
 			contadorText += 1;
 			boolean conteLletra = false;
 			for (int i=0; i < text.length(); i++) {
