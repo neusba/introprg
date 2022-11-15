@@ -7,6 +7,7 @@ public class InformeText {
 		System.out.println("Informe");
 		System.out.println("=======");
 		String vocals = "aeiouàèéíïóòúü";
+		String vocalsMajuscules = vocals.toUpperCase();
 
 		int totalCaracters = 0; // done
 		int lletresMajus = 0; // donde
@@ -22,19 +23,21 @@ public class InformeText {
 			totalCaracters += 1;
 			if (Character.isLetter(text.charAt(i))) {
 				totalLletres += 1;
-				for (int j=0; j < vocals.length(); j++) {
-					if (Character.isUpperCase(text.charAt(i))) {
-						lletresMajus += 1;
-						if (text.charAt(i) == vocals.charAt(j)) {
+				if (Character.isUpperCase(text.charAt(i))) {
+					lletresMajus += 1;
+					for (int j=0; j < vocalsMajuscules.length(); j++) {
+						if (text.charAt(i) == vocalsMajuscules.charAt(j)) {
 							vocalsMajus += 1;
 						}
-					} else if (Character.isLowerCase(text.charAt(i))) {
-						lletresMinus += 1;
+					}
+				} else if (Character.isLowerCase(text.charAt(i))) {
+					lletresMinus += 1;
+					for (int j=0; j < vocals.length(); j++) {
 						if (text.charAt(i) == vocals.charAt(j)) {
 							vocalsMinus += 1;
 						}
 					}
-				}
+				}	
 			} else if (Character.isDigit(text.charAt(i))) {
 				totalDigits += 1;
 			} else {
