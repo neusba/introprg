@@ -18,17 +18,15 @@ public class MostraInterval {
 				for (int i=0; i <= text.length() - 1; i++) {
 					System.out.println(text.charAt(i));
 				}
-			}
 		} else if (inici > text.length() - 1) {
 			if (valorFinal >= 0 && valorFinal <= text.length() - 1) {
 				for (int i=text.length() - 1; i >= valorFinal; i--) {
 					System.out.println(text.charAt(i));
 				}
-				} else if (valorFinal < text.length() - 1) {
+			} else if (valorFinal < text.length() - 1) {
 				for (int i=text.length() - 1; i >= 0; i--) {
 					System.out.println(text.charAt(i));
 				}
-			}
 		} else if (inici >= 0 && inici <= text.length() - 1) {
 			if (valorFinal >= 0 && valorFinal <= text.length() - 1) {
 				if (valorFinal >= inici) {
@@ -49,13 +47,15 @@ public class MostraInterval {
 					System.out.println(text.charAt(inici));
 				}
 			}
-		} else if (inici < 0) {
-			if (valorFinal < 0) {
-				for (int i=0; i <= 1; i++) {
-				       System.out.println(text.charAt(i));
-			      	}
-			}
 		}
-
+		}
+		}
 	}
 }
+		
+		
+		
+	
+
+	
+
