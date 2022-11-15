@@ -49,6 +49,13 @@ public class MostraInterval {
 					System.out.println(text.charAt(inici));
 				}
 			}
+		} else if (inici < 0) {
+			if (valorFinal < 0) {
+				for (int i=0; i < 1; i++) {
+				       System.out.println(text.charAt(i));
+			      	}
+			}
 		}
+
 	}
 }
