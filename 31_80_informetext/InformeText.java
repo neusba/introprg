@@ -70,9 +70,7 @@ public class InformeText {
 		System.out.printf("altres caràcters: %d (%.2f%%)%n",
 				totalAltres,
 				100.0 * totalAltres / totalCaracters);
-		System.out.printf("total caràcters: %d (%.2f%%)%n",
-				totalCaracters,
-				100.0 * totalCaracters / totalCaracters);
+		System.out.println(totalCaracters);
 	}
 }
 					
