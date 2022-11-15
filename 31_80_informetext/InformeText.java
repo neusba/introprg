@@ -41,7 +41,6 @@ public class InformeText {
 				totalAltres += 1;
 			}
 		}
-		System.out.println(totalCaracters);
 		System.out.println(lletresMajus);
 		System.out.println(lletresMinus);
 		System.out.println(totalLletres);
@@ -50,6 +49,7 @@ public class InformeText {
 		System.out.println(totalVocals);
 		System.out.println(totalDigits);
 		System.out.println(totalAltres);
+		System.out.println(totalCaracters);
 	}
 }
 					
