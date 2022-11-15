@@ -46,7 +46,7 @@ public class InformeText {
 				totalAltres += 1;
 			}
 		}
-		System.out.printf("lletres en majúscules: %d (%.2f%%) %n",
+		System.out.printf("lletres en majúscules: %d (%.2f%%)%n",
 				lletresMajus,
 				100.00 * lletresMajus / totalCaracters);
 		System.out.println(lletresMinus);
