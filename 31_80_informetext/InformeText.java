@@ -28,6 +28,7 @@ public class InformeText {
 					for (int j=0; j < vocalsMajuscules.length(); j++) {
 						if (text.charAt(i) == vocalsMajuscules.charAt(j)) {
 							vocalsMajus += 1;
+							totalVocals += 1;
 						}
 					}
 				} else if (Character.isLowerCase(text.charAt(i))) {
@@ -35,6 +36,7 @@ public class InformeText {
 					for (int j=0; j < vocals.length(); j++) {
 						if (text.charAt(i) == vocals.charAt(j)) {
 							vocalsMinus += 1;
+							totalVocals += 1;
 						}
 					}
 				}	
