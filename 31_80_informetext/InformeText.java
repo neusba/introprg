@@ -55,7 +55,9 @@ public class InformeText {
 		System.out.printf("total lletres: %d (%.2f%%)%n",
 				totalLletres,
 				100.0 * totalLletres / totalCaracters);
-		System.out.println(vocalsMajus);
+		System.out.printf("vocals en majúscules: %d (%.2f%%)%n",
+				vocalsMajus,
+				100.00 * vocalsMajus / totalCaracters);
 		System.out.println(vocalsMinus);
 		System.out.println(totalVocals);
 		System.out.println(totalDigits);
