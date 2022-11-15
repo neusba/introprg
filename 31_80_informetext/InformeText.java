@@ -15,7 +15,7 @@ public class InformeText {
 		int totalLletres = 0;
 		int vocalsMajus = 0; // done
 		int vocalsMinus = 0; // done
-		int totalVocals = 0;
+		int totalVocals = vocalsMajus + vocalsMinus;
 		int totalDigits = 0;
 		int totalAltres = 0;
 
