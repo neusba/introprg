@@ -9,13 +9,13 @@ public class InformeText {
 		String vocals = "aeiouàèéíïóòúü";
 		String vocalsMajuscules = vocals.toUpperCase();
 
-		int totalCaracters = 0; // done
-		int lletresMajus = 0; // donde
-		int lletresMinus = 0; // done
+		int totalCaracters = 0; 
+		int lletresMajus = 0; 
+		int lletresMinus = 0;
 		int totalLletres = 0;
-		int vocalsMajus = 0; // done
-		int vocalsMinus = 0; // done
-		int totalVocals = vocalsMajus + vocalsMinus;
+		int vocalsMajus = 0;
+		int vocalsMinus = 0;
+		int totalVocals = 0; 
 		int totalDigits = 0;
 		int totalAltres = 0;
 
@@ -49,7 +49,9 @@ public class InformeText {
 		System.out.printf("lletres en majúscules: %d (%.2f%%)%n",
 				lletresMajus,
 				100.00 * lletresMajus / totalCaracters);
-		System.out.println(lletresMinus);
+		System.out.printf("lletres en minúscules: %d (%.3f%%)%n",
+				lletresMinus,
+				100.0 * lletresMinus / totalCaracters);
 		System.out.println(totalLletres);
 		System.out.println(vocalsMajus);
 		System.out.println(vocalsMinus);
