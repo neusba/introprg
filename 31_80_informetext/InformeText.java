@@ -58,11 +58,21 @@ public class InformeText {
 		System.out.printf("vocals en majúscules: %d (%.2f%%)%n",
 				vocalsMajus,
 				100.00 * vocalsMajus / totalCaracters);
-		System.out.println(vocalsMinus);
-		System.out.println(totalVocals);
-		System.out.println(totalDigits);
-		System.out.println(totalAltres);
-		System.out.println(totalCaracters);
+		System.out.printf("vocals en minúscules: %d (%.2f%%)%n",
+				vocalsMinus,
+				100.00 * vocalsMinus / totalCaracters);
+		System.out.printf("total vocals: %d (%.2f%%)%n",
+				totalVocals,
+				100.0 * totalVocals / totalCaracters);
+		System.out.printf("digits: %d (%.2f%%)%n",
+				totalDigits,
+				100.0 * totalDigits / totalCaracters);
+		System.out.printf("altres caràcters: %d (%.2f%%)%n",
+				totalAltres,
+				100.0 * totalAltres / totalCaracters);
+		System.out.printf("total caràcters: %d (%.2f%%)%n",
+				totalCaracters,
+				100.0 * totalCaracters / totalCaracters);
 	}
 }
 					
