@@ -4,7 +4,7 @@ public class InformeText {
 	public static void main(String[] args) {
 		System.out.println("Text?");
 		String text = Entrada.readLine();
-		if (!text.isEmpty()) {
+		if (text.isEmpty()) {
 			System.out.println("Cadena buida");
 		} else {
 			System.out.println("Informe");
