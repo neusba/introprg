@@ -7,13 +7,13 @@ public class TriangleLletres {
 
 		for (int i=0; i < text.length(); i++) {
 			for (int j=0; j <= i; j++) {
-				if (j == text.length() - 1) {
+				if (j == text.charAt(0)) {
 					System.out.print(text.charAt(j));
-				} else if (j == 0) {
+				} else if (j == i) {
 					System.out.print(text.charAt(j));
 				} else {
 					System.out.print(text.charAt(j) + ", ");
-				}	
+				}
 			}
 			System.out.println();
 		}
