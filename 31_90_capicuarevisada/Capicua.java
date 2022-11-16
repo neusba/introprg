@@ -8,15 +8,19 @@ public class Capicua {
 		String textLletresReves = "";
 
 		for (int i=0; i <= text.length() - 1; i++) {
-			if (Character.isLetter(text.charAt(i))) {
+			if (Character.isLetter(text.charAt(i)) || Character.isDigit(text.charAt(i))) {
 				textLletres = textLletres + text.charAt(i);
 			}
 		}
 		for (int j=textLletres.length() - 1; j >= 0; j--) {
 			textLletresReves = textLletresReves + textLletres.charAt(j);
 		}
-		if (textLletres.equalsIgnoreCase(textLletresReves)) {
-			System.out.println("És capicua");
+		if (!textLletres.isEmpty() && !textLletresReves.isEmpty()) {
+			if (textLletres.equalsIgnoreCase(textLletresReves)) {
+				System.out.println("És capicua");
+			} else {
+				System.out.println("No és capicua");
+			}
 		} else {
 			System.out.println("No és capicua");
 		}
