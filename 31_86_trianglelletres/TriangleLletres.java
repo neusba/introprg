@@ -9,6 +9,8 @@ public class TriangleLletres {
 			for (int j=0; j <= i; j++) {
 				if (j == text.length() - 1) {
 					System.out.print(text.charAt(j));
+				} else if (j == 0) {
+					System.out.print(text.charAt(j));
 				} else {
 					System.out.print(text.charAt(j) + ", ");
 				}	
