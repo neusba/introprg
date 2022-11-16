@@ -11,25 +11,3 @@ public class TransformaText {
 		if (text.isEmpty()) {
 			System.out.println("Cadena buida");
 		} else {
-			text = text.toUpperCase();
-			for (int i=0; i < text.length(); i++) {
-				letra = text.charAt(i);
-				if (Character.isLetter(text.charAt(i))) {
-					for (int j=0; j < vocals.length(); j++) {
-						if (text.charAt(i) == vocals.charAt(j)) {
-							nouText = nouText + Character.toLowerCase(letra);
-						} else {
-							nouText = nouText + letra;
-							break;
-						}
-				} else if (Character.isDigit(text.charAt(i))) {
-					nouText = nouText + letra;
-				} else if (Character.isWhitespace(text.charAt(i))) {
-					nouText = nouText + letra;
-				}
-
-			}
-		}
-		System.out.println(nouText);
-	}
-}
