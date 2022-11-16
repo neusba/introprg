@@ -7,9 +7,7 @@ public class TriangleLletres {
 
 		for (int i=0; i < text.length(); i++) {
 			for (int j=0; j <= i; j++) {
-				if (j == text.charAt(0)) {
-					System.out.print(text.charAt(j));
-				} else if (j == i) {
+				if (j == i) {
 					System.out.print(text.charAt(j));
 				} else {
 					System.out.print(text.charAt(j) + ", ");
