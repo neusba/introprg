@@ -12,7 +12,6 @@ public class TransformaText {
 			System.out.println("Cadena buida");
 		} else {
 			text = text.toUpperCase();
-			text = text + " ";
 			for (int i=0; i < text.length(); i++) {
 				conteVocal = false;
 				if (Character.isLetter(text.charAt(i))) {
@@ -37,11 +36,7 @@ public class TransformaText {
 					}
 				} else if (Character.isWhitespace(text.charAt(i))) {
 					if (Character.isDigit(text.charAt(i - 1))) {
-						nouText = nouText + ") ";
-					} else if (text.charAt(i) == text.length() - 1){
-						if (Character.isDigit(text.charAt(i - 1))) {
-							nouText = nouText + ")";
-						}
+						nouText = nouText + ")";
 					} else {
 						nouText = nouText + text.charAt(i);
 					}
