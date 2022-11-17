@@ -13,14 +13,14 @@ public class TextReves {
 			}
 		}
 		for (int j=0; j < text.length(); j++) {
-			for (int k=contador; k < textReves.length(); k++) {
-				if (Character.isLetter(text.charAt(j)) || Character.isDigit(text.charAt(j))) {
+			if (Character.isLetter(text.charAt(j)) || Character.isDigit(text.charAt(j))) {
+				for (int k=contador; k < textReves.length(); k++) {
 					System.out.print(textReves.charAt(k));
 					contador += 1;
-				} else {
-					System.out.print(text.charAt(j));
+					break;
 				}
-			break;
+			} else {
+				System.out.print(text.charAt(j));
 			}
 		}
 	}
