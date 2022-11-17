@@ -39,7 +39,7 @@ public class MostraInterval {
 						System.out.println(text.charAt(inici));
 					}
 				} else {
-					for (; inici >= valorFinal; inici--) {
+					for (; inici > valorFinal; inici--) {
 						System.out.println(text.charAt(inici));
 					}
 				}
@@ -53,7 +53,7 @@ public class MostraInterval {
 				}
 			}
 		}
-		}
+		}	
 	}
 }
 		
