@@ -4,7 +4,7 @@ public class TransformaText {
 	public static void main(String[] args) {
 		System.out.println("Text?");
 		String text = Entrada.readLine();
-		String vocals = "AEIOUÁÉÈÍÏÓÒÚÜ";
+		String vocals = "AEIOUÀÉÈÍÏÓÒÚÜ";
 		String nouText = "";
 		boolean conteVocal;
 
