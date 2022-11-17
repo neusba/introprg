@@ -40,7 +40,7 @@ public class TransformaText {
 					nouText = nouText + text.charAt(i);
 				}
 			}
-		System.out.println(nouText);	
 		}
+		System.out.println(nouText);	
 	}
 }
