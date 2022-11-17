@@ -28,7 +28,11 @@ public class TransformaText {
 					if (text.charAt(i) == text.charAt(0)) {
 						nouText = nouText + "(" + text.charAt(i);
 					} else if (Character.isDigit(text.charAt(i - 1))) {
-						nouText = nouText + text.charAt(i);
+						if (text.charAt(i) == text.length() - 1) {
+							nouText = nouText + text.charAt(i) + ")";
+						} else {
+							nouText = nouText + text.charAt(i);
+						}
 					} else if (text.charAt(i) == text.length() - 1) {
 						nouText = nouText + text.charAt(i) + ")";
 					} else if (Character.isWhitespace(text.charAt(i - 1))) {
