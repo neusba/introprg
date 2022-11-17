@@ -1,6 +1,6 @@
 /* Programming weekend days in switch structure */
 
-public class DiaSetmanaSwitchExpr { 
+public class DiaSetmanaSwitch {
 	public static void main(String[] args) {
 		int num = Integer.parseInt(args[0]);
 		String dayString;
