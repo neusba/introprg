@@ -17,7 +17,7 @@ public class TransformaText {
 				if (Character.isLetter(text.charAt(i))) {
 					for (int j=0; j < vocals.length(); j ++) {
 						if (text.charAt(i) == vocals.charAt(j)) {
-							nouText = nouText + Character.toUpperCase(text.charAt(i));
+							nouText = nouText + Character.toLowerCase(text.charAt(i));
 							conteVocal = true;
 						}
 					}
