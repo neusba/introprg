@@ -11,8 +11,9 @@ public class TriangleParaules {
 			if (Character.isWhitespace(text.charAt(i))) {
 				System.out.println(lletres);
 				lletres = lletres + text.charAt(i);
+			} else {
+				lletres = lletres + text.charAt(i);
 			}
-			lletres = lletres + text.charAt(i);
 		}
 		System.out.println(lletres);
 
