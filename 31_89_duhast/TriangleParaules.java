@@ -5,7 +5,6 @@ public class TriangleParaules {
 		System.out.println("Text?");
 		String text = Entrada.readLine();
 		String lletres = "";
-		int contadorSpace = 0;
 
 		for (int i=0; i < text.length(); i++) {
 			if (Character.isWhitespace(text.charAt(i))) {
