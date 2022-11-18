@@ -10,7 +10,8 @@ public class TriangleParaules {
 			if (!Character.isWhitespace(text.charAt(i))) {
 				lletres = lletres + text.charAt(i);
 			} else if (Character.isWhitespace(text.charAt(i))) {
-				System.out.println(lletres);
+				System.out.printf("%s %n",
+						lletres);
 			}
 		}
 		System.out.println(lletres);
