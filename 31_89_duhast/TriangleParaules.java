@@ -7,8 +7,9 @@ public class TriangleParaules {
 		String lletres = "";
 
 		for (int i=0; i < text.length(); i++) {
-			lletres = lletres + text.charAt(i);
-			if (Character.isWhitespace(text.charAt(i))) {
+			if (!Character.isWhitespace(text.charAt(i))) {
+				lletres = lletres + text.charAt(i);
+			} else if (Character.isWhitespace(text.charAt(i))) {
 				System.out.println(lletres);
 			}
 		}
