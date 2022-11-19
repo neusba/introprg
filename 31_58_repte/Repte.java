@@ -1,25 +1,136 @@
-/* Creació pròpia amb bucle for */
+/* Creació pròpia amb bucles for */
 
 public class Repte {
-	public static void main(String[] args) {
-		
-		for (int linea=0; linea <=2; linea++) {
-			for (int col=0; col < 50; col++) {
+	public static void main(String[] args) {		
+		// Frente
+		for (int i=0; i < 4; i++) {
+			for (int j=0; j < 20; j++) {
 				System.out.print(".");
 			}
+			for (int j=0; j <= 20; j++) {
+				System.out.print("❏ ");
+			}
+			for (int j=0; j < 20; j++) {
+				System.out.print(".");
+			}
+			System.out.println();	
 		}
-		for (int lin=3; lin <10; lin++) {
-			for (int col=3; col<5; col++) {
+		// Ojos
+		for (int i=0; i < 5; i++) {
+			for (int j=0; j < 20; j++) {
 				System.out.print(".");
 			}
-			// Mitad izquierda paraguas
-			for (int col=15; col>lin; col--) {
-				if (col > lin && (col%2==0)) {
-					System.out.print("  O");
-				}
-
+			for (int j=0; j < 3; j++) {
+				System.out.print("❏ ");
+			}
+			for (int j=0; j < 5; j++) {
+				System.out.print("▩ ");
+			}
+			for (int j=0; j < 5; j++) {
+				System.out.print("❏ ");
+			}
+			for (int j=0; j < 5; j++) {
+				System.out.print("▩ ");
+			}
+			for (int j=0; j < 3; j++) {
+				System.out.print("❏ ");
+			}
+			for (int j=0; j < 20; j++) {
+				System.out.print(".");
 			}
 			System.out.println();
 		}
+		// Nariz
+		for (int i=0; i < 2; i++) {
+			for (int j=0; j < 20; j++) {
+				System.out.print(".");
+			}
+			for (int j=0; j < 8; j++) {
+				System.out.print("❏ ");
+			}
+			for (int j=0; j < 5; j++) {
+				System.out.print("▩ ");
+			}
+			for (int j=0; j < 8; j++) {
+				System.out.print("❏ ");
+			}
+			for (int j=0; j < 20; j++) {
+				System.out.print(".");
+			}
+			System.out.println();
+		}
+		// Morro
+		for (int i=0; i < 4; i++) {
+			for (int j=0; j < 20; j++) {
+				System.out.print(".");
+			}
+			for (int j=0; j < 5; j++) {
+				System.out.print("❏ ");
+			}
+			for (int j=0; j < 11; j++) {
+				System.out.print("▩ ");
+			}
+			for (int j=0; j < 5; j++) {
+				System.out.print("❏ ");
+			}
+			for (int j=0; j < 20; j++) {
+				System.out.print(".");
+			}
+			System.out.println();
+		}
+		// Bigote
+		for (int i=0; i < 5; i++) {
+			for (int j=0; j < 20; j++) {
+				System.out.print(".");
+			}
+			for (int j=0; j < 5; j++) {
+				System.out.print("❏ ");
+			}
+			for (int j=0; j < 3; j++) {
+				System.out.print("▩ ");
+			}
+			for (int j=0; j < 5; j++) {
+				System.out.print("❏ ");
+			}
+			for (int j=0; j < 3; j++) {
+				System.out.print("▩ ");
+			}
+			for (int j=0; j < 5; j++) {
+				System.out.print("❏ ");
+			}
+			for (int j=0; j < 20; j++) {
+				System.out.print(".");
+			}
+			System.out.println();
+		}
+		// Cuerpo
+		for (int i=0; i < 30; i++) {
+			for (int j=0; j < 23; j++) {
+				System.out.print(".");
+			}
+			for (int j=0; j < 18; j++) {
+				System.out.print("❐ ");
+			}
+			for (int j=0; j < 23; j++) {
+				System.out.print(".");
+			}
+			System.out.println();
+		}
+		// Pies
+		for (int i=0; i < 8; i++) {
+			for (int j=0; j < 19; j++) {
+				System.out.print(".");
+			}
+			for (int j=0; j < 22; j++) {
+				System.out.print("☲ ");
+			}
+			for (int j=0; j < 19; j++) {
+				System.out.print(".");
+			}
+			System.out.println();
+		}
+
+
 	}
 }
+
