@@ -5,14 +5,36 @@ public class PiramideLletres {
 		System.out.println("Text?");
 		String text = Entrada.readLine();
 		
-		for (int i=0; i <= text.length() - 1; i++) {
-			for (int j=0; j ) {
-				System.out.print(".");
+		for (int i=0; i < text.length(); i++) {
+			// Izquierda
+			for (int j=text.length() - 1; j >= 0; j--) {
+				if (j <= i) {
+					if (j == 0) {
+						System.out.print(text.charAt(i-j));
+					} else {
+						System.out.print(text.charAt(i-j) + ".");
+					}
+				} else {
+					System.out.print("..");
+				}
 			}
-			for (int j=0; j <= i; j++) {
-				System.out.print(text.charAt(j));
+			System.out.print("-");
+			// Derecha
+			for (int j=0; j < text.length(); j++) {
+				if (j <= i) {
+					if (j == 0) {
+						System.out.print(text.charAt(i-j));
+					} else {
+						System.out.print("." + text.charAt(i-j));
+					}
+				} else {
+					System.out.print("..");
+				}
 			}
 			System.out.println();
 		}
 	}
 }
+
+						
+							
