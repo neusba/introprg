@@ -13,7 +13,7 @@ public class ParaulesReves {
 				lletres = "";
 			} else if (Character.isLetter(text.charAt(i)) || Character.isDigit(text.charAt(i))) {
 				if (i == text.length() - 1) {
-					lletresReves = lletresReves + lletres + text.charAt(i);
+					lletresReves = lletresReves + text.charAt(i) + lletres;
 				}
 				lletres = text.charAt(i) + lletres;
 			} else {
