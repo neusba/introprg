@@ -35,21 +35,21 @@ public class MostraInterval {
 		} else if (inici >= 0 && inici <= text.length() - 1) {
 			if (valorFinal >= 0 && valorFinal <= text.length() - 1) {
 				if (valorFinal >= inici) {
-					for (; inici <= valorFinal; inici++) {
-						System.out.println(text.charAt(inici));
+					for (int i=inici; i <= valorFinal; i++) {
+						System.out.println(text.charAt(i));
 					}
 				} else {
-					for (; inici > valorFinal; inici--) {
-						System.out.println(text.charAt(inici));
+					for (int i=inici; i > valorFinal; i--) {
+						System.out.println(text.charAt(i));
 					}
 				}
 			} else if (valorFinal > text.length() - 1) {
-				for (; inici <= text.length() - 1; inici++) {
-					System.out.println(text.charAt(inici));
+				for (int i=inici; i <= text.length() - 1; i++) {
+					System.out.println(text.charAt(i));
 				}
-			} else if (valorFinal < text.length() - 1) {
-				for (; inici >= 0; inici--) {
-					System.out.println(text.charAt(inici));
+			} else if (valorFinal < 0) {
+				for (int i=inici; inici >= 0; i--) {
+					System.out.println(text.charAt(i));
 				}
 			}
 		}
