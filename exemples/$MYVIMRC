@@ -17,4 +17,5 @@ set cursorline
 vnoremap
 set clipboard
 set mouse
+set number
 
