@@ -35,11 +35,11 @@ public class MostraInterval {
 		} else if (inici >= 0 && inici <= text.length() - 1) {
 			if (valorFinal >= 0 && valorFinal <= text.length() - 1) {
 				if (valorFinal >= inici) {
-					for (int i=inici; i <= valorFinal; i++) {
+					for (int i=inici; i < valorFinal; i++) {
 						System.out.println(text.charAt(i));
 					}
 				} else {
-					for (int i=inici; i >= valorFinal; i--) {
+					for (int i=inici; i > valorFinal; i--) {
 						System.out.println(text.charAt(i));
 					}
 				}
