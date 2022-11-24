@@ -11,6 +11,7 @@ public class examen {
 						i,
 						text,
 						text.charAt(i));
+			System.out.println();
 			} // Diria que el printf ja inclou salt de linia
 		}
 	}

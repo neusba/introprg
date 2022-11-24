@@ -1,19 +1,17 @@
-/* Comprobación examen con while ej 3 */
+/* Comprobación examen ej 2 */
 
-public class examenwhile {
+public class examen {
 	public static void main(String[] args) {
 		System.out.println("Text?");
 		String text = Entrada.readLine();
-		int i = 0;
 
-		while (i < text.length()) {
+		for (int i=0; i < text.length(); i++) {
 			if (Character.isLetter(text.charAt(i))) {
 				System.out.printf("La posició %d de \"%s\" val \'%c\'",
 						i,
 						text,
 						text.charAt(i));
-			} // Falta salto de línea la concha de su madre
-			i++;
+			} // Diria que el printf ja inclou salt de linia
 		}
 	}
 }
