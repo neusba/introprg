@@ -16,12 +16,15 @@ public class Quadrats {
 
 	public static void dibuixaQuadrat() {
 		for (int i=0; i < 5; i++) {
-			for (int j=0; j < 5; j++) {
-				System.out.print(" X");
-			}
-			// salt de linia
-			System.out.println();
+			dibuixaLinia();
 		}
-		System.out.println();
 	}
+
+	public static void dibuixaLinia() {	
+		for (int j=0; j < 5; j++) {
+			System.out.print(" X");
+		}
+		// salt de linia
+		System.out.println();
+	}	
 }
