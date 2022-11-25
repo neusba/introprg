@@ -54,7 +54,7 @@ public class LloroQuadrat {
 
 	// el lloro es despedeix
 	public static void lloroAdeu() {
-		System.out.println("Adèu");
+		System.out.println("Adéu");
 	}
 }
 
