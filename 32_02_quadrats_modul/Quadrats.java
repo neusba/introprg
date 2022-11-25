@@ -6,13 +6,19 @@ public class Quadrats {
 	}
 
 	public static void dibuixaQuadrat() {
-		for (int i=0; i < 5; i++) {
-			// dibuixa una linia
-			for (int j=0; j < 5; j++) {
-				// Dibuixa element
-				System.out.print(" X");
+		System.out.println("Quants?");
+		int numero = Integer.parseInt(Entrada.readLine());
+		for (int i=0; i < numero; i++) {
+			// dibuixa un quadrat
+			for (int fila=0; fila < 5; fila++) {
+				// Dibuixa linia
+				for (int col=0; col < 5; col++) {
+					// Dibuixa element
+					System.out.print(" X");
+				}
+				// Salt de linia
+				System.out.println();
 			}
-			// Salt de linia
 			System.out.println();
 		}
 	}
