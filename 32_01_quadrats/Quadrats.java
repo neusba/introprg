@@ -8,9 +8,9 @@ public class Quadrats {
 		// Creem el bucle per el número de repeticions de quadrats
 		for (int i=0; i < numero; i++) {
 			// Dibuixa un quadrat 
-			for (int fila=0; fila <= 5; fila++) {
+			for (int fila=0; fila < 5; fila++) {
 				// Dibuixa una linia
-				for (int col=0; col <= 5; col++) {
+				for (int col=0; col < 5; col++) {
 					// Dibuixa un element
 					System.out.print(" X");
 				}
