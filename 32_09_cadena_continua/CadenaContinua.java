@@ -11,7 +11,7 @@ public class CadenaContinua {
 		}
 		System.out.println("Nombre?");
 		int longitud = Integer.parseInt(Entrada.readLine());
-		if (longitud < 1) {
+		if (longitud <= 1) {
 			return;
 		}
 		// cridem al mòdul
