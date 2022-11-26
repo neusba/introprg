@@ -16,11 +16,7 @@ public class MostraInterval {
 	public static void mostraInterval(String text, int inici, int fi) {
 		// valor inicial és menor que 0
 		if (inici < 0) {
-			inici = 0;
-			if (fi < 0) {
-				fi = 0;
-				mostraCaracters(text, inici, fi);
-			} else if (fi >= text.length()) {
+			if (fi >= text.length()) {
 				fi = text.length() - 1;
 				mostraCaracters(text, inici, fi);
 			} else {
