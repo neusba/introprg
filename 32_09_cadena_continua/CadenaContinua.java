@@ -11,7 +11,7 @@ public class CadenaContinua {
 		}
 		System.out.println("Nombre?");
 		int longitud = Integer.parseInt(Entrada.readLine());
-		if (longitud <= 1) {
+		if (longitud < 1) {
 			return;
 		}
 		// cridem al mòdul
@@ -24,6 +24,8 @@ public class CadenaContinua {
 		if (modul == 0) { // Si és 0, només necessitarem repetir la paraula x vegades perquè la seva longitud encaixa amb la demanada.
 			int repeticio = longitud / text.length(); // La utilitzarem per saber quantes vegades hem de repetir la paraula sencera.
 			System.out.println(text.repeat(repeticio));
+		} else if (modul == 1) {
+			System.out.println(text.charAt(0));
 		} else {
 			System.out.print(text);
 			for (int i=0; i < modul; i++) {
