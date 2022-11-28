@@ -18,7 +18,8 @@ public class MostraInterval {
 		if (inici < 0) {
 			inici = 0;
 			if (fi < 0) {
-				return;
+				fi = 0;
+				mostraCaracters(text, inici, fi);
 			} else if (fi >= text.length()) {
 				fi = text.length() - 1;
 				mostraCaracters(text, inici, fi);
