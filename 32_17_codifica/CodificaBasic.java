@@ -22,6 +22,8 @@ public class CodificaBasic {
 				} else {
 					System.out.print((char)(text.charAt(i) + quants));
 				}
+			} else {
+				System.out.print(text.charAt(i));
 			}
 		}
 	}	
