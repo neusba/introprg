@@ -17,7 +17,7 @@ public class CodificaBasic {
 	public static void codifica(String text, int quants) {
 		for (int i=0; i < text.length(); i++) {
 			if (text.charAt(i) >= 'a' && text.charAt(i) <= 'z') {
-				if (quants > 1) {
+				if (quants >= 1) {
 					if (text.charAt(i) == 'z') {
 						System.out.print((char)('a' + (quants - 1)));
 					} else {
