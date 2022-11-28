@@ -9,6 +9,7 @@ public class VocalsMajuscules {
 	}
 	// transformem el text
 	public static void majusculitzaVocals(String text) {
+		text = text.toLowerCase();
 		String vocals = "aeiou";
 		String nouText = "";
 		for (int i=0; i < text.length(); i++) {
@@ -24,7 +25,7 @@ public class VocalsMajuscules {
 					nouText = nouText + text.charAt(i);
 				}
 			} else {
-				nouText = nouText + Character.toUpperCase(text.charAt(i));
+				nouText = nouText + text.charAt(i);
 			}
 		}
 		System.out.println(nouText);
