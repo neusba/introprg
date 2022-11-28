@@ -26,6 +26,8 @@ public class CodificaBasic {
 				} else {
 					System.out.print(text.charAt(i));
 				}
+			} else {
+				System.out.print(text.charAt(i));
 			}
 		}
 	}	
