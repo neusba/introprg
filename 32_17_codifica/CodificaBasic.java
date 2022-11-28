@@ -19,7 +19,7 @@ public class CodificaBasic {
 			if (text.charAt(i) >= 'a' && text.charAt(i) <= 'z') {
 				if (quants >= 1) {
 					if (text.charAt(i) == 'z') {
-						System.out.print((char)('a' + (quants - 1)));
+						System.out.print((char)('a' + quants));
 					} else {
 						System.out.print((char)(text.charAt(i) + quants));
 					}
