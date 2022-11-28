@@ -15,10 +15,6 @@ public class NomesLletres {
 				nouText = nouText + text.charAt(i);
 			}
 		}
-		mostraLletres(nouText);
-	}
-	// mostrem les lletres amb comes
-	public static void mostraLletres (String nouText) {
 		for (int j=0; j < nouText.length(); j++) {
 			if (j == nouText.length() - 1) {
 				System.out.print(nouText.charAt(j));
