@@ -5,11 +5,11 @@ public class NomesLletres {
 		// obtenim les dades
 		System.out.println("Text?");
 		String text = Entrada.readLine();
-		String nouText = "";
-		filtraLletres(text, nouText);
+		filtraLletres(text);
 	}
 	// filtrem les lletres
-	public static void filtraLletres(String text, String nouText) {
+	public static void filtraLletres(String text) {
+		String nouText = "";
 		for (int i=0; i < text.length(); i++) {
 			if (Character.isLetter(text.charAt(i))) {
 				nouText = nouText + text.charAt(i);
