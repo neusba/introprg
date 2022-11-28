@@ -10,6 +10,7 @@ public class MajusculitzaInicials {
 	// convertim en majúscula les inicials
 	public static void majusculitzaInicials(String text) {
 		String nouText = "";
+		text = text.toLowerCase();
 		for (int i=0; i < text.length(); i++) {
 			if (Character.isLetter(text.charAt(i))) {
 				if (i == 0) {
