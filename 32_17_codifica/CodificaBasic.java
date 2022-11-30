@@ -22,7 +22,7 @@ public class CodificaBasic {
 					int seguentLletra = (int)text.charAt(i) + quants;
 					if (seguentLletra > 122) {
 						diferencia = seguentLletra - 122;
-						System.out.print((char)('a' + (diferencia - 1)));
+						System.out.print((char)('a' + (diferencia - 1))); // diferencia - 1 porque el salto de Z a A ya cuenta como uno.
 					} else {
 						System.out.print((char)seguentLletra);
 					}
