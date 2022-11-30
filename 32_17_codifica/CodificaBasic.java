@@ -22,14 +22,15 @@ public class CodificaBasic {
 				if (text.charAt(i) >= 'a' && text.charAt(i) <= 'z') {
 					int seguentLletra = (int)text.charAt(i) + quants;
 					for (int j=(int)text.charAt(i); j <= seguentLletra; j++) {
-						diferencia = seguentLletra - j;
 						j += quants;
-						if (j >= 122) {
-							resposta = resposta + ((char)('a' + diferencia));
-							break;
+						if (j > 122) {
+							diferencia = j - 122;
+							resposta = resposta + ((char)('a' + (diferencia - 1)));
+						} else if (j == 122) {
+							resposta = resposta + 'a';
 						} else {
-							resposta = resposta + ((char)j);
-						}
+							resposta = resposta + (char)j;
+						}	
 					}
 				}
 			} else {
