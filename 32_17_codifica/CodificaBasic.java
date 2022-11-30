@@ -15,7 +15,6 @@ public class CodificaBasic {
 	}
 	// codifiquem el text
 	public static void codifica(String text, int quants) {
-		String resposta = "";
 		int diferencia;
 		for (int i=0; i < text.length(); i++) {
 			if (quants >= 1) {
@@ -23,17 +22,16 @@ public class CodificaBasic {
 					int seguentLletra = (int)text.charAt(i) + quants;
 					if (seguentLletra > 122) {
 						diferencia = seguentLletra - 122;
-						resposta = resposta + ((char)('a' + (diferencia - 1)));
+						System.out.print((char)('a' + (diferencia - 1)));
 					} else {
-						resposta = resposta + (char)seguentLletra;
+						System.out.print((char)seguentLletra);
 					}
 				} else {
-					resposta = resposta + text.charAt(i);
+					System.out.print(text.charAt(i));
 				}
 			} else {
-				resposta = resposta + text.charAt(i);
+				System.out.print(text.charAt(i));
 			}
 		}
-		System.out.println(resposta);
 	}
 }
