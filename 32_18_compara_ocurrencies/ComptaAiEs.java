@@ -20,8 +20,8 @@ public class ComptaAiEs {
 				comptadorB += 1;
 			}
 		}
-		System.out.println("Nombre de 'a's; " + comptadorA);
-		System.out.println("Nombre de 'b's; " + comptadorB);
+		System.out.println("Nombre de 'a's: " + comptadorA);
+		System.out.println("Nombre de 'b's: " + comptadorB);
 	}
 	// comparem el caràcters
 	public static void comparaOcurrencies(String text, char lletra1, char lletra2) {
