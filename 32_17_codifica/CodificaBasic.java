@@ -32,7 +32,7 @@ public class CodificaBasic {
 					}
 				}
 			} else {
-				resposta = resposta+ text.charAt(i);
+				resposta = resposta + text.charAt(i);
 			}
 		}
 		System.out.println(resposta);
