@@ -5,12 +5,12 @@ public class ComptaAiEs {
 		// obtenim les dades
 		System.out.println("Introdueix un text");
 		String text = Entrada.readLine();
-		comptaLletres(text, 'a', 'e');
+		comptaLletra(text, 'a', 'e');
 		comparaOcurrencies(text, 'a', 'e');
 	
 	}
 	// comptem els dos caracters
-	public static void comptaLletres(String text, char lletra1, char lletra2) {
+	public static void comptaLletra(String text, char lletra1, char lletra2) {
 		int comptadorA = 0;
 		int comptadorB = 0;
 		for (int i=0; i < text.length(); i++) {
