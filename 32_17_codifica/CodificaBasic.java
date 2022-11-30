@@ -27,7 +27,7 @@ public class CodificaBasic {
 							diferencia = j - 122;
 							resposta = resposta + ((char)('a' + (diferencia - 1)));
 						} else {
-							resposta = resposta + j;
+							resposta = resposta + (char)j;
 						}
 					}	
 				} else {
