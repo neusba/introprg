@@ -15,20 +15,27 @@ public class CodificaBasic {
 	}
 	// codifiquem el text
 	public static void codifica(String text, int quants) {
+		String resposta = "";
+		int diferencia;
 		for (int i=0; i < text.length(); i++) {
 			if (quants >= 1) {
 				if (text.charAt(i) >= 'a' && text.charAt(i) <= 'z') {
-					if (text.charAt(i) == 'z') {
-						System.out.print((char)('a' + (quants - 1)));
-					} else {
-						System.out.print((char)(text.charAt(i) + quants));
+					int seguentLletra = (int)text.charAt(i) + quants;
+					for (int j=(int)text.charAt(i); j <= seguentLletra; j++) {
+						diferencia = seguentLletra - j;
+						j += quants;
+						if (j >= 122) {
+							resposta = resposta + ((char)('a' + diferencia));
+							break;
+						} else {
+							resposta = resposta + ((char)j);
+						}
 					}
-				} else {
-					System.out.print(text.charAt(i));
 				}
 			} else {
 				System.out.print(text.charAt(i));
 			}
 		}
-	}	
+		System.out.println(resposta);
+	}
 }
