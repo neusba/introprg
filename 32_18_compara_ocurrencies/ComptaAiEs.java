@@ -16,7 +16,7 @@ public class ComptaAiEs {
 		for (int i=0; i < text.length(); i++) {
 			if (text.charAt(i) == 'a') {
 				comptadorA += 1;
-			} else if (text.charAt(i) == 'b') {
+			} else if (text.charAt(i) == 'e') {
 				comptadorB += 1;
 			}
 		}
