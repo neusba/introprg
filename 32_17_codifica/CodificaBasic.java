@@ -30,6 +30,8 @@ public class CodificaBasic {
 							resposta = resposta + (char)j;
 						}	
 					}
+				} else {
+					resposta = resposta + text.charAt(i);
 				}
 			} else {
 				resposta = resposta + text.charAt(i);
