@@ -27,9 +27,9 @@ public class CodificaBasic {
 							diferencia = j - 122;
 							resposta = resposta + ((char)('a' + (diferencia - 1)));
 						} else {
-							resposta = resposta + (char)j;
-						}	
-					}
+							resposta = resposta + j;
+						}
+					}	
 				} else {
 					resposta = resposta + text.charAt(i);
 				}
