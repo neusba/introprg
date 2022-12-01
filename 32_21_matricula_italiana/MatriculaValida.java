@@ -15,6 +15,9 @@ public class MatriculaValida {
 			int posicio = i;
 			char caracter = text.charAt(i);
 			boolean valida = esLletraValidaPerMatriculaItaliana(posicio, caracter, matricula);
+			if (!valida) {
+				return;
+			}
 			mostraResposta(text, posicio, valida);
 		}
 	}
