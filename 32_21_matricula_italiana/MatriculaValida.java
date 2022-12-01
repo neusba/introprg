@@ -2,21 +2,30 @@
 
 public class MatriculaValida {
 	public static void main(String[] args) {
-		// obtenime les dades
+		// obtenim les dades
 		System.out.println("Introduïu una matrícula");
 		String text = Entrada.readLine();
 		text = text.toUpperCase();
-		String matricula = ""; // matricula final a valorar
-		for (int i=0; i < text.length(); i++) {
-			char lletra = text.charAt(i);
-			boolean valida = esLletraValidaPerMatriculaItaliana(lletra);
-			valoraMatricula(valida, lletra, matricula);
+		String matricula = "";
+		if (text.length() != 7) {
+			System.out.println("No és una matrícula italiana vàlida");
+			return;
 		}
-		mostraResposta(matricula);
+		for (int i=0; i < text.length(); i++) {
+			int posicio = i;
+			char caracter = text.charAt(i);
+			boolean valida = esLletraValidaPerMatriculaItaliana(posicio, caracter, matricula);
+			mostraResposta(text, posicio, valida);
+		}
 	}
-	// Revisió lletres matrícula
-	public static boolean esLletraValidaPerMatriculaItaliana(char lletra) {
-		String noValides = "ÇÀÑIOQU";
+	// revisio de les lletres de la matricula
+	public static boolean esLletraValidaPerMatriculaItaliana(int posicio, char lletra, String matricula) {
+		String noValides = "ÇAÑIOQU";
+		if (posicio > 1 && posicio < 5) {
+			if (!Character.isDigit(lletra)) {
+				return false;
+			}
+		}
 		for (int i=0; i < noValides.length(); i++) {
 			if (lletra == noValides.charAt(i)) {
 				return false;
@@ -24,24 +33,17 @@ public class MatriculaValida {
 		}
 		return true;
 	}
-	// valora la matricula
-	public static void valoraMatricula(boolean valida, char lletra, String matricula) {
+	// mostra resposta
+	public static void mostraResposta(String text, int posicio, boolean valida) {
 		if (!valida) {
 			System.out.println("No és una matrícula italiana vàlida");
-				return;
-		} else {
-			matricula = matricula + lletra;
-		}
-	}
-	// mostra la resposta
-	public static void mostraResposta(String matricula) {
-		if (matricula.length() != 7) {
+			return;
+		} else if (posicio == text.length() - 1) {
 			System.out.println("És una matrícula italiana vàlida");
-		} else {
-			System.out.println("No és una matrícula italiana vàlida");
 		}
 	}
 }
+
 
 
 
