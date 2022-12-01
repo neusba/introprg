@@ -3,7 +3,7 @@
 public class MatriculaValida {
 	public static void main(String[] args) {
 		// obtenime les dades
-		System.out.println("Introdueix matrícula");
+		System.out.println("Introduïu una matrícula");
 		String text = Entrada.readLine();
 		text = text.toUpperCase();
 		for (int i=0; i < text.length(); i++) {
