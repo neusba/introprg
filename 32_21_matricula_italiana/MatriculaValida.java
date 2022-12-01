@@ -14,12 +14,12 @@ public class MatriculaValida {
 	}
 	// resposta al text donat
 	public static void mostraResposta(boolean valida, char lletra, String text) {
-		boolean matriculaValida;
 		if (!valida) {
 			System.out.println("No és una matrícula italiana vàlida");
-		} else if (valida && lletra == text.length() - 1) {
+			return;
+		} else if (valida && (lletra == text.length() - 1)) {
 			System.out.println("És una matrícula italiana vàlida");
-		}	
+		}
 	}
 	// Revisió lletres matrícula
 	public static boolean esLletraValidaPerMatriculaItaliana(char lletra) {
