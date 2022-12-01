@@ -6,7 +6,7 @@ public class MatriculaValida {
 		System.out.println("Introduïu una matrícula");
 		String text = Entrada.readLine();
 		text = text.toUpperCase();
-		String matricula = "";
+		String matricula = ""; // matricula final a valorar
 		for (int i=0; i < text.length(); i++) {
 			char lletra = text.charAt(i);
 			boolean valida = esLletraValidaPerMatriculaItaliana(lletra);
