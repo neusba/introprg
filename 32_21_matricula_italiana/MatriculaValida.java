@@ -35,10 +35,10 @@ public class MatriculaValida {
 	}
 	// mostra la resposta
 	public static void mostraResposta(String matricula) {
-		if (matricula.length() != 6) {
-			System.out.println("No és una matrícula italiana vàlida");
-		} else {
+		if (matricula.length() != 7) {
 			System.out.println("És una matrícula italiana vàlida");
+		} else {
+			System.out.println("No és una matrícula italiana vàlida");
 		}
 	}
 }
