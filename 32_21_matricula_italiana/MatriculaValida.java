@@ -13,7 +13,7 @@ public class MatriculaValida {
 		for (int i=0; i < text.length(); i++) {
 			int posicio = i;
 			char lletra = text.charAt(i);
-			boolean valida = MatriculaValida.esLletraValidaPerMatriculaItaliana(posicio, lletra);
+			boolean valida = esLletraValidaPerMatriculaItaliana(posicio, lletra);
 			if (!valida) {
 				System.out.println("No és una matrícula italiana vàlida");
 				return;
