@@ -38,7 +38,7 @@ public class MatriculaValida {
 	public static void valoraMatricula(String text, char caracter, boolean valida, String matricula) {
 		if (valida) {
 			matricula = matricula + caracter;
-		}
+		}	
 	}
 	// mostrem la resposta
 	public static void mostraResposta(String matricula) {
