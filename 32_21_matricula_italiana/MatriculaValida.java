@@ -15,9 +15,8 @@ public class MatriculaValida {
 			int posicio = i;
 			char caracter = text.charAt(i);
 			boolean valida = esLletraValidaPerMatriculaItaliana(posicio, caracter, matricula);
-			valoraMatricula(text, caracter, valida, matricula);
+			mostraResposta(matricula);
 		}
-		mostraResposta(matricula);
 	}
 	// revisio de les lletres de la matricula
 	public static boolean esLletraValidaPerMatriculaItaliana(int posicio, char caracter, String matricula) {
@@ -33,12 +32,6 @@ public class MatriculaValida {
 			}
 		}
 		return true;
-	}
-	// valora la matricula
-	public static void valoraMatricula(String text, char caracter, boolean valida, String matricula) {
-		if (valida) {
-			matricula = matricula + caracter;
-		}	
 	}
 	// mostrem la resposta
 	public static void mostraResposta(String matricula) {
