@@ -15,38 +15,37 @@ public class MatriculaValida {
 			int posicio = i;
 			char caracter = text.charAt(i);
 			boolean valida = esLletraValidaPerMatriculaItaliana(posicio, caracter, matricula);
-			if (!valida) {
-				return;
-			}
-			mostraResposta(text, posicio, valida);
+			valoraMatricula(text, caracter, valida, matricula);
 		}
+		mostraResposta(matricula);
 	}
 	// revisio de les lletres de la matricula
-	public static boolean esLletraValidaPerMatriculaItaliana(int posicio, char lletra, String matricula) {
+	public static boolean esLletraValidaPerMatriculaItaliana(int posicio, char caracter, String matricula) {
 		String noValides = "ÇAÑIOQU";
 		if (posicio > 1 && posicio < 5) {
-			if (!Character.isDigit(lletra)) {
+			if (!Character.isDigit(caracter)) {
 				return false;
 			}
 		}
 		for (int i=0; i < noValides.length(); i++) {
-			if (lletra == noValides.charAt(i)) {
+			if (caracter == noValides.charAt(i)) {
 				return false;
 			}
 		}
 		return true;
 	}
-	// mostra resposta
-	public static void mostraResposta(String text, int posicio, boolean valida) {
-		if (!valida) {
+	// valora la matricula
+	public static void valoraMatricula(String text, char caracter, boolean valida, String matricula) {
+		if (valida) {
+			matricula = matricula + caracter;
+		}
+	}
+	// mostrem la resposta
+	public static void mostraResposta(String matricula) {
+		if (matricula.length() != 7) {
 			System.out.println("No és una matrícula italiana vàlida");
-			return;
-		} else if (posicio == text.length() - 1) {
+		} else {
 			System.out.println("És una matrícula italiana vàlida");
 		}
 	}
 }
-
-
-
-
