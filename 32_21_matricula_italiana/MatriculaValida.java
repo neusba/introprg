@@ -5,7 +5,6 @@ public class MatriculaValida {
 		// obtenim les dades
 		System.out.println("Introduïu una matrícula");
 		String text = Entrada.readLine();
-		text = text.toUpperCase();
 		String noValida = "No és una matrícula italiana vàlida";
 		if (text.length() != 7) {
 			System.out.println("No és una matrícula italiana vàlida");
@@ -31,9 +30,11 @@ public class MatriculaValida {
 	// revisio de les lletres de la matricula
 	public static boolean esLletraValidaPerMatriculaItaliana(char lletra) {
 		String noValides = "ÇAÑIOQU";
-		for (int i=0; i < noValides.length(); i++) {
-			if (lletra == noValides.charAt(i)) {
-				return false;
+		if (lletra >= 'A' && lletra <= 'Z') {
+			for (int i=0; i < noValides.length(); i++) {
+				if (lletra == noValides.charAt(i)) {
+					return false;
+				}
 			}
 		}
 		return true;
