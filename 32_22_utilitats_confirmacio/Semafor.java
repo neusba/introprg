@@ -19,6 +19,8 @@ public class Semafor {
 				System.out.println("passa");
 			} else if (color.equalsIgnoreCase("vermell")) {
 				System.out.println("espera");
+			} else {
+				System.out.println("Ves a l'oculista");
 			}
 		}
 	}
