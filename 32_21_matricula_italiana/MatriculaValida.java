@@ -11,36 +11,32 @@ public class MatriculaValida {
 			return;
 		}
 		for (int i=0; i < text.length(); i++) {
-			int posicio = i;
 			char lletra = text.charAt(i);
-			boolean valida = esLletraValidaPerMatriculaItaliana(posicio, lletra);
+			if (i > 1 && i < 5) { 
+				if (!Character.isDigit(lletra)) {	
+					System.out.println("No és una matrícula italiana vàlida");
+					return;
+				}
+			}
+			boolean valida = esLletraValidaPerMatriculaItaliana(lletra); 
 			if (!valida) {
 				System.out.println("No és una matrícula italiana vàlida");
 				return;
 			} else {
-				mostraResposta(posicio, text);
+				if (i == text.length() - 1) {
+					System.out.println("No és una matrícula italiana vàlida");
+				}
 			}
 		}
 	}
 	// revisio de les lletres de la matricula
-	public static boolean esLletraValidaPerMatriculaItaliana(int posicio, char lletra) {
+	public static boolean esLletraValidaPerMatriculaItaliana(char lletra) {
 		String noValides = "ÇAÑIOQU";
-		if (posicio > 1 && posicio < 5) {
-			if (!Character.isDigit(lletra)) {
-				return false;
-			}
-		}
 		for (int i=0; i < noValides.length(); i++) {
 			if (lletra == noValides.charAt(i)) {
 				return false;
 			}
 		}
 		return true;
-	}
-	// mostrem la resposta
-	public static void mostraResposta(int posicio, String text) {
-		if (posicio == text.length() - 1) {
-			System.out.println("És una matrícula italiana vàlida");
-		}
 	}
 }
