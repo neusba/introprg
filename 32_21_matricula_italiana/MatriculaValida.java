@@ -17,14 +17,15 @@ public class MatriculaValida {
 					System.out.println("No és una matrícula italiana vàlida");
 					return;
 				}
-			}
-			boolean valida = esLletraValidaPerMatriculaItaliana(lletra); 
-			if (!valida) {
-				System.out.println("No és una matrícula italiana vàlida");
-				return;
 			} else {
-				if (i == text.length() - 1) {
+				boolean valida = esLletraValidaPerMatriculaItaliana(lletra); 
+				if (!valida) {
 					System.out.println("No és una matrícula italiana vàlida");
+					return;
+				} else {
+					if (i == text.length() - 1) {
+						System.out.println("No és una matrícula italiana vàlida");
+					}
 				}
 			}
 		}
