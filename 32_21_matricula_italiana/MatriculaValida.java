@@ -5,6 +5,7 @@ public class MatriculaValida {
 		// obtenim les dades
 		System.out.println("Introduïu una matrícula");
 		String text = Entrada.readLine();
+		text = text.toUpperCase();
 		String noValida = "No és una matrícula italiana vàlida";
 		if (text.length() != 7) {
 			System.out.println("No és una matrícula italiana vàlida");
