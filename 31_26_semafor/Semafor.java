@@ -8,13 +8,6 @@ public class Semafor {
 		String color = Entrada.readLine();
 		
 		// Programem la respota que donarà l'assisten segons el color escollit
-		String resposta = switch (color) {
-		case "groc" -> "corre!";
-		case "vermell" -> "espera";
-		case "verd" -> "passa";
-		default -> "ves a l'oculista";
-		};
-
-		System.out.println(resposta);
-	}
-} 
+		if (color.equals("groc")) {
+		} else if (color.equals("verd")) {
+			System.out.println("corre!");
