@@ -33,7 +33,7 @@ public class MatriculaValida {
 		if (Character.isLowerCase(lletra)) {
 			return false;
 		}
-		if (lletra >= 'A' && lletra <= 'Z') {
+		if (lletra >= 'A' && lletra <= 'Z' && !(lletra == 'Ñ')) {
 			for (int i=0; i < noValides.length(); i++) {
 				if (lletra == noValides.charAt(i)) {
 					return false;
