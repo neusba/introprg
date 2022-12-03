@@ -16,7 +16,7 @@ public class Semafor {
 			if (color.equalsIgnoreCase("groc")) {
 				System.out.println("corre!");
 			} else if (color.equalsIgnoreCase("verd")) {
-				System.out.println("passa!");
+				System.out.println("passa");
 			} else if (color.equalsIgnoreCase("vermell")) {
 				System.out.println("espera");
 			}
