@@ -24,7 +24,7 @@ public class MatriculaValida {
 				}
 			} else {
 				if (!Character.isDigit(lletra)) {
-					System.out.println("No és una matrícula italiana vàlida");
+					System.out.println("És una matrícula italiana vàlida");
 					return;
 				}
 			}
