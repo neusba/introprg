@@ -29,7 +29,7 @@ public class MatriculaValida {
 	}
 	// revisio de les lletres de la matricula
 	public static boolean esLletraValidaPerMatriculaItaliana(char lletra) {
-		String noValides = "ÇAÑIOQU";
+		String noValides = "IOQU";
 		if (lletra >= 'A' && lletra <= 'Z') {
 			for (int i=0; i < noValides.length(); i++) {
 				if (lletra == noValides.charAt(i)) {
