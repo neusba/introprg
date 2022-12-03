@@ -6,29 +6,27 @@ public class MatriculaValida {
 		System.out.println("Introduïu una matrícula");
 		String text = Entrada.readLine();
 		text = text.toUpperCase();
+		String noValida = "No és una matrícula italiana vàlida";
 		if (text.length() != 7) {
 			System.out.println("No és una matrícula italiana vàlida");
 			return;
 		}
 		for (int i=0; i < text.length(); i++) {
 			char lletra = text.charAt(i);
-			if (i < 2 || i > 4) {
-				boolean valida = esLletraValidaPerMatriculaItaliana(lletra);
-				if (!valida) {
-					System.out.println("No és una matrícula italiana vàlida");
+			if (i > 1 && i < 5) {
+				if (!Character.isDigit(lletra)) {
+					System.out.println(noValida);
 					return;
-				} else {
-					if (i == text.length() - 1) {
-						System.out.println("És una matrícula italiana vàlida");
-					}
 				}
 			} else {
-				if (!Character.isDigit(lletra)) {
-					System.out.println("No és una matrícula italiana vàlida");
+				boolean valida = esLletraValidaPerMatriculaItaliana(lletra);
+				if (!valida) {
+					System.out.println(noValida);
 					return;
 				}
 			}
 		}
+		System.out.println("És una matrícula italiana vàlida");
 	}
 	// revisio de les lletres de la matricula
 	public static boolean esLletraValidaPerMatriculaItaliana(char lletra) {
