@@ -20,7 +20,7 @@ public class Semafor {
 			} else if (color.equalsIgnoreCase("vermell")) {
 				System.out.println("espera");
 			} else {
-				System.out.println("Ves a l'oculista");
+				System.out.println("ves a l'oculista");
 			}
 		}
 	}
