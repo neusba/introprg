@@ -15,10 +15,12 @@ public class UtilString {
 	public static String lletresSeparades(String nomesLletres) {
 		String lletresSeparades = "";
 		for (int i=0; i < nomesLletres.length(); i++) {
-			if (i == nomesLletres.length() - 1) {
-				System.out.print(nomesLletres.charAt(i));
+			if (i == 0) {
+				System.out.print(nomesLletres.charAt(i) + ",");
+			} else if (i == nomesLletres.length() - 1) {
+				System.out.printf(" " + nomesLletres.charAt(i));
 			} else {
-				System.out.printf("%c, ", nomesLletres.charAt(i));
+				System.out.printf(" " + nomesLletres.charAt(i) + ",");
 			}
 		}
 		return lletresSeparades;
