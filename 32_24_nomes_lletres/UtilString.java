@@ -1,0 +1,26 @@
+/* Mòdul que aïlla les lletres del text donat a l'exercici NomesLletres */
+
+public class UtilString {
+	public static String nomesLletres(String text) {
+		// Mòdul per aïllar nomésl es lletres del text
+		String nomesLletres = "";
+		for (int i=0; i < text.length(); i++) {
+			if (Character.isLetter(text.charAt(i))) {
+				nomesLletres = nomesLletres + text.charAt(i);
+			}
+		}
+		return nomesLletres;
+	}
+	// Mòdul per extreure les lletres separades
+	public static String lletresSeparades(String nomesLletres) {
+		String lletresSeparades = "";
+		for (int i=0; i < nomesLletres.length() - 1; i++) {
+			if (i == nomesLletres.length() - 1) {
+				System.out.println(nomesLletres);
+			} else {
+				System.out.printf("%c, ", nomesLletres.charAt(i));
+			}
+		}
+		return lletresSeparades;
+	}
+}
