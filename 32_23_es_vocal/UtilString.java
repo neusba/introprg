@@ -7,7 +7,7 @@ public class UtilString {
 	 * Retornarà una resposta en valor boolea, true si és vocal, false si no ho és.
 	 */
 	public static boolean esVocal(char lletra) {
-		String vocals = "aeiouàèéíïòóúü";
+		String vocals = "aeiouàèéíïòóúüAEIOUÀÈÉÍÏÒÓÚÜ";
 		for (int i=0; i < vocals.length(); i++) {
 			if (lletra == vocals.charAt(i)) {
 				return true;
