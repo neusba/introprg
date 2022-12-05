@@ -14,7 +14,7 @@ public class UtilString {
 	// Mòdul per extreure les lletres separades
 	public static String lletresSeparades(String nomesLletres) {
 		String lletresSeparades = "";
-		for (int i=0; i < nomesLletres.length() - 1; i++) {
+		for (int i=0; i <= nomesLletres.length() - 1; i++) {
 			if (i == nomesLletres.length() - 1) {
 				System.out.println(nomesLletres.charAt(i));
 			} else {
