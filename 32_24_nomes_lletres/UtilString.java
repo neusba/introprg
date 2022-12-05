@@ -2,7 +2,7 @@
 
 public class UtilString {
 	public static String nomesLletres(String text) {
-		// Mòdul per aïllar nomésl es lletres del text
+		// Mòdul per aïllar només les lletres del text
 		String nomesLletres = "";
 		for (int i=0; i < text.length(); i++) {
 			if (Character.isLetter(text.charAt(i))) {
@@ -16,7 +16,7 @@ public class UtilString {
 		String lletresSeparades = "";
 		for (int i=0; i < nomesLletres.length() - 1; i++) {
 			if (i == nomesLletres.length() - 1) {
-				System.out.println(nomesLletres);
+				System.out.println(nomesLletres.charAt(i));
 			} else {
 				System.out.printf("%c, ", nomesLletres.charAt(i));
 			}
