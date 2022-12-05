@@ -2,7 +2,7 @@
  * Aquesta vegada utilitzarem tres mòduls
  */
 
-public class VocalLloroIniciFi {
+public class LloroVocalIniciFi {
 	public static void main(String[] args) {
 		boolean confirmacio = false;
 		String paraula;
