@@ -12,7 +12,6 @@ public class MostraInterval {
 		int inici = Integer.parseInt(Entrada.readLine());
 		System.out.println("final?");
 		int fi = Integer.parseInt(Entrada.readLine());
-		String interval;
 
 		// Canviem les variables segons les possibilitats
 		if (inici < 0) {
