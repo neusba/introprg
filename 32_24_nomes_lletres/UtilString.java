@@ -16,12 +16,12 @@ public class UtilString {
 		String lletresSeparades = "";
 		for (int i=0; i < nomesLletres.length(); i++) {
 			if (nomesLletres.length() == 1) {
-				System.out.print(nomesLletres.charAt(i));
+				lletresSeparades = lletresSeparades + nomesLletres.charAt(i);
 			} else {
 				if (i == nomesLletres.length() - 1) {
-					System.out.print(nomesLletres.charAt(i));
+					lletresSeparades = lletresSeparades + nomesLletres.charAt(i);	
 				} else {
-					System.out.print(nomesLletres.charAt(i) + ", ");
+					lletresSeparades = lletresSeparades + nomesLletres.charAt(i) + ", ";
 				}
 			}		
 		}
