@@ -14,31 +14,17 @@ public class MostraInterval {
 		int fi = Integer.parseInt(Entrada.readLine());
 		String interval;
 
-		// Valorem les possibilitats
+		// Canviem les variables segons les possibilitats
 		if (inici < 0) {
 			inici = 0;
-			if (fi < 0) {
-				fi = 0;
-			} else if (fi > text.length() - 1) {
-				fi = text.length() - 1;
-			}
-			interval = UtilString.intervalString(text, inici, fi);
 		} else if (inici > text.length() - 1) {
 			inici = text.length() - 1;
-			if (fi < 0) {
-				fi = 0;
-			} else if (fi > text.length() - 1) {
-				fi = text.length() - 1;
-			}
-			interval = UtilString.intervalString(text, inici, fi);
-		} else {
-			if (fi < 0) {
-				fi = 0;
-			} else if (fi > text.length() - 1) {
-				fi = text.length() - 1;
-			}
-			interval = UtilString.intervalString(text, inici, fi);
 		}
-		System.out.println(interval);
+		if (fi < 0) {
+			fi = 0;
+		} else if (fi > text.length() - 1) {
+			fi = text.length() - 1;
+		}
+		System.out.println(UtilString.intervalString(text, inici , fi));
 	}
 }
