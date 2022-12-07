@@ -5,7 +5,7 @@
 
 public class EsEnter {
 	public static void main(String[] args) {
-		String text = "hola";
+		String text = "hola"; // String per entrar al bucle i no repetir codi
 		while (!text.isEmpty()) {
 			System.out.println("Introdueix texts (enter sol per finalitzar)");
 			text = Entrada.readLine();
