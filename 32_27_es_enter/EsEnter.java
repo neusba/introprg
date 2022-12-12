@@ -5,17 +5,18 @@
 
 public class EsEnter {
 	public static void main(String[] args) {
-		String text = "hola"; // String per entrar al bucle i no repetir codi
+		System.out.println("Introdueix texts (enter sol per finalitzar)");
+		text = Entrada.readLine();
+		text = text.strip();
 		while (!text.isEmpty()) {
-			System.out.println("Introdueix texts (enter sol per finalitzar)");
-			text = Entrada.readLine();
-			text = text.strip();
 			boolean enter = UtilString.esEnter(text);
 			if (enter) {
 				System.out.println("És enter");
 			} else {
 				System.out.println("No és enter");
 			} 
+		text = Entrada.readLine();
+		text = text.strip();
 		}
 		System.out.println("Adéu");
 	}
