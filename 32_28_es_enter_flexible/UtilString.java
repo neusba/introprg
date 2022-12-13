@@ -3,7 +3,7 @@
  */
 public class UtilString {
 	public static boolean esEnter(String text) {
-		if (text.isEmpty()) {
+		if (text.isEmpty() || text.isBlank()) {
 			return false;
 		} else {
 			if (text.endsWith("-") || text.endsWith("+")) {
