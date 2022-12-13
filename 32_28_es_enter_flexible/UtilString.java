@@ -22,7 +22,8 @@ public class UtilString {
 		if (estricte) {
 			esEnter(text);
 		} else {
-			esEnter(text.strip());
+			text = text.strip();
+			esEnter(text);	
 		}
 		return true;
 	}
