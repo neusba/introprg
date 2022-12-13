@@ -45,12 +45,8 @@ public class UtilString {
 	// Transformació d'un String a enter(estricte/no estricte)
 	public static int aEnter(String text, boolean estricte) {
 		int aEnter;
-		if (!estricte) {
-			text = text.strip();
-			aEnter = Integer.parseInt(text);
-		} else {
-			aEnter = Integer.parseInt(text);
-		}
+		text = text.strip();
+		aEnter = Integer.parseInt(text);
 		return aEnter;
 	}
 }
