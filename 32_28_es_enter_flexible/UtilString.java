@@ -1,26 +1,8 @@
-/* Utilitats per l'exercici 28
- * Utilitat de transformació de resposta String a boolean
- * Utilitat de saber si un número és enter
+/* Funcions per l'exercici 32_28
+ * Afegirem dues funcions noves en cas de que sigui estricte o no
  */
 public class UtilString {
-	public static boolean respostaABoolean(String resposta) {
-		if (null == resposta) {
-			return false;
-		}
-		resposta = resposta.toLowerCase();
-		if (resposta.equals("s") || resposta.equals("y")) {
-            		return true;
-        	}
-        	if (resposta.equals("sí") || resposta.equals("yes")) {
-            		return true;
-        	}
-        	if (resposta.equals("si") || resposta.equals("vale") || resposta.equals("yeah")) {
-		       	return true;
-        	}
-        	return false;
-	}
-	// Funció per saber si és enter o no (estricte/no estricte)
-	public static boolean esEnter(String text, boolean estricte) {
+	public static boolean esEnter(String text) {
 		if (text.isEmpty()) {
 			return false;
 		} else {
@@ -28,27 +10,22 @@ public class UtilString {
 				return false;
 			}
 			for (int i=0; i < text.length(); i++) {
-				if (Character.isLetter(text.charAt(i))) {
+				if (Character.isLetter(text.charAt(i)) || Character.isWhitespace(text.charAt(i))) {
 					return false;
-				}
-				if (estricte) {
-					if (Character.isWhitespace(text.charAt(i))) {
-						return false;
-					} else {
-						return true;
-					}
-				}
+				}	
 			}
 		}
 		return true;
 	}
-	// Transformació d'un String a enter(estricte/no estricte)
-	public static int aEnter(String text, boolean estricte) {
-		int aEnter;
-		aEnter = Integer.parseInt(text);
-		return aEnter;
+	// Funció esEnter en cas de que sigui estricte
+	public static boolean esEnter(String text, boolean estricte) {
+		if (estricte) {
+			esEnter(text);
+		} else {
+			esEnter(text.strip());
+		}
+		return true;
 	}
 }
 
-		
-
+	
