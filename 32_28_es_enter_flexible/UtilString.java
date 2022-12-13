@@ -26,6 +26,16 @@ public class UtilString {
 		}
 		return true;
 	}
+	// Funció esEnter
+	public static int aEnter(String text, boolean estricte) {
+		int nouInt = 0;
+		if (estricte) {
+			nouInt = Integer.parseInt(text);
+		} else {
+			nouInt = Integer.parseInt(text.strip());
+		}
+		return nouInt;
+	}
 }
 
 	
