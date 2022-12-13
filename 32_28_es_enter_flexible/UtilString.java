@@ -23,7 +23,18 @@ public class UtilString {
 			esEnter(text);
 		} else {
 			text = text.strip();
-			esEnter(text);	
+			if (text.isEmpty() || text.isBlank()) {
+				return false;
+			} else {
+				if (text.endsWith("-") || text.endsWith("+")) {
+					return false;
+				}
+				for (int i=0; i < text.length(); i++) {
+					if (Character.isLetter(text.charAt(i)) || Character.isWhitespace(text.charAt(i))) {
+						return false;
+					}	
+				}
+			}
 		}
 		return true;
 	}
