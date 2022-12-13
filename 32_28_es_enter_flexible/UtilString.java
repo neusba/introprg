@@ -20,7 +20,19 @@ public class UtilString {
 	// Funció esEnter en cas de que sigui estricte
 	public static boolean esEnter(String text, boolean estricte) {
 		if (estricte) {
-			esEnter(text);
+			if (text.isEmpty() || text.isBlank()) {
+				return false;
+			} else {
+				if (text.endsWith("-") || text.endsWith("+")) {
+					return false;
+				}
+				for (int i=0; i < text.length(); i++) {
+					if (Character.isLetter(text.charAt(i)) || Character.isWhitespace(text.charAt(i))) {
+						return false;
+					}	
+				}
+			}
+			return true;	
 		} else {
 			text = text.strip();
 			if (text.isEmpty() || text.isBlank()) {
