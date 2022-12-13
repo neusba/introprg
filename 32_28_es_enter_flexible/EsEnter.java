@@ -3,17 +3,17 @@
  */
 public class EsEnter {
 	public static void main(String[] args) {
-		String text = "222"; // Variable inventada per inicialitzar i no repetir
+		System.out.println("Introdueix texts (enter sol per finalitzar)");
+		String text = Entrada.readLine();
+		text = text.strip();
 		while (!text.isEmpty()) {
-			System.out.println("Introdueix texts (enter sol per finalitzar)");
-			text = Entrada.readLine();
-			text = text.strip();
 			boolean enter = UtilString.esEnter(text);
 			if (enter) {
 				System.out.println("És enter");
 			} else {
 				System.out.println("No és enter");
 			} 
+		text = Entrada.readLine();
 		}
 		System.out.println("Adéu");
 	}
