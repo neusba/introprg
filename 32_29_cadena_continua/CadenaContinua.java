@@ -12,19 +12,16 @@ public class CadenaContinua {
 		}
 		System.out.println("Nombre?");
 		String longitud = Entrada.readLine();
-		boolean enter = UtilString.esEnter(longitud);
-		if (!enter) {
-			System.out.println("error");
-		} else {	
+		boolean esEnter = UtilString.esEnter(longitud);
+		if (esEnter) {
 			int longitudInt = Integer.parseInt(longitud);
 			if (longitudInt < 1) {
 				return;
-		       	}
+			}
 			String cadenaContinua = UtilString.cadenaContinua(text, longitudInt);
 			System.out.println(cadenaContinua);
+		} else {
+			System.out.println("error");
 		}
 	}
 }
-
-
-		
