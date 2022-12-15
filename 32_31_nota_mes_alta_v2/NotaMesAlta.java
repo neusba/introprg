@@ -23,7 +23,7 @@ public class NotaMesAlta {
 			contador += 1;
 		}
 		if (contador < 3) {
-			System.out.println("Calen dues dues notes com a mínim");
+			System.out.println("Com a mínim calen dues notes");
 		} else {
 			System.out.printf("La nota més alta és %d de les introduïdes: ", notaMesAlta);
 			for (int i=0; i < llistaNotes.length(); i++) {
