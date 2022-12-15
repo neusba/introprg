@@ -17,6 +17,9 @@ public class NotaMesAlta {
 			nota = Integer.parseInt(Entrada.readLine());
 			contador += 1;
 		}
+		mostraSortides(contador, llistaNotes, notaMesAlta);
+	}
+	public static void mostraSortides(int contador, String llistaNotes, int notaMesAlta) {
 		if (contador < 3) {
 			System.out.println("Com a mínim calen dues notes");
 		} else {
