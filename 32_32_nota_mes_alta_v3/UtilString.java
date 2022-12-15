@@ -7,18 +7,21 @@ public class UtilString {
 	// Funció que converteix un int a enter
 	public static String toString(int nota, String llistaNotes) {
 		String notaString = Integer.toString(nota);
-		llistaNotes = llistaNotes + notaString;
+		llistaNotes = llistaNotes + notaString + ",";
 		return llistaNotes;
 	}
 	// Funció que filtra les notes per excluir la més alta de la llista anterior
 	public static String filtraNotes(String llistaNotes, int notaMesAlta) {
 		String llistaFinal = "";
 		String notaAlta = Integer.toString(notaMesAlta);
-		char notaAltaCh = notaAlta.charAt(0);
+		String temp = "";
 		for (int i=0; i < llistaNotes.length(); i++) {
-			if (llistaNotes.charAt(i) != notaAltaCh) {
-				llistaFinal = llistaFinal + llistaNotes.charAt(i);
+			if (!Character.isDigit(llistaNotes.charAt(i))) {
+				if (!temp.equals(notaAlta)) {
+					llistaFinal = llistaFinal + llistaNotes.charAt(i);
+				}
 			}
+			temp = temp + llistaNotes.charAt(i);
 		}
 		return llistaFinal;
 	}
