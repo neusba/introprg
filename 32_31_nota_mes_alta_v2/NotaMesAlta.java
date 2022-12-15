@@ -8,8 +8,7 @@ public class NotaMesAlta {
 		int nota = Integer.parseInt(Entrada.readLine());
 		int notaMesAlta = nota;
 		int contador = 1;
-		String llistaNotes = ""; // Llista de notes de tipus String
-		// bucle
+		String llistaNotes = "";
 		while (nota > 0) {
 			if (nota >= notaMesAlta) { 
 				notaMesAlta = nota;
@@ -25,15 +24,8 @@ public class NotaMesAlta {
 		} else {
 			System.out.printf("La nota més alta és %d de les introduïdes: ", notaMesAlta);
 			// Funció String final
-			for (int i=0; i < llistaNotes.length(); i++) {
-				if (i == llistaNotes.length() - 2) {
-					System.out.print(llistaNotes.charAt(i) + " i ");
-				} else if (i == llistaNotes.length() - 1) {
-					System.out.print(llistaNotes.charAt(i));
-				} else {
-					System.out.print(llistaNotes.charAt(i) + ", ");
-				}
-			}
+			String mostraNotes = UtilString.mostraNotes(llistaNotes);
+			System.out.println(mostraNotes);
 		}
 	}
 }
