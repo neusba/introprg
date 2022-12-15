@@ -18,8 +18,10 @@ public class UtilString {
 		for (int i=0; i < llistaNotes.length(); i++) {
 			if (!Character.isDigit(llistaNotes.charAt(i))) {
 				if (!temp.equals(notaAlta)) {
-					llistaFinal = llistaFinal + llistaNotes.charAt(i);
+					llistaFinal = llistaFinal + temp;
 				}
+				temp = "";
+				continue;
 			} else {
 				temp = temp + llistaNotes.charAt(i);
 			}
