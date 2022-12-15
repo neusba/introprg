@@ -8,16 +8,14 @@ public class NotaMesAlta {
 		int nota = Integer.parseInt(Entrada.readLine());
 		int notaMesAlta = nota;
 		int contador = 1;
-		String notaString; // int a String
 		String llistaNotes = ""; // Llista de notes de tipus String
 		// bucle
 		while (nota > 0) {
-			if (nota >= notaMesAlta) {
+			if (nota >= notaMesAlta) { 
 				notaMesAlta = nota;
-			}
-			// transformació de int a string
-			notaString = Integer.toString(nota);
-			llistaNotes = llistaNotes + notaString;
+		       	}
+			// transformació de int a string i afegim a la llista
+			llistaNotes = UtilString.toString(nota, llistaNotes);
 			// demanem la nota again
 			nota = Integer.parseInt(Entrada.readLine());
 			contador += 1;
@@ -26,6 +24,7 @@ public class NotaMesAlta {
 			System.out.println("Com a mínim calen dues notes");
 		} else {
 			System.out.printf("La nota més alta és %d de les introduïdes: ", notaMesAlta);
+			// Funció String final
 			for (int i=0; i < llistaNotes.length(); i++) {
 				if (i == llistaNotes.length() - 2) {
 					System.out.print(llistaNotes.charAt(i) + " i ");
