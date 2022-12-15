@@ -20,8 +20,9 @@ public class UtilString {
 				if (!temp.equals(notaAlta)) {
 					llistaFinal = llistaFinal + llistaNotes.charAt(i);
 				}
+			} else {
+				temp = temp + llistaNotes.charAt(i);
 			}
-			temp = temp + llistaNotes.charAt(i);
 		}
 		return llistaFinal;
 	}
