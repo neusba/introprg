@@ -18,7 +18,7 @@ public class NotaMesAlta {
 			contador += 1;
 		}
 		if (contador < 3) {
-			System.out.println("Calen com a mínim dues notes");
+			System.out.println("Calen dues notes com a mínim");
 		} else {
 			String llistaFinal = UtilString.filtraNotes(llistaNotes, notaMesAlta);
 			System.out.printf("La nota més alta és %d. ", notaMesAlta);
