@@ -1,8 +1,9 @@
 /* Funcions per l'exercici 32_31
- * La primera funció
- * La segona 
+ * La primera funció convertirà els nombre int que rebem per entrada en String per després poder afegir-los a un String buit
+ * La segona s'encarrega de crear el String que mostrarem al final del programa
  */
 public class UtilString {
+	// Funció que converteix un int a enter
 	public static String toString(int nota, String llistaNotes) {
 		String notaString = Integer.toString(nota);
 		llistaNotes = llistaNotes + notaString;

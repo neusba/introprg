@@ -13,9 +13,8 @@ public class NotaMesAlta {
 			if (nota >= notaMesAlta) { 
 				notaMesAlta = nota;
 		       	}
-			// transformació de int a string i afegim a la llista
+			// transformació de int a string i afegim a la llista en un mòdul
 			llistaNotes = UtilString.toString(nota, llistaNotes);
-			// demanem la nota again
 			nota = Integer.parseInt(Entrada.readLine());
 			contador += 1;
 		}
