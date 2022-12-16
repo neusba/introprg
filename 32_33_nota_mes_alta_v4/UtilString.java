@@ -54,10 +54,9 @@ public class UtilString {
 	//Funció que agafarà la llista final i ordenarà els nombres de manera descendent
 	public static String llistaDescendent(String llistaNoRepetits) {
 		String llistaFiltradaDescendent = "";
-		System.out.println(llistaNoRepetits);
 		for (int i=10; i >= 1; i--) {
 			for (int j=0; j < llistaNoRepetits.length(); j++) {
-				System.out.println(j);
+				System.out.println(llistaNoRepetits.charAt(j));
 				int temp = llistaNoRepetits.charAt(j);
 				if (i == temp) {
 					llistaFiltradaDescendent = llistaFiltradaDescendent + llistaNoRepetits.charAt(j);
