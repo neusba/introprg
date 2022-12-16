@@ -47,6 +47,7 @@ public class UtilString {
 				}
 			}
 		}
+		System.out.println(llistaNoRepetits);
 		return llistaNoRepetits;
 	}
 
