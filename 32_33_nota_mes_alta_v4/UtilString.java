@@ -32,8 +32,8 @@ public class UtilString {
 	//Funció que exclou els nombre repetits la llista de notes filtrada
 	public static String noRepetits(String llistaFiltrada) {
 		String llistaNoRepetits = "";
-		boolean conteCaracter = false;
 		for (int i=0; i < llistaFiltrada.length(); i++) {
+			boolean conteCaracter = false;
 			if (i == llistaFiltrada.length() - 1) {
 				llistaNoRepetits = llistaNoRepetits + llistaFiltrada.charAt(i);
 			} else {
