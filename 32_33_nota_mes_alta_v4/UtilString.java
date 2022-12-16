@@ -55,8 +55,8 @@ public class UtilString {
 	public static String llistaDescendent(String llistaNoRepetits) {
 		String llistaFiltradaDescendent = "";
 		for (int i=10; i >= 1; i--) {
-			System.out.println(i);
 			for (int j=0; j < llistaNoRepetits.length(); j++) {
+				System.out.println(j);
 				int temp = llistaNoRepetits.charAt(j);
 				if (i == temp) {
 					llistaFiltradaDescendent = llistaFiltradaDescendent + llistaNoRepetits.charAt(j);
@@ -64,7 +64,6 @@ public class UtilString {
 				}
 			}
 		}
-		System.out.println(llistaFiltradaDescendent);
 		return llistaFiltradaDescendent;
 	}	
 	// Funció que ordena la llista final amb les notes que no són la més alta
