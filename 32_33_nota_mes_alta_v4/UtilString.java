@@ -56,8 +56,8 @@ public class UtilString {
 		String llistaFiltradaDescendent = "";
 		for (int i=10; i >= 1; i--) {
 			for (int j=0; j < llistaNoRepetits.length(); j++) {
-				System.out.println(llistaNoRepetits.charAt(j));
 				int temp = llistaNoRepetits.charAt(j);
+				System.out.println(temp);
 				if (i == temp) {
 					llistaFiltradaDescendent = llistaFiltradaDescendent + llistaNoRepetits.charAt(j);
 					break;
