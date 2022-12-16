@@ -58,7 +58,7 @@ public class UtilString {
 			for (int j=0; j < llistaNoRepetits.length(); j++) {
 				String auxNum = Integer.toString(i);
 				String auxCh = Character.toString(llistaNoRepetits.charAt(j));
-				System.out.println(auxCh);
+				System.out.println(auxNum);
 			}
 		}
 		return llistaFiltradaDescendent;
