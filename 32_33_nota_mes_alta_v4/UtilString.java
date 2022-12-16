@@ -1,8 +1,9 @@
 /* Funcions per l'exercici 32_32
- * La primera converteix un int a un String
+ * La primera converteix un int a un String i agrupa totes les notes introduïdes en una llista
  * La segona filtra les notes i exclou la més alta de la llista
- * La tercera funció ordena els nombres en ordre descendent.
- * La quarta funció els afegeix les comes i connector necessaris per formar la frase coherent.
+ * La tercera funció exclou de la llista un dels dos nombres o més que estiguin repetits
+ * La quarta funció ordena la llista de manera descendent
+ * L'última funció s'encarrega d'afegir les comes i connectors necessaris per mostrar el String ginal
  */
 public class UtilString {
 	// Funció que converteix un int a enter
