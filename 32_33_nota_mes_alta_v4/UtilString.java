@@ -38,7 +38,7 @@ public class UtilString {
 			} else {
 				for (int j=i+1; j < llistaFiltrada.length(); j++) {
 					if (llistaFiltrada.charAt(i) == llistaFiltrada.charAt(j)) {
-						break;
+						continue;
 					} else {
 						llistaNoRepetits = llistaNoRepetits + llistaFiltrada.charAt(i);
 					}
@@ -51,7 +51,7 @@ public class UtilString {
 	//Funció que agafarà la llista final i ordenarà els nombres de manera descendent
 	public static String llistaDescendent(String llistaNoRepetits) {
 		String llistaFiltradaDescendent = "";
-		for (int i=10; i >= 1; i++) {
+		for (int i=10; i >= 1; i--) {
 			for (int j=0; j < llistaNoRepetits.length(); j++) {
 				if (i == llistaNoRepetits.charAt(j)) {
 					llistaFiltradaDescendent = llistaFiltradaDescendent + llistaNoRepetits.charAt(j);
