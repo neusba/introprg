@@ -38,14 +38,13 @@ public class UtilString {
 			} else {
 				for (int j=i+1; j < llistaFiltrada.length(); j++) {
 					if (llistaFiltrada.charAt(i) == llistaFiltrada.charAt(j)) {
-						continue;
+						break;
 					} else {
 						llistaNoRepetits = llistaNoRepetits + llistaFiltrada.charAt(i);
 					}
 				}
 			}
 		}
-		System.out.println(llistaNoRepetits);
 		return llistaNoRepetits;
 	}
 
