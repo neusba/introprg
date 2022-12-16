@@ -59,7 +59,7 @@ public class UtilString {
 				int temp = llistaNoRepetits.charAt(j);
 				if (i == temp) {
 					llistaFiltradaDescendent = llistaFiltradaDescendent + llistaNoRepetits.charAt(j);
-					continue;
+					break;
 				}
 			}
 		}
