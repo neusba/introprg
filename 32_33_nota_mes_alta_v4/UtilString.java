@@ -43,12 +43,12 @@ public class UtilString {
 	}
 
 	//Funció que agafarà la llista final i ordenarà els nombres de manera descendent
-	public static String llistaDescendent(String llistaFiltrada) {
+	public static String llistaDescendent(String llistaNoRepetits) {
 		String llistaFiltradaDescendent = "";
 		for (int i=10; i >= 1; i++) {
-			for (int j=0; j < llistaFiltrada.length(); j++) {
-				if (i == llistaFiltrada.charAt(j)) {
-					llistaFiltradaDescendent = llistaFiltradaDescendent + llistaFiltrada.charAt(j);
+			for (int j=0; j < llistaNoRepetits.length(); j++) {
+				if (i == llistaNoRepetits.charAt(j)) {
+					llistaFiltradaDescendent = llistaFiltradaDescendent + llistaNoRepetits.charAt(j);
 				}
 			}
 		}

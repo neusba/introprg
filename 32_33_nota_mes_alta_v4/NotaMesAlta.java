@@ -25,7 +25,8 @@ public class NotaMesAlta {
 			System.out.println("Com a mínim calen dues notes");
 		} else {
 			String llistaFiltrada = UtilString.filtraNotes(llistaNotes, notaMesAlta);
-			String llistaFiltradaDescendent = UtilString.llistaDescendent(llistaFiltrada);
+			String llistaNoRepetits = UtilString.noRepetits(llistaFiltrada);
+			String llistaFiltradaDescendent = UtilString.llistaDescendent(llistaNoRepetits);
 			System.out.printf("La nota més alta és %d. ", notaMesAlta);
 			if (llistaFiltrada.isEmpty()) {
 				System.out.print("No queda cap altra nota.");
