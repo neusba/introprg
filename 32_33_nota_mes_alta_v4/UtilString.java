@@ -27,6 +27,7 @@ public class UtilString {
 				temp = temp + llistaNotes.charAt(i);
 			}
 		}
+		System.out.println(llistaFiltrada);
 		return llistaFiltrada;
 	}
 	//Funció que exclou els nombre repetits la llista de notes filtrada
