@@ -33,11 +33,15 @@ public class UtilString {
 	public static String noRepetits(String llistaFiltrada) {
 		String llistaNoRepetits = "";
 		for (int i=0; i < llistaFiltrada.length(); i++) {
-			for (int j=i+1; j < llistaFiltrada.length(); j++) {
-				if (llistaFiltrada.charAt(i) == llistaFiltrada.charAt(j)) {
-					continue;
-				} else {
-					llistaNoRepetits = llistaNoRepetits + llistaFiltrada.charAt(i);
+			if (i == llistaFiltrada.length() - 1) {
+				llistaNoRepetits = llistaNoRepetits + llistaFiltrada.charAt(i);
+			} else {
+				for (int j=i+1; j < llistaFiltrada.length(); j++) {
+					if (llistaFiltrada.charAt(i) == llistaFiltrada.charAt(j)) {
+						continue;
+					} else {
+						llistaNoRepetits = llistaNoRepetits + llistaFiltrada.charAt(i);
+					}
 				}
 			}
 		}
