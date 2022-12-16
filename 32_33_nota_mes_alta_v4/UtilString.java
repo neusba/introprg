@@ -27,7 +27,6 @@ public class UtilString {
 				temp = temp + llistaNotes.charAt(i);
 			}
 		}
-		System.out.println(llistaFiltrada);
 		return llistaFiltrada;
 	}
 	//Funció que exclou els nombre repetits la llista de notes filtrada
@@ -42,13 +41,12 @@ public class UtilString {
 					if (llistaFiltrada.charAt(i) == llistaFiltrada.charAt(j)) {
 						conteCaracter = true;
 					}
-					if (!conteCaracter) {
-						llistaNoRepetits = llistaNoRepetits + llistaFiltrada.charAt(i);
-					}
+				}
+				if (!conteCaracter) {
+					llistaNoRepetits = llistaNoRepetits + llistaFiltrada.charAt(i);
 				}
 			}
 		}
-		System.out.println(llistaNoRepetits);
 		return llistaNoRepetits;
 	}
 
@@ -77,7 +75,6 @@ public class UtilString {
 				llistaFiltradaOrdenada = llistaFiltradaOrdenada + llistaFiltradaDescendent.charAt(i) + ", ";
 			}
 		}
-		System.out.println(llistaFiltradaOrdenada);
 		return llistaFiltradaOrdenada;
 	}
 }
