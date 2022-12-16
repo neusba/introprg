@@ -58,9 +58,12 @@ public class UtilString {
 			for (int j=0; j < llistaNoRepetits.length(); j++) {
 				String auxNum = Integer.toString(i);
 				String auxCh = Character.toString(llistaNoRepetits.charAt(j));
-				System.out.println(auxNum);
+				if (auxNum.equals(auxCh)) {
+					llistaFiltradaDescendent = llistaFiltradaDescendent + auxCh;
+				}
 			}
 		}
+		System.out.println(llistaFiltradaDescendent);
 		return llistaFiltradaDescendent;
 	}	
 	// Funció que ordena la llista final amb les notes que no són la més alta
