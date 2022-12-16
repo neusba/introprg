@@ -47,7 +47,6 @@ public class UtilString {
 				}
 			}
 		}
-		System.out.println(llistaNoRepetits);
 		return llistaNoRepetits;
 	}
 
@@ -63,7 +62,6 @@ public class UtilString {
 				}
 			}
 		}
-		System.out.println(llistaFiltradaDescendent);
 		return llistaFiltradaDescendent;
 	}	
 	// Funció que ordena la llista final amb les notes que no són la més alta
