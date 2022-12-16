@@ -32,16 +32,16 @@ public class UtilString {
 	//Funció que exclou els nombre repetits la llista de notes filtrada
 	public static String noRepetits(String llistaFiltrada) {
 		String llistaNoRepetits = "";
-		boolean conteLletra = false;
+		boolean conteCaracter = false;
 		for (int i=0; i < llistaFiltrada.length(); i++) {
 			if (i == llistaFiltrada.length() - 1) {
 				llistaNoRepetits = llistaNoRepetits + llistaFiltrada.charAt(i);
 			} else {
 				for (int j=i+1; j < llistaFiltrada.length(); j++) {
 					if (llistaFiltrada.charAt(i) == llistaFiltrada.charAt(j)) {
-						conteLletra = true;
+						conteCaracter = true;
 					}
-					if (!conteLletra) {
+					if (!conteCaracter) {
 						llistaNoRepetits = llistaNoRepetits + llistaFiltrada.charAt(i);
 					}
 				}
@@ -61,6 +61,7 @@ public class UtilString {
 				}
 			}
 		}
+		System.out.println(llistaFiltradaDescendent);
 		return llistaFiltradaDescendent;
 	}	
 	// Funció que ordena la llista final amb les notes que no són la més alta
@@ -75,6 +76,7 @@ public class UtilString {
 				llistaFiltradaOrdenada = llistaFiltradaOrdenada + llistaFiltradaDescendent.charAt(i) + ", ";
 			}
 		}
+		System.out.println(llistaFiltradaOrdenada);
 		return llistaFiltradaOrdenada;
 	}
 }
