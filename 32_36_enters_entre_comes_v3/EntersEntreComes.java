@@ -5,6 +5,10 @@ public class EntersEntreComes {
 		System.out.println("Quants?");
 		int quants = Integer.parseInt(Entrada.readLine());
 		int[] numeros = new int[quants];
+		if (quants < 1 ) {
+			System.out.println("Res a fer");
+			return;
+		}
 		int numeroValor = 1;
 		for (int i=0; i<numeros.length; i++) {
 			System.out.printf("Valor %d?%n", numeroValor);
