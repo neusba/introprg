@@ -28,7 +28,7 @@ public class UtilString {
 		System.out.println("Separador?");
 		String cadena = Entrada.readLine();
 		char separador = cadena.charAt(0);
-		System.out.printf("%c i la resta la pots ignorar", separador);
+		System.out.printf("%c i la resta la pots ignorar%n", separador);
 		return separador;
 	}
 	// funció que separa els valors de la seqüència amb el separador indicat i els mostra per pantalla
