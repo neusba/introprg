@@ -16,10 +16,9 @@ public class EntersEntreComes {
 		char separador = UtilString.demanaSeparador();
 		int[] numeros = new int[quantsInt];
 		int numeroValor = 1;
-		String valor = Entrada.readLine();
 		for (int i=0; i<numeros.length; i++) {
 			System.out.printf("Valor %d?%n", numeroValor);
-			valor = Entrada.readLine();
+			String valor = Entrada.readLine();
 			esEnter = UtilString.esEnter(valor);
 			while (!esEnter) {
 				System.out.println("Per favor, un valor enter");
