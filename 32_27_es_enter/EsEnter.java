@@ -1,6 +1,6 @@
 /* Versió modular del exercici "És Enter"
  * Aquesta vegada els càlculs els duura a terme la funció esEnter()
- * L'entrada necessita ser pulida d'espais en blanc abans d'entrar a la funció
+ * L'entrada necessita ser pulida d'espais en blanc abans d'entrar a la funció.
  */
 
 public class EsEnter {
