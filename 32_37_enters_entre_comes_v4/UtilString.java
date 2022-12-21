@@ -27,13 +27,8 @@ public class UtilString {
 	public static char demanaSeparador() {
 		System.out.println("Separador?");
 		String cadena = Entrada.readLine();
-		if (cadena.isEmpty()) {
-			char separador = ',';
-			return separador;
-		} else {
-			char separador = cadena.charAt(0);
-			return separador;
-		}
+		char separador = cadena.charAt(0);
+		return separador;
 	}
 	// funció que separa els valors de la seqüència amb el separador indicat i els mostra per pantalla
 	public static String mostraSequencia(int[] numeros, char separador) {

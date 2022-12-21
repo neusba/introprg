@@ -1,5 +1,4 @@
-/* Nova versió del programa entre comes
- * Aquesta vegada l'usuari decidirà quin és el caràcter que separarà la seqüència
+/* Nova versió del programa entre comes * Aquesta vegada l'usuari decidirà quin és el caràcter que separarà la seqüència * 
  * Quan l'array tingui longitud 0, el mòdul que mostra la seqüència final funcionarà de totes formes
  * Haurem de comprobar que els nombres intrduïts són enters per poder continuar
  */
@@ -16,7 +15,7 @@ public class EntersEntreComes {
 		if (quantsInt < 0) {
 			quantsInt = 0;
 		}
-		char separador = UtilString.demanaSeparador();
+	       	char separador = UtilString.demanaSeparador();
 		int[] numeros = new int[quantsInt];
 		int numeroValor = 1;
 		for (int i=0; i<numeros.length; i++) {
