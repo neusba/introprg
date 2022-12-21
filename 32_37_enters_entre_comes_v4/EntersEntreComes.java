@@ -13,6 +13,9 @@ public class EntersEntreComes {
 			esEnter = UtilString.esEnter(quants);
 		}
 		int quantsInt = Integer.parseInt(quants);
+		if (quantsInt < 0) {
+			quantsInt = 0;
+		}
 		char separador = UtilString.demanaSeparador();
 		int[] numeros = new int[quantsInt];
 		int numeroValor = 1;
