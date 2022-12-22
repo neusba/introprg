@@ -1,36 +1,32 @@
-/* Nova versió del programa entre comes * Aquesta vegada l'usuari decidirà quin és el caràcter que separarà la seqüència * 
- * Quan l'array tingui longitud 0, el mòdul que mostra la seqüència final funcionarà de totes formes
- * Haurem de comprobar que els nombres intrduïts són enters per poder continuar
+/* Versió millorada de l'exercici anterior amb funcions adicionals
+ * Aquesta vegada el programa demanarà a l'usuari el caràcter separador de la seqüencia
+ * El programa funcionarà encara que la longitud de l'array sigui 0
+ * Per cada valor introdüit, el programa cridarà al mòdul esEnter() per comprobar que tots els números són enters.
  */
 public class EntersEntreComes {
 	public static void main(String[] args) {
-		String quants = UtilString.demanaQuantitat();
-		boolean esEnter = UtilString.esEnter(quants);
-		while (!esEnter) {
-			System.out.println("Per favor, un valor enter");
-			quants = UtilString.demanaQuantitat();
-			esEnter = UtilString.esEnter(quants);
-		}
+		System.out.println("Quants?");
+		String quants = UtilString.esEnter(); // Llama a mòdulo esEnter
+		// bucle si es entero o no
+		// Convert int to String para poder crear el array con el numero indicado por el usuario
 		int quantsInt = Integer.parseInt(quants);
-		if (quantsInt < 0) {
-			quantsInt = 0;
-		}
-	       	char separador = UtilString.demanaSeparador();
-		int[] numeros = new int[quantsInt];
+		int[] numeros = new int[quantsInt]; // crear array con quantsInt
+		// Modulo que pide separador
+		// Modulo que pide los valores
 		int numeroValor = 1;
 		for (int i=0; i<numeros.length; i++) {
 			System.out.printf("Valor %d?%n", numeroValor);
-			String valor = Entrada.readLine();
-			esEnter = UtilString.esEnter(valor);
-			while (!esEnter) {
-				System.out.println("Per favor, un valor enter");
-				valor = Entrada.readLine();
-			}
-			int valorArray = Integer.parseInt(valor);
-			numeros[i] = valorArray;
+			numeros[i] = Integer.parseInt(Entrada.readLine());
 			numeroValor += 1;
 		}
-		String sequencia = UtilString.mostraSequencia(numeros, separador);
-		System.out.println(sequencia);
+		// modulo que muestra la sequencia con los separadores puestos
+		for (int i=0; i<numeros.length; i++) {
+			if (i == numeros.length - 1) {
+				System.out.print(numeros[i]);
+			} else {
+				System.out.print(numeros[i] + ", ");
+			}
+		}
 	}
 }
+
