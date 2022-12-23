@@ -14,6 +14,10 @@ public class EntersEntreComes {
 			esEnter = UtilString.esEnter(quants);
 		}
 		int quantsInt = Integer.parseInt(quants);
+		if (quantsInt < 0) {
+			System.out.println("Res a fer");
+			return;
+		}
 		int[] numeros = new int[quantsInt];
 		char separador = UtilString.demanaSeparador();
 		numeros = UtilString.demanaValor(numeros);
