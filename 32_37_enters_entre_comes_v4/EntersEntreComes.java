@@ -6,27 +6,29 @@
 public class EntersEntreComes {
 	public static void main(String[] args) {
 		System.out.println("Quants?");
-		String quants = UtilString.esEnter(); // Llama a mòdulo esEnter
-		// bucle si es entero o no
-		// Convert int to String para poder crear el array con el numero indicado por el usuario
-		int quantsInt = Integer.parseInt(quants);
-		int[] numeros = new int[quantsInt]; // crear array con quantsInt
-		// Modulo que pide separador
-		// Modulo que pide los valores
-		int numeroValor = 1;
-		for (int i=0; i<numeros.length; i++) {
-			System.out.printf("Valor %d?%n", numeroValor);
-			numeros[i] = Integer.parseInt(Entrada.readLine());
-			numeroValor += 1;
+		String quants = Entrada.readLine();
+		boolean esEnter = UtilString.esEnter(quants);
+		while (!esEnter) {
+			System.out.println("Per favor, un valor enter");
+			quants = Entrada.readLine();
+			esEnter = UtilString.esEnter(quants);
 		}
-		// modulo que muestra la sequencia con los separadores puestos
+		int quantsInt = Integer.parseInt(quants);
+		int[] numeros = new int[quantsInt];
+		String separador = UtilString.demanaSeparador();
+		numeros = UtilString.demanaValor(numeros);
+		mostraSequencia(numeros, separador);
+	}
+	// funció que separa l'array amb el separador corresponent i el mostra per pantalla
+	public static void mostraSequencia(int[] numeros, String separador) {
 		for (int i=0; i<numeros.length; i++) {
 			if (i == numeros.length - 1) {
 				System.out.print(numeros[i]);
 			} else {
-				System.out.print(numeros[i] + ", ");
+				System.out.print(numeros[i] + separador + " ");
+
 			}
 		}
 	}
 }
-
+			
