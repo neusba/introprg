@@ -18,6 +18,7 @@ public class EntersEntreComes {
 		char separador = UtilString.demanaSeparador();
 		numeros = UtilString.demanaValor(numeros);
 		String sequencia = UtilString.entreComes(numeros, separador);
+		System.out.println(sequencia);
 	}
 }
 			
