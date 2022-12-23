@@ -15,20 +15,9 @@ public class EntersEntreComes {
 		}
 		int quantsInt = Integer.parseInt(quants);
 		int[] numeros = new int[quantsInt];
-		String separador = UtilString.demanaSeparador();
+		char separador = UtilString.demanaSeparador();
 		numeros = UtilString.demanaValor(numeros);
-		mostraSequencia(numeros, separador);
-	}
-	// funció que separa l'array amb el separador corresponent i el mostra per pantalla
-	public static void mostraSequencia(int[] numeros, String separador) {
-		for (int i=0; i<numeros.length; i++) {
-			if (i == numeros.length - 1) {
-				System.out.print(numeros[i]);
-			} else {
-				System.out.print(numeros[i] + separador + " ");
-
-			}
-		}
+		String sequencia = UtilString.entreComes(numeros, separador);
 	}
 }
 			

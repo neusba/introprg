@@ -20,16 +20,15 @@ public class UtilString {
 		return true;
 	}
 	// funció que demana a l'usuari un separador per la seqúència final
-	public static String demanaSeparador() {
+	public static char demanaSeparador() {
 		System.out.println("Separador?");
 		String cadena = Entrada.readLine();
-		String separador;
+		char separador;
 		if (cadena.isEmpty()) {
-			separador = ",";
+			separador = ',';
 			return separador;
 		} else {
-			char separadorCh = cadena.charAt(0);
-			separador = Character.toString(separadorCh);
+			separador = cadena.charAt(0);
 			return separador;
 		}
 	}
@@ -50,6 +49,19 @@ public class UtilString {
 			numeroValor += 1;	
 		}
 		return numeros;
+	}
+	// funció que separa l'array amb el separador corresponent i el mostra per pantalla
+	public static String entreComes(int[] numeros, char separador) {
+		String sequencia = "";
+		for (int i=0; i<numeros.length; i++) {
+			if (i == numeros.length - 1) {
+				sequencia = sequencia + numeros[i];
+			} else {
+				sequencia = sequencia + numeros[i] + separador + " ";
+
+			}
+		}
+		return sequencia;
 	}
 }
 
