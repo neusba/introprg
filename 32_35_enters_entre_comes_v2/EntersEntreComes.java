@@ -18,6 +18,5 @@ public class EntersEntreComes {
 				System.out.print(numeros[i] + ", ");
 			}
 		}
-		System.out.println(numeros);
 	}
 }
