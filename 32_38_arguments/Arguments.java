@@ -3,11 +3,15 @@
 public class Arguments {
 	public static void main(String[] args) {
 		for (int i=0; i<args.length; i++) {
-			boolean esEnter = UtilString.esEnter(args[i]);
-			if (esEnter) {
-				System.out.printf("[%d] \"%s\": és enter%n", i, args[i]);
+			if (args.length == 0) {
+				System.out.println("Cap argument");
 			} else {
-				System.out.printf("[%d] \"%s\": no és enter%n", i, args[i]);
+				boolean esEnter = UtilString.esEnter(args[i]);
+				if (esEnter) {
+					System.out.printf("[%d] \"%s\": és enter%n", i, args[i]);
+				} else {
+					System.out.printf("[%d] \"%s\": no és enter%n", i, args[i]);
+				}
 			}
 		}
 	}
