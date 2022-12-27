@@ -29,7 +29,7 @@ public class TresEnRatlla {
 	// Preguntem a l'usuari el següent moviment
 		System.out.println("Fila del següent moviment?");
 		int fila = Integer.parseInt(Entrada.readLine());
-		System.out.println("columna del següent moviment?");
+		System.out.println("Columna del següent moviment?");
 		int col = Integer.parseInt(Entrada.readLine());
 	// coloquem la nova posició
 		taulell[fila][col] = 'X';
