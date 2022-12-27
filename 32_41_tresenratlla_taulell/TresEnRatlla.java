@@ -35,7 +35,7 @@ public class TresEnRatlla {
 		taulell[fila][col] = 'X';
 
 	// mostrem de nou el taulell
-		System.out.println("Posicio final del taulell:");
+		System.out.println("La posició final del taulell:");
 		mostraFila(taulell[0]);
 		mostraFila(taulell[1]);
 		mostraFila(taulell[2]);
