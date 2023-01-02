@@ -25,16 +25,16 @@ public class TresEnRatlla {
 				jugador = jugadorO;
 			}
 			System.out.printf("%c?%n", jugador); // demanem la coordenada
-			String coordenada = Entrada.readLine();
-			// adaptacio coordenada a int 
-			int fila = UtilString.conversioFila(coordenada);
-			int columna = UtilString.conversioColumna(coordenada);
+			String coordenada = Entrada.readLine();	
 			// comprovem si el jugador abandona
 			boolean abandona = UtilString.jugadorAbandona(coordenada);
 			if (abandona) {
 				System.out.printf("%c abandona%n", jugador);
 				return;
 			}
+			// adaptacio coordenada a int 
+			int fila = UtilString.conversioFila(coordenada);
+			int columna = UtilString.conversioColumna(coordenada);
 			// comprova el format de la coordenada
 			boolean correcte = UtilString.formatCorrecte(coordenada);
 			while (!correcte) {
