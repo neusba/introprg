@@ -7,8 +7,8 @@
 public class TresEnRatlla {
 	public static void main(String[] args) {
 		// definim jugadors
-		char jugadorX = 'x';
-		char jugadorO = 'o';
+		char jugadorX = 'X';
+		char jugadorO = 'O';
 		// creem el taulell inicial
 		char[][] taulell = UtilString.creacioTaulell();
 		// iniciem el joc i mostrem el taulell inicial
