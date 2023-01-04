@@ -7,7 +7,7 @@ public class SumaEnters {
 		// modul que omple l'array creat amb la quantitat anterior de enters a l'array amb els nombres que són enters
 		int[] enters = filtraEnters(args, quants);
 		// mòdul que suma els valors del array d'enters
-		int suma = UtilString.sumaEnters(enters);
+		int suma = sumaEnters(enters);
 		System.out.println(suma);
 	}
 
@@ -38,6 +38,15 @@ public class SumaEnters {
 			numeroValor += 1;
 		}
 		return enters;
+	}
+
+	// funció que suma els enters de l'array de'enters
+	public static int sumaEnters(int[] enters) {
+		int suma = 0;
+		for (int i=0; i<enters.length; i++) {
+			suma = suma + enters[i];
+		}
+		return suma;
 	}
 }
 		

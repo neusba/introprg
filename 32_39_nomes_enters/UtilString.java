@@ -20,13 +20,5 @@ public class UtilString {
 		}
 		return true;
 	}
-	// funció que suma els enters de l'array de'enters
-	public static int sumaEnters(int[] enters) {
-		int suma = 0;
-		for (int i=0; i<enters.length; i++) {
-			suma = suma + enters[i];
-		}
-		return suma;
-	}
 }
 
