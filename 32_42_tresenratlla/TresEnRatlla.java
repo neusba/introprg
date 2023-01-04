@@ -57,7 +57,7 @@ public class TresEnRatlla {
 			taulell[fila][columna] = jugador;
 			mostraTaulell(taulell);
 			// comprovem si el jugador ha guanyat la partida
-			boolean guanya = UtilString.jugadorGuanya(taulell, jugador);
+			boolean guanya = jugadorGuanya(taulell, jugador);
 			if (guanya) {
 				System.out.printf("%c guanya", jugador);
 				return;
@@ -88,5 +88,48 @@ public class TresEnRatlla {
 			return false;
 		}
 		return true;
+	}
+
+	// funcio que comproba si el jugador que està jugant ha guanyat la partida
+	public static boolean jugadorGuanya(char[][] taulell, char jugador) {
+		boolean ratlla = true;
+		// mirem primer totes les columnes de cada fila
+		for (int i=0; i<3; i++) {
+			for (int j=0; j<3; j++) {
+				if (taulell[i][j] != jugador) {
+					ratlla = false;
+				}
+			}
+			if (ratlla) {
+				return true;
+			}
+		}
+		// ara comprovem les primeres columnes int columna = 0;
+		int columna = 0;
+		int topeColumna = columna + 1;
+		while (columna < 3) {
+			for (int i=0; i<3; i++) { // files
+				for (int j=columna; j<topeColumna; j++) { // columnes 
+					if (taulell[i][j] != jugador) {
+						ratlla = false;
+					}
+				}
+			}
+			if (ratlla) {
+				return true;
+			}
+			columna += 1;
+		}
+		// mirem si ha guanyat fent diagonals
+		for (int i=0; i<3; i++) {
+			for (int j=0; j<3; j++) {
+				if (taulell[0][0] == jugador && taulell[1][1] == jugador && taulell[2][2] == jugador) {
+					return true;
+				} else if (taulell[0][2] == jugador && taulell[1][1] == jugador && taulell[2][0] == jugador) {
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 }
