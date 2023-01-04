@@ -4,22 +4,6 @@
  * La tercer s'ecarregarà de sumar els valor de l'array i mostrarà el resultat
  */
 public class UtilString {
-	// funcio que crea array només d'enters
-	public static int[] filtraEnters(String[] valors, int quants) {
-		int[] enters = new int[quants];
-		int numeroValor = 0;
-		int posicio = 0;
-		for (int i=0; i<valors.length; i++) {
-			boolean esEnter = esEnter(valors[i]);
-			if (esEnter) {
-				int valor = Integer.parseInt(valors[i]);
-				enters[posicio] = valor;
-				posicio += 1;
-			}
-			numeroValor += 1;
-		}
-		return enters;
-	}
 	// funció que comprova si un nombre és enter o no
 	public static boolean esEnter(String text) {
 		if (text.isEmpty()) {
