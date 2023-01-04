@@ -106,41 +106,18 @@ public class TresEnRatlla {
 			ratlla = true;
 		}
 		// ara comprovem les primeres columnes de la primera fila
-		// primera fila
-		ratlla = true;
-		for (int i=0; i<3; i++) { // files
-			for (int j=0; j<1; j++) { // columnes 
-				if (taulell[i][j] != jugador) {
-					ratlla = false;
-				}
-			}
-		}
-		if (ratlla) {
-			return true;
-		}
-		// segona fila
-		ratlla = true;
-		for (int i=0; i<3; i++) { // files
-			for (int j=1; j<2; j++) { // columnes 
-				if (taulell[i][j] != jugador) {
-					ratlla = false;
-				}
-			}
-		}
-		if (ratlla) {
-			return true;
-		}
-		// tercera fila
-		ratlla = true;
-		for (int i=0; i<3; i++) { // files
-			for (int j=2; j<3; j++) { // columnes 
-				if (taulell[i][j] != jugador) {
-					ratlla = false;
-				}
-			}
-		}
-		if (ratlla) {
-			return true;
+		int col = 0;
+		int topeCol = col + 1;
+		int numeroCol = 0;
+		boolean columna = UtilString.faColumna(taulell, col, topeCol, jugador);
+		while (numeroCol < 3) {
+			if (columna) {
+				return true;
+			}		
+			col += 1;
+			topeCol += 1;
+			numeroCol += 1;
+			columna = UtilString.faColumna(taulell, col, topeCol, jugador);
 		}
 		// mirem si ha guanyat fent diagonals
 		for (int i=0; i<3; i++) {
