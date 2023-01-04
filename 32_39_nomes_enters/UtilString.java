@@ -1,7 +1,4 @@
 /* Funcions per l'exercici 32_39
- * La primera funció comptarà la quantitat de nombres enters hi ha en l'array de strings main
- * La segona función crearà el nou array amb només els nombres enters
- * La tercer s'ecarregarà de sumar els valor de l'array i mostrarà el resultat
  */
 public class UtilString {
 	// funció que comprova si un nombre és enter o no
