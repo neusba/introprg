@@ -4,17 +4,6 @@
  * La tercer s'ecarregarà de sumar els valor de l'array i mostrarà el resultat
  */
 public class UtilString {
-	// funcio que compta enters
-	public static int quantsEnters(String[] valors) {
-		int quants = 0;
-		for (int i=0; i<valors.length; i++) {
-			boolean esEnter = esEnter(valors[i]);
-			if (esEnter) {
-				quants += 1;
-			}
-		}
-		return quants;
-	}
 	// funcio que crea array només d'enters
 	public static int[] filtraEnters(String[] valors, int quants) {
 		int[] enters = new int[quants];
