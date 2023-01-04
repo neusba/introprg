@@ -62,17 +62,5 @@ public class UtilString {
 		}
 		return true;
 	}		
-
-		
-	// funcio que comprova si han empatat la partida
-	public static boolean hiHaEmpat(char[][] taulell) {
-		for (int fila=0; fila<3; fila++) {
-			for (int col=0; col<3; col++) {
-				if (taulell[fila][col] == '·') {
-					return false;
-				}
-			}
-		}
-		return true;
-	}
+	
 }

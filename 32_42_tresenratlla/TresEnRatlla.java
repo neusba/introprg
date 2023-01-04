@@ -64,7 +64,7 @@ public class TresEnRatlla {
 			}
 
 			// comprovem si han empatat
-			boolean empat = UtilString.hiHaEmpat(taulell);
+			boolean empat = hiHaEmpat(taulell);
 			if (empat) {
 				System.out.println("Empat");
 				return;
@@ -131,5 +131,17 @@ public class TresEnRatlla {
 			}
 		}
 		return false;
+	}
+
+	// funcio que comprova si han empatat la partida
+	public static boolean hiHaEmpat(char[][] taulell) {
+		for (int fila=0; fila<3; fila++) {
+			for (int col=0; col<3; col++) {
+				if (taulell[fila][col] == '·') {
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 }
