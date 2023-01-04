@@ -43,7 +43,7 @@ public class TresEnRatlla {
 				correcte = UtilString.formatCorrecte(coordenada);
 			}
 			// comprova si la casella esta ocupada
-			boolean ocupada = UtilString.casellaOcupada(taulell, fila, columna);
+			boolean ocupada = casellaOcupada(taulell, fila, columna);
 			while (ocupada) {
 				System.out.println("Ocupada");
 				mostraTaulell(taulell);
@@ -51,7 +51,7 @@ public class TresEnRatlla {
 				coordenada = Entrada.readLine();
 				fila = UtilString.conversioFila(coordenada);
 				columna = UtilString.conversioColumna(coordenada);
-				ocupada = UtilString.casellaOcupada(taulell, fila, columna);
+				ocupada = casellaOcupada(taulell, fila, columna);
 			}
 			// coloquem la posició i mostrem el taulell
 			taulell[fila][columna] = jugador;
@@ -80,5 +80,13 @@ public class TresEnRatlla {
 			}
 			System.out.println();
 		}
+	}
+
+	// funció que comprova si la casella està ocupada
+	public static boolean casellaOcupada(char[][] taulell, int fila, int columna) {
+		if (taulell[fila][columna] == '·') {
+			return false;
+		}
+		return true;
 	}
 }

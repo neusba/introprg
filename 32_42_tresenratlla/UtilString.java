@@ -63,13 +63,6 @@ public class UtilString {
 		return true;
 	}		
 
-	// funció que comprova si la casella està ocupada
-	public static boolean casellaOcupada(char[][] taulell, int fila, int columna) {
-		if (taulell[fila][columna] == '·') {
-			return false;
-		}
-		return true;
-	}
 
 	// funcio que comproba si el jugador que està jugant ha guanyat la partida
 	public static boolean jugadorGuanya(char[][] taulell, char jugador) {
