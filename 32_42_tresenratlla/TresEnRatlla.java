@@ -104,7 +104,8 @@ public class TresEnRatlla {
 				return true;
 			}
 		}
-		// ara comprovem les primeres columnes de cada fila
+		// ara comprovem les primeres columnes de la primera fila
+		ratlla = true;
 		for (int i=0; i<3; i++) { // files
 			for (int j=0; j<1; j++) { // columnes 
 				if (taulell[i][j] != jugador) {
