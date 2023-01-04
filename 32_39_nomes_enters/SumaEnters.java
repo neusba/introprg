@@ -5,7 +5,7 @@ public class SumaEnters {
 		// mòdul que compta la quantitat (int) d'enters que hi ha a l'array
 		int quants = quantsEnters(args);
 		// modul que omple l'array creat amb la quantitat anterior de enters a l'array amb els nombres que són enters
-		int[] enters = filtraEnters(args, quants);
+		int[] enters = filtraEnters(args);
 		// mòdul que suma els valors del array d'enters
 		int suma = sumaEnters(enters);
 		System.out.println(suma);
@@ -24,7 +24,8 @@ public class SumaEnters {
 	}
 
 	// funcio que crea array només d'enters
-	public static int[] filtraEnters(String[] valors, int quants) {
+	public static int[] filtraEnters(String[] valors) {
+		int quants = quantsEnters(valors);
 		int[] enters = new int[quants];
 		int numeroValor = 0;
 		int posicio = 0;
