@@ -104,21 +104,16 @@ public class TresEnRatlla {
 				return true;
 			}
 		}
-		// ara comprovem les primeres columnes int columna = 0;
-		int columna = 0;
-		int topeColumna = columna + 1;
-		while (columna < 3) {
-			for (int i=0; i<3; i++) { // files
-				for (int j=columna; j<topeColumna; j++) { // columnes 
-					if (taulell[i][j] != jugador) {
-						ratlla = false;
-					}
+		// ara comprovem les primeres columnes de cada fila
+		for (int i=0; i<3; i++) { // files
+			for (int j=0; j<1; j++) { // columnes 
+				if (taulell[i][j] != jugador) {
+					ratlla = false;
 				}
 			}
-			if (ratlla) {
-				return true;
-			}
-			columna += 1;
+		}
+		if (ratlla) {
+			return true;
 		}
 		// mirem si ha guanyat fent diagonals
 		for (int i=0; i<3; i++) {
