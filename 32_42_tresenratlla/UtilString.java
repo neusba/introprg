@@ -61,17 +61,5 @@ public class UtilString {
 			}
 		}
 		return true;
-	}		
-
-	// funcio que comprova si el jugador ha fet columna
-	public static boolean faColumna(char[][] taulell, int col, int topeCol, char jugador) {
-		for (int i=0; i<3; i++) { // files
-			for (int j=col; j<topeCol; j++) { // columnes 
-				if (taulell[i][j] != jugador) {
-					return false;
-				}
-			}
-		}
-		return true;
-	}	
+	}
 }
