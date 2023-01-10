@@ -23,7 +23,6 @@ public class Pilota {
             	netejaPosicio(camp, posicio);
             	seguentPosicio(posicio, increment);
             	System.out.printf("%nEnter per continuar");
-            	Entrada.readLine();
 		} while (Entrada.readLine().isEmpty());
         }
 
