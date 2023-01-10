@@ -64,7 +64,7 @@ public class Pilota {
 
 	// funcio que retorna el nou nombre de fila
 	public static int seguentFila(int actual) {
-		if (actual == N_FILES) {
+		if (actual == N_FILES - 1) {
 			actual = 0;
 			return actual;
 		} else {
@@ -75,7 +75,7 @@ public class Pilota {
 
 	// funcio que retorna el nou nombre de columnes
 	public static int seguentCol(int actual) {
-		if (actual == N_COLS) {
+		if (actual == N_COLS - 1) {
 			actual = 0;
 			return actual;
 		} else {
