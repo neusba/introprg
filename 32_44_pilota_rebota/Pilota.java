@@ -16,7 +16,7 @@ public class Pilota {
         	int[] increment = new int[2];       // incFila, incCol
         	canviaIncrement(increment, 1, 1);   // desplaçament inicial: 1 fila 1 columna
 
-        	while (true) {
+        	while (Entrada.readLine().isEmpty()) {
             	posicionaPilota(camp, posicio);
             	netejaPantalla();
             	mostraCamp(camp);
