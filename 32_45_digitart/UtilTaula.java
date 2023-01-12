@@ -9,7 +9,7 @@ public class UtilTaula {
 				if (origen[i][j] == inici) {
 					desti[i][j] = fi;
 				} else {
-					desti[i][j] = '·';
+					desti[i][j] = origen[i][j];
 				}
 			}
 		}
