@@ -3,7 +3,7 @@
 public class DigitArt {
 	public static void main(String[] args) {
 		if (args.length < 1) {
-			System.out.println("Especifiqueu un o més arguments en la línia de comandes");
+			System.out.println("Especifiqueu un o més dígits en la línia de comandes");
 			return;
 		}
 		for (int i=0; i<args.length; i++) {
