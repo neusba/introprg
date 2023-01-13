@@ -8,6 +8,7 @@ public class TaulaEnterAString {
 			boolean correcte = especificacioCorrecte(args[i]);
 			if (!correcte) {
 				System.out.println("Especificació no vàlida");
+				continue;
 			}
  	            	int files = obteFiles(args[i]);
  	            	int columnes = obteColumnes(args[i]);
