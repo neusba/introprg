@@ -19,6 +19,7 @@ public class TaulaEnterAString {
               			UtilTaula.inicialitzaTaula(taula, 1);
                			String resultat = UtilTaula.taulaToString(taula);
                 		System.out.println(resultat);
+				System.out.println();
             		}
         	}
     	}
