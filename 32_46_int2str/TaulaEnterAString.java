@@ -46,10 +46,10 @@ public class TaulaEnterAString {
 				break;
 			}
 		}
-		int files = Integer.parseInt(fila);
-		if (files > 2) {
-			files = - 1;
+		if (fila.length() > 2) {
+			fila = "-1";
 		}
+		int files = Integer.parseInt(fila);
 		return files;	
 	}
 
