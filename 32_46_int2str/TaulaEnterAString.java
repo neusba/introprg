@@ -47,6 +47,9 @@ public class TaulaEnterAString {
 			}
 		}
 		int files = Integer.parseInt(fila);
+		if (files > 2) {
+			files = - 1;
+		}
 		return files;	
 	}
 
