@@ -2,6 +2,15 @@
 
 public class UtilTaula {
 	// funcio que retorna la taula inicialitzada
+	public static void inicialitzaTaula(int[][] taula, int valor) {
+		for (int i=0; i<taula.length; i++) {
+			for (int j=0; j<taula[i].length; j++) {
+				taula[i][j] = valor;
+			}
+		}
+	}
+
+	// funcio que retorna la taula sequenciada
 	public static void inicialitzaSequencial(int[][] taula, int valorInicial) {
 		int sequenciador = 0;
 		for (int i=0; i<taula.length; i++) {
