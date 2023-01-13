@@ -16,7 +16,7 @@ public class UtilTaula {
 		for (int i=0; i<taula.length; i++) {
 			for (int j=0; j<taula[i].length; j++) {
 				sequenciador += 1;
-				taula[i][j] = valorInicial + sequenciador;
+				taula[i][j] = valorInicial;
 			}
 		}
 	}
