@@ -37,6 +37,10 @@ public class TaulaEnterAString {
 
 	// funció que que obte les files de la taula a través del primer nombre donat en l'argument de l'usuari
 	public static int obteFiles(String especificacio) {
+		boolean correcte = especificacioCorrecte(especificacio);
+		if (!correcte) {
+			return - 1;
+		}
 		char[] valors = especificacio.toCharArray();
 		String fila = "";
 		for (int i=0; i<valors.length; i++) {
@@ -46,15 +50,16 @@ public class TaulaEnterAString {
 				break;
 			}
 		}
-		if (fila.length() > 2) {
-			return - 1;
-		}
 		int files = Integer.parseInt(fila);
 		return files;	
 	}
 
 	// funció que que obte les columnes de la taula a través del segon nombre donat en l'argument de l'usuari
 	public static int obteColumnes(String especificacio) {
+		boolean correcte = especificacioCorrecte(especificacio);
+		if (!correcte) {
+			return - 1;
+		}
 		char[] valors = especificacio.toCharArray();
 		String columna = "";
 		for (int i=valors.length - 1; i>=0; i--) {
