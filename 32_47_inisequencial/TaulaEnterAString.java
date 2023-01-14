@@ -18,7 +18,8 @@ public class TaulaEnterAString {
  	                	System.out.println("Especificació no vàlida");
 	            	} else {
 	                	int[][] taula  = new int[files][columnes];
-              			UtilTaula.inicialitzaTaula(taula, 1);	
+              			UtilTaula.inicialitzaTaula(taula, 1);
+				valorInicial = -1;
               			UtilTaula.inicialitzaSequencial(taula, valorInicial);
                			String resultat = UtilTaula.taulaToString(taula);
                 		System.out.println(resultat);
