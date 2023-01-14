@@ -4,7 +4,7 @@
  */
 public class TaulaEnterAString {
 	public static void main(String[] args){
-		int valorInicial = -1;
+		int valorInicial = 0;
  		for (int i=0; i<args.length; i++) {
  	        	System.out.println(args[i]);
 			boolean correcte = especificacioCorrecte(args[i]);
