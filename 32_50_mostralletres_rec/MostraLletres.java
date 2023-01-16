@@ -15,7 +15,6 @@ public class MostraLletres {
 		if (text.isEmpty()) {
 			return;
 		}
-		// hi ha al menys un caràcter. Comptem quantes lletres hi queden
 
         	// considerem el primer caràcter
         	char primer = text.charAt(0);
