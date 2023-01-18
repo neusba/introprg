@@ -1,5 +1,5 @@
 /* Programa que demani un text i mostri només el caràcters numèrics que conté
- * No es pot utilitzar ni whilen ni for
+ * No es pot utilitzar ni while ni for
  */
 
 public class ExtreuNombres {
@@ -12,16 +12,18 @@ public class ExtreuNombres {
 
 	// extreu els nombres i els retorna concatenats
 	public static String extreuNombres(String text) {
-		String nombres = "";
-		if (text.isEmpty()) {
-			return nombres;
-		}
+		if (text.isEmpty()) return "";			// cas base
+
 		char primer = text.charAt(0);
-		if (Character.isDigit(primer)) {
-			nombres = nombres + primer;
+		String digit = "";
+		if (Character.isDigit(primer)) {		// tracta pas actual
+			digit = digit + primer;
 		}
-		String restaText = text.substring(1);
-		extreuNombres(restaText);
+
+		String textSubString = text.substring(1);
+		String restaDigits = extreuNombres(textSubString);	// recursivitat
+
+		String nombres = digit + restaDigits;	
 		return nombres;
 	}
 }
