@@ -1,4 +1,8 @@
-/* Funcions per taules de l'exercici 32_46 */
+/* Funcions per taules de l'exercici 32_47
+ * La primera funció retorna la taula inicialitzada amb el valor donat
+ * La segona funció retorna la taula amb els valors ja seqüenciats
+ * L'última funció la retorna com un String per mostrar en el main
+ */
 
 public class UtilTaula {
 	// funcio que retorna la taula inicialitzada
