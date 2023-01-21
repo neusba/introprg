@@ -9,12 +9,12 @@ public class Subcadenes {
 		String text = Entrada.readLine();
 
 		String lletres = UtilString.nomesLletres(text);						// mòdul que retorna el text original amb només les lletres
-		System.out.printf("%4d: %s%n", lletres.length(), lletres);				// Primera sortida amb la frase sencera
 		int meitat = lletres.length() / 2;							// mida per indicar els paràmetres per a cada meitat del text
 		String primeraMeitat = lletres.substring(0, meitat);					// primera meitat del text
 		mostraSubcadena(primeraMeitat);
 		String segonaMeitat = lletres.substring(meitat);					// segona meitat del text
 		mostraSubcadena(segonaMeitat);
+		System.out.printf("%4d: %s%n", lletres.length(), lletres);				// Última sortida amb la frase sencera
 	}
 
 	// Procediment que mostra per entrada estàndard les subcadenes possibles del text donat
@@ -24,13 +24,13 @@ public class Subcadenes {
 			return;
 		}
 		
-		System.out.printf("%4d: %s%n", text.length(), text);						
 		int meitat = text.length() / 2;								
 		String primeraMeitat = text.substring(0, meitat);
 		String segonaMeitat = text.substring(meitat);
 
 		mostraSubcadena(primeraMeitat);
 		mostraSubcadena(segonaMeitat);
+		System.out.printf("%4d: %s%n", text.length(), text);					// Print del resultat
 	}
 
 }
