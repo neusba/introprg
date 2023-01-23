@@ -25,6 +25,7 @@ public class Formes {
 			}
 			boolean[][] taula = new boolean[files][columnes];
 			String forma = retornaForma(args[i]);
+			System.out.println(forma);
 			switch (forma) {
 				case "\\": UtilTaula.inicialitzaPrimeraDiagonal(taula); break;
 				case "|": UtilTaula.inicialitzaVerticalMig(taula); break;
