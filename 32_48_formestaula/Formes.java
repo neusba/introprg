@@ -23,17 +23,17 @@ public class Formes {
 				UtilTaula.inicialitzaEnFals(files, columnes);
 				continue;
 			}
+			boolean[][] taula = new boolean[files][columnes];
 			String forma = retornaForma(args[i]);
 			switch (forma) {
-				case "\\": boolean[][] taula = UtilTaula.inicialitzaPrimeraDiagonal(new boolean[files][columnes]) break;
-				case "|": boolean[][] taula = UtilTaula.inicialitzaVerticalMig(new boolean[files][columnes]) break;
-				case "-": boolean[][] taula = UtilTaula.inicialitzaHoritzontalMig(new boolean[files][columnes]) break;
-				case "+": boolean[][] taula = UtilTaula.inicialitzaQuarts(new boolean[files][columnes]) break;
-				case "/": boolean[][] taula = UtilTaula.segonaDiagonal(new boolean[files][columnes]) break;
-				case "x": boolean[][] taula = UtilTaula.inicialitzaCreu(new boolean[files][columnes]) break;
-				case "||": boolean[][] taula = UtilTaula.inicialitzaZebra(new boolean[files][columnes]) break;
-				case "++": boolean[][] taula = UtilTaula.inicialitzaEscacs(new boolean[files][columnes]) break;
-				default: return;
+				case "\\": UtilTaula.inicialitzaPrimeraDiagonal(taula); break;
+				case "|": UtilTaula.inicialitzaVerticalMig(taula); break;
+				case "-": UtilTaula.inicialitzaHoritzontalMig(taula); break;
+				case "+": UtilTaula.inicialitzaQuarts(taula); break;
+				case "/": UtilTaula.inicialitzaSegonaDiagonal(taula); break;
+				case "x": UtilTaula.inicialitzaCreu(taula); break;
+				case "||": UtilTaula.inicialitzaZebra(taula); break;
+				case "++": UtilTaula.inicialitzaEscacs(taula); break;
 			}
                		String resultat = UtilTaula.taulaToString(taula, 'X', '·');
                 	System.out.println(resultat);
