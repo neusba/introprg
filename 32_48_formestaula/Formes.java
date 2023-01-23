@@ -34,6 +34,7 @@ public class Formes {
 				case "x": UtilTaula.inicialitzaCreu(taula); break;
 				case "||": UtilTaula.inicialitzaZebra(taula); break;
 				case "++": UtilTaula.inicialitzaEscacs(taula); break;
+				default: UtilTaula.inicialitzaEnFals(files, columnes);
 			}
                		String resultat = UtilTaula.taulaToString(taula, 'X', '·');
                 	System.out.println(resultat);
