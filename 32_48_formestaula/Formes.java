@@ -4,63 +4,138 @@
  */
 
 public class Formes {
-	public static void main(String[] args) {
-		String arg = "";
-		for (int i=0; i<args.length; i++) {
-			System.out.println(args[i]);
-			arg = args[i];						// fiquem a un string l'argument a tractar
-		}
+	public static void main(String[] args){
+ 		for (int i=0; i<args.length; i++) {
+ 	        	System.out.println(args[i]);
+			boolean dimensioCorrecte = especificacioDimensio(args[i]);
+			if (!dimensioCorrecte) {
+				System.out.println("Especificació no vàlida");
+				continue;
+			}
+ 	            	int files = obteFiles(args[i]);
+ 	            	int columnes = obteColumnes(args[i]);
+ 	           	if (files < 1 || columnes < 1) {
+ 	                	System.out.println("Especificació no vàlida");
+				continue;
+	            	} 
+			boolean formaCorrecte = especificacioForma(args[i]);
+			if (!formaCorrecte) {
+				UtilTaula.inicialitzaEnFals(files, columnes);
+				continue;
+			}
+			String forma = retornaForma(args[i]);
+			switch (forma) {
+				case "\\": boolean[][] taula = UtilTaula.inicialitzaPrimeraDiagonal(new boolean[files][columnes]) break;
+				case "|": boolean[][] taula = UtilTaula.inicialitzaVerticalMig(new boolean[files][columnes]) break;
+				case "-": boolean[][] taula = UtilTaula.inicialitzaHoritzontalMig(new boolean[files][columnes]) break;
+				case "+": boolean[][] taula = UtilTaula.inicialitzaQuarts(new boolean[files][columnes]) break;
+				case "/": boolean[][] taula = UtilTaula.segonaDiagonal(new boolean[files][columnes]) break;
+				case "x": boolean[][] taula = UtilTaula.inicialitzaCreu(new boolean[files][columnes]) break;
+				case "||": boolean[][] taula = UtilTaula.inicialitzaZebra(new boolean[files][columnes]) break;
+				case "++": boolean[][] taula = UtilTaula.inicialitzaEscacs(new boolean[files][columnes]) break;
+				default: return;
+			}
+               		String resultat = UtilTaula.taulaToString(taula, 'X', '·');
+                	System.out.println(resultat);
+            		 
+        	}
+    	}
 
-		boolean dimensioCorrecte = especificacioDimensions(arg); 	// comprovem que les dimension son vàlides
-		if (dimensioCorrecte) {
-			System.out.println("correcte");
-		} else {
-			System.out.println("incorrecte");
-		}
-		boolean formaCorrecte = especificacioForma(arg);		// comprovem que el caràcter donat és vàlida per crear la forma
-		if (formaCorrecte) {
-			System.out.println("correcte");
-		} else {
-			System.out.println("incorrecte");
-		}
-		return;
-	}
-	
-	public static boolean especificacioDimensions(String arg) {	 	//  funcio que comprova que les dimensions donades son vàlides
-		String[] coordenades = arg.split("x");				// ! Tener en cuenta que una forma possible es 'x'
-		if (coordenades.length > 2) return false;
-		for (int i=1; i<=coordenades.length - 2; i++) {
+	// Funció que comprova si l'argument donat és correcte
+	public static boolean especificacioDimensio(String especificacio) {
+		String dimensio = "";
+		for (int i=0; i<especificacio.length(); i++) {
+			if (Character.isDigit(especificacio.charAt(i))) {
+				dimensio = dimensio + especificacio.charAt(i);
+			} else if (especificacio.charAt(i) == 'x') {
+				dimensio = dimensio + especificacio.charAt(i);
+			}
+		}	
+		String[] coordenades = dimensio.split("x");
+        	if (coordenades.length != 2) return false;
+        	for (int i=0; i<coordenades.length; i++) {
             		if (! UtilString.esEnter(coordenades[i])) return false;
             		int valor = Integer.parseInt(coordenades[i]);
-            		if (valor < 1 || valor > 99) return false;
+            		if (valor <= 0 || valor > 99) return false;
         	}
         	return true;
+    	}
+
+	// funció que extreu la fila corresponent a la dimensió donada
+	public static int obteFiles(String especificacio) {
+		boolean dimensioCorrecte = especificacioDimensio(especificacio);
+		if (!dimensioCorrecte) {
+			return - 1;
+		}
+		char[] valors = especificacio.toCharArray();
+		String fila = "";
+		for (int i=0; i<valors.length; i++) {
+			if (Character.isDigit(valors[i])) {
+				fila = fila + valors[i];
+			} else {
+				break;
+			}
+		}
+		int files = Integer.parseInt(fila);
+		return files;	
 	}
 
-	public static boolean especificacioForma(String arg) {			// funcio que comprova si l'especificació de la forma donada és correcte
-		//String forma = arg.substring(arg.length() - 1);
+	// funció que que obte les columnes de la taula a través del segon nombre donat en l'argument de l'usuari
+	public static int obteColumnes(String especificacio) {
+		boolean dimensioCorrecte = especificacioDimensio(especificacio);
+		if (!dimensioCorrecte) {
+			return - 1;
+		}
+		char[] valors = especificacio.toCharArray();
+		String columna = "";
+		for (int i=valors.length - 1; i>=0; i--) {
+			if (Character.isDigit(valors[i])) {
+				columna = valors[i] + columna;
+			} else if (valors[i] == 'x') {
+				break;
+			}
+		}
+		int columnes = Integer.parseInt(columna);
+		return columnes;
+	}
+
+	// funció que comprova si la especificació de la forma és correcte
+	public static boolean especificacioForma(String especificacio) {
+		String formaAValidar = "";
 		String formes = "\\,|,-,+,/,x,=,||,++";
 		String[] formesArray = formes.split(",");
+		for (int i=especificacio.length() - 1; i>=especificacio.length() - 2; i--) {
+			formaAValidar = formaAValidar + especificacio.charAt(i);
+		}
 		String forma = "";
-		String dosCaracters = arg.substring(arg.length() - 2);
-		System.out.println(dosCaracters);
-		String unCaracter = arg.substring(arg.length() - 1);
-		System.out.println(unCaracter);
-		for (int i=0; i<arg.length(); i++) {
-			for (int j=0; j<formesArray.length; j++) {
-				if (dosCaracters.equals(formesArray[i])) {
-					return true;
-				}
-				if (unCaracter.equals(formesArray[i])) {
-					return true;
-				}
+		for (int i=0; i<formaAValidar.length(); i++) {
+			if (!Character.isDigit(formaAValidar.charAt(i))) {
+				forma = forma + formaAValidar.charAt(i);
+			}
+		}
+		for (int i=0; i<formesArray.length; i++) {
+			if (forma.equals(formesArray[i])) {
+				return true;
 			}
 		}
 		return false;
-	}
+	}	
+
+	// funció que retorna la forma especificada en forma de string
+	public static String retornaForma(String especificacio) {
+		String formaAValidar = "";
+		String formes = "\\,|,-,+,/,x,=,||,++";
+		String[] formesArray = formes.split(",");
+		for (int i=especificacio.length() - 1; i>=especificacio.length() - 2; i--) {
+			formaAValidar = formaAValidar + especificacio.charAt(i);
+		}
+		String forma = "";
+		for (int i=0; i<formaAValidar.length(); i++) {
+			if (!Character.isDigit(formaAValidar.charAt(i))) {
+				forma = forma + formaAValidar.charAt(i);
+			}
+		}
+		return forma;
+	}	
 }
-
-			
-			
-
 
