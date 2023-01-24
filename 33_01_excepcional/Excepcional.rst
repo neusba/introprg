@@ -37,7 +37,15 @@ Aquí tens unes instruccions que t'ajudaran: ::
 L'error que genera és: ::
 
     $ java Mostrat
-    XXX
+    Exception in thread "main" java.io.FileNotFoundException: existent.txt (Permiso denegado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at Mostrat.main(Mostrat.java:12)
+
+    Perís de l'arxiu bloquejat
 
 
 Trapelleria 3. Un directori en comptes d'un fitxer
@@ -55,3 +63,5 @@ intentar executar-ho i copia aquí el que et genera: ::
 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
 	at java.base/java.io.FileReader.<init>(FileReader.java:60)
 	at Mostrat.main(Mostrat.java:12)
+	
+	Al buscar l'arxiu especificat es troba amb que és un directori
