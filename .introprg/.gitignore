@@ -1,6 +1,1 @@
 tmp/
-junit-platform-console-standalone.jar
-sqlite-jdbc*.jar
-prgtest.build/
-prgtest.dist/
-prgtest.onefile-build/
