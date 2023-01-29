@@ -82,6 +82,7 @@ public class Penjat {													// VARIABLES GLOBALS
 			intents = 10;
 			if (i == words.length - 1) {
 				System.out.println("No queden més paraules");
+				mostraResultat(i);
 			}
 		}
 	}
