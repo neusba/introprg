@@ -61,7 +61,7 @@ public class Penjat {													// VARIABLES GLOBALS
 						boolean descompta = UtilString.descomptaIntent(letter, currentWord);
 						if (descompta) {
 							intents -= 1;
-							mostraFigura();							// gestiona intents fallats
+							mostraFigura(intents);							// gestiona intents fallats
 							if (intents == 0) { 
 								fallades += 1;
 								//boolean finalitza = UtilConfirmacio.gestionaDerrota();
@@ -100,7 +100,7 @@ public class Penjat {													// VARIABLES GLOBALS
 		System.out.printf("Intents disponibles: %d%n", intents);
 	}
 	// Mostra figura quan es descompta un intent
-	public static void mostraFigura() throws IOException {
+	public static void mostraFigura(int intents) throws IOException {
 		String pathFigura = "";
 		switch (intents) {
 			case 9: pathFigura = "recursos/figura0.txt"; break;
