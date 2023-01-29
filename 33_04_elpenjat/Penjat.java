@@ -45,13 +45,11 @@ public class Penjat {													// VARIABLES GLOBALS
 					letter = UtilString.gestionaParaulaClau(letter);
 					if (letter.equalsIgnoreCase("prou")) {
 						boolean sortida = UtilConfirmacio.gestionaProu();			// Comprovacions paraules clau
-						if (sortida) { cancelades += 1; mostraResultat(i); return; } else { letter = ""; }	
+						if (sortida) { cancelades += 1; mostraResultat(i); return; }
 					} else if (letter.equalsIgnoreCase("glups")) {
 						cancelades += 1;
 					       	break;
-					} else {
-						break;
-					}										// - - - - - - - - - - - - - - - -
+					} 
 				}											
 				letter = UtilString.buscaError(letter);							// COMPROVACIONS DE LLETRA ADEQUADA
 				if (!letter.isEmpty()) {								// - - - - - - - - - - - - - - - - 
