@@ -26,12 +26,7 @@ public class Penjat {													// VARIABLES GLOBALS
 			System.out.print("No tinc paraules per jugar");
 			return;
 		}
-
 		String words[] = UtilFile.llistaParaules(palabras);
-		if (words == null) {
-			System.out.print("No tinc paraules per jugar");
-			return;
-		}													// - - - - - - - - - - - 
 		input.close();
 		System.out.println("Comencem a jugar");
 		playGame(words);											

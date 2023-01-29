@@ -17,7 +17,8 @@ public class UtilFile {
 	public static String conteParaules(BufferedReader input) throws IOException {
 		String palabras = "";
 		String linia = input.readLine();
-		while (linia != null) {
+		while (true) {
+			if (linia == null) { break; }
 			palabras = palabras + linia + ",";
 			linia = input.readLine();
 		}
