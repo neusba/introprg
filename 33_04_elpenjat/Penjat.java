@@ -38,7 +38,6 @@ public class Penjat {													// VARIABLES GLOBALS
 				processaEstadistica();									// estadística de la ronda
 				System.out.println("Introdueix una lletra");
 				letter = Entrada.readLine();
-				letter = letter.toLowerCase();
 				boolean checkLetter = UtilString.comprovaLletra(letter);				// LLETRA O PARAULA CLAU DEL JOC?
 				if (!checkLetter) {									// - - - - - - - - - - - - - - - 
 					letter = UtilString.gestionaParaulaClau(letter);
@@ -57,6 +56,7 @@ public class Penjat {													// VARIABLES GLOBALS
 						System.out.println("La lletra ja ha estat utilitzada");
 					} else { 
 						usedLetters = UtilString.lletresUtilitzades(letter, usedLetters);	// retorna String de lletres utilitzades
+						letter = letter.toLowerCase();
 						boolean descompta = UtilString.descomptaIntent(letter, currentWord);
 						if (descompta) {
 							intents -= 1;
