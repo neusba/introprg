@@ -31,6 +31,7 @@ public class UtilFile {
 			if (linia == null) { break; }
 			System.out.println(linia);
 		}
+		inputFigura.close();
 	}
 			
 		
