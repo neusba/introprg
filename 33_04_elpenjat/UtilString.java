@@ -89,9 +89,8 @@ public class UtilString {
 	}	
 	// Comprova si l'entrada introduida és una de les paraules claus del joc o un error
 	public static String gestionaParaulaClau(String letter) {
-		if (letter.equalsIgnoreCase("prou") || letter.equalsIgnoreCase("glups")) { return letter;
-		} else {
-			System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
+		if (letter.equalsIgnoreCase("prou") || letter.equalsIgnoreCase("glups")) {
+			return letter;
 		}
 		return "";												
 	}
