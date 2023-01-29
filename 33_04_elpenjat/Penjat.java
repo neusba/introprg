@@ -21,7 +21,13 @@ public class Penjat {													// VARIABLES GLOBALS
 		String path = "paraules.txt";										// - - - - - - - - - - -
 		BufferedReader input = new BufferedReader(new FileReader(path));
 		
-		String[] words = UtilFile.llistaParaules(input);							// funcio que retorna les paraules del fitxer en un array
+		String palabras = UtilFile.conteParaules(input);							// funcio que retorna les paraules del fitxer en un array
+		if (palabras.isEmpty()) {
+			System.out.print("No tinc paraules per jugar");
+			return;
+		}
+
+		String words[] = UtilFile.llistaParaules(palabras);
 		if (words == null) {
 			System.out.print("No tinc paraules per jugar");
 			return;

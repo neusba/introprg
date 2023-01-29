@@ -8,21 +8,21 @@ public class UtilFile {
 
 	// ################## UTILITATS DE FITXERS ################# // 
 	
+	// Funcion que comprueva si el archivo contiene palabras y las devuelve en un string separadas por comas
+	public static String[] llistaParaules(String palabras) throws IOException {
+		String words[] = palabras.split(",");
+		return words;
+	}	
 	// Funcion que devuelve un array con las palabras que se jugaran
-	public static String[] llistaParaules(BufferedReader input) throws IOException {
-		String paraules = "";
+	public static String conteParaules(BufferedReader input) throws IOException {
+		String palabras = "";
 		String linia = input.readLine();
 		while (linia != null) {
-			paraules = paraules + linia + ",";
+			palabras = palabras + linia + ",";
 			linia = input.readLine();
 		}
-		if (paraules.isEmpty()) {
-			System.out.println("No tinc paraules per jugar");
-		}
-		String[] words = paraules.split(",");
-		return words;
+		return palabras;
 	}
-	
 	// Visualització del fitxer de la figura corresponent quan es perd un intent
 	public static void visualitzacioFigura(String pathFigura) throws IOException {
 		BufferedReader inputFigura = new BufferedReader(new FileReader(pathFigura));
