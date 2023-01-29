@@ -21,9 +21,6 @@ public class UtilConfirmacio {
 			return false;
 		}
 		resposta = resposta.toLowerCase();
-		if (resposta.equals("false")) {
-			return false;
-		}
 		if (resposta.equals("s") || resposta.equals("y")) {
             		return true;
         	}
@@ -35,12 +32,4 @@ public class UtilConfirmacio {
         	}
         	return false;
 	}
-	// Gestiona la sortida del joc quan l'usuari es derrotat
-	/*public static boolean gestionaDerrota() {
-		System.out.println("Has mort");
-		String resposta = Entrada.readLine();
-		boolean confirma = respostaABoolean(resposta);
-		if (confirma) { return false; }
-		return true;
-	}*/
 }

@@ -64,8 +64,6 @@ public class Penjat {													// VARIABLES GLOBALS
 							mostraFigura(intents);							// gestiona intents fallats
 							if (intents == 0) { 
 								fallades += 1;
-								//boolean finalitza = UtilConfirmacio.gestionaDerrota();
-								//if (finalitza) { mostraResultat(i); return; }
 								System.out.println("Has mort");
 								break;
 							}								// - - - - - - - - - - - - - - - - 
