@@ -71,7 +71,7 @@ public class UtilString {
 				} else if (i == usedLetters.length() - 1) {
 					System.out.printf("i %c%n", usedLetters.charAt(i));
 				} else {
-					System.out.printf("%c, ", usedLetters.charAt(i));
+					System.out.printf("%c ", usedLetters.charAt(i));
 				}
 			}
 		}
