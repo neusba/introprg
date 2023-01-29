@@ -53,7 +53,7 @@ public class Penjat {													// VARIABLES GLOBALS
 				if (!letter.isEmpty()) {								// - - - - - - - - - - - - - - - - 
 					boolean repetida = UtilString.lletraRepetida(letter, usedLetters);		// comprova lletra repetida
 					if (repetida) { 
-						System.out.println("Lletra ja introduïda");
+						System.out.println("La lletra ja ha estat utilitzada");
 					} else { 
 						usedLetters = UtilString.lletresUtilitzades(letter, usedLetters);	// retorna String de lletres utilitzades
 						boolean descompta = UtilString.descomptaIntent(letter, currentWord);
