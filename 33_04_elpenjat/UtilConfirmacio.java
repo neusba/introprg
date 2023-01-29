@@ -9,7 +9,7 @@ public class UtilConfirmacio {
 	
 	// Gestiona la sortida del joc a l'introduir la paraula "prou"	
 	public static boolean gestionaProu() {
-		System.out.println("Vols sortir?");
+		System.out.println("Vols finalitzar?");
 		String resposta = Entrada.readLine();
 		boolean confirma = respostaABoolean(resposta);
 		if (confirma) { return true; }
