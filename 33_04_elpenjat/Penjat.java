@@ -80,6 +80,9 @@ public class Penjat {													// VARIABLES GLOBALS
 			}
 			usedLetters = "";										// RESET DE GLOBALS
 			intents = 10;
+			if (i == words.length - 1) {
+				System.out.println("No hem queden més paraules");
+			}
 		}
 	}
 	// Processa estadístiques de la partida										// VISUALITZACIO DE PARTIDA
