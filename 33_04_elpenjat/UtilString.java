@@ -89,7 +89,7 @@ public class UtilString {
 	public static String gestionaParaulaClau(String letter) {
 		if (letter.equalsIgnoreCase("prou") || letter.equalsIgnoreCase("glups")) { return letter;
 		} else {
-			System.out.println("Error: cal una lletra ente 'a' i 'z', 'prou' o 'glups'");
+			System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
 		}
 		return "";												
 	}
@@ -100,7 +100,7 @@ public class UtilString {
 		}
 		char lletra = letter.charAt(0);
 		if (Character.isDigit(lletra)) {
-			System.out.println("Error: cal una lletra ente 'a' i 'z', 'prou' o 'glups'");
+			System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
 			return "";											// Si l'entrada es digit, retorna buit
 		}
 		return letter;												// Si és un lletra, la retorna

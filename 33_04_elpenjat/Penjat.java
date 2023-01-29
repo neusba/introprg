@@ -42,7 +42,7 @@ public class Penjat {													// VARIABLES GLOBALS
 				if (!checkLetter) {									// - - - - - - - - - - - - - - - 
 					letter = UtilString.gestionaParaulaClau(letter);
 					if (letter.equalsIgnoreCase("prou")) {
-						boolean sortida = UtilConfirmacio.gestionaProu();
+						boolean sortida = UtilConfirmacio.gestionaProu();			// Comprovacions paraules clau
 						if (sortida) { cancelades += 1; mostraResultat(i); return; } else { letter = ""; }	
 					} else if (letter.equalsIgnoreCase("glups")) {
 						cancelades += 1;
