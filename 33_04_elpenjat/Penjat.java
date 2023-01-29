@@ -81,7 +81,7 @@ public class Penjat {													// VARIABLES GLOBALS
 			usedLetters = "";										// RESET DE GLOBALS
 			intents = 10;
 			if (i == words.length - 1) {
-				System.out.println("No hem queden més paraules");
+				System.out.println("No quede més paraules");
 			}
 		}
 	}
