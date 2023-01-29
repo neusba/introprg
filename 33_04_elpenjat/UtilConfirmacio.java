@@ -34,7 +34,7 @@ public class UtilConfirmacio {
 	}
 	// Gestiona la sortida del joc quan l'usuari es derrotat
 	public static boolean gestionaDerrota() {
-		System.out.println("Has perdut. Vols continuar jugant?");
+		System.out.println("Has mort");
 		String resposta = Entrada.readLine();
 		boolean confirma = respostaABoolean(resposta);
 		if (confirma) { return false; }
