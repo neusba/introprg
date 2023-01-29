@@ -5,6 +5,9 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class UtilFile {
+
+	// ################## UTILITATS DE FITXERS ################# // 
+	
 	// Funcion que devuelve un array con las palabras que se jugaran
 	public static String[] llistaParaules(BufferedReader input) throws IOException {
 		String paraules = "";
@@ -19,10 +22,19 @@ public class UtilFile {
 		String[] words = paraules.split(",");
 		return words;
 	}
-
-	// Modifica la visualització de la paraula durant la partida
-	public static String situacio
-
+	
+	// Visualització del fitxer de la figura corresponent quan es perd un intent
+	public static void visualitzacioFigura(String pathFigura) throws IOException {
+		BufferedReader inputFigura = new BufferedReader(new FileReader(pathFigura));
+		while (true) {
+			String linia = inputFigura.readLine();
+			if (linia == null) { break; }
+			System.out.println(linia);
+		}
+	}
+			
+		
+		
 }
 
 
