@@ -38,6 +38,7 @@ public class Penjat {													// VARIABLES GLOBALS
 				processaEstadistica();									// estadística de la ronda
 				System.out.println("Introdueix una lletra");
 				letter = Entrada.readLine();
+				letter = letter.toLowerCase();
 				boolean checkLetter = UtilString.comprovaLletra(letter);				// LLETRA O PARAULA CLAU DEL JOC?
 				if (!checkLetter) {									// - - - - - - - - - - - - - - - 
 					letter = UtilString.gestionaParaulaClau(letter);
