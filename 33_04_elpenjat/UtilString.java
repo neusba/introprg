@@ -99,6 +99,7 @@ public class UtilString {
 	public static String buscaError(String letter) {
 		if (letter.isEmpty()) { 
 			System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
+			return letter;
 		}
 		char lletra = letter.charAt(0);
 		if (Character.isDigit(lletra)) {
