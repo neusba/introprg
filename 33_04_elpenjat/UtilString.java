@@ -44,7 +44,7 @@ public class UtilString {
 
 	// Funcio que acumula les lletres utilitzades en un string i el retorna
 	public static String lletresUtilitzades(String letter, String usedLetters) {
-		usedLetters = usedLetters + letter;
+		usedLetters = usedLetters + letter;							// Acumula les lletres utilitzades
 		return usedLetters;
 	}
 	// Procediment de la visualització de les paraules utilitzades 
@@ -58,7 +58,7 @@ public class UtilString {
 		}
 		for (int i=0; i<usedLetters.length(); i++) {
 			if (length == 1) {
-				System.out.printf("%c%n", usedLetters.charAt(i));
+				System.out.printf("%c%n", usedLetters.charAt(i));			// Visualitzacio lletres utilitzades
 			} else if (length == 2) {
 				if (i == 0) {
 					System.out.printf("%c i ", usedLetters.charAt(i));
@@ -70,8 +70,10 @@ public class UtilString {
 					System.out.printf("%c, ", usedLetters.charAt(i));
 				} else if (i == usedLetters.length() - 1) {
 					System.out.printf("i %c%n", usedLetters.charAt(i));
-				} else {
+				} else if (i == usedLetters.length() - 2) {
 					System.out.printf("%c ", usedLetters.charAt(i));
+				} else {
+					System.out.printf("%c, ", usedLetters.charAt(i));
 				}
 			}
 		}
