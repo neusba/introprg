@@ -20,6 +20,9 @@ public class UtilConfirmacio {
 		if (null == resposta) {
 			return false;
 		}
+		if (resposta.equals("false")) {
+			return false;
+		}
 		resposta = resposta.toLowerCase();
 		if (resposta.equals("s") || resposta.equals("y")) {
             		return true;
