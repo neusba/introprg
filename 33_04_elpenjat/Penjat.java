@@ -49,6 +49,8 @@ public class Penjat {													// VARIABLES GLOBALS
 					} else if (letter.equalsIgnoreCase("glups")) {
 						cancelades += 1;
 					       	break;
+					} else {
+						break;
 					}										// - - - - - - - - - - - - - - - -
 				}											
 				letter = UtilString.buscaError(letter);							// COMPROVACIONS DE LLETRA ADEQUADA
