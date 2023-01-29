@@ -98,6 +98,7 @@ public class UtilString {
 	// Comprova si la lletra és un buit o un dígit no vàlid
 	public static String buscaError(String letter) {
 		if (letter.isEmpty()) { 
+			System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
 			return "";											// Si l'entrada es "", retorna  buit
 		}
 		char lletra = letter.charAt(0);
