@@ -1,4 +1,8 @@
-/* Funcions per fitxers */
+/* Funcions per fitxers
+ * La primera funcio fica les paraules del text en un array de String separat per comes
+ * La segona funció comprova si n'hi ha paraules al fitxer i les retorna en un string separades per comes
+ * El tercer procediment mostra l'interior dels fitxers de les figures cada vegada que es perd un intent
+ */
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -8,7 +12,7 @@ public class UtilFile {
 
 	// ################## UTILITATS DE FITXERS ################# // 
 	
-	// Funcion que comprueva si el archivo contiene palabras y las devuelve en un string separadas por comas
+	// Funcion que fica totes les paraules existents al text en un array separades per comer
 	public static String[] llistaParaules(String palabras) throws IOException {
 		String words[] = palabras.split(",");
 		return words;
