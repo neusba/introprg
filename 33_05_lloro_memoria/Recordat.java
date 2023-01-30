@@ -1,5 +1,6 @@
-/*
- * programa que simula un lloro que recorda les frases que li han dit
+/* Programa 532 del lloro, aquesta vegada registra les paraules que li dones per entrada i les guarda en un fitxer
+ * després llegeix les paraules registrades
+ * No guarda linies en blanc
  */
 
 import java.io.BufferedReader;
@@ -38,6 +39,7 @@ public class Recordat {
 					System.out.println("El lloro no recorda res");
 				}
 				System.out.println("Adéu");
+				input.close();
 				return;
 			}
 			controlaLinies += 1;
