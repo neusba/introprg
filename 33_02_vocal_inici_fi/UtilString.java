@@ -4,10 +4,10 @@
  */
 
 public class UtilString {
-	public static boolean esVocal(char lletra) {
+	public static boolean esVocal(char lletra, char ultima) {
 		String vocals = "aeiouàèéíïòóúüAEIOUÀÈÉÍÏÒÓÚÜ";
 		for (int i=0; i < vocals.length(); i++) {
-			if (lletra == vocals.charAt(i)) {
+			if (lletra == vocals.charAt(i) || ultima == vocals.charAt(i)) {
 				return true;
 			}
 		}
