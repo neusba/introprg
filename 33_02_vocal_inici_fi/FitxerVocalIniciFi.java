@@ -15,7 +15,8 @@ public class FitxerVocalIniciFi {
 		while (true) {
 			String linia = entrada.readLine();				// llegim la primera línea de l'arxiu	
 			if (linia == null) break;
-			boolean checkVocal = UtilString.esVocal(linia);
+			char lletra = linia.charAt(0);
+			boolean checkVocal = UtilString.esVocal(lletra);
 			if (checkVocal) {
 				System.out.println(linia);
 			}
