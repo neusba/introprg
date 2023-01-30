@@ -30,9 +30,16 @@ public class Recordat {
 
 	public static void mostraRecords(final String cami) throws IOException {
 		BufferedReader input = new BufferedReader(new FileReader(cami));
+		int controlaLinies = 0;
 		while (true) {
 			String linia = input.readLine();
-			if (linia == null) { System.out.println("Adéu"); return; }
+			if (linia == null) {
+				if (controlaLinies == 0) {
+					System.out.println("El lloro no recorda res");
+				}
+				return;
+			}
+			controlaLinies += 1;
 			System.out.printf("El lloro recorda: %s%n", linia);
 		}
 
