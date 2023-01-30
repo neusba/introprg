@@ -37,6 +37,7 @@ public class Recordat {
 				if (controlaLinies == 0) {
 					System.out.println("El lloro no recorda res");
 				}
+				System.out.println("Adéu");
 				return;
 			}
 			controlaLinies += 1;
