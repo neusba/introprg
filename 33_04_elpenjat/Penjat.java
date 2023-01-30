@@ -1,6 +1,8 @@
 /* Programa que simula el joc del "penjat" en el que a partir d'un fitxer amb paraules, l'usuari ha d'anar donant lletres per encertal-la
  * S'haurà de portar el seguiment de tot el procés del lloc: mostrar intents, paraules, lletres utilitzades, etc
  * Es mostraran les figures corresponents cada vegada que l'usuari falli l'intent
+ * Es portarà un control tant de les paraules encertades, com fallades, cancelades i jugades
+ * S'oferirà abandonar el joc o passar la paraula quan s'introdueixin les paraules claus "prou" o "glups"
  */
 import java.io.BufferedReader;
 import java.io.FileReader;
