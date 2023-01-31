@@ -39,10 +39,18 @@ public class Traduccio {
 			String traduccio = input.readLine(); 
 			if (traduccio == null) { break;}
 			String[] clauValor = traduccio.split(",");
+			clauValor = arrayArreglat(clauValor);
 			linia = linia.replace(clauValor[0], clauValor[1]);
 		}
 		input.close();
 		return linia;	
+	}
+
+	public static String[] arrayArreglat(String[] clauValor) {
+		for (int i=0; i<clauValor.length; i++) {
+			clauValor[i] = clauValor[i].strip();
+		}
+		return clauValor;
 	}
 
 }	
