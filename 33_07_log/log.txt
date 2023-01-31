@@ -1,1 +1,3 @@
-contingut inicial
+[1] ERROR: Això és un error greu
+[2] WARNING: Això és un avís
+[3] DEBUG: Aquí s'acaba el main()
