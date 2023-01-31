@@ -46,7 +46,6 @@ public class Log {
 	}
 	//Permet indicar detalls de l'execució, com per exemple, la crida a un mòdul amb els arguments que se li passen o l'opertura/tancament dels fitxers.
 	public static String printDebug(String text) throws IOException {
-		reset();
 		String type = "DEBUG:";
 		String path = "log.txt";
 		String linia = String.format("[%d] %s %s%n", sequencial, type, text);
