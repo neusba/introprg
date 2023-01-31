@@ -15,7 +15,7 @@ public class Log {
 	public static String printError(String text) throws IOException {
 		String type = "ERROR:";
 		String path = "log.txt";
-		String linia = String.format("[%d] %s %s%n", sequencial, type, text);
+		String linia = String.format("[%d] %s %s", sequencial, type, text);
 		sequencial += 1;
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(linia);
@@ -26,7 +26,7 @@ public class Log {
 	public static String printWarning(String text) throws IOException {
 		String type = "WARNING:";
 		String path = "log.txt";
-		String linia = String.format("[%d] %s %s%n", sequencial, type, text);
+		String linia = String.format("[%d] %s %s", sequencial, type, text);
 		sequencial += 1;
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(linia);
@@ -37,7 +37,7 @@ public class Log {
 	public static String printInfo(String text) throws IOException {
 		String type = "INFO:";
 		String path = "log.txt";
-		String linia = String.format("[%d] %s %s%n", sequencial, type, text);
+		String linia = String.format("[%d] %s %s", sequencial, type, text);
 		sequencial += 1;
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(linia);
@@ -48,7 +48,7 @@ public class Log {
 	public static String printDebug(String text) throws IOException {
 		String type = "DEBUG:";
 		String path = "log.txt";
-		String linia = String.format("[%d] %s %s%n", sequencial, type, text);
+		String linia = String.format("[%d] %s %s", sequencial, type, text);
 		sequencial += 1;
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(linia);
