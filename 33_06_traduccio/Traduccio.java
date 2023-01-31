@@ -39,6 +39,7 @@ public class Traduccio {
 			String traduccio = input.readLine(); 
 			if (traduccio == null) { break;}
 			String traduccioArreglat = guarrada(traduccio);
+			System.out.println(traduccioArreglat);
 			String[] clauValor = traduccioArreglat.split(",");
 			linia = linia.replace(clauValor[0], clauValor[1]);
 		}
