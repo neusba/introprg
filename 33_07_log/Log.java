@@ -15,45 +15,46 @@ public class Log {
 	public static String printError(String text) throws IOException {
 		String type = "ERROR:";
 		String path = "log.txt";
+		String linia = String.format("[%d] %s %s%n", sequencial, type, text);
+		sequencial += 1;
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
-		output.write(String.format("[%d] %s %s%n", sequencial, type, text));
+		output.write(linia);
 		output.close();
-		text = String.format("[%d] %s %s%n", sequencial, type, text);
-		return text;
+		return linia;
 	}
 	// Per indicar situacions anòmales que, si bé són recuperables, poden esdevenir un error.
 	public static String printWarning(String text) throws IOException {
-		sequencial += 1;
 		String type = "WARNING:";
 		String path = "log.txt";
+		String linia = String.format("[%d] %s %s%n", sequencial, type, text);
+		sequencial += 1;
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
-		output.write(String.format("[%d] %s %s%n", sequencial, type, text));
+		output.write(linia);
 		output.close();
-		text = String.format("[%d] %s %s%n", sequencial, type, text);
-		return text;
+		return linia;
 	}
 	//Permet indicar informació general, normalment no problemàtica, com ara, l'inici i finalització d'una execució.
 	public static String printInfo(String text) throws IOException {
-		sequencial += 1;
 		String type = "INFO:";
 		String path = "log.txt";
+		String linia = String.format("[%d] %s %s%n", sequencial, type, text);
+		sequencial += 1;
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
-		output.write(String.format("[%d] %s %s%n", sequencial, type, text));
+		output.write(linia);
 		output.close();
-		text = String.format("[%d] %s %s%n", sequencial, type, text);
-		return text;
+		return linia;
 	}
 	//Permet indicar detalls de l'execució, com per exemple, la crida a un mòdul amb els arguments que se li passen o l'opertura/tancament dels fitxers.
 	public static String printDebug(String text) throws IOException {
 		int sequencial = 1;
 		String type = "DEBUG:";
 		String path = "log.txt";
-		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
-		output.write(String.format("[%d] %s %s%n", sequencial, type, text));
+		String linia = String.format("[%d] %s %s%n", sequencial, type, text);
 		sequencial += 1;
+		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
+		output.write(linia);
 		output.close();
-		text = String.format("[%d] %s %s%n", sequencial, type, text);
-		return text;
+		return linia;
 	}
 	// Resetea el comptador sequencial
 	public static void reset() {
