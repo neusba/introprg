@@ -44,7 +44,7 @@ public class Log {
 		String path = "log.txt";
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(String.format("[%d] %s %s%n", sequencial, type, text));
-		sequencial += 1;
+		sequencial = 1;
 		output.close();
 	}
 	// Resetea el comptador sequencial
