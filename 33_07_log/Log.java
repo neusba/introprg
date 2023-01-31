@@ -12,34 +12,37 @@ import java.io.IOException;
 public class Log {
 	private static int sequencial = 1;
 	// Per indicar errors greus, sovint irrecuperables
-	public static void printError(String text) throws IOException {
+	public static String printError(String text) throws IOException {
 		String type = "ERROR:";
 		String path = "log.txt";
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(String.format("[%d] %s %s%n", sequencial, type, text));
 		sequencial += 1;
 		output.close();
+		return text;
 	}
 	// Per indicar situacions anòmales que, si bé són recuperables, poden esdevenir un error.
-	public static void printWarning(String text) throws IOException {
+	public static String printWarning(String text) throws IOException {
 		String type = "WARNING:";
 		String path = "log.txt";
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(String.format("[%d] %s %s%n", sequencial, type, text));
 		sequencial += 1;
 		output.close();
+		return text;
 	}
 	//Permet indicar informació general, normalment no problemàtica, com ara, l'inici i finalització d'una execució.
-	public static void printInfo(String text) throws IOException {
+	public static String printInfo(String text) throws IOException {
 		String type = "INFO:";
 		String path = "log.txt";
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(String.format("[%d] %s %s%n", sequencial, type, text));
 		sequencial += 1;
 		output.close();
+		return text;
 	}
 	//Permet indicar detalls de l'execució, com per exemple, la crida a un mòdul amb els arguments que se li passen o l'opertura/tancament dels fitxers.
-	public static void printDebug(String text) throws IOException {
+	public static String printDebug(String text) throws IOException {
 		int sequencial = 1;
 		String type = "DEBUG:";
 		String path = "log.txt";
@@ -47,6 +50,7 @@ public class Log {
 		output.write(String.format("[%d] %s %s%n", sequencial, type, text));
 		sequencial += 1;
 		output.close();
+		return text;
 	}
 	// Resetea el comptador sequencial
 	public static void reset() {
