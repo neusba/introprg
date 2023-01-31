@@ -11,7 +11,7 @@ public class Traduccio {
 	// variables globales
 	public static void main(String[] args) throws IOException {
 		if (args.length != 3) {
-			System.out.println("ERROR: Cal especificar els fitxers origen, traducció i destinació");
+			System.out.println("ERROR: Cal especificar els fitxers origen, traduccio i destinació");
 			return;
 		}
 		String fitxerOrigen = args[0];
