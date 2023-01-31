@@ -19,7 +19,7 @@ public class Traduccio {
 		String fitxerDestinacio = args[2];
 		tradueix(fitxerOrigen, fitxerTraduccio, fitxerDestinacio);
 	}
-
+	// Procediment que llegeix el fitxer origen i gestiona la traduccio per escriure al fitxer destinacio
 	public static void tradueix(String fitxerOrigen, String fitxerTraduccio, String fitxerDestinacio) throws IOException {
 		BufferedReader input = new BufferedReader(new FileReader(fitxerOrigen));
 		BufferedWriter output = new BufferedWriter(new FileWriter(fitxerDestinacio));
@@ -32,7 +32,7 @@ public class Traduccio {
 		input.close();
 		output.close();
 	}
-
+	// Funcio que retorna la linia del fitxer origen traduida amb el text intercanviat
 	public static String tradueixLinia(String linia, String fitxerTraduccio) throws IOException {
 		BufferedReader input = new BufferedReader(new FileReader(fitxerTraduccio));
 		while (true) {
@@ -45,7 +45,8 @@ public class Traduccio {
 		input.close();
 		return linia;	
 	}
-
+	
+	// Funcio que treu el espais en blanc als elements del array dels valors csv
 	public static String[] arrayArreglat(String[] clauValor) {
 		for (int i=0; i<clauValor.length; i++) {
 			clauValor[i] = clauValor[i].strip();
