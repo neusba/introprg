@@ -17,29 +17,28 @@ public class Log {
 		String path = "log.txt";
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(String.format("[%d] %s %s%n", sequencial, type, text));
-		sequencial += 1;
 		output.close();
 		text = String.format("[%d] %s %s%n", sequencial, type, text);
 		return text;
 	}
 	// Per indicar situacions anòmales que, si bé són recuperables, poden esdevenir un error.
 	public static String printWarning(String text) throws IOException {
+		sequencial += 1;
 		String type = "WARNING:";
 		String path = "log.txt";
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(String.format("[%d] %s %s%n", sequencial, type, text));
-		sequencial += 1;
 		output.close();
 		text = String.format("[%d] %s %s%n", sequencial, type, text);
 		return text;
 	}
 	//Permet indicar informació general, normalment no problemàtica, com ara, l'inici i finalització d'una execució.
 	public static String printInfo(String text) throws IOException {
+		sequencial += 1;
 		String type = "INFO:";
 		String path = "log.txt";
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(String.format("[%d] %s %s%n", sequencial, type, text));
-		sequencial += 1;
 		output.close();
 		text = String.format("[%d] %s %s%n", sequencial, type, text);
 		return text;
