@@ -10,7 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Log {
-	private static int sequencial = 0;
+	public static int sequencial = 0;
 	// Per indicar errors greus, sovint irrecuperables
 	public static String printError(String text) throws IOException {
 		sequencial += 1;
