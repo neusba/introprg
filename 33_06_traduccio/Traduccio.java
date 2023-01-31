@@ -12,6 +12,7 @@ public class Traduccio {
 	public static void main(String[] args) throws IOException {
 		if (args.length != 3) {
 			System.out.println("ERROR: Cal especificar els fitxers origen, traducció i destinació");
+			return;
 		}
 		String fitxerOrigen = args[0];
 		String fitxerTraduccio = args[1];
