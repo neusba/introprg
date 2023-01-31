@@ -36,8 +36,9 @@ public class Traduccio {
 	public static String tradueixLinia(String linia, String fitxerTraduccio) throws IOException {
 		BufferedReader input = new BufferedReader(new FileReader(fitxerTraduccio));
 		while (true) {
-			String traduccio = input.readLine(); // _,_
+			String traduccio = input.readLine(); 
 			if (traduccio == null) { break;}
+			traduccio = traduccio.strip();
 			String[] clauValor = traduccio.split(",");
 			linia = linia.replace(clauValor[0], clauValor[1]);
 		}
