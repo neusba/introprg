@@ -57,7 +57,7 @@ public class Log {
 	}
 	// Resetea el comptador sequencial
 	public static void reset() {
-		int sequencial = 0;
+		int sequencial = 1;
 	}
 }
 
