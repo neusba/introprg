@@ -19,6 +19,7 @@ public class Log {
 		sequencial += 1;
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(linia);
+		output.newLine();
 		output.close();
 		return linia;
 	}
@@ -30,6 +31,7 @@ public class Log {
 		sequencial += 1;
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(linia);
+		output.newLine();
 		output.close();
 		return linia;
 	}
@@ -41,6 +43,7 @@ public class Log {
 		sequencial += 1;
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(linia);
+		output.newLine();
 		output.close();
 		return linia;
 	}
@@ -52,6 +55,7 @@ public class Log {
 		sequencial += 1;
 		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
 		output.write(linia);
+		output.newLine();
 		output.close();
 		return linia;
 	}
