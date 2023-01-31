@@ -38,13 +38,23 @@ public class Traduccio {
 		while (true) {
 			String traduccio = input.readLine(); 
 			if (traduccio == null) { break;}
-			traduccio = traduccio.strip();
-			System.out.println(traduccio);
-			String[] clauValor = traduccio.split(",");
+			String traduccioArreglat = guarrada(traduccio);
+			String[] clauValor = traduccioArreglat.split(",");
 			linia = linia.replace(clauValor[0], clauValor[1]);
 		}
 		input.close();
 		return linia;	
+	}
+
+	// retorna un string arreglat amb una guarrada per que no doni error
+	public static String guarrada(String traduccio) {
+		String traduccioArreglat = "";
+		for (int i=0; i<traduccio.length(); i++) {
+			if (!Character.isWhitespace(traduccio.charAt(i))) {
+				traduccioArreglat = traduccioArreglat + traduccio.charAt(i);
+			}
+		}
+		return traduccioArreglat;
 	}
 }	
 
