@@ -10,7 +10,6 @@ import java.io.IOException;
 public class UtilString {
 	// globals
 	public static boolean matriculaItalianaValida(String text) throws IOException {
-		text = text.strip();
 		if (text.length() != 7) {
 			return false;
 		}

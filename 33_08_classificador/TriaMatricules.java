@@ -36,6 +36,8 @@ public class TriaMatricules {
 		while (true) {
 			String linia = input.readLine();
 			if (linia == null) { break; }
+			if (linia.isEmpty()) { continue; }
+			linia = linia.strip();
 			boolean checkMatricula = UtilString.matriculaItalianaValida(linia);
 			if (checkMatricula) {
 				italianes = italianes + linia + ",";
@@ -43,6 +45,7 @@ public class TriaMatricules {
 				desconegudes = desconegudes + linia + ",";
 			}
 		}
+		input.close();
 		String[] matriculesItalianes = italianes.split(",");
 		String[] matriculesDesconegudes = desconegudes.split(",");
 		fitxerItalianes(matriculesItalianes);
@@ -71,21 +74,3 @@ public class TriaMatricules {
 		output.close();
 	}
 }
-
-
-
-		// comprueva que el archivo contiene algo
-		//
-		// crida boolean matriculaItaliana()
-		// if true {
-		// 	abre archivo italianas
-		// 	escribe matricula (path, true)
-		//	cierra archivo
-		//if false {
-		//	abre archivo desconegudes
-		//	escribe matricula (path, true)
-		//	cierra archivo
-		//continue; 
-		
-
-
