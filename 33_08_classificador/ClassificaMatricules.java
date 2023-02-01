@@ -8,7 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class TriaMatricules {
+public class ClassificaMatricules {
 	public static void main(String[] args) throws IOException {
 		String path = "llegides.txt";
 		BufferedReader input = new BufferedReader(new FileReader(path));
