@@ -1,4 +1,6 @@
-/* Programa que serveix de prova per la biblioteca LOG 
+/* Programa que serveix de prova per la biblioteca LOG. 
+ * Crida diferents mòduls al fitxer Log amb el seu missatge i desde l'altre fitxer 
+ * registra els errors a un .txt
  */
 
 import java.io.IOException;
