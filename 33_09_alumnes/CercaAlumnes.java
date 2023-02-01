@@ -14,6 +14,7 @@ import java.io.IOException;
 public class CercaAlumnes {
     public static void main(String[] args) throws IOException {
         if (args.length == 0) {
+
         // assegura que hi ha el criteri de cerca
         // XXX a completar
 

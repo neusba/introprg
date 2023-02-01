@@ -1,4 +1,8 @@
-/* Utilitats de String per l'exercicic 33_04 */
+/* Utilitats de String per l'exercicic 33_04
+ * Les funcions dins l'apartat "Paraula en joc" modifiquen o mostren la variable de la paraula actual(currentWord)
+ * Les funcions de "Lletres utilitzades" modifiquen la variable usedLetters i la visualitzen
+ * Tot tipus de comprovacions es fan als últims mòduls d'aquesta biblioteca
+ */
 
 public class UtilString {
 
