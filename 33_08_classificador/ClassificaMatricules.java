@@ -17,7 +17,6 @@ public class ClassificaMatricules {
 			String linia = input.readLine();
 			if (linia == null) { 
 				if (controlaLinies == 0) {
-					System.out.println("No tinc matricules per llegir");
 					return;
 				}
 				break;
