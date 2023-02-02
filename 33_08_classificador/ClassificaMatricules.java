@@ -35,6 +35,7 @@ public class ClassificaMatricules {
         }
 
 	public static boolean matriculaValida(String text) throws IOException {
+		String noValides = "IOQU";
 		if (text.length() != 7) {
 			return false;
 		}
@@ -44,28 +45,17 @@ public class ClassificaMatricules {
 				if (!Character.isDigit(lletra)) {
 					return false;
 				}
-			} else {
-				boolean valida = esLletraValidaPerMatriculaItaliana(lletra);
-				if (!valida) {
-					return false;
-				}
-			}
+			} else if (Character.isLetter(lletra) && Character.isUpperCase(lletra)) {
+                            if (lletra >= 'A' && lletra <= 'Z') {
+                                for (int j=0; j < noValides.length(); j++) {
+                                    if (lletra == noValides.charAt(j)) {
+                                        return false;
+                                    }
+                                }
+                                return true;
+                            }
+                    }
 		}
 		return true;
-	}
-	// revisio de les lletres de la matricula
-	public static boolean esLletraValidaPerMatriculaItaliana(char lletra) throws IOException {
-		String noValides = "IOQU";
-		if (Character.isLetter(lletra) && Character.isUpperCase(lletra)) {
-			if (lletra >= 'A' && lletra <= 'Z') {
-				for (int i=0; i < noValides.length(); i++) {
-					if (lletra == noValides.charAt(i)) {
-						return false;
-					}
-				}
-				return true;
-			}
-		}
-		return false;
 	}
 }
