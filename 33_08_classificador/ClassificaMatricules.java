@@ -11,15 +11,15 @@ import java.io.IOException;
 public class ClassificaMatricules {
 	public static void main(String[] args) throws IOException {
 		String path = "llegides.txt";
-		classificaMatricules(path);
+                String pathItalianes = "italianes.txt";
+                String pathDesconegudes = "desconegudes.txt";
+		classificaMatricules(path, pathItalianes, pathDesconegudes);
 	}
 
 	// Procediment que comprova la matrícula donada i la classifica a un fitxer o un altre segons el tipus
-	public static void classificaMatricules(String path) throws IOException {
+	public static void classificaMatricules(String path, String pathItalianes, String pathDesconegudes) throws IOException {
             BufferedReader input = new BufferedReader(new FileReader(path));
-            String pathItalianes = "italianes.txt";
             BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes));
-            String pathDesconegudes = "desconegudes.txt";
             BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes));
             while (true) {
                 String linia = input.readLine();
