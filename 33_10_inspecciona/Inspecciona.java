@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.File;
+import java.util.Arrays;
 
 public class Inspecciona {
     public static String permisos = "rwx";
@@ -56,15 +57,16 @@ public class Inspecciona {
         File carpeta = new File(arg);
         System.out.printf("%s directori ", permisos);
         String[] continguts = carpeta.list();
+        Arrays.sort(continguts);
         if (continguts.length == 0) {
             System.out.print("buit");
         } else {
             System.out.print("que conté: ");
-            for (int i=continguts.length - 1; i>=0; i--) {
+            for (int i=0; i<continguts.length; i++) {
                 if (i == continguts.length - 1) {
-                    System.out.print(continguts[i] + ", ");
-                } else {
                     System.out.print(continguts[i]);
+                } else {
+                    System.out.print(continguts[i] + ", ");
                 }
             }
         }
