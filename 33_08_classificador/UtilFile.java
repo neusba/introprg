@@ -1,4 +1,6 @@
-/* Funcions de fitxers */
+/* Funcions de fitxers 
+ * La primera funció s'encarrega de comprovar si el fitxer està buit o té contingut a dins
+ */
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
