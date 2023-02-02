@@ -55,10 +55,10 @@ public class Inspecciona {
     public static void gestionaDirectori(File path) throws IOException {
         File carpeta = new File(arg);
         System.out.printf("%s directori ", permisos);
-        if (carpeta.length() == 0) {
+        String[] continguts = carpeta.list();
+        if (continguts.length == 0) {
             System.out.print("buit");
-        } else { 
-            String[] continguts = carpeta.list();
+        } else {
             System.out.print("que conté: ");
             for (int i=0; i<continguts.length; i++) {
                 System.out.print(continguts[i] + ", ");
