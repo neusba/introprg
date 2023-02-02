@@ -26,7 +26,7 @@ public class ClassificaMatricules {
                 if (linia == null) { break; }
                 if (linia.isEmpty()) { continue; }
                 linia = linia.strip();
-                boolean italiana = matriculaValida(linia);
+                boolean italiana = matriculaItalianaValida(linia);
                 if (italiana) {
                     outputItalianes.write(String.format("%s%n", linia));
                 } else {
@@ -38,7 +38,7 @@ public class ClassificaMatricules {
             outputDesconegudes.close();
         }
 
-	public static boolean matriculaValida(String text) throws IOException {
+	public static boolean matriculaItalianaValida(String text) throws IOException {
 		if (text.length() != 7) {
 			return false;
 		}
