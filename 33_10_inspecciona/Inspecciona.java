@@ -86,6 +86,7 @@ public class Inspecciona {
                 System.out.printf("|%s|", linia);
             }
             input.close();
+            System.out.println();
         }
     }
     // Reset de les variables globals
