@@ -26,7 +26,7 @@ public class ClassificaMatricules {
                 if (linia == null) { break; }
                 if (linia.isEmpty()) { continue; }
                 linia = linia.strip();
-                boolean italiana = UtilString.matriculaItalianaValida(linia);
+                boolean italiana = matriculaValida(linia);
                 if (italiana) {
                     outputItalianes.write(String.format("%s%n", linia));
                 } else {
@@ -37,4 +37,39 @@ public class ClassificaMatricules {
             outputItalianes.close();
             outputDesconegudes.close();
         }
+
+	public static boolean matriculaValida(String text) throws IOException {
+		if (text.length() != 7) {
+			return false;
+		}
+		for (int i=0; i < text.length(); i++) {
+			char lletra = text.charAt(i);
+			if (i > 1 && i < 5) {
+				if (!Character.isDigit(lletra)) {
+					return false;
+				}
+			} else {
+				boolean valida = esLletraValidaPerMatriculaItaliana(lletra);
+				if (!valida) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	// revisio de les lletres de la matricula
+	public static boolean esLletraValidaPerMatriculaItaliana(char lletra) throws IOException {
+		String noValides = "IOQU";
+		if (Character.isLetter(lletra) && Character.isUpperCase(lletra)) {
+			if (lletra >= 'A' && lletra <= 'Z') {
+				for (int i=0; i < noValides.length(); i++) {
+					if (lletra == noValides.charAt(i)) {
+						return false;
+					}
+				}
+				return true;
+			}
+		}
+		return false;
+	}
 }
