@@ -61,9 +61,14 @@ public class Inspecciona {
         } else {
             System.out.print("que conté: ");
             for (int i=0; i<continguts.length; i++) {
-                System.out.print(continguts[i] + ", ");
+                if (i == continguts.length - 1) {
+                    System.out.print(continguts[i]);
+                } else {
+                    System.out.print(continguts[i] + ", ");
+                }
             }
         }
+        System.out.println();
     }
     // Procediment que dona informació del fitxer
     public static void gestionaFitxer(File path) throws IOException {
