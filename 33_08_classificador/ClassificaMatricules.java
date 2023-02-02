@@ -29,45 +29,21 @@ public class ClassificaMatricules {
 
 	// Procediment que comprova la matrícula donada i la classifica a un fitxer o un altre segons el tipus
 	public static void classificaMatricules(String path) throws IOException {
-		BufferedReader input = new BufferedReader(new FileReader(path));
-		String italianes = "";
-		String desconegudes = "";
-		while (true) {
-			String linia = input.readLine();
-			if (linia == null) { break; }
-			if (linia.isEmpty()) { continue; }
-			linia = linia.strip();
-			boolean checkMatricula = UtilString.matriculaItalianaValida(linia);
-			if (checkMatricula) {
-				italianes = italianes + linia + ",";
-			} else {
-				desconegudes = desconegudes + linia + ",";
-			}
-		}
-		input.close();
-		String[] matriculesItalianes = italianes.split(",");
-		String[] matriculesDesconegudes = desconegudes.split(",");
-		fitxerItalianes(matriculesItalianes);
-		fitxerDesconegudes(matriculesDesconegudes);
-	}
-
-	// Procediment que afegeix les matrícules italianes al fitxer de "italianes.txt"
-	public static void fitxerItalianes(String[] matriculesItalianes) throws IOException {
-		String path = "italianes.txt";
-		BufferedWriter output = new BufferedWriter(new FileWriter(path));
-	        for (int i=0; i<matriculesItalianes.length; i++) {
-		    output.write(String.format("%s%n", matriculesItalianes[i]));
-                }
-                output.close();
-	}
-
-	// Procediment que afegeix les matrícules desconecgudes al fitxer de "desconegudes.txt"
-	public static void fitxerDesconegudes(String[] matriculesDesconegudes) throws IOException {
-		String path = "desconegudes.txt";
-		BufferedWriter output = new BufferedWriter(new FileWriter(path));
-	        for (int i=0; i<matriculesDesconegudes.length; i++) {
-		    output.write(String.format("%s%n", matriculesDesconegudes[i]));
-                }
-                output.close();
-	}
+            BufferedReader input = new BufferedReader(new FileReader(path));
+            String pathItalianes = "italianes.txt";
+            BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes));
+            String pathDesconegudes = "desconegudes.txt";
+            BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes));
+            String linia = input.readLine();
+            boolean italiana = UtilString.matriculaItalianaValida(linia);
+            linia = linia.strip();
+            if (italiana) {
+                outputItalianes.write(String.format("%s%n", linia));
+            } else {
+                outputDesconegudes.write(String.format("%s%n", linia));
+            }
+            input.close();
+            outputItalianes.close();
+            outputDesconegudes.close();
+        }
 }
