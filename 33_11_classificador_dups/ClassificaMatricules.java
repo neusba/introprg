@@ -16,7 +16,7 @@ public class ClassificaMatricules {
         BufferedReader input = new BufferedReader(new FileReader(path));
         BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes));
         BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes));
-        String paraules = "";
+        String paraules = null;
 
         while (true) {
             String linia = input.readLine();
@@ -42,7 +42,6 @@ public class ClassificaMatricules {
     public static boolean comprovaRepetida(String linia, String paraules) {
         String[] utilitzades = paraules.split(",");
         if (utilitzades.length == 0) {
-            System.out.println("buit");
             return false;
         }
         for (int i=0; i<utilitzades.length; i++) {
