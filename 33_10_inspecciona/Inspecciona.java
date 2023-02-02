@@ -25,7 +25,7 @@ public class Inspecciona {
             arg = args[i];
             int length = arg.length();
             System.out.printf("Processant argument: %s%n", arg);
-            System.out.printf("%s%n", separador.repeat(19 + length));
+            System.out.printf("%s%n", separador.repeat(21 + length));
             System.out.println();
             File path = new File(arg);
             if (!path.exists()) {                                                                      // EXISTE
