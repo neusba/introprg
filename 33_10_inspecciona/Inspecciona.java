@@ -26,6 +26,7 @@ public class Inspecciona {
             int length = arg.length();
             System.out.printf("Processa argument: %s%n", arg);
             System.out.printf("%s%n", separador.repeat(19 + length));
+            System.out.println();
             File path = new File(arg);
             if (!path.exists()) {                                                                      // EXISTE
                 System.out.println("No trobat");
