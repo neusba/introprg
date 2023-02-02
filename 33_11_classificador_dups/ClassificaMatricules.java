@@ -16,7 +16,7 @@ public class ClassificaMatricules {
         BufferedReader input = new BufferedReader(new FileReader(path));
         BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes));
         BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes));
-        String paraules = null;
+        String paraules = "";
 
         while (true) {
             String linia = input.readLine();
@@ -25,6 +25,7 @@ public class ClassificaMatricules {
             linia = linia.strip();
             boolean valida = matriculaItalianaValida(linia);
             boolean repetida = comprovaRepetida(linia, paraules);
+            System.out.println(repetida);
             if (!repetida) { 
                 paraules = paraules + linia + ",";
                 if (valida) {
