@@ -78,12 +78,14 @@ public class Inspecciona {
         } else {
             BufferedReader input = new BufferedReader(new FileReader(path));
             System.out.printf("%s fitxer de mida en bytes: %d%n", permisos, mida);
-            System.out.println("Amb els continguts:");
-            while (true) {
-                String linia = input.readLine();
-                if (linia == null) { break; }
-                if (linia.isEmpty()) { continue; }
-                System.out.printf("|%s|%n", linia);
+            if (arg.contains(".txt") || arg.contains(".java")) {
+                System.out.println("Amb els continguts:");
+                while (true) {
+                    String linia = input.readLine();
+                    if (linia == null) { break; }
+                    if (linia.isEmpty()) { continue; }
+                    System.out.printf("|%s|%n", linia);
+                }
             }
             input.close();
             System.out.println();
