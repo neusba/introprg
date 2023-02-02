@@ -83,7 +83,7 @@ public class Inspecciona {
                 String linia = input.readLine();
                 if (linia == null) { break; }
                 if (linia.isEmpty()) { continue; }
-                System.out.printf("|%s|", linia);
+                System.out.printf("|%s|%n", linia);
             }
             input.close();
             System.out.println();
