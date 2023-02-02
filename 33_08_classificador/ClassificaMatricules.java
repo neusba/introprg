@@ -30,8 +30,8 @@ public class ClassificaMatricules {
 	// Procediment que comprova la matrícula donada i la classifica a un fitxer o un altre segons el tipus
 	public static void classificaMatricules(String path) throws IOException {
 		BufferedReader input = new BufferedReader(new FileReader(path));
-		//String italianes = "";
-		//String desconegudes = "";
+		String italianes = "";
+		String desconegudes = "";
 		while (true) {
 			String linia = input.readLine();
 			if (linia == null) { break; }
@@ -39,35 +39,35 @@ public class ClassificaMatricules {
 			linia = linia.strip();
 			boolean checkMatricula = UtilString.matriculaItalianaValida(linia);
 			if (checkMatricula) {
-                                fitxerItalianes(linia);
-				//italianes = italianes + linia + ",";
+				italianes = italianes + linia + ",";
 			} else {
-                                fitxerDesconegudes(linia);
-				//desconegudes = desconegudes + linia + ",";
+				desconegudes = desconegudes + linia + ",";
 			}
 		}
 		input.close();
-		/*String[] matriculesItalianes = italianes.split(",");
+		String[] matriculesItalianes = italianes.split(",");
 		String[] matriculesDesconegudes = desconegudes.split(",");
 		fitxerItalianes(matriculesItalianes);
-		fitxerDesconegudes(matriculesDesconegudes);*/
+		fitxerDesconegudes(matriculesDesconegudes);
 	}
 
 	// Procediment que afegeix les matrícules italianes al fitxer de "italianes.txt"
-	public static void fitxerItalianes(String matricula) throws IOException {
+	public static void fitxerItalianes(String[] matriculesItalianes) throws IOException {
 		String path = "italianes.txt";
-		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
-		
-		output.write(String.format("%s%n", matricula));
+		BufferedWriter output = new BufferedWriter(new FileWriter(path));
+	        for (int i=0; i<matriculesItalianes.length; i++) {
+		    output.write(String.format("%s%n", matriculesItalianes[i]));
+                }
                 output.close();
 	}
 
 	// Procediment que afegeix les matrícules desconecgudes al fitxer de "desconegudes.txt"
-	public static void fitxerDesconegudes(String matricula) throws IOException {
+	public static void fitxerDesconegudes(String[] matriculesDesconegudes) throws IOException {
 		String path = "desconegudes.txt";
-		BufferedWriter output = new BufferedWriter(new FileWriter(path, true));
-		
-		output.write(String.format("%s%n", matricula));
+		BufferedWriter output = new BufferedWriter(new FileWriter(path));
+	        for (int i=0; i<matriculesDesconegudes.length; i++) {
+		    output.write(String.format("%s%n", matriculesDesconegudes[i]));
+                }
                 output.close();
 	}
 }
