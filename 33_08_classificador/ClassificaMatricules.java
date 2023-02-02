@@ -13,29 +13,25 @@ public class ClassificaMatricules {
 		String path = "llegides.txt";
                 String pathItalianes = "italianes.txt";
                 String pathDesconegudes = "desconegudes.txt";
-		classificaMatricules(path, pathItalianes, pathDesconegudes);
-	}
 
-	// Procediment que comprova la matrícula donada i la classifica a un fitxer o un altre segons el tipus
-	public static void classificaMatricules(String path, String pathItalianes, String pathDesconegudes) throws IOException {
-            BufferedReader input = new BufferedReader(new FileReader(path));
-            BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes));
-            BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes));
-            while (true) {
-                String linia = input.readLine();
-                if (linia == null) { break; }
-                if (linia.isEmpty()) { continue; }
-                linia = linia.strip();
-                boolean italiana = matriculaItalianaValida(linia);
-                if (italiana) {
-                    outputItalianes.write(String.format("%s%n", linia));
-                } else {
-                    outputDesconegudes.write(String.format("%s%n", linia));
+                BufferedReader input = new BufferedReader(new FileReader(path));
+                BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes));
+                BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes));
+                while (true) {
+                    String linia = input.readLine();
+                    if (linia == null) { break; }
+                    if (linia.isEmpty()) { continue; }
+                    linia = linia.strip();
+                    boolean italiana = matriculaItalianaValida(linia);
+                    if (italiana) {
+                        outputItalianes.write(String.format("%s%n", linia));
+                    } else {
+                        outputDesconegudes.write(String.format("%s%n", linia));
+                    }
                 }
-            }
-            input.close();
-            outputItalianes.close();
-            outputDesconegudes.close();
+                input.close();
+                outputItalianes.close();
+                outputDesconegudes.close();
         }
 
 	public static boolean matriculaItalianaValida(String text) throws IOException {
