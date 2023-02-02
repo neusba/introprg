@@ -62,9 +62,9 @@ public class Inspecciona {
             System.out.print("que conté: ");
             for (int i=continguts.length - 1; i>=0; i--) {
                 if (i == continguts.length - 1) {
-                    System.out.print(continguts[i]);
-                } else {
                     System.out.print(continguts[i] + ", ");
+                } else {
+                    System.out.print(continguts[i]);
                 }
             }
         }
