@@ -24,7 +24,7 @@ public class Inspecciona {
         for (int i=0; i<args.length; i++) {
             arg = args[i];
             int length = arg.length();
-            System.out.printf("Processa argument: %s%n", arg);
+            System.out.printf("Processant argument: %s%n", arg);
             System.out.printf("%s%n", separador.repeat(19 + length));
             System.out.println();
             File path = new File(arg);
