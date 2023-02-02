@@ -45,6 +45,7 @@ public class ClassificaMatricules {
             return false;
         }
         for (int i=0; i<utilitzades.length; i++) {
+            System.out.println(utilitzades[i]);
             if (linia == utilitzades[i]) {
                 return true;
             }
