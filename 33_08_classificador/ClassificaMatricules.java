@@ -46,6 +46,7 @@ public class ClassificaMatricules {
                     if (!Character.isDigit(lletra)) { return false; }
                 } else {
                     if (!Character.isLetter(lletra)) { return false; }
+                    if (Character.isLowerCase(lletra)) { return false; }
                     for (int j=0; j < noValides.length(); j++) {
                         if (lletra == noValides.charAt(j)) { return false; }
                     }
@@ -54,4 +55,3 @@ public class ClassificaMatricules {
         return true;
     }
 }
-
