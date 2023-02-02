@@ -44,7 +44,6 @@ public class ClassificaMatricules {
             char lletra = matricula.charAt(i);
                 if (i > 1 && i < 5) {
                     if (!Character.isDigit(lletra)) { return false; }
-                    if (!Character.isLowerCase(lletra)) { return false; }
                 } else {
                     if (!Character.isLetter(lletra)) { return false; }
                     for (int j=0; j < noValides.length(); j++) {
