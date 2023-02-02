@@ -25,8 +25,8 @@ public class ClassificaMatricules {
             linia = linia.strip();
             boolean valida = matriculaItalianaValida(linia);
             boolean repetida = comprovaRepetida(linia, paraules);
-            paraules = paraules + linia + ",";
-            if (!repetida) {
+            if (!repetida) { 
+                paraules = paraules + linia + ",";
                 if (valida) {
                     outputItalianes.write(String.format("%s%n", linia));
                 } else {
@@ -45,7 +45,6 @@ public class ClassificaMatricules {
             return false;
         }
         for (int i=0; i<utilitzades.length; i++) {
-            System.out.println(utilitzades[i]);
             if (linia == utilitzades[i]) {
                 return true;
             }
