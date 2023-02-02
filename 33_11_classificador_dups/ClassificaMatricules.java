@@ -42,6 +42,7 @@ public class ClassificaMatricules {
     public static boolean comprovaRepetida(String linia, String paraules) {
         String[] utilitzades = paraules.split(",");
         if (utilitzades.length == 0) {
+            System.out.println("buit");
             return false;
         }
         for (int i=0; i<utilitzades.length; i++) {
