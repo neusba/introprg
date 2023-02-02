@@ -11,19 +11,6 @@ import java.io.IOException;
 public class ClassificaMatricules {
 	public static void main(String[] args) throws IOException {
 		String path = "llegides.txt";
-		BufferedReader input = new BufferedReader(new FileReader(path));
-		int controlaLinies = 0;
-		while (true) {
-			String linia = input.readLine();
-			if (linia == null) { 
-				if (controlaLinies == 0) {
-					return;
-				}
-				break;
-			}
-			controlaLinies += 1;
-		}
-		input.close();
 		classificaMatricules(path);
 	}
 
