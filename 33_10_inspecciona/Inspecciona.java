@@ -11,17 +11,16 @@ public class Inspecciona {
     public static String permisos = "rwx";
     public static String arg = "";
     public static String separador = "=";
+
     public static void main(String[] args) throws IOException {
-        if (args.length == 0) {                                                 
+    /*    if (args.length == 0) {                                                 
             System.out.println("Necessito un path mínim");
             return;
-        }
+        }*/
         processaArgument(args);
     }
     // Procediment que processa els arguments de la línia de comandes
     public static void processaArgument(String[] args) throws IOException {
-        boolean directori = false;
-        boolean fitxer = false;
         for (int i=0; i<args.length; i++) {
             arg = args[i];
             int length = arg.length();
@@ -37,10 +36,8 @@ public class Inspecciona {
             modificaPermisos(path);
             // Es directori
             if (path.isDirectory()) {
-                directori = true;
                 gestionaDirectori(path);
             } else {
-                fitxer = true;
                 gestionaFitxer(path);
             }
             resetGlobals();
