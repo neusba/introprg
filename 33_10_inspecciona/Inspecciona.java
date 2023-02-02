@@ -13,10 +13,6 @@ public class Inspecciona {
     public static String separador = "=";
 
     public static void main(String[] args) throws IOException {
-    /*    if (args.length == 0) {                                                 
-            System.out.println("Necessito un path mínim");
-            return;
-        }*/
         processaArgument(args);
     }
     // Procediment que processa els arguments de la línia de comandes
@@ -28,16 +24,17 @@ public class Inspecciona {
             System.out.printf("%s%n", separador.repeat(21 + length));
             System.out.println();
             File path = new File(arg);
-            if (!path.exists()) {                                                                      // EXISTE
+            if (!path.exists()) {                                                                      // No existe
                 System.out.println("No trobat");
                 continue;
             }
-            // Gestiona permisos (MODUL)
+            // Gestiona permisos
             modificaPermisos(path);
             // Es directori
             if (path.isDirectory()) {
                 gestionaDirectori(path);
             } else {
+            // Es fitxer
                 gestionaFitxer(path);
             }
             resetGlobals();
