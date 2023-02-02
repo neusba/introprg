@@ -34,13 +34,17 @@ public class ClassificaMatricules {
             BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes));
             String pathDesconegudes = "desconegudes.txt";
             BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes));
-            String linia = input.readLine();
-            boolean italiana = UtilString.matriculaItalianaValida(linia);
-            linia = linia.strip();
-            if (italiana) {
-                outputItalianes.write(String.format("%s%n", linia));
-            } else {
-                outputDesconegudes.write(String.format("%s%n", linia));
+            while (true) {
+                String linia = input.readLine();
+                if (linia == null) { break; }
+                if (linia.isEmpty()) { continue; }
+                linia = linia.strip();
+                boolean italiana = UtilString.matriculaItalianaValida(linia);
+                if (italiana) {
+                    outputItalianes.write(String.format("%s%n", linia));
+                } else {
+                    outputDesconegudes.write(String.format("%s%n", linia));
+                }
             }
             input.close();
             outputItalianes.close();
