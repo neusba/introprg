@@ -44,8 +44,8 @@ public class ClassificaMatricules {
         while (true) {
             String check = input.readLine();
             if (check == null) break;
+            System.out.println(check);
             if (linia.equals(check)) {
-                System.out.println("se repite la matricula");
                 input.close();
                 return true;
             }
