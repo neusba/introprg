@@ -23,15 +23,13 @@ public class ClassificaMatricules {
             if (!matriculaItalianaValida(linia)) {
                 if (!exists(linia, "desconegudes.txt")) {
                     BufferedWriter noValid = new BufferedWriter(new FileWriter("desconegudes.txt", true));
-                    noValid.write(linia);
-                    noValid.newLine();
+                    noValid.write(String.format("%s%n", linia));
                     noValid.close();
                 }
             } else {
                 if (!exists(linia, "italianes.txt")) {
                     BufferedWriter valid = new BufferedWriter(new FileWriter("italianes.txt", true));
-                    valid.write(linia);
-                    valid.newLine();
+                    valid.write(String.format("%s%n", linia));
                     valid.close();
                 }
             }
