@@ -69,6 +69,7 @@ public class ClassificaMatricules {
         int comptaLinies = 0;
         while (true) {
             String checkLinia = input.readLine();
+            System.out.println(checkLinia);
             comptaLinies += 1;
             if (checkLinia == null) { break; }
             if (checkLinia.contains(linia)) {
