@@ -27,16 +27,16 @@ public class ClassificaMatricules {
             linia = linia.strip();
             System.out.println(linia);
             if (matriculaItalianaValida(linia)) {                                                              // Comprova si és una matrícula vàlida
-                if (!exists(linia, pathItalianes)) {
-                    BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes, true));        // Escritura del fitxer italianes
-                    outputItalianes.write(String.format("%s%n", linia));
-                    outputItalianes.close();
-                }
-            } else {
                 if (!exists(linia, pathDesconegudes)) {
                     BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes, true));  // Escritura del fitxer Desconegudes
                     outputDesconegudes.write(String.format("%s%n", linia));
                     outputDesconegudes.close();
+                }
+            } else {
+                if (!exists(linia, pathItalianes)) {
+                    BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes, true));        // Escritura del fitxer italianes
+                    outputItalianes.write(String.format("%s%n", linia));
+                    outputItalianes.close();
                 }
             }
         }
