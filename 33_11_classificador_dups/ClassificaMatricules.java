@@ -43,8 +43,9 @@ public class ClassificaMatricules {
         BufferedReader input = new BufferedReader(new FileReader(path));
         while (true) {
             String check = input.readLine();
-            if (check == null) { break; }
+            if (check == null) break;
             if (linia.equals(check)) {
+                System.out.println("se repite la matricula");
                 input.close();
                 return true;
             }
