@@ -27,12 +27,12 @@ public class ClassificaMatricules {
             boolean valida = matriculaItalianaValida(linia);
             if (valida) {
                 boolean repetida = checkItalianes(linia);
-                if (!repetida) {
+                if (repetida) {
                     outputItalianes.write(String.format("%s%n", linia));
                 }
             } else {
                 boolean repetida = checkDesconegudes(linia);
-                if (!repetida) {
+                if (repetida) {
                     outputDesconegudes.write(String.format("%s%n", linia));
                 }
             }
