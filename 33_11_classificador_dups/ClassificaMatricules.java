@@ -12,32 +12,28 @@ public class ClassificaMatricules {
     public static void main(String[] args) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader("llegides.txt"));
 
-        BufferedWriter conegudes = new BufferedWriter(new FileWriter("italianes.txt", true));
-        //conegudes.close();
-        BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt", true));
-        //desconegudes.close();
+        BufferedWriter italianes = new BufferedWriter(new FileWriter("italianes.txt"));
+        italianes.close();
+        BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
+        desconegudes.close();
         while (true) {
             String linia = input.readLine();
             if (linia == null) break;
             linia = linia.strip();
             if (!matriculaItalianaValida(linia)) {
                 if (!exists(linia, "desconegudes.txt")) {
-                    //BufferedWriter noValid = new BufferedWriter(new FileWriter("desconegudes.txt", true));
-                    /*noValid.write(String.format("%s%n", linia));
-                    noValid.close();*/
-                    desconegudes.write(String.format("%s%n", linia));
+                    BufferedWriter noValid = new BufferedWriter(new FileWriter("desconegudes.txt", true));
+                    noValid.write(String.format("%s%n", linia));
+                    noValid.close();
                 }
             } else {
                 if (!exists(linia, "italianes.txt")) {
-                    //BufferedWriter valid = new BufferedWriter(new FileWriter("italianes.txt", true));
-                    /*valid.write(String.format("%s%n", linia));
-                    valid.close();*/
-                    conegudes.write(String.format("%s%n", linia));
+                    BufferedWriter valid = new BufferedWriter(new FileWriter("italianes.txt", true));
+                    valid.write(String.format("%s%n", linia));
+                    valid.close();
                 }
             }
         }
-        conegudes.close();
-        desconegudes.close();
         input.close();
     }
     // Procediment que comprova si la matrícula està repetida o no
