@@ -12,10 +12,10 @@ public class ClassificaMatricules {
     public static void main(String[] args) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader("llegides.txt"));
 
-        BufferedWriter conegudes = new BufferedWriter(new FileWriter("italianes.txt"));
+        /*BufferedWriter conegudes = new BufferedWriter(new FileWriter("italianes.txt"));
         conegudes.close();
         BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
-        desconegudes.close();
+        desconegudes.close();*/
         while (true) {
             String linia = input.readLine();
             if (linia == null) break;
