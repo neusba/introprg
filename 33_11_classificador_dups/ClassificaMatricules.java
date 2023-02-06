@@ -12,10 +12,10 @@ public class ClassificaMatricules {
     public static void main(String[] args) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader("llegides.txt"));
 
-        /*BufferedWriter conegudes = new BufferedWriter(new FileWriter("italianes.txt"));
+        BufferedWriter conegudes = new BufferedWriter(new FileWriter("italianes.txt"));
         conegudes.close();
         BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
-        desconegudes.close();*/
+        desconegudes.close();
         while (true) {
             String linia = input.readLine();
             if (linia == null) break;
@@ -40,16 +40,16 @@ public class ClassificaMatricules {
     }
     // Procediment que comprova si la matrícula està repetida o no
     public static boolean exists(String linia, String path) throws IOException {
-        BufferedReader comprova = new BufferedReader(new FileReader(path));
+        BufferedReader input = new BufferedReader(new FileReader(path));
         while (true) {
-            String check = comprova.readLine();
+            String check = input.readLine();
             if (check == null) break;
             if (linia.equals(check)) {
-                comprova.close();
+                input.close();
                 return true;
             }
         }
-        comprova.close();
+        input.close();
         return false;
     }
     // Procediment que retorna true si la matrícula és vàlida com a italiana o no
