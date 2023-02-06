@@ -13,26 +13,28 @@ public class ClassificaMatricules {
         BufferedReader input = new BufferedReader(new FileReader("llegides.txt"));
 
         BufferedWriter conegudes = new BufferedWriter(new FileWriter("italianes.txt"));
-        conegudes.close();
+        //conegudes.close();
         BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
-        desconegudes.close();
+        //desconegudes.close();
         while (true) {
             String linia = input.readLine();
             if (linia == null) break;
             linia = linia.strip();
             if (!matriculaItalianaValida(linia)) {
-                System.out.println(linia);
                 if (!exists(linia, "desconegudes.txt")) {
-                    BufferedWriter noValid = new BufferedWriter(new FileWriter("desconegudes.txt", true));
-                    noValid.write(String.format("%s%n", linia));
-                    noValid.close();
+                    //BufferedWriter noValid = new BufferedWriter(new FileWriter("desconegudes.txt", true));
+                    /*noValid.write(String.format("%s%n", linia));
+                    noValid.close();*/
+                    desconegudes.write(String.format("%s%n", linia));
+                    desconegudes.close();
                 }
             } else {
-                System.out.println(linia);
                 if (!exists(linia, "italianes.txt")) {
-                    BufferedWriter valid = new BufferedWriter(new FileWriter("italianes.txt", true));
-                    valid.write(String.format("%s%n", linia));
-                    valid.close();
+                    //BufferedWriter valid = new BufferedWriter(new FileWriter("italianes.txt", true));
+                    /*valid.write(String.format("%s%n", linia));
+                    valid.close();*/
+                    conegudes.write(String.format("%s%n", linia));
+                    conegudes.close();
                 }
             }
         }
