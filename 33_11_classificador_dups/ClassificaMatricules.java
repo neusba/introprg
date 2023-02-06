@@ -28,11 +28,13 @@ public class ClassificaMatricules {
             if (valida) {
                 boolean repetida = checkItalianes(linia);
                 if (!repetida) {
+                    System.out.println(linia);
                     outputItalianes.write(String.format("%s%n", linia));
                 }
             } else {
                 boolean repetida = checkDesconegudes(linia);
                 if (!repetida) {
+                    System.out.println(linia);
                     outputDesconegudes.write(String.format("%s%n", linia));
                 }
             }
@@ -69,10 +71,9 @@ public class ClassificaMatricules {
         int comptaLinies = 0;
         while (true) {
             String checkLinia = input.readLine();
-            System.out.println(checkLinia);
             comptaLinies += 1;
             if (checkLinia == null) { break; }
-            if (checkLinia.contains(linia)) {
+            if (checkLinia.equals(linia)) {
                 input.close();
                 return true;
             }
@@ -92,7 +93,7 @@ public class ClassificaMatricules {
             String checkLinia = input.readLine();
             comptaLinies += 1;
             if (checkLinia == null) { break; }
-            if (checkLinia.contains(linia)) {
+            if (checkLinia.equals(linia)) {
                 input.close();
                 return true;
             }
