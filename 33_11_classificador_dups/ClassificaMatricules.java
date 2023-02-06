@@ -15,9 +15,10 @@ public class ClassificaMatricules {
     
     public static void main(String[] args) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader(path));
+        BufferedReader inputItalianes = new BufferedReader(new FileReader(pathItalianes));
+        BufferedReader inputDesconegudes = new BufferedReader(new FileReader(pathDesconegudes));
         BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes));
         BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes));
-        String paraules = "";
 
         while (true) {
             String linia = input.readLine();
@@ -26,22 +27,36 @@ public class ClassificaMatricules {
             linia = linia.strip();
             boolean valida = matriculaItalianaValida(linia);
             if (valida) {
-                boolean repetida = checkItalianes(linia);
-                if (!repetida) {
-                    System.out.println(linia);
+                int comptaLinies = 0;
+                while (true) {
+                    String checkLinia = inputItalianes.readLine();
+                    comptaLinies += 1;
+                    if (checkLinia == null) { break; }
+                    if (checkLinia.equals(linia)) {
+                        outputItalianes.write(String.format("%s%n", linia));
+                    }
+                }
+                if (comptaLinies == 0) {
                     outputItalianes.write(String.format("%s%n", linia));
                 }
             } else {
-                boolean repetida = checkDesconegudes(linia);
-                if (!repetida) {
-                    System.out.println(linia);
+                int comptaLinies = 0;
+                while (true) {
+                    String checkLinia = inputDesconegudes.readLine();
+                    comptaLinies += 1;
+                    if (checkLinia == null) { break; }
+                    if (checkLinia.equals(linia)) {
+                        outputDesconegudes.write(String.format("%s%n", linia));
+                    }
+                }
+                if (comptaLinies == 0) {
                     outputDesconegudes.write(String.format("%s%n", linia));
                 }
             }
         }
         input.close();
-        outputItalianes.close();
         outputDesconegudes.close();
+        outputItalianes.close();
     }
 
     // Funcio que retorna true si la matrícula és vàlida com a italiana o no
@@ -52,56 +67,16 @@ public class ClassificaMatricules {
         }
         for (int i=0; i < matricula.length(); i++) {
             char lletra = matricula.charAt(i);
-                if (i > 1 && i < 5) {
-                    if (!Character.isDigit(lletra)) { return false; }
-                } else {
-                    if (!Character.isLetter(lletra)) { return false; }
-                    if (Character.isLowerCase(lletra)) { return false; }
-                    for (int j=0; j < noValides.length(); j++) {
-                        if (lletra == noValides.charAt(j)) { return false; }
-                    }
+            if (i > 1 && i < 5) {
+                if (!Character.isDigit(lletra)) { return false; }
+            } else {
+                if (!Character.isLetter(lletra)) { return false; }
+                if (Character.isLowerCase(lletra)) { return false; }
+                for (int j=0; j < noValides.length(); j++) {
+                    if (lletra == noValides.charAt(j)) { return false; }
                 }
+            }
         }
         return true;
-    }
-
-    // Funcio que comprova si la matrícula actual està ja afegida al fitxer italianes
-    public static boolean checkItalianes(String linia) throws IOException {
-        BufferedReader input = new BufferedReader(new FileReader(pathItalianes));
-        int comptaLinies = 0;
-        while (true) {
-            String checkLinia = input.readLine();
-            comptaLinies += 1;
-            if (checkLinia == null) { break; }
-            if (checkLinia.equals(linia)) {
-                input.close();
-                return true;
-            }
-        }
-        input.close();
-        if (comptaLinies == 1) {
-            return false;
-        }
-        return false;
-    }
-
-    // Funcio que comprova si la matrícula actual està ja afegida al fitxer desconegudes
-    public static boolean checkDesconegudes(String linia) throws IOException {
-        BufferedReader input = new BufferedReader(new FileReader(pathDesconegudes));
-        int comptaLinies = 0;
-        while (true) {
-            String checkLinia = input.readLine();
-            comptaLinies += 1;
-            if (checkLinia == null) { break; }
-            if (checkLinia.equals(linia)) {
-                input.close();
-                return true;
-            }
-        }
-        input.close();
-        if (comptaLinies == 1) {
-            return false;
-        }
-        return false;
     }
 }
