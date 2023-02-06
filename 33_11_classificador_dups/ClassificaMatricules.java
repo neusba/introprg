@@ -9,10 +9,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class ClassificaMatricules {
+    public static String path = "llegides.txt";
+    public static String pathItalianes = "italianes.txt";
+    public static String pathDesconegudes = "desconegudes.txt";
+    
     public static void main(String[] args) throws IOException {
-        String path = "llegides.txt";
-        String pathItalianes = "italianes.txt";
-        String pathDesconegudes = "desconegudes.txt";
         BufferedReader input = new BufferedReader(new FileReader(path));
         BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes));
         BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes));
@@ -24,12 +25,14 @@ public class ClassificaMatricules {
             if (linia.isEmpty()) { continue; }
             linia = linia.strip();
             boolean valida = matriculaItalianaValida(linia);
-            boolean repetida = comprovaRepetida(linia, paraules);
-            if (!repetida) { 
-                paraules = paraules + linia + ",";
-                if (valida) {
+            if (valida) {
+                boolean repetida = checkItalianes(linia);
+                if (!repetida) {
                     outputItalianes.write(String.format("%s%n", linia));
-                } else {
+                }
+            } else {
+                boolean repetida = checkDesconegudes(linia);
+                if (!repetida) {
                     outputDesconegudes.write(String.format("%s%n", linia));
                 }
             }
@@ -38,19 +41,7 @@ public class ClassificaMatricules {
         outputItalianes.close();
         outputDesconegudes.close();
     }
-    // Funcio que comprova si la matrícula esta repetida
-    public static boolean comprovaRepetida(String linia, String paraules) {
-        String[] utilitzades = paraules.split(",");
-        if (utilitzades.length == 0) {
-            return false;
-        }
-        for (int i=0; i<utilitzades.length; i++) {
-            if (linia.equals(utilitzades[i])) {
-                return true;
-            }
-        }
-        return false;
-    }
+
     // Funcio que retorna true si la matrícula és vàlida com a italiana o no
     public static boolean matriculaItalianaValida(String matricula) {
         String noValides = "IOQU";
@@ -70,5 +61,33 @@ public class ClassificaMatricules {
                 }
         }
         return true;
+    }
+
+    // Funcio que comprova si la matrícula actual està ja afegida al fitxer italianes
+    public static boolean checkItalianes(String linia) throws IOException {
+        BufferedReader input = new BufferedReader(new FileReader(pathItalianes));
+        while (true) {
+            String checkLinia = input.readLine();
+            if (checkLinia == null) { break; }
+            if (checkLinia.contains(linia)) {
+                return true;
+            }
+        }
+        input.close();
+        return false;
+    }
+
+    // Funcio que comprova si la matrícula actual està ja afegida al fitxer desconegudes
+    public static boolean checkDesconegudes(String linia) throws IOException {
+        BufferedReader input = new BufferedReader(new FileReader(pathDesconegudes));
+        while (true) {
+            String checkLinia = input.readLine();
+            if (checkLinia == null) { break; }
+            if (checkLinia.contains(linia)) {
+                return true;
+            }
+        }
+        input.close();
+        return false;
     }
 }
