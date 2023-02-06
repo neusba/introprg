@@ -15,8 +15,8 @@ public class ClassificaMatricules {
     
     public static void main(String[] args) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader(path));                                       // Lectura del fitxer llegides
-        BufferedReader inputItalianes = new BufferedReader(new FileReader(pathItalianes));                                             
-        BufferedReader inputDesconegudes = new BufferedReader(new FileReader(pathDesconegudes));                                              
+        BufferedWriter conegudes = new BufferedWriter(new FileWriter(pathItalianes));
+        BufferedWriter deconegudes = new BufferedWriter(new FileWriter(pathDesconegudes));
         while (true) {
             String linia = input.readLine();
             if (linia == null) { break; }
