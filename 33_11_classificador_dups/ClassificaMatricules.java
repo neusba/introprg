@@ -73,6 +73,7 @@ public class ClassificaMatricules {
             comptaLinies += 1;
             if (checkLinia == null) { break; }
             if (checkLinia.contains(linia)) {
+                input.close();
                 return true;
             }
         }
@@ -92,6 +93,7 @@ public class ClassificaMatricules {
             comptaLinies += 1;
             if (checkLinia == null) { break; }
             if (checkLinia.contains(linia)) {
+                input.close();
                 return true;
             }
         }
