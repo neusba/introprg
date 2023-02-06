@@ -27,12 +27,12 @@ public class ClassificaMatricules {
             boolean valida = matriculaItalianaValida(linia);
             if (valida) {
                 boolean repetida = checkItalianes(linia);
-                if (repetida) {
+                if (!repetida) {
                     outputItalianes.write(String.format("%s%n", linia));
                 }
             } else {
                 boolean repetida = checkDesconegudes(linia);
-                if (repetida) {
+                if (!repetida) {
                     outputDesconegudes.write(String.format("%s%n", linia));
                 }
             }
@@ -66,28 +66,38 @@ public class ClassificaMatricules {
     // Funcio que comprova si la matrícula actual està ja afegida al fitxer italianes
     public static boolean checkItalianes(String linia) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader(pathItalianes));
+        int comptaLinies = 0;
         while (true) {
             String checkLinia = input.readLine();
+            comptaLinies += 1;
             if (checkLinia == null) { break; }
             if (checkLinia.contains(linia)) {
                 return true;
             }
         }
         input.close();
+        if (comptaLinies == 1) {
+            return true;
+        }
         return false;
     }
 
     // Funcio que comprova si la matrícula actual està ja afegida al fitxer desconegudes
     public static boolean checkDesconegudes(String linia) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader(pathDesconegudes));
+        int comptaLinies = 0;
         while (true) {
             String checkLinia = input.readLine();
+            comptaLinies += 1;
             if (checkLinia == null) { break; }
             if (checkLinia.contains(linia)) {
                 return true;
             }
         }
         input.close();
+        if (comptaLinies == 1) {
+            return true;
+        }
         return false;
     }
 }
