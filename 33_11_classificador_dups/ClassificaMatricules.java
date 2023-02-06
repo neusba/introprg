@@ -27,17 +27,31 @@ public class ClassificaMatricules {
             if (matriculaItalianaValida(linia)) {                                                       // Comprova si és una matrícula vàlida
                 if (!exists(linia, "italianes.txt")) {
                     outputItalianes.write(String.format("%s%n", linia));
-                    outputItalianes.close();
                 }
             } else {
                 if (!exists(linia, "desconegudes.txt")) {
                     outputDesconegudes.write(String.format("%s%n", linia));
-                    outputDesconegudes.close();
                 }
             }
         }
         input.close();
+        outputDesconegudes.close();
+        outputItalianes.close();
     } 
+    // Procediment que comprova si la matrícula està repetida dins del seu fitxer corresponent
+    public static boolean exists(String linia, String path) throws IOException {
+        BufferedReader input = new BufferedReader(new FileReader(path));
+        while (true) {
+            String check = input.readLine();
+            if (check == null) { break; }
+            if (linia.equals(check)) {
+                input.close();
+                return true;
+            }
+        }
+        input.close();
+        return false;
+    }
     // Funcio que retorna true si la matrícula és vàlida com a italiana o no
     public static boolean matriculaItalianaValida(String matricula) {
         String noValides = "IOQU";
@@ -57,20 +71,6 @@ public class ClassificaMatricules {
                 }
         }
         return true;
-    }
-    // Procediment que comprova si la matrícula està repetida dins del seu fitxer corresponent
-    public static boolean exists(String linia, String path) throws IOException {
-        BufferedReader input = new BufferedReader(new FileReader(path));
-        while (true) {
-            String check = input.readLine();
-            if (check == null) { break; }
-            if (linia.equals(check)) {
-                input.close();
-                return true;
-            }
-        }
-        input.close();
-        return false;
     }
 }
 
