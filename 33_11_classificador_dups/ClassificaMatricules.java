@@ -77,7 +77,7 @@ public class ClassificaMatricules {
         }
         input.close();
         if (comptaLinies == 1) {
-            return true;
+            return false;
         }
         return false;
     }
@@ -96,7 +96,7 @@ public class ClassificaMatricules {
         }
         input.close();
         if (comptaLinies == 1) {
-            return true;
+            return false;
         }
         return false;
     }
