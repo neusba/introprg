@@ -26,7 +26,6 @@ public class ClassificaMatricules {
                     /*noValid.write(String.format("%s%n", linia));
                     noValid.close();*/
                     desconegudes.write(String.format("%s%n", linia));
-                    desconegudes.close();
                 }
             } else {
                 if (!exists(linia, "italianes.txt")) {
@@ -34,10 +33,11 @@ public class ClassificaMatricules {
                     /*valid.write(String.format("%s%n", linia));
                     valid.close();*/
                     conegudes.write(String.format("%s%n", linia));
-                    conegudes.close();
                 }
             }
         }
+        conegudes.close();
+        desconegudes.close();
         input.close();
     }
     // Procediment que comprova si la matrícula està repetida o no
