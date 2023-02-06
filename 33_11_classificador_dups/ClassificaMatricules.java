@@ -15,8 +15,6 @@ public class ClassificaMatricules {
     
     public static void main(String[] args) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader(path));                                       // Lectura del fitxer llegides
-        
-
         while (true) {
             String linia = input.readLine();
             if (linia == null) { break; }
@@ -25,13 +23,13 @@ public class ClassificaMatricules {
             System.out.println(linia);
             if (matriculaItalianaValida(linia)) {                                                              // Comprova si és una matrícula vàlida
                 if (!exists(linia, "italianes.txt")) {
-                    BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes));        // Escritura del fitxer italianes
+                    BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes, true));        // Escritura del fitxer italianes
                     outputItalianes.write(String.format("%s%n", linia));
                     outputItalianes.close();
                 }
             } else {
                 if (!exists(linia, "desconegudes.txt")) {
-                    BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes));  // Escritura del fitxer Desconegudes
+                    BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes, true));  // Escritura del fitxer Desconegudes
                     outputDesconegudes.write(String.format("%s%n", linia));
                     outputDesconegudes.close();
                 }
