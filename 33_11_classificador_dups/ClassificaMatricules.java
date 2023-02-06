@@ -15,27 +15,27 @@ public class ClassificaMatricules {
     
     public static void main(String[] args) throws IOException {
         BufferedReader input = new BufferedReader(new FileReader(path));                                       // Lectura del fitxer llegides
+        BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes, true));        // Escritura del fitxer Desconegudes
+        BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes, true));              // Escritura del fitxer italianes
         while (true) {
             String linia = input.readLine();
             if (linia == null) { break; }
             if (linia.isEmpty()) { continue; }
             linia = linia.strip();
             System.out.println(linia);
-            if (matriculaItalianaValida(linia)) {                                                              // Comprova si és una matrícula vàlida
+            if (!matriculaItalianaValida(linia)) {                                                              // Comprova si és una matrícula vàlida
                 if (!exists(linia, pathDesconegudes)) {
-                    BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes, true));  // Escritura del fitxer Desconegudes
                     outputDesconegudes.write(String.format("%s%n", linia));
-                    outputDesconegudes.close();
                 }
             } else {
                 if (!exists(linia, pathItalianes)) {
-                    BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes, true));        // Escritura del fitxer italianes
                     outputItalianes.write(String.format("%s%n", linia));
-                    outputItalianes.close();
                 }
             }
         }
         input.close();
+        outputDesconegudes.close();
+        outputItalianes.close();
     } 
     // Procediment que comprova si la matrícula està repetida dins del seu fitxer corresponent
     public static boolean exists(String linia, String path) throws IOException {
