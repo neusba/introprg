@@ -14,9 +14,7 @@ public class ClassificaMatricules {
     public static String pathDesconegudes = "desconegudes.txt";
     
     public static void main(String[] args) throws IOException {
-        BufferedReader input = new BufferedReader(new FileReader(path));                                // Lectura del fitxer llegides
-        BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes));             // Escritura del fitxer italianes
-        BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes));       // Escritura del fitxer Desconegudes
+        BufferedReader input = new BufferedReader(new FileReader(path));                                       // Lectura del fitxer llegides
         
 
         while (true) {
@@ -24,19 +22,22 @@ public class ClassificaMatricules {
             if (linia == null) { break; }
             if (linia.isEmpty()) { continue; }
             linia = linia.strip();
-            if (matriculaItalianaValida(linia)) {                                                       // Comprova si és una matrícula vàlida
+            System.out.println(linia);
+            if (matriculaItalianaValida(linia)) {                                                              // Comprova si és una matrícula vàlida
                 if (!exists(linia, "italianes.txt")) {
+                    BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes));        // Escritura del fitxer italianes
                     outputItalianes.write(String.format("%s%n", linia));
+                    outputItalianes.close();
                 }
             } else {
                 if (!exists(linia, "desconegudes.txt")) {
+                    BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes));  // Escritura del fitxer Desconegudes
                     outputDesconegudes.write(String.format("%s%n", linia));
+                    outputDesconegudes.close();
                 }
             }
         }
         input.close();
-        outputDesconegudes.close();
-        outputItalianes.close();
     } 
     // Procediment que comprova si la matrícula està repetida dins del seu fitxer corresponent
     public static boolean exists(String linia, String path) throws IOException {
@@ -44,7 +45,6 @@ public class ClassificaMatricules {
         while (true) {
             String check = input.readLine();
             if (check == null) break;
-            System.out.println(check);
             if (linia.equals(check)) {
                 input.close();
                 return true;
