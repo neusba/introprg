@@ -9,49 +9,50 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class ClassificaMatricules {
-    public static String path = "llegides.txt";
-    public static String pathItalianes = "italianes.txt";
-    public static String pathDesconegudes = "desconegudes.txt";
-    
     public static void main(String[] args) throws IOException {
-        BufferedReader input = new BufferedReader(new FileReader(path));                                       // Lectura del fitxer llegides
-        BufferedWriter outputDesconegudes = new BufferedWriter(new FileWriter(pathDesconegudes, true));        // Escritura del fitxer Desconegudes
-        BufferedWriter outputItalianes = new BufferedWriter(new FileWriter(pathItalianes, true));              // Escritura del fitxer italianes
+        BufferedReader input = new BufferedReader(new FileReader("llegides.txt"));
+
+        BufferedWriter conegudes = new BufferedWriter(new FileWriter("italianes.txt"));
+        conegudes.close();
+        BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
+        desconegudes.close();
         while (true) {
             String linia = input.readLine();
-            if (linia == null) { break; }
-            if (linia.isEmpty()) { continue; }
+            if (linia == null) break;
             linia = linia.strip();
-            System.out.println(linia);
-            if (!matriculaItalianaValida(linia)) {                                                              // Comprova si és una matrícula vàlida
-                if (!exists(linia, pathDesconegudes)) {
-                    outputDesconegudes.write(String.format("%s%n", linia));
+            if (!matriculaItalianaValida(linia)) {
+                if (!exists(linia, "desconegudes.txt")) {
+                    BufferedWriter noValid = new BufferedWriter(new FileWriter("desconegudes.txt", true));
+                    noValid.write(linia);
+                    noValid.newLine();
+                    noValid.close();
                 }
             } else {
-                if (!exists(linia, pathItalianes)) {
-                    outputItalianes.write(String.format("%s%n", linia));
+                if (!exists(linia, "italianes.txt")) {
+                    BufferedWriter valid = new BufferedWriter(new FileWriter("italianes.txt", true));
+                    valid.write(linia);
+                    valid.newLine();
+                    valid.close();
                 }
             }
         }
         input.close();
-        outputDesconegudes.close();
-        outputItalianes.close();
-    } 
-    // Procediment que comprova si la matrícula està repetida dins del seu fitxer corresponent
+    }
+    // Procediment que comprova si la matrícula està repetida o no
     public static boolean exists(String linia, String path) throws IOException {
-        BufferedReader input = new BufferedReader(new FileReader(path));
+        BufferedReader comprova = new BufferedReader(new FileReader(path));
         while (true) {
-            String check = input.readLine();
+            String check = comprova.readLine();
             if (check == null) break;
             if (linia.equals(check)) {
-                input.close();
+                comprova.close();
                 return true;
             }
         }
-        input.close();
+        comprova.close();
         return false;
     }
-    // Funcio que retorna true si la matrícula és vàlida com a italiana o no
+    // Procediment que retorna true si la matrícula és vàlida com a italiana o no
     public static boolean matriculaItalianaValida(String matricula) {
         String noValides = "IOQU";
         if (matricula.length() != 7) {
