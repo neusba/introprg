@@ -89,6 +89,7 @@ public class CercaAlumnes {
             return;
         }
         int contador = 0;
+        int mostra = 0;
         String path = "alumnes.csv";
         BufferedReader input = new BufferedReader(new FileReader(path));
         while (true) {
@@ -99,9 +100,10 @@ public class CercaAlumnes {
             Alumne alumne = csvAAlumne(linia);
             if (alumne.nom.contains(args[0]) || alumne.email.contains(args[0])) {
                 mostraAlumne(alumne);
+                mostra += 1;
             }
         }
-        if (contador == 1) {
+        if (mostra == 0) {
             System.out.println("Cap alumne");
         }
         input.close();
