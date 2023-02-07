@@ -75,7 +75,9 @@ public class CercaAlumnes {
         boolean esOient = dades[3].equals("true")?true:false;
         int[] notes = new int[6];
         for (int i=0; i<notesCsv.length; i++) {
-            notes[i] = Integer.parseInt(notesCsv[i]);
+            boolean enter = UtilString.esEnter(notesCsv[i]);
+            if (enter) { notes[i] = Integer.parseInt(notesCsv[i]);
+            } else { notes[i] = -1; }
         }
         Alumne alumne = construeixAlumne(nom, email, edat, esOient, notes);
         return alumne;
