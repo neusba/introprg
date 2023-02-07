@@ -85,7 +85,7 @@ public class CercaAlumnes {
     public static void main(String[] args) throws IOException {
         // assegura que hi ha el criteri de cerca
         if (args.length == 0) {
-            System.out.println("No hi ha cap argument");
+            System.out.println("Error: indica el criteri de cerca");
             return;
         }
         int contador = 0;
