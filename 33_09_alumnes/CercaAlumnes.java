@@ -86,10 +86,13 @@ public class CercaAlumnes {
             System.out.println("No hi ha cap argument");
             return;
         }
+        int contador = 0;
         String path = "alumnes.csv";
         BufferedReader input = new BufferedReader(new FileReader(path));
         while (true) {
             String linia = input.readLine();
+            contador += 1;
+            if (contador == 1) continue;
             if (linia == null) break;
             Alumne alumne = csvAAlumne(linia);
             if (alumne.nom.contains(args[0]) || alumne.email.contains(args[0])) {
