@@ -99,6 +99,8 @@ public class CercaAlumnes {
             Alumne alumne = csvAAlumne(linia);
             if (alumne.nom.contains(args[0]) || alumne.email.contains(args[0])) {
                 mostraAlumne(alumne);
+            } else {
+                System.out.println("Cap alumne");
             }
         }
         input.close();
