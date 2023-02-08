@@ -5,6 +5,7 @@
 public class Ascensor {
     public int pis = 0;
 
+    // CREA ASCENSORS
     public static Ascensor[] creaAscensors(int quants) {
         Ascensor[] ascensors = new Ascensor[quants];
         for (int i=0; i<ascensors.length; i++) {
@@ -13,6 +14,7 @@ public class Ascensor {
         return ascensors;
     }
 
+    // MAIN
     public static void main(String[] args){
         if (args.length != 1) {
             System.out.println("Cap ascensor");                                                 // Descarta arguments diferents de un nombre
