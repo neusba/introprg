@@ -29,7 +29,6 @@ public class Ascensor {
         }
         int quants = Integer.parseInt(arg);                                                     // Transforma a int la quantitat d'ascensors
         if (quants == 0) { System.out.println("Cap ascensor"); return; }
-        System.out.println(quants);
 
         Ascensor[] ascensors = creaAscensors(quants);                                           // Crea l'array d'ascensors
         for (int i=0; i < ascensors.length; i++) {
