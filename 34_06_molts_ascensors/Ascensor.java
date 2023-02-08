@@ -16,10 +16,6 @@ public class Ascensor {
 
     // MAIN
     public static void main(String[] args){
-        if (args.length != 1) {
-            System.out.println("Cap ascensor");                                                 // Descarta arguments diferents de un nombre
-            return;
-        }
         String arg = args[0];
         for (int i=0; i<arg.length(); i++) {
             if (Character.isLetter(arg.charAt(i))) {                                            // Descarta si són només una lletra
