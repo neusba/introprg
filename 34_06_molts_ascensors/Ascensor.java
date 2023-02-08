@@ -3,7 +3,7 @@
  */
 
 public class Ascensor {
-    public int pis = 0;
+    public int pis = 1;
 
     // CREA ASCENSORS
     public static Ascensor[] creaAscensors(int quants) {
