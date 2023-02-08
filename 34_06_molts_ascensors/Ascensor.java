@@ -16,6 +16,10 @@ public class Ascensor {
 
     // MAIN
     public static void main(String[] args){
+        if (args.length == 0) {
+            System.out.println("Cap ascensor");
+            return;
+        }
         String arg = args[0];
         for (int i=0; i<arg.length(); i++) {
             if (Character.isLetter(arg.charAt(i))) {                                            // Descarta si són només una lletra
@@ -29,8 +33,7 @@ public class Ascensor {
         Ascensor[] ascensors = creaAscensors(quants);                                           // Crea l'array d'ascensors
         for (int i=0; i < ascensors.length; i++) {
             ascensors[i].pis = ascensors[i].pis + i;
-            System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i]);
-             
+            System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
         }
     }
 }
