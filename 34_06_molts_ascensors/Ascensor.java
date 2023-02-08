@@ -29,7 +29,7 @@ public class Ascensor {
         Ascensor[] ascensors = creaAscensors(quants);                                           // Crea l'array d'ascensors
         for (int i=0; i < ascensors.length; i++) {
             ascensors[i].pis = ascensors[i].pis + i;
-            System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
+            System.out.printf("Ascensor %d al pis %d%n", i, i);
              
         }
     }
