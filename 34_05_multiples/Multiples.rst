@@ -2,9 +2,9 @@
 Anotacions sobre múltiples instàncies
 #####################################
 
-* Autor/a: XXX
+* Autor/a: Neus Bravo Arias
 
-* Data: XXX
+* Data: 8/2/2023
 
 Introducció
 ===========
@@ -49,7 +49,14 @@ La sortida en executar el programa anterior és:
 ::
 
     $ java GatRenat
-    XXX
+    7 vides
+    7 vides
+    8 vides
+    7 vides
+    8 vides
+    8 vides
+    9 vides
+    9 vides
 
 Pregunta 2. Memòria
 ===================
@@ -62,50 +69,50 @@ Baso els meus càlculs en XXX.
 Pregunta 3. Fins la línia 5
 ===========================
 
-El nombre d'instànces de ``GatRenat`` tot just executat el codi fins la línia 5 (inclosa) és XXX
+El nombre d'instànces de ``GatRenat`` tot just executat el codi fins la línia 5 (inclosa) és 0 perquè encara és una referència i no una instància existent
 
 Pregunta 4. Fins la línia 6
 ===========================
 
-El nombre d'instànces de ``GatRenat`` tot just executat el codi fins la línia 6 (inclosa) és XXX
+El nombre d'instànces de ``GatRenat`` tot just executat el codi fins la línia 6 (inclosa) és 1
 
 Pregunta 5. Fins la línia 9
 ===========================
 
-El nombre d'instànces de ``GatRenat`` tot just executat el codi fins la línia 9 (inclosa) és XXX
+El nombre d'instànces de ``GatRenat`` tot just executat el codi fins la línia 9 (inclosa) és 2
 
 Pregunta 6. Vides iguals a 7 i 10
 =================================
 
 Les línies 7 i 10 mostren les mateixes vides pels gats Renat I i Renat II,
-perquè XXX
+perquè la propietat vides està inicialitzada en 7 per ambdós instàncies.
 
 Pregunta 7. Vides diferents a 13 i 14
 =====================================
 
 Les línies 13 i 14 mostren diferent nombre de vides pels gats Renat I i
-Renat II, perquè XXX
+Renat II, perquè renatI ha agumentat la seva propietat però no el renatII
 
 Pregunta 8. El comentari de la línia 16
 =======================================
 
-Penso que el comentari de la línia 16 vol dir XXX
+Penso que el comentari de la línia 16 vol dir que les propietats d'aquesta instància perdran el seu valor anterior
 
 Pregunta 9. Vides iguals a 17 i 18
 ==================================
 
 Les línies 17 i 18 mostren les mateixes vides pels gats Renat I i Renat
-II, perquè XXX
+II, perquè renatII ara és = a renatI i aquest últim ha augmentat el seu valor per tant el II també.
 
 Pregunta 10. Vides iguals a 21 i 22
 ===================================
 
 Les línies 21 i 22 mostren les mateixes vides pels gats Renat I i Renat II
-malgrat la instrucció de la línia 20, perquè XXX
+malgrat la instrucció de la línia 20, perquè ara les dos instàncies valen el que renatI malgrat les modificacions i fins que es torni a canviar
 
 Pregunta 11. Nombre d'instàncies
 ================================
 
-El nombre d'instàncies hi ha quan s'executa la línia 20 és XXX
+El nombre d'instàncies hi ha quan s'executa la línia 20 és 2
 
-La raó és XXX
+La raó és perquè segueixen existint les dues instàncies només que per el moment tenen el mateix valor a les seves propietats.
