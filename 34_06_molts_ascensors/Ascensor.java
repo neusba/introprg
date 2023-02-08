@@ -22,7 +22,7 @@ public class Ascensor {
         }
         String arg = args[0];
         for (int i=0; i<arg.length(); i++) {
-            if (Character.isLetter(arg.charAt(i))) {                                            // Descarta si són només una lletra
+            if (!Character.isDigit(arg.charAt(i))) {                                             // Descarta si són només una lletra
                 System.out.println("Cap ascensor");
                 return;
             }
