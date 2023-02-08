@@ -2,9 +2,9 @@
 Anotacions sobre propietats
 ###########################
 
-* Autor/a: XXX
+* Autor/a: Neus Bravo Arias
 
-* Data: XXX
+* Data: 8/2/2023
 
 Introducció
 ===========
@@ -29,7 +29,7 @@ Pregunta 1. El nom del fitxer
 =============================
 
 Per que funcioni, el nom del fitxer que contingui el programa anterior ha
-de ser ``XXX``.
+de ser ``GatRenat.java``.
 
 Si reanomeno el fitxer anterior a ``UnNomQualsevol.java``, em trobo el
 següent resultat a l'hora de compilar:
@@ -37,7 +37,12 @@ següent resultat a l'hora de compilar:
 ::
 
     $ javac UnNomQualsevol.java
-    XXX
+    UnNomQualsevol.java:1: error: class GatRenat is public, should be declared in a file named GatRenat.java
+    public class GatRenat {
+            ^
+    1 error
+
+    
 
 Pregunta 2. Sortida
 ===================
@@ -47,18 +52,18 @@ En executar el programa ``GatRenat`` m'ha generat la següent sortida:
 ::
 
     $ java GatRenat
-    XXX
+    Al gat Renat li quedan 7 vides.
 
 Pregunta 3. Declaració de ``renat``.
 ====================================
 
 La línia en que està declarada la variable ``renat`` que apareix a la
-línia 6 és XXX.
+línia 5 és una instància.
 
 Pregunta 4. Inicialització
 ==========================
 
-El valor que es mostra per pantalla, és assignat a la línia XXX.
+El valor que es mostra per pantalla, és assignat a la línia 2.
 
 Pregunta 5. No inicialització
 =============================
@@ -68,7 +73,7 @@ valor, el que es mostrarà per pantalla és:
 
 ::
 
-    XXX
+    El gat Renat tè 0 vides.
 
 Pregunta 6. Eliminem la línia 5
 ===============================
@@ -76,16 +81,19 @@ Pregunta 6. Eliminem la línia 5
 En cas que la línia 5 no hi sigui (per exemple, si la comento), es
 produeix el següent resultat:
 
-XXX
+    GatRenat.java:6: error: variable renat might not have been initialized
+            System.out.println("Al gat Renat li queden " + renat.vides + " vides");
+                                                       ^
+    1 error
 
-Penso que passa això perquè XXX.
+Penso que passa això perquè la variable renat de tipus GatRenat no ha sigut inicialitzada, només declarada la referència.
 
 Pregunta 7. Referència
 ======================
 
-Penso que el el comentari de la línia 4 parla de *referència* perquè XXX.
+Penso que el el comentari de la línia 4 parla de *referència* perquè la variale renat no és de tipus primitut per tant està apuntant a un valor a altre lloc en la memòria.
 
-Crec que la  relació entre *referència* i *variable* és: XXX.
+Crec que la  relació entre *referència* i *variable* és: la variable és només una referència que apunta al valor real que utilitzem.
 
 
 Pregunta 8. Instància
@@ -93,13 +101,13 @@ Pregunta 8. Instància
 
 Respecte la línia 5:
 
-* la instància és: XXX
+* la instància és: el que ha creat el resultat del new GatRenat() i l'espai reservat.
 
-* la variable és: XXX
+* la variable és: renat
 
-* la referència és: XXX
+* la referència és: renat (la referència apunta al valor real en la posició de memòria)
 
-* la classe és: XXX
+* la classe és: GatRenat
 
 Pregunta 9. ``vides`` i variables globals
 =========================================
@@ -107,6 +115,6 @@ Pregunta 9. ``vides`` i variables globals
 Les diferències presenta la variable ``vides`` respecte les 
 *variables globals* són:
 
-1. XXX
+1. No conté el static
 
-2. XXX
+2. Pertany a una classe i es crida amb la variable corresponent
