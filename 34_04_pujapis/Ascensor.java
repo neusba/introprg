@@ -4,6 +4,7 @@
 
 public class Ascensor {
     public int pis = -1;
+    º
     // Procediment que puja de pis l'ascensor
     public static void pujaPis(Ascensor ascensor) {
         ascensor.pis = ascensor.pis + 1;
