@@ -14,10 +14,19 @@ public class Ascensor {
         return moviment;
     }
     // Setters
-    public void setPis(int nouPis) {
-        if (nouPis > -2 && nouPis < 11) {
-            pis = nouPis;
+    public void setPis(String nouPis) {
+        String nou = "";
+        int pisNou;
+        if (nouPis.length() == 1) {
+            for (int i=0; i<nouPis.length(); i++) {
+                if (Character.isDigit(nouPis.charAt(i))) {
+                    nou = nou + nouPis.charAt(i);
+                }
+            }
+           pisNou = Integer.parseInt(nou);
+           pis = pisNou;
         }
+
     }
     public void setMoviment(String nouMoviment) {
         switch (nouMoviment) {
