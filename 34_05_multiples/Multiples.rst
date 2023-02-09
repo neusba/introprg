@@ -108,7 +108,7 @@ Pregunta 10. Vides iguals a 21 i 22
 ===================================
 
 Les línies 21 i 22 mostren les mateixes vides pels gats Renat I i Renat II
-malgrat la instrucció de la línia 20, perquè ara les dos instàncies valen el que renatI malgrat les modificacions i fins que es torni a canviar
+malgrat la instrucció de la línia 20, perquè ara les dos instàncies apunten on renatI malgrat les modificacions i fins que es torni a canviar
 
 Pregunta 11. Nombre d'instàncies
 ================================

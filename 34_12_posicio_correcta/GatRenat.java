@@ -6,21 +6,17 @@
 public class GatRenat {
     private int vides = 7;
     private String posicio = "estirat";
-
     public int getVides() {                             // Retorna les vides actuals del gat
         return vides;
     }
-
     public void setVides(int novesVides) {              // Comprova si les vides noves introduïdes són vàlides pel gat
         if (novesVides >= 0) {
             vides = novesVides;
         }
     }
-
     public String getPosicio() {                        // Retorna la posició inical del gat
         return posicio;
     }
-
     public void setPosicio(String novaPosicio) {                // Comprova la nova entrada per posicio i valida si és una posició vàlida
         switch (novaPosicio) {
             case "estirat": posicio = novaPosicio; break;
