@@ -3,7 +3,7 @@
  */
 
 public class Ascensor {
-    public int pis = 0;
+    public int pis = -1;
 
     // CREA ASCENSORS
     public static Ascensor[] creaAscensors(int quants) {
@@ -32,7 +32,7 @@ public class Ascensor {
 
         Ascensor[] ascensors = creaAscensors(quants);                                           // Crea l'array d'ascensors
         for (int i=0; i < ascensors.length; i++) {
-            ascensors[i].pis = ascensors[i].pis + i;
+            ascensors[i].pis += 1;
             System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
         }
     }
