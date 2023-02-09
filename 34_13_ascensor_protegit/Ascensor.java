@@ -24,6 +24,7 @@ public class Ascensor {
             case "aturat": moviment = nouMoviment; break;
             case "pujant": moviment = nouMoviment; break;
             case "baixant": moviment = nouMoviment; break;
+            case "tremola": moviment = nouMoviment; break;
         }
     }
 }
