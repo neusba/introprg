@@ -10,6 +10,7 @@ public class Ascensor {
         Ascensor[] ascensors = new Ascensor[quants];
         for (int i=0; i<ascensors.length; i++) {
             ascensors[i] = new Ascensor();
+            ascensors[i].pis = i;
         }
         return ascensors;
     }
