@@ -16,9 +16,7 @@ public class GatRenat {
         return posicio;
     }
     public void setVides(int novesVides) {
-        if (novesVides > 0){
-            vides = novesVides;
-        }
+        vides = novesVides;
     }
     public void setPosicio(String novaPosicio) {
         switch (novaPosicio) {
