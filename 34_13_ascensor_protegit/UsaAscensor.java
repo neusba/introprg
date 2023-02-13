@@ -1,3 +1,8 @@
+/* Programa que utilitza la classe ascensor per simular que es mou a un pis o un altre segons les indicacions
+ * del usuari
+ * Implementem getter/setter
+ */
+
 public class UsaAscensor {
     public static void main(String[] args) {
         Ascensor ascensor = new Ascensor();
