@@ -1,3 +1,6 @@
+/* Programa que uttilitzant la classe Ascensor amb totes les seves propietats, accessor i mètodes simula un ascensor
+ * i el seu moviment i pis a partir de les indicacions de l'usuari
+ */
 public class UsaAscensor {
     public static int llegeixEnter() {
         String resposta = Entrada.readLine();

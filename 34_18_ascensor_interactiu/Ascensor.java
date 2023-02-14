@@ -5,7 +5,7 @@
 
 public class Ascensor {
     // propietats privades
-    private int pis = 7;                                        // -1 hasta 10
+    private int pis = -1;                                        // -1 hasta 10
     private String moviment = "aturat";                          // aturat, baixant o pujant
 
     // accessors
