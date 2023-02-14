@@ -29,18 +29,21 @@ public class GatRenat {
         return("...");
     }
     public String resuscita() {
-        vides += 1;
-        if (vides == 1) {
+        if (vides < 1) {
+            vides = vides + 1;
             return("guai!");
         }
         return("...");
     }
     public String resuscita(int novesVides) {
-        vides = novesVides;
         if (vides < 1) {
-            return("...");
+            vides = vides + novesVides;
+                if (vides < 1) {
+                    return("...");
+                }
+                return("guai!");
         }
-        return("guai!");
+        return("...");
     }
     public boolean estaViu() {
         if (vides > 0) {
