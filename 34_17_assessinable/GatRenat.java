@@ -29,22 +29,19 @@ public class GatRenat {
         return("...");
     }
     public String resuscita() {
-        if (vides < 1) {
+        if (vides == 0) {
             vides = vides + 1;
-            if (vides > 1) {
-                return("guai!");
-            }
-            return("...");
+            return("guai!");
         }
         return("...");
     }
     public String resuscita(int novesVides) {
-        if (vides < 1) {
+        if (vides == 0) {
             vides = vides + novesVides;
-                if (vides < 1) {
-                    return("...");
-                }
-                return("guai!");
+            if (vides < 1) {
+                return("...");
+            }
+            return("guai!");
         }
         return("...");
     }
