@@ -19,10 +19,11 @@ public class GatRenat {
 
     // mètodes
     public String mor() {
-        vides = vides - 1;
         if (vides > 0) {
-            return("auch");
-        } else if (vides == 0) {
+            vides = vides - 1;
+            if (vides > 0) {
+                return("auch");
+            }
             return("ximpún");
         }
         return("...");
