@@ -29,7 +29,7 @@ public class GatRenat {
         return("...");
     }
     public String resuscita() {
-        if (vides <= 0) {
+        if (vides == 0) {
             vides = vides + 1;
             return("guai!");
         }
