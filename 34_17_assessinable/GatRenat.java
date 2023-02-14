@@ -31,7 +31,10 @@ public class GatRenat {
     public String resuscita() {
         if (vides < 1) {
             vides = vides + 1;
-            return("guai!");
+            if (vides > 1) {
+                return("guai!");
+            }
+            return("...");
         }
         return("...");
     }
