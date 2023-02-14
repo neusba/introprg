@@ -36,6 +36,9 @@ public class GatRenat {
         return("...");
     }
     public String resuscita(int novesVides) {
+        if (novesVides < 0) {
+            return("...");
+        }
         if (vides == 0) {
             vides = vides + novesVides;
             if (vides < 1) {
