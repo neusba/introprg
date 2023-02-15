@@ -6,7 +6,7 @@ public class GatRenat {
     public String posicio = "estirat";
     // CONSTRUCTORS
     public GatRenat() {
-        this(8);
+        this(7);
     }
     public GatRenat(int vides) {
         setVides(vides);
