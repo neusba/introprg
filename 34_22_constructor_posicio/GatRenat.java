@@ -6,7 +6,7 @@
 public class GatRenat {
     // propietats privades
     private int vides;
-    private String posicio;
+    private String posicio = "estirat";
     // MAIN
     public static void main(String[] args) {
         System.out.println(new GatRenat(7, "dret"));
