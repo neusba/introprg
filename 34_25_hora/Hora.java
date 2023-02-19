@@ -62,19 +62,19 @@ public class Hora {
     // ########################### METHODS ################################
     // Incrementa un segon
     public void incrementa() {
-        this.segons = this.segons + 1;
+        setSegons(this.segons + 1);
     }
     // Incrementa i segons
     public void incrementa(int segons) {
-        this.segons = this.segons + segons;
+        setSegons(this.segons + segons);
     }
     // Decerementa 1 segon
     public void decrementa() {
-        this.segons = this.segons - 1;
+        setSegons(this.segons - 1);
     }
     // Decrementa i segons
     public void decrementa(int segons) {
-        this.segons = this.segons - segons;
+        setSegons(this.segons - segons);
     }
     // converteix instància a string
     @Override
