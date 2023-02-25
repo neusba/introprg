@@ -58,7 +58,9 @@ public class Hora {
     // Específic
     public Hora(int hores, int minuts, int segons) {
         if (hores < 0 || hores > 23 || minuts < 0 || minuts > 59 || segons < 0 || segons > 59) {
-            new Hora();
+            setHores(0);
+            setMinuts(0);
+            setSegons(0);
         } else { 
             setHores(hores);
             setMinuts(minuts);
