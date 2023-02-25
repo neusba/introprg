@@ -70,15 +70,28 @@ public class Hora {
     }
     // Incrementa N segons
     public void incrementa(int segons) {                                        
-        this.segons = this.segons + segons;
-        if (this.segons > 59) {
-            segons = this.segons - 59;
-            setSegons(segons);
-            if (this.minuts == 59) {
-                setMinuts(this.minuts + 1);
-                setHores(this.hores + 1);
+        int comptaMinuts = 0;                                   // Porta la compta de quants minuts hi ha dins del bucle
+        for (int i=0; i<=segons; i++) {
+            if (this.segons == 59) {                             // Actua cada segon
+               setSegons(0);
             } else {
-                setMinuts(this.minuts + 1);
+                setSegons(this.segons + 1);
+            }
+            if (i % 60 == 0) {                                  // Actua cada 60 segons / 1 minut
+                if (this.minuts == 59) {
+                    setMinuts(0);
+                    comptaMinuts += 1;
+                } else {
+                    setMinuts(this.minuts + 1);
+                    comptaMinuts += 1;
+                }
+            }
+            if (comptaMinuts % 60 == 0) {                       // Actua cada hora
+                if (this.hores == 23) {
+                    setHores(0);
+                } else {
+                    setHores(this.hores + 1);
+                }
             }
         }
     }
