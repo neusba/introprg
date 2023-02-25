@@ -62,20 +62,71 @@ public class Hora {
     // ########################### METHODS ################################
     // Incrementa un segon
     public void incrementa() {
-        setSegons(this.segons + 1);
+        if (this.segons == 59) {
+            setSegons(this.segons + 1);
+            if (this.minuts == 59) {
+                setMinuts(this.minuts + 1);
+                setHores(this.hores + 1);
+            } else {
+                setMinuts(this.minuts + 1);
+            }
+        } else { 
+            setSegons(this.segons + 1);
+        }
     }
-    // Incrementa i segons
+    // Incrementa N segons
     public void incrementa(int segons) {
-        setSegons(this.segons + segons);
+        this.segons = this.segons + segons;
+        if (this.segons > 59) {
+            segons = this.segons - 59;
+            setSegons(segons);
+            if (this.minuts == 59) {
+                setMinuts(this.minuts + 1);
+                setHores(this.hores + 1);
+            } else {
+                setMinuts(this.minuts + 1);
+            }
+        }
     }
     // Decerementa 1 segon
     public void decrementa() {
-        setSegons(this.segons - 1);
+        if (this.segons == 0) {
+            setSegons(59);
+            if (this.minuts == 0) {
+                setMinuts(59);
+                if (this.hores == 0) {
+                    setHores(23);
+                } else {
+                    setHores(this.hores - 1);
+                }
+            } else {
+                setMinuts(this.minuts - 1);
+            }
+        } else { 
+            setSegons(this.segons - 1);
+        }
     }
-    // Decrementa i segons
+    // Decrementa N segons
     public void decrementa(int segons) {
-        setSegons(this.segons - segons);
+        this.segons = this.segons - segons;
+        if (this.segons < 0) {
+            segons = 0 - this.segons;
+            setSegons(59 - segons + 1);
+            if (this.minuts == 0) {                                                    // corregir setters y limites 
+                setMinuts(59);
+                if (this.hores == 0) {
+                    setHores(23);
+                } else {
+                    setHores(this.hores - 1);
+                }
+            } else {
+                setMinuts(this.minuts - 1);
+            }
+        } else {
+            setSegons(this.segons);
+        }
     }
+    // ########################## CONVERSOR ####################################################
     // converteix instància a string
     @Override
     public String toString() {
