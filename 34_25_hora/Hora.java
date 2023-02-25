@@ -24,25 +24,28 @@ public class Hora {
     }
     // Setters
     public void setHores(int hores) {
-        if (hores >= 0 && hores <= 23) {
+        this.hores = hores;
+        /*if (hores >= 0 && hores <= 23) {
             this.hores = hores;
         } else {
             this.hores = 0;
-        }
+        } */
     }
     public void setMinuts(int minuts) {
-        if (minuts >= 0 && minuts <= 59) {
+        this.minuts = minuts;
+        /*if (minuts >= 0 && minuts <= 59) {
             this.minuts = minuts;
         } else {
             this.minuts = 0;
-        }
+        }*/
     }
     public void setSegons(int segons) {
-        if (segons >= 0 && segons <= 59){
+        this.hores = hores;
+        /*if (segons >= 0 && segons <= 59){
             this.segons = segons;
         } else {
             this.segons = 0;
-        }
+        }*/
     }
 
     // ########################### CONSTRUCTORS ###########################
@@ -54,9 +57,13 @@ public class Hora {
     }
     // Específic
     public Hora(int hores, int minuts, int segons) {
-        setHores(hores);
-        setMinuts(minuts);
-        setSegons(segons);
+        if (hores < 0 || hores > 23 || minuts < 0 || minuts > 59 || segons < 0 || segons > 59) {
+            new Hora();
+        } else { 
+            setHores(hores);
+            setMinuts(minuts);
+            setSegons(segons);
+        }
     }
 
     // ########################### METHODS ################################
