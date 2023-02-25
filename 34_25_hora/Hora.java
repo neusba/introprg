@@ -57,10 +57,14 @@ public class Hora {
     // Incrementa un segon
     public void incrementa() {
         if (this.segons == 59) {
-            setSegons(this.segons + 1);
+            setSegons(0);
             if (this.minuts == 59) {
-                setMinuts(this.minuts + 1);
-                setHores(this.hores + 1);
+                setMinuts(0);
+                if (this.hores == 23) {
+                    setHores(0);
+                } else {
+                    setHores(this.hores + 1);
+                }
             } else {
                 setMinuts(this.minuts + 1);
             }
