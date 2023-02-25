@@ -40,7 +40,7 @@ public class Hora {
         }*/
     }
     public void setSegons(int segons) {
-        this.hores = hores;
+        this.segons = segons;
         /*if (segons >= 0 && segons <= 59){
             this.segons = segons;
         } else {
