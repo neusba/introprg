@@ -25,27 +25,12 @@ public class Hora {
     // Setters
     public void setHores(int hores) {
         this.hores = hores;
-        /*if (hores >= 0 && hores <= 23) {
-            this.hores = hores;
-        } else {
-            this.hores = 0;
-        } */
     }
     public void setMinuts(int minuts) {
         this.minuts = minuts;
-        /*if (minuts >= 0 && minuts <= 59) {
-            this.minuts = minuts;
-        } else {
-            this.minuts = 0;
-        }*/
     }
     public void setSegons(int segons) {
         this.segons = segons;
-        /*if (segons >= 0 && segons <= 59){
-            this.segons = segons;
-        } else {
-            this.segons = 0;
-        }*/
     }
 
     // ########################### CONSTRUCTORS ###########################
@@ -84,7 +69,7 @@ public class Hora {
         }
     }
     // Incrementa N segons
-    public void incrementa(int segons) {
+    public void incrementa(int segons) {                                        
         this.segons = this.segons + segons;
         if (this.segons > 59) {
             segons = this.segons - 59;
@@ -97,7 +82,7 @@ public class Hora {
             }
         }
     }
-    // Decerementa 1 segon
+    // Decrementa 1 segon
     public void decrementa() {
         if (this.segons == 0) {
             setSegons(59);
@@ -117,25 +102,31 @@ public class Hora {
     }
     // Decrementa N segons
     public void decrementa(int segons) {
-        this.segons = this.segons - segons;
-        if (this.segons < 0) {
-            segons = 0 - this.segons;
-            setSegons(59 - segons + 1);
-            if (this.minuts == 0) {                                                    // corregir setters y limites 
-                setMinuts(59);
+        int comptaMinuts = 0;                                   // Porta la compta de quants minuts hi ha dins del bucle
+        for (int i=0; i<=segons; i++) {
+            if (this.segons == 0) {                             // Actua cada segon
+               setSegons(59);
+            } else {
+                setSegons(this.segons - 1);
+            }
+            if (i % 60 == 0) {                                  // Actua cada 60 segons / 1 minut
+                if (this.minuts == 0) {
+                    setMinuts(59);
+                    comptaMinuts += 1;
+                } else {
+                    setMinuts(this.minuts - 1);
+                    comptaMinuts += 1;
+                }
+            }
+            if (comptaMinuts % 60 == 0) {                       // Actua cada hora
                 if (this.hores == 0) {
                     setHores(23);
                 } else {
                     setHores(this.hores - 1);
                 }
-            } else {
-                setMinuts(this.minuts - 1);
             }
-        } else {
-            setSegons(this.segons);
         }
     }
-    // ########################## CONVERSOR ####################################################
     // converteix instància a string
     @Override
     public String toString() {
