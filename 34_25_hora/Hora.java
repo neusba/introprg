@@ -24,7 +24,7 @@ public class Hora {
     }
     // Setters
     public void setHores(int hores) {
-        if (hores >= 0 && minuts <= 23) {
+        if (hores >= 0 && hores <= 23) {
             this.hores = hores;
         } else {
             this.hores = 0;
