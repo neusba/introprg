@@ -77,6 +77,31 @@ public class Hora {
             setSegons(this.segons + 1);
         }
     }
+    // Decrementa 1 segon
+    public void decrementa() {
+        if (this.segons == 0) {
+            setSegons(59);
+            if (this.minuts == 0) {
+                setMinuts(59);
+                if (this.hores == 0) {
+                    setHores(23);
+                } else {
+                    setHores(this.hores - 1);
+                }
+            } else {
+                setMinuts(this.minuts - 1);
+            }
+        } else { 
+            setSegons(this.segons - 1);
+        }
+    }
+
+
+
+
+
+
+    // #################################################################################### CORREGIR ###########################################################################################################
     // Incrementa N segons
     public void incrementa(int segons) {                                        
         segonsRestant = segons % 3600;                                           // segons sobrants al redoniment d'hores
@@ -88,7 +113,7 @@ public class Hora {
         gestionaMinuts(minutsAModificar);
         gestionaHores(horesAModificar);
     }
-    // ################################################# MODULOS PARA GESTIONAR LOS NUMEROS #############################################
+    // ------------------------------------------------------------------------------- MODULOS DE GESTION ------------------------------------------------------------------------------------------------------
     public void gestionaSegons(int segonsAModificar) {
         while (segonsAModificar > 59) {
             segonsAModificar -= 60;
@@ -109,25 +134,7 @@ public class Hora {
         }
         setHores(horesAModificar);
     }
-    // ####################################################################################################################################
-    // Decrementa 1 segon
-    public void decrementa() {
-        if (this.segons == 0) {
-            setSegons(59);
-            if (this.minuts == 0) {
-                setMinuts(59);
-                if (this.hores == 0) {
-                    setHores(23);
-                } else {
-                    setHores(this.hores - 1);
-                }
-            } else {
-                setMinuts(this.minuts - 1);
-            }
-        } else { 
-            setSegons(this.segons - 1);
-        }
-    }
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // Decrementa N segons
     public void decrementa(int segons) {
         segonsRestant = segons % 3600;                         // segons sobrants al redoniment d'hores
@@ -139,6 +146,17 @@ public class Hora {
         gestionaMinuts(minutsAModificar);
         gestionaHores(horesAModificar);
     }
+
+
+
+
+
+
+
+
+
+
+
     // converteix instància a string
     @Override
     public String toString() {
