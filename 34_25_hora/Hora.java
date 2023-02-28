@@ -104,8 +104,8 @@ public class Hora {
         setMinuts(minutsAModificar);
     }
     public void gestionaHores(int horesAModificar) {
-        while (horesAModificar > 59) {
-            horesAModificar -= 60;
+        while (horesAModificar > 23) {
+            horesAModificar -= 24;
         }
         setHores(horesAModificar);
     }
