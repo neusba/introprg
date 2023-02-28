@@ -6,6 +6,11 @@
  * @return operador resultant
  */
 public class Hora {
+    // variables globales
+    public static int segonsRestant;
+    public static int segonsAModificar;
+    public static int minutsAModificar;
+    public static int horesAModificar;
     // propietats privades
     private int hores;
     private int minuts;
@@ -74,31 +79,37 @@ public class Hora {
     }
     // Incrementa N segons
     public void incrementa(int segons) {                                        
-        int comptaMinuts = 0;                                   // Porta la compta de quants minuts hi ha dins del bucle
-        for (int i=0; i<=segons; i++) {
-            if (this.segons == 59) {                             // Actua cada segon
-               setSegons(0);
-            } else {
-                setSegons(this.segons + 1);
-            }
-            if (i % 60 == 0) {                                  // Actua cada 60 segons / 1 minut
-                if (this.minuts == 59) {
-                    setMinuts(0);
-                    comptaMinuts += 1;
-                } else {
-                    setMinuts(this.minuts + 1);
-                    comptaMinuts += 1;
-                }
-            }
-            if (comptaMinuts % 60 == 0) {                       // Actua cada hora
-                if (this.hores == 23) {
-                    setHores(0);
-                } else {
-                    setHores(this.hores + 1);
-                }
-            }
-        }
+        segonsRestant = segons % 3600;                                           // segons sobrants al redoniment d'hores
+        segonsAModificar = segons % 60;                                          // segons a afegir 
+        minutsAModificar = (segonsRestant - segonsAModificar) / 60;              // minuts a afegir
+        horesAModificar = (segons - segonsRestant)/3600;                         // Aconseguim els segons "nets" i calculem a quantes hores equival
+        // gestiona los segundos, minutos y horas para que tengan un valor adecuado
+        gestionaSegons(segonsAModificar);
+        gestionaMinuts(minutsAModificar);
+        gestionaHores(horesAModificar);
     }
+    // ################################################# MODULOS PARA GESTIONAR LOS NUMEROS #############################################
+    public void gestionaSegons(int segonsAModificar) {
+        while (segonsAModificar > 59) {
+            segonsAModificar -= 60;
+            minutsAModificar += 1;
+        }
+        setSegons(segonsAModificar);
+    }
+    public void gestionaMinuts(int minutsAModificar) {
+        while (minutsAModificar > 59) {
+            minutsAModificar -= 60;
+            horesAModificar += 1;
+        }
+        setMinuts(minutsAModificar);
+    }
+    public void gestionaHores(int horesAModificar) {
+        while (horesAModificar > 59) {
+            horesAModificar -= 60;
+        }
+        setHores(horesAModificar);
+    }
+    // ####################################################################################################################################
     // Decrementa 1 segon
     public void decrementa() {
         if (this.segons == 0) {
@@ -119,30 +130,14 @@ public class Hora {
     }
     // Decrementa N segons
     public void decrementa(int segons) {
-        int comptaMinuts = 0;                                   // Porta la compta de quants minuts hi ha dins del bucle
-        for (int i=0; i<=segons; i++) {
-            if (this.segons == 0) {                             // Actua cada segon
-               setSegons(59);
-            } else {
-                setSegons(this.segons - 1);
-            }
-            if (i % 60 == 0) {                                  // Actua cada 60 segons / 1 minut
-                if (this.minuts == 0) {
-                    setMinuts(59);
-                    comptaMinuts += 1;
-                } else {
-                    setMinuts(this.minuts - 1);
-                    comptaMinuts += 1;
-                }
-            }
-            if (comptaMinuts % 60 == 0) {                       // Actua cada hora
-                if (this.hores == 0) {
-                    setHores(23);
-                } else {
-                    setHores(this.hores - 1);
-                }
-            }
-        }
+        segonsRestant = segons % 3600;                         // segons sobrants al redoniment d'hores
+        segonsAModificar = segons % 60;                               // segons a treure 
+        minutsAModificar = (segonsRestant - segonsAModificar) / 60;          // minuts a treure
+        horesAModificar = (segons - segonsRestant) / 3600;            // Aconseguim els segons "nets" i calculem a quantes hores equival
+        // gestiona los segundos, minutos y horas para que tengan un valor adecuado
+        gestionaSegons(segonsAModificar);
+        gestionaMinuts(minutsAModificar);
+        gestionaHores(horesAModificar);
     }
     // converteix instància a string
     @Override
