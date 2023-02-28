@@ -105,13 +105,9 @@ public class Hora {
     // Incrementa N segons
     public void incrementa(int segons) {                                        
         segonsRestant = segons % 3600;                                           // segons sobrants al redoniment d'hores
-        System.out.println(segonsRestant);
         segonsAModificar = segons % 60;                                          // segons a afegir 
-        System.out.println(segonsAModificar);
         minutsAModificar = (segonsRestant - segonsAModificar) / 60;              // minuts a afegir
-        System.out.println(minutsAModificar);
         horesAModificar = (segons - segonsRestant)/3600;                         // Aconseguim els segons "nets" i calculem a quantes hores equival
-        System.out.println(horesAModificar);
         // gestiona los segundos, minutos y horas para que tengan un valor adecuado
         gestionaSegons(segonsAModificar);
         gestionaMinuts(minutsAModificar);
