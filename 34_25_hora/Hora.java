@@ -158,21 +158,21 @@ public class Hora {
     // --------------------------------------------------------------------------------- MODULOS DE DECREMENTO ---------------------------------------------------------------------------------------------------
     public void gestionaSegonsDec(int segonsDec) {
         while (segonsDec < 0) {
-            segonsDec -= 60;
-            minutsDec += 1;
+            segonsDec += 60;
+            minutsDec -= 1;
         }
         setSegons(segonsDec);
     }
     public void gestionaMinutsDec(int minutsDec) {
         while (minutsDec > 59) {
-            minutsDec -= 60;
-            horesDec += 1;
+            minutsDec += 60;
+            horesDec -= 1;
         }
         setMinuts(minutsInc);
     }
     public void gestionaHoresDec(int horesDec) {
         while (horesDec > 23) {
-            horesDec -= 24;
+            horesDec += 24;
         }
         setHores(horesDec);
     }
