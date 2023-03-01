@@ -8,9 +8,12 @@
 public class Hora {
     // variables globales
     public static int segonsRestant;
-    public static int segonsAModificar;
-    public static int minutsAModificar;
-    public static int horesAModificar;
+    public static int segonsInc;
+    public static int minutsInc;
+    public static int horesInc;
+    public static int segonsDec;
+    public static int minutsDec;
+    public static int horesDec;
     // propietats privades
     private int hores;
     private int minuts;
@@ -105,46 +108,67 @@ public class Hora {
     // Incrementa N segons
     public void incrementa(int segons) {                                        
         segonsRestant = segons % 3600;                                           // segons sobrants al redoniment d'hores
-        segonsAModificar = segons % 60;                                          // segons a afegir 
-        minutsAModificar = (segonsRestant - segonsAModificar) / 60;              // minuts a afegir
-        horesAModificar = (segons - segonsRestant)/3600;                         // Aconseguim els segons "nets" i calculem a quantes hores equival
+        segonsInc = segons % 60;                                                 // segons a afegir 
+        minutsInc = (segonsRestant - segonsInc) / 60;                            // minuts a afegir
+        horesInc = (segons - segonsRestant)/3600;                                // Aconseguim els segons "nets" i calculem a quantes hores equival
         // gestiona los segundos, minutos y horas para que tengan un valor adecuado
-        gestionaSegons(segonsAModificar);
-        gestionaMinuts(minutsAModificar);
-        gestionaHores(horesAModificar);
+        gestionaSegonsInc(segonsInc);
+        gestionaMinutsInc(minutsInc);
+        gestionaHoresInc(horesInc);
     }
     // ------------------------------------------------------------------------------- MODULOS DE GESTION ------------------------------------------------------------------------------------------------------
-    public void gestionaSegons(int segonsAModificar) {
-        while (segonsAModificar > 59) {
-            segonsAModificar -= 60;
-            minutsAModificar += 1;
+    public void gestionaSegonsInc(int segonsInc) {
+        while (segonsInc > 59) {
+            segonsInc -= 60;
+            minutsInc += 1;
         }
-        setSegons(segonsAModificar);
+        setSegons(segonsInc);
     }
-    public void gestionaMinuts(int minutsAModificar) {
-        while (minutsAModificar > 59) {
-            minutsAModificar -= 60;
-            horesAModificar += 1;
+    public void gestionaMinutsInc(int minutsInc) {
+        while (minutsInc > 59) {
+            minutsInc -= 60;
+            horesInc += 1;
         }
-        setMinuts(minutsAModificar);
+        setMinuts(minutsInc);
     }
-    public void gestionaHores(int horesAModificar) {
-        while (horesAModificar > 23) {
-            horesAModificar -= 24;
+    public void gestionaHoresInc(int horesInc) {
+        while (horesInc > 23) {
+            horesInc -= 24;
         }
-        setHores(horesAModificar);
+        setHores(horesInc);
     }
     // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // Decrementa N segons
     public void decrementa(int segons) {
         segonsRestant = segons % 3600;                         // segons sobrants al redoniment d'hores
-        segonsAModificar = segons % 60;                               // segons a treure 
-        minutsAModificar = (segonsRestant - segonsAModificar) / 60;          // minuts a treure
-        horesAModificar = (segons - segonsRestant) / 3600;            // Aconseguim els segons "nets" i calculem a quantes hores equival
+        segonsDec = segons % 60;                               // segons a treure 
+        minutsDec = (segonsRestant - segonsDec) / 60;          // minuts a treure
+        horesDec = (segons - segonsRestant) / 3600;            // Aconseguim els segons "nets" i calculem a quantes hores equival
         // gestiona los segundos, minutos y horas para que tengan un valor adecuado
-        gestionaSegons(segonsAModificar);
-        gestionaMinuts(minutsAModificar);
-        gestionaHores(horesAModificar);
+        gestionaSegonsDec(segonsDec);
+        gestionaMinutsDec(minutsDec);
+        gestionaHoresDec(horesDec);
+    }
+    // --------------------------------------------------------------------------------- MODULOS DE DECREMENTO ---------------------------------------------------------------------------------------------------
+    public void gestionaSegonsDec(int segonsDec) {
+        while (segonsDec < 0) {
+            segonsDec -= 60;
+            minutsDec += 1;
+        }
+        setSegons(segonsDec);
+    }
+    public void gestionaMinutsDec(int minutsDec) {
+        while (minutsDec > 59) {
+            minutsDec -= 60;
+            horesDec += 1;
+        }
+        setMinuts(minutsInc);
+    }
+    public void gestionaHoresDec(int horesDec) {
+        while (horesDec > 23) {
+            horesDec -= 24;
+        }
+        setHores(horesDec);
     }
 
 
