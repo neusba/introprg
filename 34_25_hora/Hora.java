@@ -112,9 +112,12 @@ public class Hora {
         minutsInc = (segonsRestant - segonsInc) / 60;                            // minuts a afegir
         horesInc = (segons - segonsRestant)/3600;                                // Aconseguim els segons "nets" i calculem a quantes hores equival
         // gestiona los segundos, minutos y horas para que tengan un valor adecuado
-        gestionaSegonsInc(segonsInc);
-        gestionaMinutsInc(minutsInc);
-        gestionaHoresInc(horesInc);
+        this.segons = this.segons + segonsInc;
+        this.minuts = this.minuts + minutsInc;
+        this.hores = this.hores + horesInc;
+        gestionaSegonsInc(this.segons);
+        gestionaMinutsInc(this.minuts);
+        gestionaHoresInc(this.hores);
     }
     // ------------------------------------------------------------------------------- MODULOS DE GESTION ------------------------------------------------------------------------------------------------------
     public void gestionaSegonsInc(int segonsInc) {
@@ -145,9 +148,12 @@ public class Hora {
         minutsDec = (segonsRestant - segonsDec) / 60;          // minuts a treure
         horesDec = (segons - segonsRestant) / 3600;            // Aconseguim els segons "nets" i calculem a quantes hores equival
         // gestiona los segundos, minutos y horas para que tengan un valor adecuado
-        gestionaSegonsDec(segonsDec);
-        gestionaMinutsDec(minutsDec);
-        gestionaHoresDec(horesDec);
+        this.segons = this.segons + segonsDec;
+        this.minuts = this.minuts + minutsDec;
+        this.hores = this.hores + horesDec;
+        gestionaSegonsDec(this.segons);
+        gestionaMinutsDec(this.minuts);
+        gestionaHoresDec(this.hores);
     }
     // --------------------------------------------------------------------------------- MODULOS DE DECREMENTO ---------------------------------------------------------------------------------------------------
     public void gestionaSegonsDec(int segonsDec) {
