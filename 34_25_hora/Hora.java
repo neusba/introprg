@@ -115,9 +115,21 @@ public class Hora {
         this.segons = this.segons + segonsInc;
         this.minuts = this.minuts + minutsInc;
         this.hores = this.hores + horesInc;
-        gestionaSegonsInc(this.segons);
-        gestionaMinutsInc(this.minuts);
-        gestionaHoresInc(this.hores);
+        if (this.segons < 0) {
+            gestionaSegonsNegatius(this.segons);
+        } else if (this.segons > 59) {
+            gestionaSegonsInc(this.segons);
+        }
+        if (this.minuts < 0) {
+            gestionaSegonsNegatius(this.minuts);
+        } else if (this.minuts > 59) {
+            gestionaMinutsInc(this.minuts);
+        }
+        if (this.hores < 0) {
+            gestionaHoresNegatius(this.hores);
+        } else if (this.hores > 23) {
+            gestionaHoresInc(this.hores);
+        }
     }
     // ------------------------------------------------------------------------------- MODULOS DE GESTION ------------------------------------------------------------------------------------------------------
     public void gestionaSegonsInc(int segonsInc) {
@@ -127,6 +139,27 @@ public class Hora {
         }
         setSegons(segonsInc);
     }
+    public void gestionaSegonsNegatius(int segonsNeg) {
+        while (segonsNeg < 0) {
+            segonsNeg += 60;
+            minutsInc -= 1;
+        }
+        setSegons(segonsNeg);
+    }
+    public void gestionaMinutsNegatius(int minutsNeg) {
+        while (minutsNeg < 0) {
+            minutsNeg += 60;
+            horesInc -= 1;
+        }
+        setMinuts(minutsNeg);
+    }
+    public void gestionaHoresNegatius(int horesNeg) {
+        while (horesNeg < 0) {
+            horesNeg += 60;
+        }
+        setHores(horesNeg);
+    }
+
     public void gestionaMinutsInc(int minutsInc) {
         while (minutsInc > 59) {
             minutsInc -= 60;
