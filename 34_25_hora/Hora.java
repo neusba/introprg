@@ -148,9 +148,9 @@ public class Hora {
         minutsDec = (segonsRestant - segonsDec) / 60;          // minuts a treure
         horesDec = (segons - segonsRestant) / 3600;            // Aconseguim els segons "nets" i calculem a quantes hores equival
         // gestiona los segundos, minutos y horas para que tengan un valor adecuado
-        this.segons = this.segons + segonsDec;
-        this.minuts = this.minuts + minutsDec;
-        this.hores = this.hores + horesDec;
+        this.segons = this.segons - segonsDec;
+        this.minuts = this.minuts - minutsDec;
+        this.hores = this.hores - horesDec;
         gestionaSegonsDec(this.segons);
         gestionaMinutsDec(this.minuts);
         gestionaHoresDec(this.hores);
