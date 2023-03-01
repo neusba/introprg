@@ -7,13 +7,10 @@
  */
 public class Hora {
     // variables globales
-    public static int segonsRestant;
-    public static int segonsInc;
-    public static int minutsInc;
-    public static int horesInc;
-    public static int segonsDec;
-    public static int minutsDec;
-    public static int horesDec;
+    public static int resto;
+    public static int nousSegons;
+    public static int nousMinuts;
+    public static int novesHores;
     // propietats privades
     private int hores;
     private int minuts;
@@ -104,122 +101,158 @@ public class Hora {
 
 
 
-    // #################################################################################### CORREGIR ###########################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+    // #################################################################################### CORREGIR #############################################################################
     // Incrementa N segons
     public void incrementa(int segons) {                                        
-        segonsRestant = segons % 3600;                                           // segons sobrants al redoniment d'hores
-        segonsInc = segons % 60;                                                 // segons a afegir 
-        minutsInc = (segonsRestant - segonsInc) / 60;                            // minuts a afegir
-        horesInc = (segons - segonsRestant)/3600;                                // Aconseguim els segons "nets" i calculem a quantes hores equival
-        // gestiona los segundos, minutos y horas para que tengan un valor adecuado
-        this.segons = this.segons + segonsInc;
-        this.minuts = this.minuts + minutsInc;
-        this.hores = this.hores + horesInc;
+        resto = segonsRestant(segons);
+        nousSegons = calculaSegons(segons);
+        nousMinuts = calculaMinuts(resto, nousSegons);
+        novesHores = calculaHores(segons, resto);
+        // incrementa els valors a la hora actual
+        this.segons = this.segons + nousSegons;                                           // Suma els segons actuals amb els nous
+        this.minuts = this.minuts + nousMinuts;                                          // Suma els minuts actuals amb els nous
+        this.hores = this.hores + novesHores;                                           // Suma les hores actuals amb les noves
+        // modifica els valors per a que siguin vàlids per la hora si és necessari
         if (this.segons < 0) {
             gestionaSegonsNegatius(this.segons);
         } else if (this.segons > 59) {
-            gestionaSegonsInc(this.segons);
+            gestionaSegonsPassats(this.segons);
         }
         if (this.minuts < 0) {
-            gestionaSegonsNegatius(this.minuts);
+            gestionaMinutsNegatius(this.minuts);
         } else if (this.minuts > 59) {
-            gestionaMinutsInc(this.minuts);
+            gestionaMinutsPassats(this.minuts);
         }
         if (this.hores < 0) {
-            gestionaHoresNegatius(this.hores);
+            gestionaHoresNegatives(this.hores);
         } else if (this.hores > 23) {
-            gestionaHoresInc(this.hores);
+            gestionaHoresPassades(this.hores);
         }
     }
-    // ------------------------------------------------------------------------------- MODULOS DE GESTION ------------------------------------------------------------------------------------------------------
-    public void gestionaSegonsInc(int segonsInc) {
-        while (segonsInc > 59) {
-            segonsInc = segonsInc - 60;
-            minutsInc = minutsInc + 1;
+    // modulos para modificar los valores hasta que sean adecuados
+    public void gestionaSegonsNegatius(int segons) {
+        while (segons < 0) {
+            segons += 60;
+            this.minuts = this.minuts - 1;
         }
-        setSegons(segonsInc);
-    }
-    public void gestionaSegonsNegatius(int segonsNeg) {
-        while (segonsNeg < 0) {
-            segonsNeg += 60;
-            minutsInc -= 1;
+        setSegons(segons);
+    }                                                                                   
+    public void gestionaMinutsNegatius(int minuts) {
+        while (minuts < 0) {
+            minuts += 60;
+            this.hores = this.hores - 1;
         }
-        setSegons(segonsNeg);
+        setMinuts(minuts);
     }
-    public void gestionaMinutsNegatius(int minutsNeg) {
-        while (minutsNeg < 0) {
-            minutsNeg += 60;
-            horesInc -= 1;
+    public void gestionaSegonsPassats(int segons) {
+        while (segons > 59) {
+            segons -= 60;
+            this.minuts = this.minuts + 1;
         }
-        setMinuts(minutsNeg);
-    }
-    public void gestionaHoresNegatius(int horesNeg) {
-        while (horesNeg < 0) {
-            horesNeg += 60;
+        setSegons(segons);
+    }                                                                         
+    public void gestionaMinutsPassats(int minuts) {
+        while (minuts > 59) {
+            minuts -= 60;
+            this.hores = this.hores + 1;
         }
-        setHores(horesNeg);
+        setMinuts(minuts);
     }
-
-    public void gestionaMinutsInc(int minutsInc) {
-        while (minutsInc > 59) {
-            minutsInc -= 60;
-            horesInc += 1;
+    public void gestionaHoresNegatives(int hores) {
+        while (hores < 0) {
+            hores += 60;
         }
-        setMinuts(minutsInc);
+        setHores(hores);
     }
-    public void gestionaHoresInc(int horesInc) {
-        while (horesInc > 23) {
-            horesInc -= 24;
+    public void gestionaHoresPassades(int hores) {
+        while (hores > 23) {
+            hores -= 24;
         }
-        setHores(horesInc);
+        setHores(hores);
     }
-    // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // Decrementa N segons
     public void decrementa(int segons) {
-        segonsRestant = segons % 3600;                         // segons sobrants al redoniment d'hores
-        segonsDec = segons % 60;                               // segons a treure 
-        minutsDec = (segonsRestant - segonsDec) / 60;          // minuts a treure
-        horesDec = (segons - segonsRestant) / 3600;            // Aconseguim els segons "nets" i calculem a quantes hores equival
-        // gestiona los segundos, minutos y horas para que tengan un valor adecuado
-        this.segons = this.segons - segonsDec;
-        this.minuts = this.minuts - minutsDec;
-        this.hores = this.hores - horesDec;
-        gestionaSegonsDec(this.segons);
-        gestionaMinutsDec(this.minuts);
-        gestionaHoresDec(this.hores);
-    }
-    // --------------------------------------------------------------------------------- MODULOS DE DECREMENTO ---------------------------------------------------------------------------------------------------
-    public void gestionaSegonsDec(int segonsDec) {
-        while (segonsDec < 0) {
-            segonsDec += 60;
-            minutsDec -= 1;
+        resto = segonsRestant(segons);
+        nousSegons = calculaSegons(segons);
+        nousMinuts = calculaMinuts(resto, nousSegons);
+        novesHores = calculaHores(segons, resto);
+        // decrementa els valors a la hora actual
+        this.segons = this.segons - nousSegons;                                           // Resta els segons actuals amb els nous
+        this.minuts = this.minuts - nousMinuts;                                          // Resta els minuts actuals amb els nous
+        this.hores = this.hores - novesHores;                                           // Resta les hores actuals amb les noves
+        // modifica els valors per a que siguin vàlids per la hora si és necessari
+        if (this.segons < 0) {
+            gestionaSegonsNegatius(this.segons);
+        } else if (this.segons > 59) {
+            gestionaSegonsPassats(this.segons);
         }
-        setSegons(segonsDec);
-    }
-    public void gestionaMinutsDec(int minutsDec) {
-        while (minutsDec > 59) {
-            minutsDec += 60;
-            horesDec -= 1;
+        if (this.minuts < 0) {
+            gestionaMinutsNegatius(this.minuts);
+        } else if (this.minuts > 59) {
+            gestionaMinutsPassats(this.minuts);
         }
-        setMinuts(minutsInc);
-    }
-    public void gestionaHoresDec(int horesDec) {
-        while (horesDec > 23) {
-            horesDec += 24;
+        if (this.hores < 0) {
+            gestionaHoresNegatives(this.hores);
+        } else if (this.hores > 23) {
+            gestionaHoresPassades(this.hores);
         }
-        setHores(horesDec);
     }
 
+    // Modulos para convertir los segundos dados en minutos, horas y segundos
+    public int segonsRestant(int segons) {
+        resto = segons % 3600;
+        return resto;
+    }
+    public int calculaSegons(int segons) {
+        nousSegons = segons % 60;
+        return nousSegons;
+    }
+    public int calculaMinuts(int resto, int nousSegons) {
+        nousMinuts = (resto - nousSegons) / 60; 
+        return nousMinuts;
+    }
+    public int calculaHores(int segons, int resto) {
+        novesHores = (segons - resto)/3600;
+        return novesHores;
+    }
+    
 
 
 
 
 
 
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // converteix instància a string
     @Override
     public String toString() {
