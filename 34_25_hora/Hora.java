@@ -95,25 +95,6 @@ public class Hora {
             setSegons(this.segons - 1);
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // #################################################################################### CORREGIR #############################################################################
     // Incrementa N segons
     public void incrementa(int segons) {                                        
         resto = segonsRestant(segons);
@@ -141,48 +122,6 @@ public class Hora {
             gestionaHoresPassades(this.hores);
         }
     }
-    // modulos para modificar los valores hasta que sean adecuados
-    public void gestionaSegonsNegatius(int segons) {
-        while (segons < 0) {
-            segons += 60;
-            this.minuts = this.minuts - 1;
-        }
-        setSegons(segons);
-    }                                                                                   
-    public void gestionaMinutsNegatius(int minuts) {
-        while (minuts < 0) {
-            minuts += 60;
-            this.hores = this.hores - 1;
-        }
-        setMinuts(minuts);
-    }
-    public void gestionaSegonsPassats(int segons) {
-        while (segons > 59) {
-            segons -= 60;
-            this.minuts = this.minuts + 1;
-        }
-        setSegons(segons);
-    }                                                                         
-    public void gestionaMinutsPassats(int minuts) {
-        while (minuts > 59) {
-            minuts -= 60;
-            this.hores = this.hores + 1;
-        }
-        setMinuts(minuts);
-    }
-    public void gestionaHoresNegatives(int hores) {
-        while (hores < 0) {
-            hores += 24;
-        }
-        setHores(hores);
-    }
-    public void gestionaHoresPassades(int hores) {
-        while (hores > 23) {
-            hores -= 24;
-        }
-        setHores(hores);
-    }
-    // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // Decrementa N segons
     public void decrementa(int segons) {
         resto = segonsRestant(segons);
@@ -228,30 +167,47 @@ public class Hora {
         novesHores = (segons - resto)/3600;
         return novesHores;
     }
-    
-
-
-
-
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    // Modulos para modificar los valores hasta que sean adecuados
+    public void gestionaSegonsNegatius(int segons) {
+        while (segons < 0) {
+            segons += 60;
+            this.minuts = this.minuts - 1;
+        }
+        setSegons(segons);
+    }                                                                                   
+    public void gestionaMinutsNegatius(int minuts) {
+        while (minuts < 0) {
+            minuts += 60;
+            this.hores = this.hores - 1;
+        }
+        setMinuts(minuts);
+    }
+    public void gestionaSegonsPassats(int segons) {
+        while (segons > 59) {
+            segons -= 60;
+            this.minuts = this.minuts + 1;
+        }
+        setSegons(segons);
+    }                                                                         
+    public void gestionaMinutsPassats(int minuts) {
+        while (minuts > 59) {
+            minuts -= 60;
+            this.hores = this.hores + 1;
+        }
+        setMinuts(minuts);
+    }
+    public void gestionaHoresNegatives(int hores) {
+        while (hores < 0) {
+            hores += 24;
+        }
+        setHores(hores);
+    }
+    public void gestionaHoresPassades(int hores) {
+        while (hores > 23) {
+            hores -= 24;
+        }
+        setHores(hores);
+    }
     
     // converteix instància a string
     @Override
@@ -298,7 +254,6 @@ public class Hora {
             return "==";
         }
     }
-
     // ############################## MAIN ####################################
     public static void main(String[] args) {
         Hora hora1 = new Hora();
