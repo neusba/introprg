@@ -172,7 +172,7 @@ public class Hora {
     }
     public void gestionaHoresNegatives(int hores) {
         while (hores < 0) {
-            hores += 60;
+            hores += 24;
         }
         setHores(hores);
     }
