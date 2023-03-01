@@ -119,8 +119,8 @@ public class Hora {
     // ------------------------------------------------------------------------------- MODULOS DE GESTION ------------------------------------------------------------------------------------------------------
     public void gestionaSegonsInc(int segonsInc) {
         while (segonsInc > 59) {
-            segonsInc -= 60;
-            minutsInc += 1;
+            segonsInc = segonsInc - 60;
+            minutsInc = minutsInc + 1;
         }
         setSegons(segonsInc);
     }
