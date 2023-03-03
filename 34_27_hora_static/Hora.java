@@ -305,7 +305,7 @@ public class Hora {
         return novaHora;
     }
     // duplica una instància de la classe Hora amb els mateixos valors de l'instància donada
-    public Hora duplica(Hora hora1) {
+    public static Hora duplica(Hora hora1) {
         Hora novaHora = new Hora(hora1.hores, hora1.minuts, hora1.segons);
         return novaHora;
     }
