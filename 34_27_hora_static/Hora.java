@@ -299,6 +299,17 @@ public class Hora {
         }
         return 0;
     }
+    // duplica una instància de classe Hora amb els mateixos valors per les propietats de l'hora corresponent (mètode d'instància)
+    public Hora duplica() {
+        Hora novaHora = new Hora(this.hores, this.minuts, this.segons);
+        return novaHora;
+    }
+    // duplica una instància de la classe Hora amb els mateixos valors de l'instància donada
+    public Hora duplica(Hora hora1) {
+        Hora novaHora = new Hora(hora1.hores, hora1.minuts, hora1.segons);
+        return novaHora;
+    }
+
     // ############################## MAIN ####################################
     public static void main(String[] args) {
         Hora hora1 = new Hora();
