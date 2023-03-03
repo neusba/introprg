@@ -267,7 +267,38 @@ public class Hora {
 	}
    	return true;
     }
-
+    // compara hora 1 amb hora 2
+    public static int compareTo(Hora hora1, Hora hora2) {
+        if (hora1.hores > hora2.hores) {
+            return 2;
+        }
+        if (hora1.hores > hora2.hores) {
+            return 2;
+        }
+        if (hora1.hores < hora2.hores) {
+            return -2;
+        }
+        if (hora1.hores == hora2.hores) {
+            if (hora1.minuts > hora2.minuts) {
+                return 2;
+            }
+            if (hora1.minuts < hora2.minuts) {
+                return -2;
+            }
+            if (hora1.minuts == hora2.minuts) {
+                if (hora1.segons > hora2.segons) {
+                    return 2;
+                }
+                if (hora1.segons < hora2.segons) {
+                    return -2;
+                }
+                if (hora1.segons == hora2.segons) {
+                    return 0;
+                }
+            }
+        }
+        return 0;
+    }
     // ############################## MAIN ####################################
     public static void main(String[] args) {
         Hora hora1 = new Hora();
