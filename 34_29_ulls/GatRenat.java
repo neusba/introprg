@@ -18,21 +18,16 @@ public class GatRenat {
     public UllDeGat getUllDret() {
         if (ullDret == null) {
             ullDret = new UllDeGat();
-        } else {
-            UllDeGat copiaUllDret = ullDret;
-            return copiaUllDret;
         }
-        UllDeGat copia = ullDret;
-        return copia;
+        UllDeGat copiaDret = ullDret;
+        return copiaDret;
     }
     public UllDeGat getUllEsquerre() {
         if (ullEsquerre == null) {
             ullEsquerre = new UllDeGat();
-        } else {
-            UllDeGat copiaUllEsquerre = ullEsquerre;
-            return copiaUllEsquerre;
         }
-        return ullEsquerre;
+        UllDeGat copiaEsquerre = ullEsquerre;
+        return copiaEsquerre;
     }
     public String getPosicio() {
         return posicio;
