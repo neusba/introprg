@@ -22,7 +22,8 @@ public class GatRenat {
             UllDeGat copiaUllDret = ullDret;
             return copiaUllDret;
         }
-        return ullDret;
+        UllDeGat copia = ullDret;
+        return copia;
     }
     public UllDeGat getUllEsquerre() {
         if (ullEsquerre == null) {
