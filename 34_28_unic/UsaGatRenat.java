@@ -20,7 +20,7 @@ public class UsaGatRenat {
             case "estirat": novaPosicio = "estirat"; break;
             case "assegut": novaPosicio = "assegut"; break;
             case "dret": novaPosicio = "dret"; break;
-            default: novaPosicio = novaPosicio; break;
+            default: novaPosicio = "estirat"; break;
         }
         GatRenat.getInstancia(novaPosicio);
         
