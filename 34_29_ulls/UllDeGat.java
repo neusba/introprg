@@ -3,16 +3,23 @@
  * Utilitzarem la classe afegint-la com a atribut al fitxer principal
  */
 public class UllDeGat {
-    private String estatUll = "tancat";
-    
+    private boolean estatUll = false;
+
+    // CONSTRUCTORS
+    public UllDeGat() {
+    }
+    public UllDeGat(boolean estat) {
+        estatUll = estat;
+    }
+    // Mètodes
     public void obret() {
-        this.estatUll = "obert";
+        this.estatUll = true;
     }
     public void tancat() {
-        this.estatUll = "tancat";
+        this.estatUll = false;
     }
     public boolean estaObert() {
-        if (estatUll.equals("obert")) {
+        if (estatUll) {
             return true;
         }
         return false;
