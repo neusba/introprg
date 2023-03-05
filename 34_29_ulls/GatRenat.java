@@ -10,23 +10,33 @@ public class GatRenat {
 
     // Constructores
     public GatRenat() {
+        ullDret = new UllDeGat();
+        ullEsquerre = new UllDeGat();
+        switch (this.posicio) {
+            case "estirat": ullDret.tancat(); ullEsquerre.tancat(); break;
+            case "assegut": ullDret.obret(); ullEsquerre.tancat(); break;
+            case "dret": ullDret.obret(); ullEsquerre.obret(); break;
+        }
     }
     public GatRenat(String posicio) {
         this.posicio = posicio;
+        ullDret = new UllDeGat();
+        ullEsquerre = new UllDeGat();
+        switch (this.posicio) {
+            case "estirat": ullDret.tancat(); ullEsquerre.tancat(); break;
+            case "assegut": ullDret.obret(); ullEsquerre.tancat(); break;
+            case "dret": ullDret.obret(); ullEsquerre.obret(); break;
+        }
     }
     // getters
     public UllDeGat getUllDret() {
-        if (ullDret == null) {
-            ullDret = new UllDeGat();
-        }
-        UllDeGat copiaDret = ullDret;
+        UllDeGat copiaDret = new UllDeGat();
+        copiaDret = ullDret;
         return copiaDret;
     }
     public UllDeGat getUllEsquerre() {
-        if (ullEsquerre == null) {
-            ullEsquerre = new UllDeGat();
-        }
-        UllDeGat copiaEsquerre = ullEsquerre;
+        UllDeGat copiaEsquerre = new UllDeGat();
+        copiaEsquerre = ullEsquerre;
         return copiaEsquerre;
     }
     public String getPosicio() {
