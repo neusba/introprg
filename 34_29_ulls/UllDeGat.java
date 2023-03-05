@@ -24,9 +24,5 @@ public class UllDeGat {
         }
         return false;
     }
-    // Getters
-    public boolean getEstatUll() {
-        return estatUll;
-    }
 }
 

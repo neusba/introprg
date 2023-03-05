@@ -12,39 +12,45 @@ public class GatRenat {
     public GatRenat() {
         ullDret = new UllDeGat();
         ullEsquerre = new UllDeGat();
-        switch (this.posicio) {
-            case "estirat": ullDret.tancat(); ullEsquerre.tancat(); break;
-            case "assegut": ullDret.obret(); ullEsquerre.tancat(); break;
-            case "dret": ullDret.obret(); ullEsquerre.obret(); break;
-        }
+        setEstatUlls();
     }
     public GatRenat(String posicio) {
         this.posicio = posicio;
         ullDret = new UllDeGat();
         ullEsquerre = new UllDeGat();
+        setEstatUlls();
+    }
+    // setters
+    public void setEstatUlls() {
         switch (this.posicio) {
             case "estirat": ullDret.tancat(); ullEsquerre.tancat(); break;
             case "assegut": ullDret.obret(); ullEsquerre.tancat(); break;
             case "dret": ullDret.obret(); ullEsquerre.obret(); break;
         }
     }
-    // getters
-    public UllDeGat getUllDret() {
-        UllDeGat copiaDret = new UllDeGat();
+    public void setEstatUllDret(UllDeGat copiaDret) {
         switch (this.posicio) {
             case "estirat": copiaDret.tancat(); break;
             case "assegut": copiaDret.obret(); break;
             case "dret": copiaDret.obret(); break;
         }
-        return copiaDret;
     }
-    public UllDeGat getUllEsquerre() {
-        UllDeGat copiaEsquerre = new UllDeGat();
+    public void setEstatUllEsquerre(UllDeGat copiaEsquerre) {
         switch (this.posicio) {
             case "estirat": copiaEsquerre.tancat(); break;
             case "assegut": copiaEsquerre.tancat(); break;
             case "dret": copiaEsquerre.obret(); break;
         }
+    }
+    // getters
+    public UllDeGat getUllDret() {
+        UllDeGat copiaDret = new UllDeGat();
+        setEstatUllDret(copiaDret);
+        return copiaDret;
+    }
+    public UllDeGat getUllEsquerre() {
+        UllDeGat copiaEsquerre = new UllDeGat();
+        setEstatUllEsquerre(copiaEsquerre);
         return copiaEsquerre;
     }
     public String getPosicio() {
