@@ -31,12 +31,20 @@ public class GatRenat {
     // getters
     public UllDeGat getUllDret() {
         UllDeGat copiaDret = new UllDeGat();
-        copiaDret = ullDret;
+        switch (this.posicio) {
+            case "estirat": copiaDret.tancat(); break;
+            case "assegut": copiaDret.obret(); break;
+            case "dret": copiaDret.obret(); break;
+        }
         return copiaDret;
     }
     public UllDeGat getUllEsquerre() {
         UllDeGat copiaEsquerre = new UllDeGat();
-        copiaEsquerre = ullEsquerre;
+        switch (this.posicio) {
+            case "estirat": copiaEsquerre.tancat(); break;
+            case "assegut": copiaEsquerre.tancat(); break;
+            case "dret": copiaEsquerre.obret(); break;
+        }
         return copiaEsquerre;
     }
     public String getPosicio() {
