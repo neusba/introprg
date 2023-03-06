@@ -50,6 +50,7 @@ public class GatRenat {
             // copia el actual
             Picarol copia = new Picarol();
             copia = this.picarol;
+            //
             this.picarol = picarol;
             this.tePicarol = true;
             return copia;
