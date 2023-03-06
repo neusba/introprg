@@ -47,7 +47,7 @@ public class GatRenat {
     }
     public Picarol posaPicarol(Picarol picarol) {
         if (tePicarol) {
-            this.picarol = new Picarol();
+            this.picarol = picarol;
             this.tePicarol = true;
             return picarol;
         }
