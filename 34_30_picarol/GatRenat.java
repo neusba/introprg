@@ -30,6 +30,14 @@ public class GatRenat {
             this.tePicarol = true;
         }
     }
+    public GatRenat(String posicio) {
+        this.posicio = posicio;
+        if (this.picarol == null) {
+            this.tePicarol = false;
+        } else {
+            this.tePicarol = true;
+        }
+    }
     // mètodes agregació picarol
     public boolean tePicarol() { 
         if (tePicarol) {
