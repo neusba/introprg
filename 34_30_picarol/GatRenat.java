@@ -45,11 +45,14 @@ public class GatRenat {
         }
         return false;
     }
-    public Picarol posaPicarol(Picarol nouPicarol) {
+    public Picarol posaPicarol(Picarol picarol) {
         if (tePicarol) {
-            this.picarol = nouPicarol;
+            // copia el actual
+            Picarol copia = new Picarol();
+            copia = this.picarol;
+            this.picarol = picarol;
             this.tePicarol = true;
-            return picarol;
+            return copia;
         }
         this.picarol = picarol;
         this.tePicarol = true;
