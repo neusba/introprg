@@ -1,3 +1,6 @@
+/* Fitxer que conté la classe Gat la qual és superclasse de Gat Renat i en la que definim les propietats dels
+ * que seràn instàncies de Gat Renat per conseqüent
+ */
 class Gat {
     private int vides = 7;
     private String posicio = "estirat";

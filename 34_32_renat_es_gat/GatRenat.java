@@ -1,3 +1,8 @@
+/* Fitxer que conté la classe GatRenat la qual és una subclasse de Gat i en la que trobem tots els mètodes
+ * referents a la classe Gat Renat i les seves instàncies.
+ * Es defineixen les posicions del GatRenat i les comprovacions corresponents
+ */
+
 class GatRenat extends Gat {
     // esta viu
     public boolean estaViu() {
