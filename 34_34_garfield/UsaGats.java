@@ -96,7 +96,7 @@ class Gat {
     // Domestica
     public String aixecat() {
         if (this.posicio.equals("dret")) {
-            return("No faig res");
+            return("no faig res");
         }
         setPosicio("dret");
         return("m'aixeco");
@@ -110,7 +110,7 @@ class Gat {
     }
     public String estirat() {
         if (this.posicio.equals("estirat")) {
-            return("No faig res");
+            return("no faig res");
         }
         setPosicio("estirat");
         return("m'estiro");
