@@ -26,7 +26,8 @@ class Gat {
     }
     // Methods
     public String esValid(String nom) {
-        if (nom.isEmpty() || nom.isBlank() || nom == null) { return("anònim"); 
+        if (nom == null) {
+            return("anònim");
         }
         return(nom);
     }
