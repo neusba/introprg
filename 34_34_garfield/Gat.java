@@ -1,27 +1,27 @@
 
 // CLASSE GAT
 class Gat {
-    private final String nombre;
+    private final String nom;
     private int vides = 7;
     private String posicio = "estirat";
     // Constructores
     public Gat(String nom) {
         String name = esValid(nom);
-        this.nombre = name;
+        this.nom = name;
     }
     public Gat(String nom, int vides) {
         String name = esValid(nom);
-        this.nombre = name;
+        this.nom = name;
         setVides(vides);
     }
     public Gat(String nom, String posicio) {
         String name = esValid(nom);
-        this.nombre = name;
+        this.nom = name;
         setPosicio(posicio);
     }
     public Gat(String nom, int vides, String posicio) {
         String name = esValid(nom);
-        this.nombre = name;
+        this.nom = name;
         setVides(vides);
     }
     // Methods
@@ -31,7 +31,7 @@ class Gat {
         return(nom);
     }
     public String getNom() {
-        return this.nombre;
+        return this.nom;
     }
     // Getters & Setters
     public int getVides() {
