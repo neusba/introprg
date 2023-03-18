@@ -5,15 +5,6 @@ class Garfield extends Gat {
     public Garfield() {
         super("Garfield", 9, "estirat");
     }
-    public Garfield(int vides) {
-        super("Garfield", 9);
-    }
-    public Garfield(String posicio) {
-        super("Garfield", 9, "estirat");
-    }
-    public Garfield(int vides, String posicio) {
-        super("Garfield", 9, "estirat");
-    }
     // Methods
     @Override
     public String aixecat() {
