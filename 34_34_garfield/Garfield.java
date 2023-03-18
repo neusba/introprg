@@ -40,8 +40,6 @@ class Garfield extends Gat {
     public void setVides(int vides) {
         if (vides > 0 && vides <= 9) {
             super.setVides(vides);
-        } else {
-            super.setVides(9);
         }
     }
 
