@@ -157,7 +157,7 @@ class Garfield extends Gat {
         if (getPosicio().equals("estirat")) {
             return("Bai Maitea, bai");
         }
-        return("No faig res");
+        return("no faig res");
     }
     @Override
     public String estirat() {
@@ -168,7 +168,7 @@ class Garfield extends Gat {
         if (getPosicio().equals("dret")) {
             return("Bai Maitea, bai");
         }
-        return("No faig res");
+        return("no faig res");
     }
     @Override
     public String seu() {
@@ -176,6 +176,6 @@ class Garfield extends Gat {
             setPosicio("assegut");
             return("m'assec");
         }
-        return("No faig res");
+        return("no faig res");
     }
 }
