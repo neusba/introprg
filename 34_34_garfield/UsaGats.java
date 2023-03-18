@@ -1,24 +1,5 @@
 /* Programa que prova el polimorfisme de les classes amb Gats */
 
-// CLASSE PÚBLICA
-public class UsaGats {
-    public static void main(String[] args) {
-        Gat[] gats = new Gat[] {
-            new Gat("Misifú"),
-            new GatRenat(),
-            new Garfield()
-        };
-        for (Gat gat: gats) {
-            System.out.println("Entrenant el gat " + gat.getNom());
-            System.out.println(gat.getNom() + " diu: "+ gat.seu());
-            System.out.println(gat.getNom() + " diu: "+ gat.aixecat());
-            System.out.println(gat.getNom() + " diu: "+ gat.aixecat());
-            System.out.println(gat.getNom() + " diu: "+ gat.estirat());
-            System.out.println();
-        }
-    }
-}
-
 // CLASSE GAT
 class Gat {
     private final String nom;
@@ -179,3 +160,22 @@ class Garfield extends Gat {
         return("no faig res");
     }
 }
+// CLASSE PÚBLICA
+public class UsaGats {
+    public static void main(String[] args) {
+        Gat[] gats = new Gat[] {
+            new Gat("Misifú"),
+            new GatRenat(),
+            new Garfield()
+        };
+        for (Gat gat: gats) {
+            System.out.println("Entrenant el gat " + gat.getNom());
+            System.out.println(gat.getNom() + " diu: "+ gat.seu());
+            System.out.println(gat.getNom() + " diu: "+ gat.aixecat());
+            System.out.println(gat.getNom() + " diu: "+ gat.aixecat());
+            System.out.println(gat.getNom() + " diu: "+ gat.estirat());
+            System.out.println();
+        }
+    }
+}
+
