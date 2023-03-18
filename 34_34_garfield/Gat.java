@@ -55,7 +55,7 @@ class Gat {
     }
     // Booleans
     public boolean estaViu() {
-        if (this.vides < 0) { return false;
+        if (this.vides <= 0) { return false;
         }
         return true;
     }
