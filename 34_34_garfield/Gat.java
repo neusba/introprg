@@ -41,6 +41,8 @@ class Gat {
     public void setVides(int vides) {
         if (vides > 0) {
             this.vides = vides;
+        } else {
+            this.vides = 7;
         }
     }
     public String getPosicio() {
@@ -55,7 +57,10 @@ class Gat {
     }
     // Booleans
     public boolean estaViu() {
-        return this.vides > 0;
+        if (this.vides > 0) {
+            return true;
+        }
+        return false;
     }
     public boolean estaDret() {
         if (this.posicio.equals("dret")) { return true; 
