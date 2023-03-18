@@ -1,7 +1,7 @@
 
 // CLASSE GAT
 class Gat {
-    private final String nom;
+    private String nom = "";
     private int vides = 7;
     private String posicio = "estirat";
     // Constructores
