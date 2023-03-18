@@ -103,7 +103,7 @@ class Gat {
     }
     public String seu() {
         if (this.posicio.equals("assegut")) {
-            return("No faig res");
+            return("no faig res");
         }
         setPosicio("assegut");
         return("m'assec");
