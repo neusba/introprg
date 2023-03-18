@@ -39,10 +39,10 @@ class Gat {
         return this.vides;
     }
     public void setVides(int vides) {
-        if (vides > 0) {
-            this.vides = vides;
-        } else {
+        if (vides < 0) {
             this.vides = 7;
+        } else {
+            this.vides = vides;
         }
     }
     public String getPosicio() {
