@@ -36,10 +36,4 @@ class Garfield extends Gat {
         }
         return("no faig res");
     }
-    @Override
-    public void setVides(int vides) {
-        if (vides == 9) {
-            setVides(vides);
-        }
-    }
 }
