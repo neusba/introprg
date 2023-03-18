@@ -55,9 +55,9 @@ class Gat {
     }
     // Booleans
     public boolean estaViu() {
-        if (this.vides <= 0) { return false;
+        if (this.vides <= 0) { return true;
         }
-        return true;
+        return false;
     }
     public boolean estaDret() {
         if (this.posicio.equals("dret")) { return true; 
