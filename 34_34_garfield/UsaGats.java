@@ -1,4 +1,7 @@
-/* Programa que prova el polimorfisme de les classes amb Gats */
+/* Programa que prova el polimorfisme de les classes amb Gats, aquest fitxer
+ * conté el main que executa el programa, les classes de Gats es troben en altres
+ * fitxers dins de la misma carpeta
+ */
 
 // CLASSE PÚBLICA
 public class UsaGats {

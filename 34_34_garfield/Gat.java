@@ -1,4 +1,6 @@
-
+/* Fitxer que conté la classe Gat amb tots els seus mètodes, propietats i constructors corresponents
+ * per relacionar-se amb les seves subclasses
+ */
 // CLASSE GAT
 class Gat {
     private final String nom;

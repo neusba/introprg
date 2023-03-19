@@ -1,3 +1,6 @@
+/* Fitxer que conté la classe GatRenat per l'exercici 34_34 amb tots els seus mètodes i 
+ * constructors corresponents per relacionar-se amb la seva superclasse
+ */
 // CLASSE GAT RENAT
 class GatRenat extends Gat {
     // Constructores

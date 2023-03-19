@@ -1,4 +1,6 @@
-
+/* Fitxer que conté la classe Garfield i tots els seus mètodes i constructors corresponents per
+ * relacionar-se ambla superclasse Gat
+ */
 // CLASSE GARFIELD
 class Garfield extends Gat {
     // Constructores
