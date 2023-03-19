@@ -43,16 +43,16 @@ class Gat implements EsserViu {
 
     // Mètodes heretats de la interface
     @Override public boolean estaViu() {
-        if (this.vides > 0) {
-            return true;
+        if (this.vides <= 0) {
+            return false;
         }
-        return false;
+        return true;
     }
     @Override public String mor() {
         this.vides = this.vides - 1;
-        if (this.vides == 0) {
+        if (this.vides > 0) {
             return("adéu món cruel");
-        } 
+        }
         return("ja l'he espifiada");
     }
     @Override public String ressuscita() {
