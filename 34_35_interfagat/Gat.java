@@ -10,12 +10,16 @@ class Gat implements EsserViu {
 
     // Constructors
     public Gat(String nom) {
-        if (nom != null || !nom.isBlank()) {
+        if (nom == null || nom.isBlank()) {
+            this.nom = "anònim";
+        } else {
             this.nom = nom;
         }
     }
     public Gat(String nom, int vides) {
-        if (nom != null || !nom.isBlank()) {
+        if (nom == null || nom.isBlank()) {
+            this.nom = "anònim";
+        } else {
             this.nom = nom;
         }
         setVides(vides);
