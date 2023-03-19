@@ -10,12 +10,14 @@ class Gat implements EsserViu {
 
     // Constructors
     public Gat(String nom) {
-        String name = esValid(nom);
-        this.nom = name;
+        if (nom != null || !nom.isBlank()) {
+            this.nom = nom;
+        }
     }
     public Gat(String nom, int vides) {
-        String name = esValid(nom);
-        this.nom = name;
+        if (nom != null || !nom.isBlank()) {
+            this.nom = nom;
+        }
         setVides(vides);
     }
 
@@ -32,13 +34,6 @@ class Gat implements EsserViu {
         } else {
             this.vides = vides;
         }
-    }
-    // Mètodes de comprovació de nom
-    public String esValid(String nom) {
-        if (nom == null || nom.isBlank()) {
-            return("anònim");
-        }
-        return(nom);
     }
 
     // Mètodes heretats de la interface
