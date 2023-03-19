@@ -27,7 +27,7 @@ class Gat implements EsserViu {
         return this.vides;
     }
     public void setVides(int vides) {
-        if (vides < 0 ) {
+        if (vides <= 0 ) {
             this.vides = 7;
         } else {
             this.vides = vides;
