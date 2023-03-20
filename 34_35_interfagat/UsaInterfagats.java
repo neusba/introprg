@@ -1,3 +1,7 @@
+/* Fitxer que conté la classe principal del programa amb el main.
+ * El programa consisteix en veure el polimorfisme en les classes de gats 
+ * i veure com itneractuen les classes abstractes o no i les seves interfícies
+ */
 public class UsaInterfagats {
     public static void main(String[] args) {
         GatRenat renat = new GatRenat();
