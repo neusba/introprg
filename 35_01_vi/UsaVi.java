@@ -96,7 +96,7 @@ class Vi {
     }
     // @toString
     @Override public String toString() {
-        return(String.format("%n    Vi: %s%n    Preu: %d%n   Estoc: %d%n", this.nom, this.preu, this.estoc));
+        return(String.format("%n    Vi: %s%n    Preu: %d%n    Estoc: %d%n", this.nom, this.preu, this.estoc));
     }
 }
 
