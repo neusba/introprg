@@ -61,8 +61,7 @@ class Vi {
 
     // Methods
     public boolean esValid() {
-        if (nom.isEmpty() || nom.isBlank() || (nom == null)) {
-            System.out.println("esto deberia ser falso");
+        if (getNom().isEmpty() || getNom().isBlank() || (getNom() == null)) {
             return false;
         }
         if (this.nom.equals("NOM NO VÀLID")) { return false; }
