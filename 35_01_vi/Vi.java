@@ -11,7 +11,6 @@ class Vi {
     // Constructors
     public Vi(String nom, int preu) {
         this.nom = normalitzaNom(nom); 
-        // Que pasa aqui?
         if (preu < 0 ) {
             this.preu = -1;
         } else {
@@ -70,7 +69,7 @@ class Vi {
     }
     public static String normalitzaNom(String nom) {
         // checkea si el nombre és un nombre válido, si no lo es, devuelve "NOM NO VÀLID"
-        if (nom.isBlank() || nom.isEmpty()) {
+        if (nom.isEmpty() || nom.isBlank() || nom == null) {
             return("NOM NO VÀLID!");
         }
         // Si és un nombre vàlido:
