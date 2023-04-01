@@ -11,7 +11,8 @@ class Vi {
     // Constructors
     public Vi(String nom, int preu) {
         this.nom = nom;
-        normalitzaNom(nom);                                     
+        normalitzaNom(nom); 
+        // Que pasa aqui?
         if (preu < 0 ) {
             this.preu = -1;
         } else {
