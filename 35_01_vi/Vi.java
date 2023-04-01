@@ -61,9 +61,8 @@ class Vi {
 
     // Methods
     public boolean esValid() {
-        if (this.nom.equals("NOM NO VÀLID") || getNom().isEmpty()) {
-            return false;
-        }
+        if (nom.isEmpty() || nom.isBlank() || (nom == null)) { return false; }
+        if (this.nom.equals("NOM NO VÀLID")) { return false; }
         if (this.preu == -1 || this.estoc == -1) { return false; }
         return true;
     }
