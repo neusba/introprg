@@ -17,7 +17,6 @@ class Vi {
         } else {
             setPreu(preu);
         }
-        esValid();
     }
     public Vi(String nom, int preu, int estoc) {
         this.nom = normalitzaNom(nom);                                     
@@ -31,7 +30,6 @@ class Vi {
         } else {
             this.estoc = estoc;
         }
-        esValid();
     }
 
     // Accessors
@@ -64,7 +62,9 @@ class Vi {
 
     // Methods
     public boolean esValid() {
-        if (this.nom.equals("NOM NO VÀLID")) { return false; }
+        if (this.nom.equals("NOM NO VÀLID") || getNom().isEmpty()) {
+            return false;
+        }
         if (this.preu == -1 || this.estoc == -1) { return false; }
         return true;
     }
