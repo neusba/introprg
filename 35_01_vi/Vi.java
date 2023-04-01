@@ -65,7 +65,7 @@ class Vi {
             return false;
         }
         if (this.preu == -1 || this.estoc == -1) { return false; }
-        return false;
+        return true;
     }
     public static String normalitzaNom(String nom) {
         // checkea si el nombre és un nombre válido, si no lo es, devuelve "NOM NO VÀLID"
