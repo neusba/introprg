@@ -64,7 +64,7 @@ class Vi {
         if (getNom().isEmpty() || getNom().isBlank() || (getNom() == null)) {
             return false;
         }
-        if (this.nom.equals("NOM NO VÀLID")) { return false; }
+        if (this.nom.equals("NOM NO VÀLID!")) { return false; }
         if (this.preu == -1 || this.estoc == -1) { return false; }
         return true;
     }
