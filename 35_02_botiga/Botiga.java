@@ -11,7 +11,6 @@ class Botiga {
     // Constructors
     public Botiga() {
         this.DEFAULT_MAX_VINS = DEFAULT_MAX_VINS;
-
     }
     public Botiga(int maxVins) {
         if (maxVins < 1) {
