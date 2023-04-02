@@ -7,6 +7,7 @@
 class Botiga {
     private int DEFAULT_MAX_VINS = 10;                // Nombre màxim de vins que hi caben a la botiga
     private Vi[] vins;
+    private Vi vi;
 
     // Constructors
     public Botiga() {
