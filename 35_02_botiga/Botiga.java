@@ -10,77 +10,72 @@ class Botiga {
 
     // Constructors
     public Botiga() {
-        Vi[] vins = new Vi[this.DEFAULT_MAX_VINS];
+        Vi[] vins = new Vi[DEFAULT_MAX_VINS];
     }
+        // específic
     public Botiga(int maxVins) {
         if (maxVins < 1) {
-            this.DEFAULT_MAX_VINS = this.DEFAULT_MAX_VINS;
-            Vi[] vins = new Vi[this.DEFAULT_MAX_VINS];
+            Vi[] vins = new Vi[DEFAULT_MAX_VINS];
         } else {
-            this.DEFAULT_MAX_VINS = maxVins;
-            Vi[] vins = new Vi[this.DEFAULT_MAX_VINS];
+            Vi[] vins = new Vi[maxVins];
         }
     }
 
-    // Mètodes
-    // afegeix un vi a la botiga
+    // MÈTODES
     public Vi afegeix(Vi vi) {
-        String nomVi = vi.getNom();
-        if (!vi.esValid()) { return null; }             
-        // si hi ha un altre vi amb el MATEIX NOM RETURNS NULL
-        if (vins.length == 0) {
-          vins[0] = vi;
-          return vins[0];
-        } 
-        if (estaABotiga(nomVi)) { return null; }       
-        // AFEGIRÀ el vi a una POSICIO NULL de l'array i INDICARA que s'ha AFEGIT
+        // recibo instancia de vino
+        // compruebo si la instància es válida
+        if (!vi.esValid()) { return null; }
+        // Para comprobar que no està repetido el nombre en la tienda
+        // recorro el array de vinos
         for (int i=0; i<vins.length; i++) {
+            // Si no encuentra ninguna instancia con el mismo nombre la añado
             if (vins[i] == null) {
                 vins[i] = vi;
-                return vins[i];
+                return vi;
             }
-        }       
-        return null;    // en cas que la botiga estigui plena
-    }
-    // elimina un vi de la botiga
-    public Vi elimina(String vi) {
-        for (int i=0; i<vins.length; i++) {
-            if (vins[i].getNom().equals(vi)) {
-                // comprova stock
-                if (vins[i].getEstoc() > 0) {
-                    return null;
-                }
-                vins[i] = null;
-                return vins[i];
+            // Si encuentra una instància con el mismo nombre
+            if (vins[i].getNom().equals(vi.getNom())) {
+                // no puede añadirla a la tienda, la devuelve
+                return null;
             }
         }
-        return null;
-
+        // Si no encuentra el mismo nombre y la tienda esta llena, devuelve
+            return null;
     }
-    // cerca un vi en concret a la botiga
+
     public Vi cerca(String nom) {
+        // recibo el nombre de un vino
+        // normalizamos el nombre para poder buscarlo en la tienda
+        nom = Vi.normalitzaNom(nom);
+        // buscamos el mismo nombre en la tienda
         for (int i=0; i<vins.length; i++) {
+            // Si lo encuentra
             if (vins[i].getNom().equals(nom)) {
                 return vins[i];
             }
         }
+        // Si acaba el recorrido de la tienda y no ha coincidido el nombre
         return null;
     }
 
-    // Mètodes extres
-    // comprova si el vi ja ha sigut afeigit a la botiga
-    public boolean estaABotiga(String nomVi) {
-        // recorre array de vinos disponibles
-        // compara el nombre del vino [i] con el del parametro
-        // Si alguno coincide RETURNS TRUE
-            // Si nunca devuelve true, al acabar el bucle RETURNS FALSE;
+    public Vi elimina(String nom) {
+        nom = Vi.normalitzaNom(nom);
         for (int i=0; i<vins.length; i++) {
-            if (vins[i].getNom().equals(nomVi)) {
-                return true;
+            // Si encuentra el vino en la tienda
+            if (vins[i].getNom().equals(nom)) {
+                // comprueba stock
+                if (vins[i].getEstoc() > 0) {
+                    // si aun queda
+                    return null;
+                }
+                // si no queda
+                vins[i] = null;
+                return null;
             }
         }
-        return false;
+        // Si no encuentra el vino
+        return null;
     }
 }
-    
 
