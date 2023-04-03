@@ -12,7 +12,7 @@ class Botiga {
     public Botiga() {
         Vi[] vins = new Vi[DEFAULT_MAX_VINS];
     }
-        // específic
+       // específic
     public Botiga(int maxVins) {
         if (maxVins < 1) {
             Vi[] vins = new Vi[DEFAULT_MAX_VINS];
@@ -28,19 +28,19 @@ class Botiga {
         if (!vi.esValid()) { return null; }
         // Para comprobar que no està repetido el nombre en la tienda
         // recorro el array de vinos
-        if (vins[0] == null) {
-            vins[0] = vi;
-            return vins[0];
-        }
         for (int i=0; i<vins.length; i++) {
             // Si no encuentra ninguna instancia con el mismo nombre la añado
+            if (i == 0) {
+                vins[i] = vi;
+                return vi;
+            }
             if (vins[i] == null) {
                 vins[i] = vi;
                 return vi;
             }
             // Si encuentra una instància con el mismo nombre
             if (vins[i].getNom().equals(vi.getNom())) {
-                // no puede añadirla a la tienda, la devuelve
+               // no puede añadirla a la tienda, la devuelve
                 return null;
             }
         }
@@ -56,9 +56,9 @@ class Botiga {
         for (int i=0; i<vins.length; i++) {
             // Si lo encuentra
             if (vins[i].getNom().equals(nom)) {
-                return vins[i];
+               return vins[i];
             }
-        }
+       }
         // Si acaba el recorrido de la tienda y no ha coincidido el nombre
         return null;
     }
@@ -76,7 +76,7 @@ class Botiga {
                 // si no queda
                 vins[i] = null;
                 return null;
-            }
+           }
         }
         // Si no encuentra el vino
         return null;
