@@ -7,17 +7,18 @@
 class Botiga {
     private int DEFAULT_MAX_VINS = 10;                // Nombre màxim de vins que hi caben a la botiga
     private Vi[] vins;
-    private Vi vi;
 
     // Constructors
     public Botiga() {
-        this.DEFAULT_MAX_VINS = DEFAULT_MAX_VINS;
+        Vi[] vins = new Vi[this.DEFAULT_MAX_VINS];
     }
     public Botiga(int maxVins) {
         if (maxVins < 1) {
-            this.DEFAULT_MAX_VINS = DEFAULT_MAX_VINS;
+            this.DEFAULT_MAX_VINS = this.DEFAULT_MAX_VINS;
+            Vi[] vins = new Vi[this.DEFAULT_MAX_VINS];
         } else {
             this.DEFAULT_MAX_VINS = maxVins;
+            Vi[] vins = new Vi[this.DEFAULT_MAX_VINS];
         }
     }
 
@@ -25,17 +26,20 @@ class Botiga {
     // afegeix un vi a la botiga
     public Vi afegeix(Vi vi) {
         String nomVi = vi.getNom();
-        // COMPROVA que es VALID
         if (!vi.esValid()) { return null; }             
         // si hi ha un altre vi amb el MATEIX NOM RETURNS NULL
+        if (vins.length == 0) {
+          vins[0] = vi;
+          return vins[0];
+        } 
         if (estaABotiga(nomVi)) { return null; }       
         // AFEGIRÀ el vi a una POSICIO NULL de l'array i INDICARA que s'ha AFEGIT
         for (int i=0; i<vins.length; i++) {
             if (vins[i] == null) {
                 vins[i] = vi;
-                return vi;
+                return vins[i];
             }
-        }
+        }       
         return null;    // en cas que la botiga estigui plena
     }
     // elimina un vi de la botiga
