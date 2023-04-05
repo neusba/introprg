@@ -10,7 +10,7 @@ class Botiga {
 
     // Constructors
     public Botiga() {
-        Vi[] vins = new Vi[DEFAULT_MAX_VINS];
+        this.vins = new Vi[DEFAULT_MAX_VINS];
     }
        // específic
     public Botiga(int maxVins) {
