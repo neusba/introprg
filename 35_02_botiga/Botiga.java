@@ -26,10 +26,6 @@ class Botiga {
         // recibo instancia de vino
         // compruebo si la instància es válida
         if (!vi.esValid()) { return null; }
-        if (this.vins == null) {
-            vins[0] = vi;
-            return vi;
-        }
         // Para comprobar que no està repetido el nombre en la tienda
         // recorro el array de vinos
         for (int i=0; i<vins.length; i++) {
@@ -52,6 +48,7 @@ class Botiga {
         // recibo el nombre de un vino
         // normalizamos el nombre para poder buscarlo en la tienda
         nom = Vi.normalitzaNom(nom);
+        if (this.vins == null) { return null; }
         // buscamos el mismo nombre en la tienda
         for (int i=0; i<vins.length; i++) {
             // Si lo encuentra
@@ -65,6 +62,7 @@ class Botiga {
 
     public Vi elimina(String nom) {
         nom = Vi.normalitzaNom(nom);
+        if (this.vins == null) { return null; }
         for (int i=0; i<vins.length; i++) {
             // Si encuentra el vino en la tienda
             if (vins[i].getNom().equals(nom)) {
