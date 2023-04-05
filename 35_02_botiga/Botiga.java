@@ -14,7 +14,7 @@ class Botiga {
     }
        // específic
     public Botiga(int maxVins) {
-        if (maxVins < 1) {
+        if (maxVins <= 0) {
             Vi[] vins = new Vi[DEFAULT_MAX_VINS];
         } else {
             Vi[] vins = new Vi[maxVins];
