@@ -53,7 +53,7 @@ class Botiga {
         // buscamos el mismo nombre en la tienda
         for (int i=0; i<vins.length; i++) {
             // Si lo encuentra
-            if (vins[i].getNom().toLowerCase().equals(nom)) {
+            if (vins[i].getNom().toLowerCase().equals(nom.toLowerCase())) {
                return vins[i];
             }
        }
