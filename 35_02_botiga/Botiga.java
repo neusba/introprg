@@ -26,7 +26,7 @@ class Botiga {
         // recibo instancia de vino
         // compruebo si la instància es válida
         if (!vi.esValid()) { return null; }
-        if (vins[0] == null) {
+        if (this.vins[0] == null) {
             vins[0] = vi;
             return vi;
         }
