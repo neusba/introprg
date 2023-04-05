@@ -51,6 +51,10 @@ class Botiga {
         if (this.vins == null) { return null; }
         // buscamos el mismo nombre en la tienda
         for (int i=0; i<vins.length; i++) {
+            // Si la posicion encontrada es null, devuelve NULL
+            if (vins[i] == null) {
+                return null;
+            }
             // Si lo encuentra
             if (vins[i].getNom().toLowerCase().equals(nom.toLowerCase())) {
                return vins[i];
