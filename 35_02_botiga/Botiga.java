@@ -77,7 +77,7 @@ class Botiga {
                 }
                 // si no queda
                 vins[i] = null;
-                return null;
+                return vins[i];
            }
         }
         // Si no encuentra el vino
