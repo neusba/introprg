@@ -47,12 +47,13 @@ class Botiga {
     public Vi cerca(String nom) {
         // recibo el nombre de un vino
         // normalizamos el nombre para poder buscarlo en la tienda
+
         nom = Vi.normalitzaNom(nom);
         if (this.vins == null) { return null; }
         // buscamos el mismo nombre en la tienda
         for (int i=0; i<vins.length; i++) {
             // Si lo encuentra
-            if (vins[i].getNom().equals(nom)) {
+            if (vins[i].getNom().toLowerCase().equals(nom)) {
                return vins[i];
             }
        }
