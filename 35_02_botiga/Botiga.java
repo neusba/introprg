@@ -26,10 +26,8 @@ class Botiga {
         // recibo instancia de vino
         // compruebo si la instància es válida
         if (!vi.esValid()) { return null; }
-        if (this.vins[0] == null) {
-            this.vins[0] = vi;
-            return vi;
-        }
+        this.vins[0] = vi;
+        System.out.println(vins[0]);
         // Para comprobar que no està repetido el nombre en la tienda
         // recorro el array de vinos
         for (int i=0; i<vins.length; i++) {
