@@ -80,8 +80,10 @@ class Botiga {
                     return null;
                 }
                 // si no queda
+                Vi copia = new Vi(vins[i].getNom(), vins[i].getPreu());
+                copia = vins[i];
                 vins[i] = null;
-                return vins[i];
+                return copia; 
            }
         }
         // Si no encuentra el vino
