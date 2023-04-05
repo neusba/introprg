@@ -48,7 +48,6 @@ class Botiga {
         // recibo el nombre de un vino
         // normalizamos el nombre para poder buscarlo en la tienda
         nom = Vi.normalitzaNom(nom);
-        //if (this.vins == null) { return null; }
         // buscamos el mismo nombre en la tienda
         for (int i=0; i<vins.length; i++) {
             // Si la posicion encontrada es null, devuelve NULL
@@ -66,7 +65,6 @@ class Botiga {
 
     public Vi elimina(String nom) {
         nom = Vi.normalitzaNom(nom);
-        if (this.vins == null) { return null; }
         for (int i=0; i<vins.length; i++) {
             // Si la posicion que encuentra es null
             if (vins[i] == null) {
