@@ -15,9 +15,9 @@ class Botiga {
        // específic
     public Botiga(int maxVins) {
         if (maxVins <= 0) {
-            Vi[] vins = new Vi[DEFAULT_MAX_VINS];
+            this. vins = new Vi[DEFAULT_MAX_VINS];
         } else {
-            Vi[] vins = new Vi[maxVins];
+            this.vins = new Vi[maxVins];
         }
     }
 
@@ -26,8 +26,6 @@ class Botiga {
         // recibo instancia de vino
         // compruebo si la instància es válida
         if (!vi.esValid()) { return null; }
-        this.vins[0] = vi;
-        System.out.println(vins[0]);
         // Para comprobar que no està repetido el nombre en la tienda
         // recorro el array de vinos
         for (int i=0; i<vins.length; i++) {
