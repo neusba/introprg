@@ -80,7 +80,6 @@ class Botiga {
                     return null;
                 }
                 // si no queda
-                vins[i] = null;
                 return vins[i];
            }
         }
