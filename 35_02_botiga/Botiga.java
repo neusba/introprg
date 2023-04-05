@@ -28,9 +28,7 @@ class Botiga {
         if (!vi.esValid()) { return null; }
         // Para comprobar que no està repetido el nombre en la tienda
         // recorro el array de vinos
-        System.out.println("hola");
         for (int i=0; i<vins.length; i++) {
-            System.out.println("adios");
             // Si no encuentra ninguna instancia con el mismo nombre la añado
             if (i == 0) {
                 vins[i] = vi;
