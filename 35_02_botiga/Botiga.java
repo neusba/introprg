@@ -27,7 +27,7 @@ class Botiga {
         // compruebo si la instància es válida
         if (!vi.esValid()) { return null; }
         if (this.vins[0] == null) {
-            vins[0] = vi;
+            this.vins[0] = vi;
             return vi;
         }
         // Para comprobar que no està repetido el nombre en la tienda
