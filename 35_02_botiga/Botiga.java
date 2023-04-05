@@ -64,6 +64,10 @@ class Botiga {
         nom = Vi.normalitzaNom(nom);
         if (this.vins == null) { return null; }
         for (int i=0; i<vins.length; i++) {
+            // Si la posicion que encuentra es null
+            if (vins[i] == null) {
+                break;
+            }
             // Si encuentra el vino en la tienda
             if (vins[i].getNom().equals(nom)) {
                 // comprueba stock
