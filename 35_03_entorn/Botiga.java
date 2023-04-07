@@ -32,7 +32,7 @@ class Botiga {
             // Si no encuentra ninguna instancia con el mismo nombre la añado
             if (vins[i] == null) {
                 vins[i] = vi;
-                return vi;
+                return vins[i];
             }
             // Si encuentra una instància con el mismo nombre
             if (vins[i].getNom().equals(vi.getNom())) {
