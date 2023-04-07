@@ -112,7 +112,7 @@ public class Entorn {
                 return;
             }
 
-            System.out.print("estoc (enter 0)> ");
+            System.out.printf("estoc (enter %d)> ", instancia.getEstoc());
             String estoc = Entrada.readLine();
             if (estoc.isEmpty()) {
                 estoc = "0";
