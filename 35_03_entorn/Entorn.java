@@ -39,26 +39,42 @@ public class Entorn {
     }
     // comanda AFEGEIX
     public void afegeix() {
+        int preuInt;
+        int estocInt;
         System.out.print("nom (enter cancel·la)> ");
         String nom = Entrada.readLine();
         // gestionem l'entrada de nom
         if (nom.isEmpty()) { return; }
 
         System.out.print("preu (en cèntims)> ");
-        int preu = Integer.parseInt(Entrada.readLine());
-        if (preu < 0) {
+        String preu = Entrada.readLine();
+        // gestio del preu 
+        if (preu.isEmpty()) {
+            preu = "0";
+            preuInt = Integer.parseInt(preu);
+        } else {
+            preuInt = Integer.parseInt(preu);
+        }
+        if (preuInt < 0) {
             System.out.println("ERROR: el valor ha de ser un enter positiu");
             return;
         }
+
         System.out.print("estoc (enter sense estoc)> ");
-        int estoc = Integer.parseInt(Entrada.readLine());
-        if (estoc < 0) {
+        String estoc = Entrada.readLine();
+        if (estoc.isEmpty()) {
+            estoc = "0";
+            estocInt = Integer.parseInt(estoc);
+        } else {
+            estocInt = Integer.parseInt(estoc);
+        }
+        if (estocInt < 0) {
             System.out.println("ERROR: el valor ha de ser un enter positiu");
             return;
         }
 
         // intentem afegir el vi amb les seves dades a la botiga
-        Vi instancia = botiga.afegeix(new Vi(nom, preu, estoc));
+        Vi instancia = botiga.afegeix(new Vi(nom, preuInt, estocInt));
         if (instancia == null) {
             System.out.println("ERROR: no s'ha pogut afegir");
             return;
