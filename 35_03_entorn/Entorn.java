@@ -86,8 +86,8 @@ public class Entorn {
     // comanda MODIFICA
     public void modifica() {
         // variables glob
-        int preuInt;
-        int estocInt;
+        int preuInt = 0;
+        int estocInt = 0;
 
         System.out.print("nom (enter cancel·la)> ");
         String nom = Entrada.readLine();
@@ -101,11 +101,11 @@ public class Entorn {
         } else {
             System.out.printf("preu (enter %d)> ", instancia.getPreu());
             String preu = Entrada.readLine();
-            if (preu.isEmpty()) {
-                preu = "0";
-                preuInt = instancia.getPreu();
+            if (preu.isEmpty()) { 
+                instancia.setPreu(instancia.getPreu());
             } else {
                 preuInt = Integer.parseInt(preu);
+                instancia.setPreu(preuInt);
             }
             if (preuInt < 0) {
                 System.out.println("ERROR: el valor ha de ser un enter positiu");
@@ -115,10 +115,10 @@ public class Entorn {
             System.out.printf("estoc (enter %d)> ", instancia.getEstoc());
             String estoc = Entrada.readLine();
             if (estoc.isEmpty()) {
-                estoc = "0";
-                estocInt = instancia.getEstoc();
+                instancia.setEstoc(instancia.getEstoc());
             } else {
                 estocInt = Integer.parseInt(estoc);
+                instancia.setEstoc(estocInt);
             }
             if (estocInt < 0) {
                 System.out.println("ERROR: el valor ha de ser un enter positiu");
