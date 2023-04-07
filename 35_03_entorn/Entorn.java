@@ -64,7 +64,7 @@ public class Entorn {
             return;
         } else { 
             System.out.println("Introduït:");
-            System.out.println(instancia.toString());
+            System.out.print(instancia.toString());
         }
     }
     // comanda MODIFICA
