@@ -149,7 +149,7 @@ public class Entorn {
             if (confirmacio) {
                 instancia = botiga.elimina(nom);
                 if (instancia == null) {
-                    System.out.println("No s'ha pogut eliminar");
+                    System.out.println("ERROR: no s'ha pogut eliminar");
                     return;
                 } else {
                     System.out.println("Eliminat");
