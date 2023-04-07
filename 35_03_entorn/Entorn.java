@@ -111,7 +111,7 @@ public class Entorn {
             }
             // Mostra modificat
             System.out.println("Modificat:");
-            instancia.toString();
+            System.out.println(instancia.toString());
         }
     }
     // comanda ELIMINA
