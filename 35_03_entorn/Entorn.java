@@ -63,8 +63,8 @@ public class Entorn {
             System.out.println("ERROR: no s'ha pogut afegir");
             return;
         } else { 
-            System.out.println("Introduït:");
-            System.out.print(instancia.toString());
+            System.out.print("Introduït:");
+            System.out.println(instancia.toString());
         }
     }
     // comanda MODIFICA
