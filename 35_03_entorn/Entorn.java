@@ -33,8 +33,8 @@ public class Entorn {
         if (instancia == null) {
             System.out.println("No trobat");
         } else {
-            System.out.println("Trobat:");
-            instancia.toString();
+            System.out.print("Trobat:");
+            System.out.println(instancia.toString());
         }
     }
     // comanda AFEGEIX
