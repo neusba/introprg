@@ -103,7 +103,7 @@ public class Entorn {
             String preu = Entrada.readLine();
             if (preu.isEmpty()) {
                 preu = "0";
-                preuInt = Integer.parseInt(preu);
+                preuInt = instancia.getPreu();
             } else {
                 preuInt = Integer.parseInt(preu);
             }
@@ -116,7 +116,7 @@ public class Entorn {
             String estoc = Entrada.readLine();
             if (estoc.isEmpty()) {
                 estoc = "0";
-                estocInt = Integer.parseInt(estoc);
+                estocInt = instancia.getEstoc();
             } else {
                 estocInt = Integer.parseInt(estoc);
             }
