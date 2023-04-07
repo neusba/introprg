@@ -13,7 +13,6 @@ public class Entorn {
     }
 
     // Mètodes que actuaran com a comandes al main
-
     // Comanda AJUDA
     public static void ajuda() {
         String[] comandes  = {"ajuda", "cerca", "afegeix", "modifica", "elimina", "surt"};
@@ -39,8 +38,6 @@ public class Entorn {
     }
     // comanda AFEGEIX
     public void afegeix() {
-        int preuInt;
-        int estocInt;
         System.out.print("nom (enter cancel·la)> ");
         String nom = Entrada.readLine();
         // gestionem l'entrada de nom
@@ -49,12 +46,9 @@ public class Entorn {
         System.out.print("preu (en cèntims)> ");
         String preu = Entrada.readLine();
         // gestio del preu 
-        if (preu.isEmpty()) {
-            preu = "0";
-            preuInt = Integer.parseInt(preu);
-        } else {
-            preuInt = Integer.parseInt(preu);
-        }
+        int preuInt = gestionaPreu(preu);
+        // BORRAR /////////////
+        ////////////////////////
         if (preuInt < 0) {
             System.out.println("ERROR: el valor ha de ser un enter positiu");
             return;
@@ -62,12 +56,9 @@ public class Entorn {
 
         System.out.print("estoc (enter sense estoc)> ");
         String estoc = Entrada.readLine();
-        if (estoc.isEmpty()) {
-            estoc = "0";
-            estocInt = Integer.parseInt(estoc);
-        } else {
-            estocInt = Integer.parseInt(estoc);
-        }
+        int estocInt = gestionaEstoc(estoc);
+        // BORRAR //////////////
+        ///////////////////////
         if (estocInt < 0) {
             System.out.println("ERROR: el valor ha de ser un enter positiu");
             return;
@@ -83,6 +74,28 @@ public class Entorn {
             System.out.println(instancia.toString());
         }
     }
+    // METODES EXTERNS
+    public static int gestionaPreu(String preu) {
+        int preuInt;
+        if (preu.isEmpty()) {
+            preu = "0";
+            preuInt = Integer.parseInt(preu);
+        } else {
+            preuInt = Integer.parseInt(preu);
+        }
+        return preuInt;
+    }
+    public static int gestionaEstoc(String estoc) {
+        int estocInt;
+        if (estoc.isEmpty()) {
+            estoc = "0";
+            estocInt = Integer.parseInt(estoc);
+        } else {
+            estocInt = Integer.parseInt(estoc);
+        }
+        return estocInt;
+    }
+
     // comanda MODIFICA
     public void modifica() {
         // variables glob
@@ -189,6 +202,3 @@ public class Entorn {
         }
     }
 }
-
-
-        
