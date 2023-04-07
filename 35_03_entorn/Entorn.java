@@ -17,6 +17,7 @@ public class Entorn {
     // Comanda AJUDA
     public static void ajuda() {
         String[] comandes  = {"ajuda", "cerca", "modifica", "afegeix", "elimina", "surt"};
+        System.out.println("Comandes disponibles:");
         for (String comanda : comandes) {
             System.out.println(comanda);
         }
