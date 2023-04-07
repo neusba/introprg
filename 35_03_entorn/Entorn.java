@@ -135,20 +135,26 @@ public class Entorn {
         String nom = Entrada.readLine();
         // gestiona entrada nom
         if (nom.isEmpty()) { return; }
-        // gestiona instancia a eliminar
-        Vi instancia = botiga.elimina(nom);
+        // busca la instancia a la botiga abans d'eliminar-la
+        Vi instancia = botiga.cerca(nom);
         if (instancia == null) {
-            System.out.println("ERROR: no s'ha pogut eliminar");
+            System.out.println("No s'ha trobat");
             return;
         } else {
-            System.out.println("A eliminar:");
-            instancia.toString();
+            System.out.print("A eliminar:");
+            System.out.println(instancia.toString());
             System.out.print("Segur?> ");
             // demana confirmació per eliminar
             boolean confirmacio = Utilitats.respostaABoolean(Entrada.readLine());
             if (confirmacio) {
-                System.out.println("Eliminat");
-                return;
+                instancia = botiga.elimina(nom);
+                if (instancia == null) {
+                    System.out.println("No s'ha pogut eliminar");
+                    return;
+                } else {
+                    System.out.println("Eliminat");
+                    return;
+                }
             }
             System.out.println("No eliminat");
         }
