@@ -1,6 +1,7 @@
 /* Fitxer que conté el main que duura a terme el funcionament del programa de la german de la Gualda
  * Serà un programa utilitzable des de la consola per simplicitat.
  * El programa es basarà en un prompt que apareix per pantalla on podem escrivir les comandes
+ * Desastre de código que verguenza
  */
 
 public class Entorn {
