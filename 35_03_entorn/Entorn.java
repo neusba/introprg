@@ -46,15 +46,17 @@ public class Entorn {
 
         System.out.print("preu (en cèntims)> ");
         int preu = Integer.parseInt(Entrada.readLine());
-
-        System.out.print("estoc (enter sense estoc)> ");
-        int estoc = Integer.parseInt(Entrada.readLine());
-
-        // gestionem el valor de preu i estoc
-        if (preu < 0 || estoc < 0) {
+        if (preu < 0) {
             System.out.println("ERROR: el valor ha de ser un enter positiu");
             return;
         }
+        System.out.print("estoc (enter sense estoc)> ");
+        int estoc = Integer.parseInt(Entrada.readLine());
+        if (estoc < 0) {
+            System.out.println("ERROR: el valor ha de ser un enter positiu");
+            return;
+        }
+
         // intentem afegir el vi amb les seves dades a la botiga
         Vi instancia = botiga.afegeix(new Vi(nom, preu, estoc));
         if (instancia == null) {
