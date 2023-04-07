@@ -33,7 +33,7 @@ public class Entorn {
         if (instancia == null) {
             System.out.println("No trobat");
         } else {
-            System.out.println("Introduït");
+            System.out.println("Trobat:");
             instancia.toString();
         }
     }
