@@ -138,7 +138,7 @@ public class Entorn {
         // busca la instancia a la botiga abans d'eliminar-la
         Vi instancia = botiga.cerca(nom);
         if (instancia == null) {
-            System.out.println("No s'ha trobat");
+            System.out.println("No trobat");
             return;
         } else {
             System.out.print("A eliminar:");
