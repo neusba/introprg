@@ -126,7 +126,7 @@ public class Entorn {
 
 // ###################################### MAIN ########################################
     public static void main(String[] args) {
-        System.out.println("Celler la Bona Estrella. Escriviu ajuda per veure opcions.");
+        System.out.println("Celler La Bona Estrella. Escriviu ajuda per veure opcions.");
         Entorn entorn = new Entorn();
 
         while (true) {
