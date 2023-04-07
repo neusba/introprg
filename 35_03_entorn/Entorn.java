@@ -38,32 +38,26 @@ public class Entorn {
     }
     // comanda AFEGEIX
     public void afegeix() {
+        // gestionem l'entrada de nom
         System.out.print("nom (enter cancel·la)> ");
         String nom = Entrada.readLine();
-        // gestionem l'entrada de nom
         if (nom.isEmpty()) { return; }
-
+        // gestio del preu 
         System.out.print("preu (en cèntims)> ");
         String preu = Entrada.readLine();
-        // gestio del preu 
         int preuInt = gestionaPreu(preu);
-        // BORRAR /////////////
-        ////////////////////////
         if (preuInt < 0) {
             System.out.println("ERROR: el valor ha de ser un enter positiu");
             return;
         }
-
+        // gestió de l'estoc
         System.out.print("estoc (enter sense estoc)> ");
         String estoc = Entrada.readLine();
         int estocInt = gestionaEstoc(estoc);
-        // BORRAR //////////////
-        ///////////////////////
         if (estocInt < 0) {
             System.out.println("ERROR: el valor ha de ser un enter positiu");
             return;
         }
-
         // intentem afegir el vi amb les seves dades a la botiga
         Vi instancia = botiga.afegeix(new Vi(nom, preuInt, estocInt));
         if (instancia == null) {
@@ -74,7 +68,8 @@ public class Entorn {
             System.out.println(instancia.toString());
         }
     }
-    // METODES EXTERNS
+
+    // METODES EXTERNS PER TRACTAR VARIABLES 
     public static int gestionaPreu(String preu) {
         int preuInt;
         if (preu.isEmpty()) {
