@@ -13,7 +13,7 @@ import java.io.BufferedWriter;
 
 public class Entorn {
     // Variables globales
-    public static File arxiu = new File("Botiga.csv");    // crea la referencia del archivo a tratar como variable global
+    public static File arxiu = new File("botiga.csv");    // crea la referencia del archivo a tratar como variable global
 
     // Relacionem les classes Botiga i Entorn per mitjà de la composició
     private Botiga botiga;
