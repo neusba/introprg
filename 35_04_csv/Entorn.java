@@ -17,7 +17,8 @@ public class Entorn {
 
     // Relacionem les classes Botiga i Entorn per mitjà de la composició
     private Botiga botiga;
-
+    
+    // ###############################  METODES DE CLASSE ENTORN #############################################################
     // Donem el constructor d'Entorn per implícit
     public Entorn() {
         botiga = new Botiga();
@@ -160,7 +161,7 @@ public class Entorn {
         System.out.println("ERROR: comanda no reconeguda, escriviu help per ajuda");
     }
     // #############################################################################################
-    // METODES EXTERNS PER TRACTAR VARIABLES 
+    // METODES PER TRACTAR VARIABLES 
     public static int gestionaPreu(String preu) {
         int preuInt;
         if (preu.isEmpty()) {
@@ -231,8 +232,10 @@ public class Entorn {
         while (true) {
             String linia = input.readLine();
             if (linia == null) break;
-            referenciesLlegides += 1;                                                   // sumamos una referencia leida
-            // convertimos el String a un dato valido para crear un vino
+            // comprobamos si la linia contiene datos validos
+            if (!validaLinia(linia)) continue;                                          // Datos no validos, saltamos a la siguiente 
+            // convertimos el String a un dato valido
+            referenciesLlegides += 1;                                                   // sumamos una referencia leidas VALIDAS
             String[] valors = linia.split(";");
             Vi instancia = Vi.deArrayString(valors);                                    // creacion de vino a partir de datos
             if (instancia != null) { botiga.afegeix(instancia); }                       // añadimos vino
@@ -259,5 +262,15 @@ public class Entorn {
         }
         output.close();                                                                 // cierra archivo
         System.out.printf("Referències guardades: %d%n", referenciesGuardades);
+    }
+    // ################### METODOS EXTRAS: ARCHIVOS #####################################
+    public boolean validaLinia(String linia) {
+        if (!linia.contains(";")) return false;
+        String[] valores = linia.split(";");
+        if (valores.length != 3) return false;
+        // control de tipos
+        if (Character.isLetter(valores[1].charAt(0))) return false;
+        if (Character.isLetter(valores[2].charAt(0))) return false;
+        return true;
     }
 }
