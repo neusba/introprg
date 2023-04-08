@@ -193,6 +193,7 @@ public class Entorn {
         entorn.procesaPrompt();
         // Tractament i escriptura arxiu Botiga.csv
         entorn.escriuArxiu();
+        System.out.println("adéu");
     }
 // ######################################################################################
     // METODOS EJECUCION
@@ -204,7 +205,6 @@ public class Entorn {
             String comanda = Entrada.readLine().strip();
             // gestionem la comanda introduïda al prompt
             if (comanda.equals("surt")) {
-                System.out.println("adéu");
                 return;
             }
             switch (comanda) {
