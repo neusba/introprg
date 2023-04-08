@@ -16,7 +16,7 @@ class Botiga {
        // específic
     public Botiga(int maxVins) {
         if (maxVins <= 0) {
-            this. vins = new Vi[DEFAULT_MAX_VINS];
+            this.vins = new Vi[DEFAULT_MAX_VINS];
         } else {
             this.vins = new Vi[maxVins];
         }
@@ -92,8 +92,10 @@ class Botiga {
         posicionRecorrido = 0;        
     }
     public Vi getSeguent() {
-        if (posicionRecorrido == vins.length) {
-            return null;
+        if (posicionRecorrido == vins.length) return null;
+        while (vins[posicionRecorrido] == null) {
+            posicionRecorrido += 1;
+            if (posicionRecorrido == vins.length) return null;
         }
         posicionRecorrido += 1;
         return(vins[posicionRecorrido - 1]);
