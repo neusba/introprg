@@ -51,9 +51,9 @@ class Botiga {
         nom = Vi.normalitzaNom(nom);
         // buscamos el mismo nombre en la tienda
         for (int i=0; i<vins.length; i++) {
-            // Si la posicion encontrada es null, devuelve NULL
+            // Si la posicion encontrada es null, continua
             if (vins[i] == null) {
-                return null;
+                continue;
             }
             // Si lo encuentra
             if (vins[i].getNom().toLowerCase().equals(nom.toLowerCase())) {
@@ -79,8 +79,7 @@ class Botiga {
                     return null;
                 }
                 // si no queda
-                Vi copia = new Vi(vins[i].getNom(), vins[i].getPreu());
-                copia = vins[i];
+                Vi copia = new Vi(vins[i].getNom(), vins[i].getPreu(), vins[i].getEstoc());
                 vins[i] = null;
                 return copia; 
            }
