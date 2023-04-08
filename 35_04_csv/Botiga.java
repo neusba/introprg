@@ -68,22 +68,20 @@ class Botiga {
         nom = Vi.normalitzaNom(nom);
         for (int i=0; i<vins.length; i++) {
             // Si la posicion que encuentra es null
-            if (vins[i] == null) {
-                continue;
-            }
+            if (vins[i] == null) continue;
             // Si encuentra el vino en la tienda
-            if (vins[i].getNom().toLowerCase().equals(nom.toLowerCase())) {
+            if (vins[i].getNom().equalsIgnoreCase(nom)) {
                 // comprueba stock
                 if (vins[i].getEstoc() > 0) {
                     // si aun queda
                     return null;
+                } else {
+                    // si no queda
+                    Vi copia = vins[i];
+                    vins[i] = null;
+                    return copia; 
                 }
-                // si no queda
-                Vi copia = new Vi(vins[i].getNom(), vins[i].getPreu(), vins[i].getEstoc());
-                System.out.println(copia.toString());
-                vins[i] = null;
-                return copia; 
-           }
+            }
         }
         // Si no encuentra el vino
         return null;
