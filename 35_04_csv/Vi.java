@@ -97,12 +97,14 @@ class Vi {
         if (valorsVi.length != 3) return null;
         if (Character.isLetter(valorsVi[1].charAt(0))) return null;
         if (Character.isLetter(valorsVi[2].charAt(0))) return null;
-        if (valorsVi[0].equals("NOM NO VÀLID!")) return null;
+        String nom = normalitzaNom(valorsVi[0]);
+        if (nom.equals("NOM NO VÀLID!")) return null;
+
         int preu = Integer.parseInt(valorsVi[1]);
         if (preu < 0) return null;
         int estoc = Integer.parseInt(valorsVi[2]);
         if (estoc < 0) return null;
-        return(new Vi(valorsVi[0], preu, estoc));
+        return(new Vi(nom, preu, estoc));
     }
 }
 
