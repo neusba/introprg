@@ -233,7 +233,7 @@ public class Entorn {
             String linia = input.readLine();
             if (linia == null) break;
             // comprobamos si la linia contiene datos validos
-            //if (!validaLinia(linia)) continue;                                          // Datos no validos, saltamos a la siguiente 
+            if (!validaLinia(linia)) continue;                                          // Datos no validos, saltamos a la siguiente 
             // convertimos el String a un dato valido
             referenciesLlegides += 1;                                                   // sumamos una referencia leidas VALIDAS
             String[] valors = linia.split(";");
@@ -264,7 +264,7 @@ public class Entorn {
         System.out.printf("Referències guardades: %d%n", referenciesGuardades);
     }
     // ################### METODOS EXTRAS: ARCHIVOS #####################################
-    /*public boolean validaLinia(String linia) {
+    public boolean validaLinia(String linia) {
         if (!linia.contains(";")) return false;
         String[] valores = linia.split(";");
         if (valores.length != 3) return false;
@@ -272,5 +272,5 @@ public class Entorn {
         if (Character.isLetter(valores[1].charAt(0))) return false;     // preu
         if (Character.isLetter(valores[2].charAt(0))) return false;     // estoc
         return true;
-    }*/
+    }
 }
