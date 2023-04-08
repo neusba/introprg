@@ -95,7 +95,9 @@ class Vi {
     // Recibe un array con los valores del vino y devuelve el Vino inicializado
     public static Vi deArrayString(String[] valorsVi) {
         int preu = Integer.parseInt(valorsVi[1]);
+        if (preu < 0) return null;
         int estoc = Integer.parseInt(valorsVi[2]);
+        if (estoc < 0) return null;
         return(new Vi(valorsVi[0], preu, estoc));
     }
 }
