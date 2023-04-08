@@ -249,6 +249,7 @@ public class Entorn {
         botiga.iniciaRecorregut();
         while (true) {
             Vi instancia = botiga.getSeguent();
+            if (instancia != null) { System.out.println(instancia.toString()); }
             if (instancia == null) break;
             // transformamos las propiedades de la instancia a un string[]
             String valorsCSV = String.join(";", instancia.aArrayString());              // obtenemos un string bien formado ("...;...;") a partir del metodo

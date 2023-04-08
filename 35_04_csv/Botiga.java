@@ -69,7 +69,7 @@ class Botiga {
         for (int i=0; i<vins.length; i++) {
             // Si la posicion que encuentra es null
             if (vins[i] == null) {
-                return null;
+                continue;
             }
             // Si encuentra el vino en la tienda
             if (vins[i].getNom().toLowerCase().equals(nom.toLowerCase())) {
