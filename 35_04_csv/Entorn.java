@@ -269,8 +269,8 @@ public class Entorn {
         String[] valores = linia.split(";");
         if (valores.length != 3) return false;
         // control de tipos
-        if (Character.isLetter(valores[1].charAt(0))) return false;
-        if (Character.isLetter(valores[2].charAt(0))) return false;
+        if (Character.isLetter(valores[1].charAt(0))) return false;     // preu
+        if (Character.isLetter(valores[2].charAt(0))) return false;     // estoc
         return true;
     }
 }
