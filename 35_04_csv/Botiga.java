@@ -80,8 +80,8 @@ class Botiga {
                 }
                 // si no queda
                 Vi copia = new Vi(vins[i].getNom(), vins[i].getPreu(), vins[i].getEstoc());
+                System.out.println(copia.toString());
                 vins[i] = null;
-                System.out.println(vins[i].toString());
                 return copia; 
            }
         }
