@@ -18,8 +18,11 @@ class Hora {
     }
     // Específic
     public Hora(int hores, int minuts, int segons) throws Exception {
+        setHores(hores);
+        setMinuts(minuts);
+        setSegons(segons);
         // tractem d'assignar les hores
-        try {
+        /*try {
             setHores(hores);
         } catch (Exception e) {
             throw e;
@@ -35,7 +38,7 @@ class Hora {
             setSegons(segons);
         } catch (Exception e) {
             throw e;
-        }
+        }*/
     }
 
     // ########################### ACCESSORS #############################
