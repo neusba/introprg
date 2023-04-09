@@ -22,21 +22,18 @@ class Hora {
         try {
             setHores(hores);
         } catch (Exception e) {
-            System.out.println(e);
             throw e;
         }
         // tractem d'assignar els minuts
         try {
             setMinuts(minuts);
         } catch (Exception e) {
-            System.out.println(e);
             throw e;
         }
         // tractem d'assignar els segons
         try {
             setSegons(segons);
         } catch (Exception e) {
-            System.out.println(e);
             throw e;
         }
     }
