@@ -21,24 +21,6 @@ class Hora {
         setHores(hores);
         setMinuts(minuts);
         setSegons(segons);
-        // tractem d'assignar les hores
-        /*try {
-            setHores(hores);
-        } catch (Exception e) {
-            throw e;
-        }
-        // tractem d'assignar els minuts
-        try {
-            setMinuts(minuts);
-        } catch (Exception e) {
-            throw e;
-        }
-        // tractem d'assignar els segons
-        try {
-            setSegons(segons);
-        } catch (Exception e) {
-            throw e;
-        }*/
     }
 
     // ########################### ACCESSORS #############################
