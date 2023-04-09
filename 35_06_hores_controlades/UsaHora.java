@@ -1,3 +1,8 @@
+/* Fitxer que conté el main per fer funcional el programa que tracta la classe Hora
+ * Aquesta vegada implementarem el control d'excepcions de manera manual ja que encara no coneixem 
+ *  el try catch
+ */
+
 public class UsaHora {
     public static void main(String[] args) {
         Hora hora = new Hora();
