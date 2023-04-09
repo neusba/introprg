@@ -23,6 +23,7 @@ class Hora {
             setHores(hores);
         } catch (Exception e) {
             System.out.println(e);
+            return;
         }
         // tractem d'assignar els minuts
         try {
@@ -39,16 +40,6 @@ class Hora {
     }
 
     // ########################### ACCESSORS #############################
-    // Getters
-    public int getHores() {
-        return this.hores;
-    }
-    public int getMinuts() {
-        return this.minuts;
-    }
-    public int getSegons() {
-        return this.segons;
-    }
     // Setters amb CONTROL DE EXCEPTIONS
     public void setHores(int hores) throws Exception {
         if (hores>=0 && hores<24) {
@@ -70,6 +61,16 @@ class Hora {
         } else {
             throw new Exception("segons fora de rang: "+segons+"");
         }
+    }
+    // Getters
+    public int getHores() {
+        return this.hores;
+    }
+    public int getMinuts() {
+        return this.minuts;
+    }
+    public int getSegons() {
+        return this.segons;
     }
 
     // converteix instància a string
