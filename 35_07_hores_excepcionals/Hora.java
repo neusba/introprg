@@ -17,25 +17,27 @@ class Hora {
         segons = 0;
     }
     // Específic
-    public Hora(int hores, int minuts, int segons) {
+    public Hora(int hores, int minuts, int segons) throws Exception {
         // tractem d'assignar les hores
         try {
             setHores(hores);
         } catch (Exception e) {
             System.out.println(e);
-            return;
+            throw e;
         }
         // tractem d'assignar els minuts
         try {
             setMinuts(minuts);
         } catch (Exception e) {
             System.out.println(e);
+            throw e;
         }
         // tractem d'assignar els segons
         try {
             setSegons(segons);
         } catch (Exception e) {
             System.out.println(e);
+            throw e;
         }
     }
 
