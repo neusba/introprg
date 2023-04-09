@@ -8,22 +8,11 @@ public class UsaHora {
         // tractem d'assignar les hores
         try {
             hora.setHores(hores);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        // tractem d'assignar els minuts
-        try {
             hora.setMinuts(minuts);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        // tractem d'assignar els segons
-        try {
             hora.setSegons(segons);
         } catch (Exception e) {
             System.out.println(e);
         }
-
     }
     public static void main(String[] args) {
         Hora hora = new Hora();
