@@ -15,7 +15,7 @@ enum GatPosicio {
             if (valor.name().equalsIgnoreCase(posicio)) return valor;
         }
         // tira excepcion si no encuentra un valor coincidente
-        throw new IllegalArgumentException(String.format("Posició %s no suportada per GatPosicio", posicio));
+        throw new IllegalArgumentException(String.format("Valor \"%s\" no suportat per GatPosicio", posicio));
     }
 }
 
