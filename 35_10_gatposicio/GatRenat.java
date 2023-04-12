@@ -7,6 +7,9 @@ class GatRenat {
     private GatPosicio posicio;
 
     // ##### METODES #####
+    public GatRenat() {
+        posicio = GatPosicio.ESTIRAT;
+    }
     public GatRenat(GatPosicio posicio) {
         setPosicio(posicio);
     }
