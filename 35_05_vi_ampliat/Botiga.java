@@ -44,26 +44,28 @@ class Botiga {
         // Si no encuentra el mismo nombre y la tienda esta llena, devuelve
             return null;
     }
-
+   
+    // Busca vino por referencia 
     public Vi cerca(String ref) {
-        // recibo la referncia de un vino
-        // normalizamos la referencia para poder buscarlo en la tienda
+        // recibo referencia de un vino
+        // normalizamos referencia  para poder buscarlo en la tienda
         ref = Vi.normalitzaString(ref);
-        // buscamos la misma referencia en la tienda
+        // buscamos el mismo nombre en la tienda
         for (int i=0; i<vins.length; i++) {
             // Si la posicion encontrada es null, continua
             if (vins[i] == null) {
                 continue;
             }
             // Si lo encuentra
-            if (vins[i].getRef().equalsIgnoreCase(ref)) {
+            if (vins[i].getRef().toLowerCase().equals(ref.toLowerCase())) {
                return vins[i];
             }
        }
         // Si acaba el recorrido de la tienda y no ha coincidido el nombre
         return null;
     }
-
+    
+    // Elimina vino por referencia
     public Vi elimina(String ref) {
         ref = Vi.normalitzaString(ref);
         for (int i=0; i<vins.length; i++) {
@@ -86,27 +88,8 @@ class Botiga {
         // Si no encuentra el vino
         return null;
     }
-    // ############ NOU METODE ###############
-    public Vi cerca(Vi plantilla) {
-        // especifiquem els valors que ens interesen
-        = Vi.normalitzaString(Entrada.readLine());
-        plantilla.ref = Vi.normalitzaString(Entrada.readLine());
-        plantilla.preu = Integer.parseInt(Entrada.readLine());
-        plantilla.estoc = Integer.parseInt(Entrada.readLine());
-        plantilla.lloc = Vi.normalitzaString(Entrada.readLine());
-        plantilla.origen = Vi.normalitzaString(Entrada.readLine());
-        plantilla.tipus = Vi.normalitzaString(Entrada.readLine());
-        plantilla.collita = Vi.normalitzaString(Entrada.readLine());
-        // recorrem la bodega
-        for (int i=0; i<vins.length; i++) {
-            if (vins[i] == plantilla) {
-                return vins[i];
-            }
-        }
-        return null;
-    }
 
-    // ################################ METODES PER GESTIO DE FITXERS ##############################
+    // ################################ NOUS METODES ##############################
     public void iniciaRecorregut() {
         posicionRecorrido = 0;        
     }
@@ -118,6 +101,23 @@ class Botiga {
         }
         posicionRecorrido += 1;
         return(vins[posicionRecorrido - 1]);
+    }
+
+    // NUEVO METODO A AÑADIR #############################################################################################
+    public Vi cerca(Vi plantilla) {
+        for (Vi vi : vins) {
+            if (vi == null) continue;
+            if (!plantilla.getRef().isEmpty() && !plantilla.getRef().equalsIgnoreCase(vi.getRef())) continue;
+            if (!plantilla.getNom().isEmpty() && !plantilla.getNom().equalsIgnoreCase(vi.getNom())) continue;
+            if (plantilla.getPreu() != vi.getPreu()) continue;
+            if (plantilla.getEstoc() != vi.getEstoc()) continue;
+            if (!plantilla.getLloc().isEmpty() && !plantilla.getLloc().equalsIgnoreCase(vi.getLloc())) continue;
+            if (!plantilla.getOrigen().isEmpty() && !plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen())) continue;
+            if (!plantilla.getTipus().isEmpty() && !plantilla.getTipus().equalsIgnoreCase(vi.getTipus())) continue;
+            if (!plantilla.getCollita().isEmpty() && !plantilla.getCollita().equalsIgnoreCase(vi.getCollita())) continue;
+            return vi;
+        }
+        return null;
     }
 }
 

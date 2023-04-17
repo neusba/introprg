@@ -44,7 +44,9 @@ class Botiga {
         // Si no encuentra el mismo nombre y la tienda esta llena, devuelve
             return null;
     }
-
+    
+    // MODIFICAR METODO ####################################################################################################
+    // public Vi cerca(String ref) {}
     public Vi cerca(String nom) {
         // recibo el nombre de un vino
         // normalizamos el nombre para poder buscarlo en la tienda
@@ -64,6 +66,8 @@ class Botiga {
         return null;
     }
 
+    // MODIFICAR METODO ####################################################################################################
+    // public Vi elimina(String ref) {}
     public Vi elimina(String nom) {
         nom = Vi.normalitzaNom(nom);
         for (int i=0; i<vins.length; i++) {
@@ -100,5 +104,12 @@ class Botiga {
         posicionRecorrido += 1;
         return(vins[posicionRecorrido - 1]);
     }
+
+    // NUEVO METODO A AÑADIR #############################################################################################
+    // public Vi cerca(Vi plantilla) {
+    //  for (int i=0; i<vins.length; i++) {
+    //         if (vins[i] != null) {
+    //                  if (plantilla.getNom() != null) {
+    //          /* ... */
 }
 

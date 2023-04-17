@@ -8,6 +8,16 @@ class Vi {
     private int preu;
     private int estoc = 0;
 
+    // private String ref;
+    // private String lloc;
+    // private String origen;   ################################################
+    // private String tipus;
+    // private String collita;
+    
+    // CONSTRUCTOR UNICO ###########################################################
+    // public Vi(String ref, String nom, int preu, intr estoc, String lloc, String origen, String tipus, String collita) {} ###############################
+
+
     // Constructors
     public Vi(String nom, int preu) {
         this.nom = normalitzaNom(nom); 
@@ -42,6 +52,12 @@ class Vi {
     public int getEstoc() {
         return this.estoc;
     }
+    // public String getRef() {}
+    // public String getLloc() {}
+    // public String getOrigen() {} #########################################################################################
+    // public String getTipus() {}
+    // public String getCollita() {}
+
     // setters
     public void setPreu(int preu) {
         // El precio ya se recibe en céntimos, no hace falta conversión
@@ -58,6 +74,17 @@ class Vi {
             this.estoc = estoc;
         }
     }
+    // public void setLloc(String lloc) {} ##################################################################################
+    
+
+    // EDITAR ESTE METODO #####################################################################################################
+    // public boolean esValid() {
+    //  Se tiene que adequar al nuevo normalitzaString();
+    //          if (getNom().isEmpty() || getNom().isBlank() || getNom() == null) return true;(?)
+    //          if (this.preu == -1 || this.estoc == -1) return false;
+    //          return true;
+
+
 
     // Methods
     public boolean esValid() {
@@ -68,6 +95,17 @@ class Vi {
         if (this.preu == -1 || this.estoc == -1) { return false; }
         return true;
     }
+    
+    // Editar este metodo ####################################################################################################
+    // public static String normalitzaString(String propietat) {}
+    //  accepta valor null y cadena vacia o blank. Se devuelven como null de todas formas
+    //          if (nom.isEmpty() || nom.isBlank() || nom == null) return null;
+    //          valor = valor.strip();
+    //          valor = valor.replaceAll("\\s+", " ");
+    //          return valor;
+
+
+
     public static String normalitzaNom(String nom) {
         // checkea si el nombre és un nombre válido, si no lo es, devuelve "NOM NO VÀLID"
         if (nom.isEmpty() || nom.isBlank() || nom == null) {
@@ -79,6 +117,8 @@ class Vi {
         nom = nom.replaceAll("\\s+", " ");      // une 2 o más ws consecutivos en 1 solo
         return nom;
     }
+
+    // MODIFICAR TOSTRING PARA QUE MUESTRE TODAS LAS NUEVAS PROPIEDADES #########################################################
     // @toString
     @Override public String toString() {
         return(String.format("%n    Vi: %s%n    Preu: %d%n    Estoc: %d%n", this.nom, this.preu, this.estoc));
@@ -92,6 +132,24 @@ class Vi {
         String[] valors = { this.nom, preuArray, estocArray };
         return valors;
     }
+
+
+    // MODIFICAR METODO ########################################################################################################
+    // public static Vi deArrayString(String[] valorsVi) {
+    //          if (valorsVi.lengty != 8) return null;
+    //          // comprovar preu
+                // comprovar estoc
+                // comprovar nom
+                // comprovar ref
+                // comprovar lloc
+                // comprovar tipus
+                // comprovar origen
+                // comprovar collita
+                
+                // convertir necesarios
+                // inicializar
+    // #######################################################################################################################
+
     // Recibe un array con los valores del vino y devuelve el Vino inicializado
     public static Vi deArrayString(String[] valorsVi) {
         if (valorsVi.length != 3) return null;
