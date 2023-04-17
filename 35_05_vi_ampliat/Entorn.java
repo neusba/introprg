@@ -58,7 +58,7 @@ public class Entorn {
         // Creem un array per guardar les propietats seguents a ref
         String[] propietats = { nom, preu, estoc, lloc, origen, tipus, collita };
         // Demanem la primera
-        System.out.print("ref>");
+        System.out.print("ref> ");
         ref = Entrada.readLine();
         if (!ref.isEmpty()) { botiga.cerca(ref); return; }
         // recorrem l'array de propietats
