@@ -18,7 +18,7 @@ public class EnvoltaString {
     }
     
     // sobrecárrega
-    /*public boolean equals(String valor) {
+    public boolean equals(String valor) {
         return this.valor.equalsIgnoreCase(valor);
-    }*/
+    }
 }
