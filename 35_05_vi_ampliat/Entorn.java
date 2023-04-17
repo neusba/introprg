@@ -55,19 +55,20 @@ public class Entorn {
         String ref="", nom="", preu="", estoc="", lloc="", origen="", tipus="", collita="";
         int preuInt;
         int estocInt;
-        // Creem un array per guardar les propietats seguents a ref
+        // Creem un array per guardar les propietats seguents a ref i un altre identic per guardar paraules clau
         String[] propietats = { nom, preu, estoc, lloc, origen, tipus, collita };
+        String[] nomVariables = { "nom", "preu", "estoc", "lloc", "origen", "tipus", "collita" };
         // Demanem la primera
         System.out.print("ref> ");
         ref = Entrada.readLine();
         if (!ref.isEmpty()) { botiga.cerca(ref); return; }
         // recorrem l'array de propietats
-        for (String propietat : propietats) {
-            System.out.printf("%s> ", propietat);
-            propietat = Entrada.readLine();
-            if (propietats.equals("!")) break;
-            if (propietats.equals("")) continue;        
-        }
+        for (int i=0; i<propietats.length; i++) {
+            System.out.printf("%s> ", nomVariables[i]);
+            propietats[i] = Entrada.readLine();
+            if (propietats[i].equals("!")) break;
+            if (propietats[i].equals("")) continue;
+        } 
         // Convertimos los String a int
         if (preu.equals("") || preu.equals("!")) preu = "-1";
         preuInt = Integer.parseInt(preu);
