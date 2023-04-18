@@ -81,7 +81,7 @@ class Vi {
     
     // Editar este metodo
     public static String normalitzaString(String propietat) {
-        if (propietat.isEmpty() || propietat.isBlank() || propietat == null) return null;
+        if (propietat.isEmpty() || propietat.isBlank() || propietat == null) return "";
         propietat = propietat.strip();
         propietat = propietat.replaceAll("\\s+", " ");
         return propietat;

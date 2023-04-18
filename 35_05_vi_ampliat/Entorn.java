@@ -63,40 +63,47 @@ public class Entorn {
         ref = Entrada.readLine();
         if (!ref.isEmpty()) { 
             Vi instanciaRef = botiga.cerca(ref);
-            return;
-        }
-        // recorrem l'array de propietats
-        for (int i=0; i<propietats.length; i++) {
-            System.out.printf("%s> ", nomVariables[i]);
-            propietats[i] = Entrada.readLine();
-            if (nomVariables[i].equals("preu max.")) {
-                if (propietats[i].length() > 0) {
-                    if (Character.isLetter(propietats[i].charAt(0))) {
-                        System.out.println("ERROR: el valor ha de ser un enter positiu");
-                        return;
+            if (instanciaRef != null) {
+                System.out.println("Trobat");
+                System.out.println(instanciaRef);
+            } else {
+                System.out.println("No trobat");
+            }
+        return;
+        } else {
+            // recorrem l'array de propietats
+            for (int i=0; i<propietats.length; i++) {
+                System.out.printf("%s> ", nomVariables[i]);
+                propietats[i] = Entrada.readLine();
+                if (nomVariables[i].equals("preu max.")) {
+                    if (propietats[i].length() > 0) {
+                        if (Character.isLetter(propietats[i].charAt(0))) {
+                            System.out.println("ERROR: el valor ha de ser un enter positiu");
+                            return;
+                        }
                     }
                 }
-            }
-            if (nomVariables[i].equals("estoc min.")) {
-                if (propietats[i].length() > 0) { 
-                    if (Character.isLetter(propietats[i].charAt(0))) {
-                        System.out.println("ERROR: el valor ha de ser un enter positiu");
-                        return;
+                if (nomVariables[i].equals("estoc min.")) {
+                    if (propietats[i].length() > 0) { 
+                        if (Character.isLetter(propietats[i].charAt(0))) {
+                            System.out.println("ERROR: el valor ha de ser un enter positiu");
+                            return;
+                        }
                     }
                 }
+                if (propietats[i].equals("!")) break;
+                if (propietats[i].equals("")) continue;
+            } 
+            // Convertimos los String a int
+            if (preu.equals("") || preu.equals("!")) {
+                preu = "-1";
             }
-            if (propietats[i].equals("!")) break;
-            if (propietats[i].equals("")) continue;
-        } 
-        // Convertimos los String a int
-        if (preu.equals("") || preu.equals("!")) {
-            preu = "-1";
+            preuInt = Integer.parseInt(preu);
+            if (estoc.equals("") || estoc.equals("!") || Character.isLetter(estoc.charAt(0))) {
+                estoc = "-1";
+            }
+            estocInt = Integer.parseInt(estoc);
         }
-        preuInt = Integer.parseInt(preu);
-        if (estoc.equals("") || estoc.equals("!") || Character.isLetter(estoc.charAt(0))) {
-            estoc = "-1";
-        }
-        estocInt = Integer.parseInt(estoc);
         // creamos la instancia de vino 
         Vi instancia = botiga.cerca(new Vi(ref, nom, preuInt, estocInt, lloc, origen, tipus, collita));
         if (instancia == null) {
@@ -298,11 +305,9 @@ public class Entorn {
             referenciesLlegides += 1;                                                   // sumamos una referencia leidas VALIDAS
             String[] valors = linia.split(";");
             Vi instancia = Vi.deArrayString(valors);                                    // creacion de vino a partir de datos
-            if (instancia != null) { botiga.afegeix(instancia); 
-            }else{
-                System.out.println("no se puede añadir a la botiga porque es null");
+            if (instancia != null) { 
+                botiga.afegeix(instancia);
             }
-                    // añadimos vino
         }
         input.close();                                                                  // cierra archivo
         return(String.format("Referències llegides: %d", referenciesLlegides));
