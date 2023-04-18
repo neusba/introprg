@@ -61,7 +61,10 @@ public class Entorn {
         // Demanem la primera
         System.out.print("ref> ");
         ref = Entrada.readLine();
-        if (!ref.isEmpty()) { botiga.cerca(ref); return; }
+        if (!ref.isEmpty()) { 
+            Vi instanciaRef = botiga.cerca(ref);
+            return;
+        }
         // recorrem l'array de propietats
         for (int i=0; i<propietats.length; i++) {
             System.out.printf("%s> ", nomVariables[i]);
@@ -191,7 +194,7 @@ public class Entorn {
             }
             System.out.println("No eliminat");
         }
-    }*/
+    } */
 
     // comanda DEFAULT
     public static void def() {
@@ -275,14 +278,18 @@ public class Entorn {
             referenciesLlegides += 1;                                                   // sumamos una referencia leidas VALIDAS
             String[] valors = linia.split(";");
             Vi instancia = Vi.deArrayString(valors);                                    // creacion de vino a partir de datos
-            if (instancia != null) { botiga.afegeix(instancia); }                       // añadimos vino
+            if (instancia != null) { botiga.afegeix(instancia); 
+            }else{
+                System.out.println("no se puede añadir a la botiga porque es null");
+            }
+                    // añadimos vino
         }
         input.close();                                                                  // cierra archivo
         return(String.format("Referències llegides: %d", referenciesLlegides));
     }
     // ultimo contacto con archivo Botiga.csv
     // abrimos el archivo en modo escritura
-    public void escriuArxiu() throws IOException {
+/*    public void escriuArxiu() throws IOException {
         int referenciesGuardades = 0;
         BufferedWriter output = new BufferedWriter(new FileWriter(arxiu));              // abrimos en modo escritura
         // iniciamos el recorrido de la bodega para escribir los vinos en el archivo
@@ -299,7 +306,7 @@ public class Entorn {
         }
         output.close();                                                                 // cierra archivo
         System.out.printf("Referències guardades: %d%n", referenciesGuardades);
-    }
+    } */
     // ################### METODOS EXTRAS: ARCHIVOS #####################################
     public boolean validaLinia(String linia) {
         if (!linia.contains(";")) return false;

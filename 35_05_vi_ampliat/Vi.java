@@ -89,7 +89,7 @@ class Vi {
 
     // @toString
     @Override public String toString() {
-        return(String.format("%n    Ref: %s%n   Vi: %s%n    Preu: %d%n    Estoc: %d%n   Lloc: %s%n      Origen: %s%n    Tipus: %s%n     Collita: %s%n", this.ref, this.nom, this.preu, this.estoc, this.lloc, this.origen, this.tipus, this.collita));
+        return(String.format("%n    Ref: %s%n    Vi: %s%n    Preu: %d%n    Estoc: %d%n    Lloc: %s%n    Origen: %s%n    Tipus: %s%n    Collita: %s%n", this.ref, this.nom, this.preu, this.estoc, this.lloc, this.origen, this.tipus, this.collita));
     }
 
     // ################ NUEVOS METODOS ########################
@@ -106,19 +106,19 @@ class Vi {
     public static Vi deArrayString(String[] valorsVi) {
         if (valorsVi.length != 8) return null;
         // comprova preu
-        if (Character.isLetter(valorsVi[3].charAt(0))) return null;
+        if (Character.isLetter(valorsVi[2].charAt(0))) return null;
         // comprovar estoc
-        if (Character.isLetter(valorsVi[5].charAt(0))) return null;
+        if (Character.isLetter(valorsVi[3].charAt(0))) return null;     // PETA ESTOC
         // comprovar nom/ref/lloc/origen/tipus/collita
         String nom = valorsVi[1];
         String ref = valorsVi[0];
-        String lloc = valorsVi[7];
-        String origen = valorsVi[6];
-        String tipus = valorsVi[2];
-        String collita = valorsVi[4];
-        int preu = Integer.parseInt(valorsVi[3]);
+        String lloc = valorsVi[4];
+        String origen = valorsVi[5];
+        String tipus = valorsVi[6];
+        String collita = valorsVi[7];
+        int preu = Integer.parseInt(valorsVi[2]);
         if (preu < 0) return null;
-        int estoc = Integer.parseInt(valorsVi[5]);
+        int estoc = Integer.parseInt(valorsVi[3]);
         if (estoc < 0) return null;
         // inicialitzem
         return(new Vi(ref, nom, preu, estoc, lloc, origen, tipus, collita));
