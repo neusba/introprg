@@ -95,6 +95,10 @@ public class Entorn {
             }
             estocInt = Integer.parseInt(estoc);
         }
+        // si la ref no esta buida
+        if (ref.equals("!")) {
+            return;
+        }
         // creamos la instancia de vino 
         Vi instancia = botiga.cerca(new Vi(ref, nom, preuInt, estocInt, lloc, origen, tipus, collita));
         if (instancia == null) {
