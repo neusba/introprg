@@ -57,7 +57,7 @@ public class Entorn {
         int estocInt;
         // Creem un array per guardar les propietats seguents a ref i un altre identic per guardar paraules clau
         String[] propietats = { nom, preu, estoc, lloc, origen, tipus, collita };
-        String[] nomVariables = { "nom", "preu", "estoc", "lloc", "origen", "tipus", "collita" };
+        String[] nomVariables = { "nom", "preu max.", "estoc min.", "lloc", "origen", "tipus", "collita" };
         // Demanem la primera
         System.out.print("ref> ");
         ref = Entrada.readLine();
