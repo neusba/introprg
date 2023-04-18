@@ -13,6 +13,6 @@ public class UsaEnvoltaString {
         System.out.printf("%s.equals(%s) -> %b%n", envoltaNom1, envoltaNom2, envoltaNom1.equals(envoltaNom2));
         System.out.printf("%s.equals(\"%s\") -> %b%n", envoltaNom1, nom2, envoltaNom1.equals(nom2));
         System.out.printf("\"%s\".equals(%s) -> %b%n", nom1, envoltaNom2, nom1.equals(envoltaNom2));
-        // Mai podrà ser TRUE perquè la funció equals només opera correctament en objectes que són del mateix tipus, si no ho són retornarà FALSE;
+        // Podria ser TRUE si puguesim editar 
     }
 }
