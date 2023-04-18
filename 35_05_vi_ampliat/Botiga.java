@@ -107,6 +107,7 @@ class Botiga {
     public Vi cerca(Vi plantilla) {
         for (Vi vi: vins) {
         if (vi == null) continue;
+        if (plantilla == null) return vi;
         if (! plantilla.getRef().isEmpty() && ! plantilla.getRef().equalsIgnoreCase(vi.getRef())) continue;
         if (! plantilla.getNom().isEmpty() && ! plantilla.getNom().equalsIgnoreCase(vi.getNom())) continue;
         if (plantilla.getPreu() >= 0 && plantilla.getPreu() <= vi.getPreu()) continue;
