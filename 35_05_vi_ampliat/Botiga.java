@@ -107,21 +107,21 @@ class Botiga {
         for (Vi vi: vins) {
         if (vi == null) continue;
         if (plantilla.getRef() != null) {
-            if (plantilla.getRef().equals(vi.getRef())) { return vi; }else{ continue; }}
+            if (plantilla.getRef().equalsIgnoreCase(vi.getRef())) { return vi; }else{ continue; }}
         if (plantilla.getNom() != null) {
-            if (plantilla.getNom().equals(vi.getNom())) { return vi; }else{ continue; }}
+            if (plantilla.getNom().equalsIgnoreCase(vi.getNom())) { return vi; }else{ continue; }}
         if (plantilla.getPreu() != -1) {
             if (plantilla.getPreu() == vi.getPreu()) { return vi; }else{ continue; }}
         if (plantilla.getEstoc() != -1) {
             if (plantilla.getEstoc() == vi.getEstoc()) { return vi; }else{ continue; }}
         if (plantilla.getLloc() != null) {
-            if (plantilla.getLloc().equals(vi.getLloc())) { return vi; }else{ continue; }}
+            if (plantilla.getLloc().equalsIgnoreCase(vi.getLloc())) { return vi; }else{ continue; }}
         if (plantilla.getOrigen() != null) {
-            if (plantilla.getOrigen().equals(vi.getOrigen())) { return vi; }else{ continue; }}
+            if (plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen())) { return vi; }else{ continue; }}
         if (plantilla.getTipus() != null) {
-            if (plantilla.getTipus().equals(vi.getTipus())) { return vi; }else{ continue; }}
+            if (plantilla.getTipus().equalsIgnoreCase(vi.getTipus())) { return vi; }else{ continue; }}
         if (plantilla.getCollita() != null) {
-            if (plantilla.getCollita().equals(vi.getCollita())) { return vi; }else{ continue; }}
+            if (plantilla.getCollita().equalsIgnoreCase(vi.getCollita())) { return vi; }else{ continue; }}
         return vi;
         }
         return null;
