@@ -111,9 +111,9 @@ class Botiga {
         if (plantilla.getNom() != null) {
             if (plantilla.getNom().equalsIgnoreCase(vi.getNom())) { return vi; }else{ continue; }}
         if (plantilla.getPreu() != -1) {
-            if (plantilla.getPreu() <= vi.getPreu()) { return vi; }else{ continue; }}
+            if (plantilla.getPreu() == vi.getPreu()) { return vi; }else{ continue; }}
         if (plantilla.getEstoc() != -1) {
-            if (plantilla.getEstoc() <= vi.getEstoc()) { return vi; }else{ continue; }}
+            if (plantilla.getEstoc() == vi.getEstoc()) { return vi; }else{ continue; }}
         if (plantilla.getLloc() != null) {
             if (plantilla.getLloc().equalsIgnoreCase(vi.getLloc())) { return vi; }else{ continue; }}
         if (plantilla.getOrigen() != null) {
