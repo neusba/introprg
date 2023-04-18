@@ -69,6 +69,12 @@ public class Entorn {
         for (int i=0; i<propietats.length; i++) {
             System.out.printf("%s> ", nomVariables[i]);
             propietats[i] = Entrada.readLine();
+            if (nomVariables[i].equals("preu max.")) {
+                if (Character.isLetter(propietats[i].charAt(0))) {
+                    System.out.println("Ha de ser un número enter");
+                    return;
+                }
+            }
             if (propietats[i].equals("!")) break;
             if (propietats[i].equals("")) continue;
         } 
