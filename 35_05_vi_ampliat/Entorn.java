@@ -72,8 +72,7 @@ public class Entorn {
             if (nomVariables[i].equals("preu max.")) {
                 if (Character.isLetter(preu.charAt(0))) {
                     System.out.println("Ha de ser un nombre enter");
-                    i=0;
-                    continue;
+                    return;
                 }
             }
             if (propietats[i].equals("!")) break;
