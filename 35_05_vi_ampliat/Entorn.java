@@ -71,7 +71,13 @@ public class Entorn {
             propietats[i] = Entrada.readLine();
             if (nomVariables[i].equals("preu max.")) {
                 if (Character.isLetter(propietats[i].charAt(0))) {
-                    System.out.println("Ha de ser un número enter");
+                    System.out.println("ERROR: el valor ha de ser un enter positiu");
+                    return;
+                }
+            }
+            if (nomVariables[i].equals("estoc min.")) {
+                if (Character.isLetter(propietats[i].charAt(0))) {
+                    System.out.println("ERROR: el valor ha de ser un enter positiu");
                     return;
                 }
             }
