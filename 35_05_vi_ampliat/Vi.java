@@ -89,7 +89,7 @@ class Vi {
 
     // @toString
     @Override public String toString() {
-        return(String.format("%n    Ref: %s%n    Vi: %s%n    Preu: %d%n    Estoc: %d%n    Lloc: %s%n    Origen: %s%n    Tipus: %s%n    Collita: %s%n", this.ref, this.nom, this.preu, this.estoc, this.lloc, this.origen, this.tipus, this.collita));
+        return(String.format("%n    Ref: %s%n    Nom: %s%n    Preu: %d%n    Estoc: %d%n    Lloc: %s%n    Origen: %s%n    Tipus: %s%n    Collita: %s%n", this.ref, this.nom, this.preu, this.estoc, this.lloc, this.origen, this.tipus, this.collita));
     }
 
     // ################ NUEVOS METODOS ########################
