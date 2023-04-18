@@ -73,9 +73,13 @@ public class Entorn {
             if (propietats[i].equals("")) continue;
         } 
         // Convertimos los String a int
-        if (preu.equals("") || preu.equals("!")) preu = "-1";
-        preuInt = Integer.parseInt(preu);
-        if (estoc.equals("") || estoc.equals("!")) estoc = "-1";
+        if (preu.equals("") || preu.equals("!") || Character.isLetter(preu.charAt(0))) {
+            preu = "-1";
+        }
+         preuInt = Integer.parseInt(preu);
+        if (estoc.equals("") || estoc.equals("!") || Character.isLetter(estoc.charAt(0))) {
+            estoc = "-1";
+        }
         estocInt = Integer.parseInt(estoc);
         // creamos la instancia de vino 
         Vi instancia = botiga.cerca(new Vi(ref, nom, preuInt, estocInt, lloc, origen, tipus, collita));
