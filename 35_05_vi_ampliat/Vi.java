@@ -108,7 +108,7 @@ class Vi {
         // comprova preu
         if (Character.isLetter(valorsVi[2].charAt(0))) return null;
         // comprovar estoc
-        if (Character.isLetter(valorsVi[3].charAt(0))) return null;     // PETA ESTOC
+        if (Character.isLetter(valorsVi[3].charAt(0))) return null;  
         // comprovar nom/ref/lloc/origen/tipus/collita
         String nom = valorsVi[1];
         String ref = valorsVi[0];
