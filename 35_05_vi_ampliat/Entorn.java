@@ -69,22 +69,23 @@ public class Entorn {
         for (int i=0; i<propietats.length; i++) {
             System.out.printf("%s> ", nomVariables[i]);
             propietats[i] = Entrada.readLine();
+            if (nomVariables[i].equals("preu max.")) {
+                if (Character.isLetter(preu.charAt(0))) {
+                    System.out.println("Ha de ser un nombre enter");
+                    i=0;
+                    continue;
+                }
+            }
             if (propietats[i].equals("!")) break;
             if (propietats[i].equals("")) continue;
         } 
         // Convertimos los String a int
         if (preu.equals("") || preu.equals("!")) {
             preu = "-1";
-        } else if (Character.isLetter(preu.charAt(0))) {
-            System.out.println("Ha de ser un nombre enter");
-            return;
         }
         preuInt = Integer.parseInt(preu);
         if (estoc.equals("") || estoc.equals("!") || Character.isLetter(estoc.charAt(0))) {
             estoc = "-1";
-        } else if (Character.isLetter(estoc.charAt(0))) {
-            System.out.println("Ha de ser un nombre enter");
-            return;
         }
         estocInt = Integer.parseInt(estoc);
         // creamos la instancia de vino 
