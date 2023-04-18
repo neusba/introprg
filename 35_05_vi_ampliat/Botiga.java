@@ -102,19 +102,45 @@ class Botiga {
         posicionRecorrido += 1;
         return(vins[posicionRecorrido - 1]);
     }
-
+    // ref, nom, preu, estoc, lloc, origen, tipus, collita
     // NUEVO METODO A AÑADIR #############################################################################################
     public Vi cerca(Vi plantilla) {
         for (Vi vi : vins) {
             if (vi == null) continue;
-            if (!plantilla.getRef().isEmpty() && !plantilla.getRef().equalsIgnoreCase(vi.getRef())) continue;
-            if (!plantilla.getNom().isEmpty() && !plantilla.getNom().equalsIgnoreCase(vi.getNom())) continue;
-            if (plantilla.getPreu() != vi.getPreu()) continue;
-            if (plantilla.getEstoc() != vi.getEstoc()) continue;
-            if (!plantilla.getLloc().isEmpty() && !plantilla.getLloc().equalsIgnoreCase(vi.getLloc())) continue;
-            if (!plantilla.getOrigen().isEmpty() && !plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen())) continue;
-            if (!plantilla.getTipus().isEmpty() && !plantilla.getTipus().equalsIgnoreCase(vi.getTipus())) continue;
-            if (!plantilla.getCollita().isEmpty() && !plantilla.getCollita().equalsIgnoreCase(vi.getCollita())) continue;
+            if (plantilla == null) return vi;
+
+            if (plantilla.getRef() == null) { continue;
+            }else{
+                if (plantilla.getRef().equals(vi.getRef())) return vi;
+            }
+            if (plantilla.getNom() == null) { continue;
+            }else{
+                if (plantilla.getNom().equals(vi.getNom())) return vi;
+            }
+            if (plantilla.getPreu() == -1) { continue;
+            }else{
+                if (plantilla.getPreu() == vi.getPreu()) return vi;
+            }
+            if (plantilla.getEstoc() == -1) { continue;
+            }else{
+                if (plantilla.getEstoc() == vi.getEstoc()) return vi;
+            }
+            if (plantilla.getLloc() == null) { continue;
+            }else{
+                if (plantilla.getLloc().equals(vi.getLloc())) return vi; 
+            }
+            if (plantilla.getOrigen() == null) { continue;
+            }else{
+                if (plantilla.getOrigen().equals(vi.getOrigen())) return vi; 
+            }
+            if (plantilla.getTipus() == null) { continue;
+            }else{
+                if (plantilla.getTipus().equals(vi.getTipus())) return vi; 
+            }
+            if (plantilla.getCollita() == null) { continue;
+            }else{
+                if (plantilla.getCollita().equals(vi.getCollita())) return vi; 
+            }
             return vi;
         }
         return null;
