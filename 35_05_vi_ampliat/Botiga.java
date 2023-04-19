@@ -106,7 +106,7 @@ class Botiga {
     public Vi cerca(Vi plantilla) {
         for (Vi vi: vins) {
         if (vi == null) continue;
-        if (! plantilla.getRef().isEmpty() && ! plantilla.getRef().equalsIgnoreCase(vi.getRef())) continue;
+        /*if (! plantilla.getRef().isEmpty() && ! plantilla.getRef().equalsIgnoreCase(vi.getRef())) continue;
         if (! plantilla.getNom().isEmpty() && ! plantilla.getNom().equalsIgnoreCase(vi.getNom())) continue;
         if (plantilla.getPreu() >= 0 && plantilla.getPreu() <= vi.getPreu()) continue;
         if (plantilla.getPreu() >= 0 && plantilla.getPreu() <= vi.getPreu()) continue;
@@ -114,7 +114,8 @@ class Botiga {
         if (! plantilla.getLloc().isEmpty() && ! plantilla.getLloc().equalsIgnoreCase(vi.getLloc())) continue;
         if (! plantilla.getOrigen().isEmpty() && ! plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen())) continue;
         if (! plantilla.getTipus().isEmpty() && ! plantilla.getTipus().equalsIgnoreCase(vi.getTipus())) continue;
-        if (! plantilla.getCollita().isEmpty() && ! plantilla.getCollita().equalsIgnoreCase(vi.getCollita())) continue;
+        if (! plantilla.getCollita().isEmpty() && ! plantilla.getCollita().equalsIgnoreCase(vi.getCollita())) continue;*/
+        if (!plantilla.getRef().isEmpty() && plantilla.getRef().equalsIgnoreCase(vi.getRef()))  return vi; 
         return vi;
         }
         return null;
