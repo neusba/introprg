@@ -16,7 +16,7 @@ enum GatPosicio {
             GatPosicio valor = GatPosicio.valueOf(posicio);
             return valor;
         } catch (IllegalArgumentException e) {
-           throw new IllegalArgumentException("Valor \"posicio\" no suportat per GatPosicio");
+           throw new IllegalArgumentException("Valor \"content\" no suportat per GatPosicio");
         }
     }
 }
