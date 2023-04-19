@@ -11,11 +11,13 @@ enum GatPosicio {
     // METODOS
     // este metodo se encarga de devolver un valor de la lista enum a partir del String que le pasamos por paràmetro
     public static GatPosicio fromString(String posicio) { 
-        for (GatPosicio valor: GatPosicio.values()) {
-            if (valor.name().equalsIgnoreCase(posicio)) return valor;
+        posicio = posicio.toUpperCase();
+        try {
+            GatPosicio valor = GatPosicio.valueOf(posicio);
+            return valor;
+        } catch (IllegalArgumentException e) {
+            throw e;
         }
-        // tira excepcion si no encuentra un valor coincidente
-        throw new IllegalArgumentException(String.format("Valor \"%s\" no suportat per GatPosicio", posicio));
     }
 }
 
