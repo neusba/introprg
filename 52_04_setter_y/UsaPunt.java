@@ -5,19 +5,21 @@
 public class UsaPunt {
     public static void main(String[] args){
         Punt punt = new Punt();
-        int x;
-        int y;
-        try {
-            x = Integer.parseInt(args[0]);
-        } catch (NumberFormatException e) {
-            x = 0;
+        int x = 0;
+        int y = 0;
+        if (args.length > 0) {
+            try {
+                x = Integer.parseInt(args[0]);
+            } catch (NumberFormatException e) {
+                x = x;
+            }
+        } else if (args.length > 1) {
+            try {
+                y = Integer.parseInt(args[1]);
+            } catch (NumberFormatException e) {
+                y = y;
+            }
         }
-        try {
-            y = Integer.parseInt(args[1]);
-        } catch (NumberFormatException e) {
-            y = 0;
-        }
-
         punt.setX(x);
         punt.setY(y);
         System.out.printf("punt.getX() -> %d%n", punt.getX());
