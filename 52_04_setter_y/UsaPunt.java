@@ -11,13 +11,13 @@ public class UsaPunt {
             try {
                 x = Integer.parseInt(args[0]);
             } catch (NumberFormatException e) {
-                x = x;
-            }
-        } else if (args.length > 1) {
-            try {
-                y = Integer.parseInt(args[1]);
-            } catch (NumberFormatException e) {
-                y = y;
+            } finally {
+                if (args.length > 1) {
+                    try {
+                        y = Integer.parseInt(args[1]);
+                    } catch (NumberFormatException e) {
+                    }
+                }
             }
         }
         punt.setX(x);
