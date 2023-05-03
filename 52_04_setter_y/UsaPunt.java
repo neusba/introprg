@@ -1,12 +1,23 @@
-/* Fitxé que conté el main que farà ús de la classe Punt la qual estarà sent provada pels nostres tests
- * Aquesta classe interactua amb les altres dues
+/* Fitxer que conté el main que s'utilizarà per fer ús de la classe Punt la qual estarà sent testejada
+ * pels tests creats a la classe TestPunt
  */
 
 public class UsaPunt {
     public static void main(String[] args){
         Punt punt = new Punt();
-        int x = // args[0] si hi és i és enter, o 0 altrament
-        int y = //  args[1] si hi és i és enter, o 0 altrament
+        int x;
+        int y;
+        try {
+            x = Integer.parseInt(args[0]);
+        } catch (NumberFormatException e) {
+            x = 0;
+        }
+        try {
+            y = Integer.parseInt(args[0]);
+        } catch (NumberFormatException e) {
+            y = 0;
+        }
+
         punt.setX(x);
         punt.setY(y);
         System.out.printf("punt.getX() -> %d%n", punt.getX());
