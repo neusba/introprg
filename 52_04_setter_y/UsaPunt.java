@@ -13,7 +13,7 @@ public class UsaPunt {
             x = 0;
         }
         try {
-            y = Integer.parseInt(args[0]);
+            y = Integer.parseInt(args[1]);
         } catch (NumberFormatException e) {
             y = 0;
         }
