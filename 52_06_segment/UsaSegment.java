@@ -13,7 +13,7 @@ public class UsaSegment {
             y1 = Integer.parseInt(args[1]);
             x2 = Integer.parseInt(args[2]);
             y2 = Integer.parseInt(args[3]);
-        } catch (NumberFormatException e) {}
+        } catch (Exception e) {}
     
         Punt punt1 = new Punt(x1, y1);
         Punt punt2 = new Punt(x2, y2);
