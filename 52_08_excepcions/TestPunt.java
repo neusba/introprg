@@ -64,4 +64,14 @@ public class TestPunt {
                 () -> Assertions.assertEquals(8, p1.getY())
         );
     }
+
+    // ###################### EXCEPTIONS ###############################
+    @Test
+    public void controlaNegatius() {
+        Punt p = new Punt(1, -3);
+        Assertions.assertAll(
+            () -> Assertions.assertThrows(IllegalArgumentException.class, () -> p.setX(-1)),
+            () -> Assertions.assertThrows(IllegalArgumentException.class, () -> p.setY(-1))
+        );
+    }
 }

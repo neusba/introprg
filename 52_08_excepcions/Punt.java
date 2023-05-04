@@ -6,8 +6,8 @@ public class Punt {
     private int[] coord = {0, 0};
     // constructor específic
     public Punt(int x, int y) {
-        this.coord[0] = x;
-        this.coord[1] = y;
+        setX(x);
+        setY(y);
     }
     // constructor per defecte
     public Punt() {}
