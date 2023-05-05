@@ -68,7 +68,7 @@ public class TestPunt {
     // ###################### EXCEPTIONS ###############################
     @Test
     public void controlaNegatius() {
-        Punt p = new Punt(1, -3);
+        Punt p = new Punt();
         Assertions.assertAll(
             () -> Assertions.assertThrows(IllegalArgumentException.class, () -> p.setX(-1)),
             () -> Assertions.assertThrows(IllegalArgumentException.class, () -> p.setY(-1))
