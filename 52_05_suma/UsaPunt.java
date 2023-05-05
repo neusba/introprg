@@ -11,12 +11,15 @@ public class UsaPunt {
         try {
             x1 = Integer.parseInt(args[0]);
         } catch (Exception e) {
+        } finally {
             try {
                 y1 = Integer.parseInt(args[1]);
             } catch (Exception e1) {
+            } finally {
                 try {
                     x2 = Integer.parseInt(args[2]);
                 } catch(Exception e2) {
+                } finally {
                     try {
                         y2 = Integer.parseInt(args[3]);
                     } catch (Exception e3) {
