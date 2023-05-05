@@ -13,7 +13,7 @@ public class UsaPunt {
             y1 = Integer.parseInt(args[1]);
             x2 = Integer.parseInt(args[2]);
             y2 = Integer.parseInt(args[3]);
-        } catch (NumberFormatException e) {}
+        } catch (Exception e) {}
 
         Punt p1 = new Punt(x1, y1);
         Punt p2 = new Punt(x2, y2);
