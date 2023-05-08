@@ -3,7 +3,7 @@
  */
 
 public class Punt {
-    private int[] coord = {0, 0};
+    private int[] coord = new int[2];
     // constructor específic
     public Punt(int x, int y) {
         coord[0] = x;
