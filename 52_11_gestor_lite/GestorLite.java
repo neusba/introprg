@@ -12,7 +12,7 @@ public class GestorLite {
     
     // crea un client de prova i el retorna
     public static Client creaClientDemo() {
-        return new Client("41008208J", "Neus Bravo Arias", "601125828");
+        return new Client("51590695Q", "Eugènia Salinas Roig", "93614214242");
     }
 
     // recibe un client i muestra todos sus datos(Client: nom, nif, tlf. Lloguers: num lloguers, vehicle, dies llogats, dades de la resta de lloguers)
