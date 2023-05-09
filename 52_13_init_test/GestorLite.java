@@ -15,7 +15,7 @@ public class GestorLite {
         Client client = new Client("51590695Q", "Eugènia Salinas Roig", "93614214242");
         client.getLloguers().add(new Lloguer(new Vehicle("Seat", "600", 1), 2));
         client.getLloguers().add(new Lloguer(new Vehicle("Tata", "Vista", 1), 5));
-        client.getLloguers().add(new Lloguer(new Vehicle("Fiat", "Uno", 2), 3));
+        client.getLloguers().add(new Lloguer(new Vehicle("Fiat", "Uno", 3), 3));
         return client;
     }
 
