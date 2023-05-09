@@ -7,9 +7,9 @@
 
 public class Vehicle {
     // propietats
-    private static int basic = 1;
-    private static int general = 2;
-    private static int luxe = 3;
+    public static final int BASIC = 1;
+    public static final int GENERAL = 2;
+    public static final int LUXE = 3;
     private String model;
     private String marca;
     private int categoria;
@@ -28,7 +28,9 @@ public class Vehicle {
     // SETTERS
     public void setModel(String model)  { this.model = model; }
     public void setMarca(String marca) { this.marca = marca; }
-    public void setCategoria(int categoria) { this.categoria = categoria; }
+    public void setCategoria(int categoria) {
+        this.categoria = categoria;
+    }
 
     // metodes
     // TODO: buit de moment

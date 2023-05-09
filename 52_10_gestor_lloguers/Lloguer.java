@@ -22,6 +22,9 @@ public class Lloguer {
     public int getDies() {
         return this.dies;
     }
+    public Vehicle getVehicle() {
+        return this.vehicle;
+    }
 
     // SETTERS
     public void setDies(int dies) {
