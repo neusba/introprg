@@ -7,9 +7,9 @@ import java.util.ArrayList;
 public class GestorLite {
     public static void main(String[] args) {
         Client demo = creaClientDemo();
-        Lloguer primer = new Lloguer(new Vehicle("Seat", "600", 1), 2);
-        Lloguer segon = new Lloguer(new Vehicle("Tata", "Vista", 1), 5);
-        Lloguer tercer = new Lloguer(new Vehicle("Fiat", "Uno", 1), 3);
+        demo.getLloguers().add(new Lloguer(new Vehicle("Seat", "600", 1), 2));
+        demo.getLloguers().add(new Lloguer(new Vehicle("Tata", "Vista", 1), 5));
+        demo.getLloguers().add(new Lloguer(new Vehicle("Fiat", "Uno", 1), 3));
         mostraClient(demo);
     }
     
