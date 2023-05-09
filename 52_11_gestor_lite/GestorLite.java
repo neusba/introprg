@@ -7,15 +7,16 @@ import java.util.ArrayList;
 public class GestorLite {
     public static void main(String[] args) {
         Client demo = creaClientDemo();
-        demo.getLloguers().add(new Lloguer(new Vehicle("Seat", "600", 1), 2));
-        demo.getLloguers().add(new Lloguer(new Vehicle("Tata", "Vista", 1), 5));
-        demo.getLloguers().add(new Lloguer(new Vehicle("Fiat", "Uno", 1), 3));
         mostraClient(demo);
     }
     
     // crea un client de prova i el retorna
     public static Client creaClientDemo() {
-        return new Client("51590695Q", "Eugènia Salinas Roig", "93614214242");
+        Client client = new Client("51590695Q", "Eugènia Salinas Roig", "93614214242");
+        client.getLloguers().add(new Lloguer(new Vehicle("Seat", "600", 1), 2));
+        client.getLloguers().add(new Lloguer(new Vehicle("Tata", "Vista", 1), 5));
+        client.getLloguers().add(new Lloguer(new Vehicle("Fiat", "Uno", 1), 3));
+        return client;
     }
 
     // recibe un client i muestra todos sus datos(Client: nom, nif, tlf. Lloguers: num lloguers, vehicle, dies llogats, dades de la resta de lloguers)
