@@ -27,7 +27,7 @@ public class GestorLite {
         int tmp = 0;
         for (Lloguer lloguer : lloguers) {
             tmp = tmp + 1;
-            System.out.printf("        %d. vehicle: %s %s%n           dies llogat: %d%n", tmp, lloguer.getVehicle().getMarca(), lloguer.getVehicle().getModel(), lloguer.getDies());
+            System.out.printf("        %d. vehicle: %s %s%n           dies llogats: %d%n", tmp, lloguer.getVehicle().getMarca(), lloguer.getVehicle().getModel(), lloguer.getDies());
         }
     }
 } 
