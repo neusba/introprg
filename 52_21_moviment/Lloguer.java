@@ -57,7 +57,7 @@ public class Lloguer {
     }
     // Moviment de mètode de càlcul de bonificacions
     // Client - Lloguer
-    public int bonificacionsDeLloguer() {
+    public int bonificacions() {
         int bonificacions = 1;
         // afegeix bonificació per dos dies de lloguer de Luxe
         if (this.getVehicle().getCategoria() == Vehicle.LUXE &&
