@@ -5,6 +5,7 @@
 import java.util.ArrayList;
 
 public class Client {
+    private static final double EUROS_PER_UNITAT_DE_COST = 30;
     private String nif;
     private String nom;
     private String telefon;
@@ -42,7 +43,7 @@ public class Client {
     private double importTotal() {
         double total = 0;
         for (Lloguer lloguer: lloguers) {
-            total += quantitat(lloguer) * 30;
+            total += quantitat(lloguer) * EUROS_PER_UNITAT_DE_COST;
         }
         return total;
     }
@@ -71,7 +72,7 @@ public class Client {
                 lloguer.getVehicle().getMarca() +
                 " " +
                 lloguer.getVehicle().getModel() + ": " +
-                (quantitat(lloguer) * 30) + "€" + "\n";
+                (quantitat(lloguer) * EUROS_PER_UNITAT_DE_COST) + "€" + "\n";
         }
         return resultat;
     }
