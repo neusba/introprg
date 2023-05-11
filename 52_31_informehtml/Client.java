@@ -94,9 +94,9 @@ public class Client {
     public String composaDetallHTML() {
         Locale.setDefault(Locale.US);
         String doubleFormat;
-        String resultat = "<table>\n  <tr>\n    <td><strong>Marca</strong></td>\n    <td><strong>Model</strong></td>\n    <td><strong>Import</strong></td>\n </tr>\n";
+        String resultat = "<table>\n  <tr>\n    <td><strong>Marca</strong></td>\n    <td><strong>Model</strong></td>\n    <td><strong>Import</strong></td>\n  </tr>\n";
         for (Lloguer lloguer : lloguers) {
-            resultat += String.format(" <tr><td>%s</td><td>%s</td><td>%s€</td></tr>\n", lloguer.getVehicle().getMarca(), lloguer.getVehicle().getModel(), String.format("%.1f", lloguer.calculQuantitatsPerLloguer() * EUROS_PER_UNITAT_DE_COST)); }
+            resultat += String.format("  <tr><td>%s</td><td>%s</td><td>%s€</td></tr>\n", lloguer.getVehicle().getMarca(), lloguer.getVehicle().getModel(), String.format("%.1f", lloguer.calculQuantitatsPerLloguer() * EUROS_PER_UNITAT_DE_COST)); }
         resultat += "</table>\n";
         return resultat;
     }
