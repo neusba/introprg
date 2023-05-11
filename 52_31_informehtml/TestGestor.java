@@ -173,13 +173,13 @@ public class TestGestor {
         demo.getLloguers().add(new Lloguer(new Vehicle("Tata", "Vista", 1), 5));
         demo.getLloguers().add(new Lloguer(new Vehicle("Seat", "600", 1), 2));
         String esperat = "<table>\n" + 
-                          " <tr>\n" +
-                          "  <td><strong>Marca</strong></td>\n" +
-                          "  <td><strong>Model</strong></td>\n" +
-                          "  <td><strong>Import</strong></td>\n" +
-                          " </tr>\n" +
-                          " <tr><td>Tata</td><td>Vista</td><td>180.0€</td></tr>\n" +
-                          " <tr><td>Seat</td><td>600</td><td>90.0€</td></tr>\n" +
+                          "  <tr>\n" +
+                          "    <td><strong>Marca</strong></td>\n" +
+                          "    <td><strong>Model</strong></td>\n" +
+                          "    <td><strong>Import</strong></td>\n" +
+                          "  </tr>\n" +
+                          "  <tr><td>Tata</td><td>Vista</td><td>180.0€</td></tr>\n" +
+                          "  <tr><td>Seat</td><td>600</td><td>90.0€</td></tr>\n" +
                           "</table>\n"; 
 
         Assertions.assertEquals(esperat, demo.composaDetallHTML());
