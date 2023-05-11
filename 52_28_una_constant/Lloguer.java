@@ -6,13 +6,13 @@
  */
 // IMPORTS 
 public class Lloguer {
-    private static final double PREU_VEHICLE_BASIC = 3;
-    private static final double DIES_PER_VEHICLE_BASIC = 3;
+    private static final double UNITAT_DE_COST_BASIC = 3;
+    private static final double DIES_INICIALS_BASIC = 3;
     private static final double MITJA_DIES_BASIC = 1.5;
-    private static final double PREU_VEHICLE_GENERAL = 4;
-    private static final double DIES_PER_VEHICLE_GENERAL = 2;
+    private static final double UNITAT_DE_COST_GENERAL = 4;
+    private static final double DIES_INICIALS_GENERAL = 2;
     private static final double MITJA_DIES_GENERAL = 2.5;
-    private static final double DIES_PER_VEHICLE_LUXE = 6;
+    private static final double UNITAT_DE_COST_LUXE = 6;
     // Propietats
     private int dies;
     private Vehicle vehicle;
@@ -43,19 +43,19 @@ public class Lloguer {
         double quantitat = 0;
         switch (this.getVehicle().getCategoria()) {
             case Vehicle.BASIC:
-                quantitat += PREU_VEHICLE_BASIC;
-                if (this.getDies() > DIES_PER_VEHICLE_BASIC) {
-                    quantitat += (this.getDies() - DIES_PER_VEHICLE_BASIC) * MITJA_DIES_BASIC;
+                quantitat += UNITAT_DE_COST_BASIC;
+                if (this.getDies() > DIES_INICIALS_BASIC) {
+                    quantitat += (this.getDies() - DIES_INICIALS_BASIC) * MITJA_DIES_BASIC;
                 }
                 break;
             case Vehicle.GENERAL:
-                quantitat += PREU_VEHICLE_GENERAL;
-                if (this.getDies() > DIES_PER_VEHICLE_GENERAL) {
-                    quantitat += (this.getDies() - DIES_PER_VEHICLE_GENERAL) * MITJA_DIES_GENERAL;
+                quantitat += UNITAT_DE_COST_GENERAL;
+                if (this.getDies() > DIES_INICIALS_GENERAL) {
+                    quantitat += (this.getDies() - DIES_INICIALS_GENERAL) * MITJA_DIES_GENERAL;
                 }
                 break;
             case Vehicle.LUXE:
-                quantitat += this.getDies() * DIES_PER_VEHICLE_LUXE;
+                quantitat += this.getDies() * UNITAT_DE_COST_LUXE;
                 break;
         }
         return quantitat;
