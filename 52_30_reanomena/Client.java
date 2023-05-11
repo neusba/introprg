@@ -32,18 +32,12 @@ public class Client {
            composaDetall() +
            composaPeu();
     }
-
-    // ############### REMPLAÇAMENT DE VARIABLES PER CRIDA ###################
-    public double quantitat(Lloguer lloguer) {
-        double quantitat = lloguer.calculQuantitatsPerLloguer();
-        return quantitat;
-    }
     // ############## ELIMINACIÓ DE VARIABLES ################################
     // Variable total
     private double importTotal() {
         double total = 0;
         for (Lloguer lloguer: lloguers) {
-            total += quantitat(lloguer) * EUROS_PER_UNITAT_DE_COST;
+            total += lloguer.calculQuantitatsPerLloguer() * EUROS_PER_UNITAT_DE_COST;
         }
         return total;
     }
@@ -72,7 +66,7 @@ public class Client {
                 lloguer.getVehicle().getMarca() +
                 " " +
                 lloguer.getVehicle().getModel() + ": " +
-                (quantitat(lloguer) * EUROS_PER_UNITAT_DE_COST) + "€" + "\n";
+                (lloguer.calculQuantitatsPerLloguer() * EUROS_PER_UNITAT_DE_COST) + "€" + "\n";
         }
         return resultat;
     }
