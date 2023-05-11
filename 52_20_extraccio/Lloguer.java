@@ -54,5 +54,4 @@ public class Lloguer {
         }
         return quantitat;
     }
-
 }
