@@ -47,18 +47,13 @@ public class Client {
                 lloguer.getVehicle().getMarca() +
                 " " +
                 lloguer.getVehicle().getModel() + ": " +
-                (quantitat(lloguer) * 30) + "€" + "\n";
-            total += quantitat(lloguer) * 30;
+                (lloguer.quantitat() * 30) + "€" + "\n";         // primera crida
+            total += lloguer.quantitat() * 30;                   // segona crida
         }
 
         // afegeix informació final
         resultat += "Import a pagar: " + total + "€\n" +
             "Punts guanyats: " + bonificacions + "\n";
         return resultat;
-    }
-    // ############### REMPLAÇAMENT DE VARIABLES PER CRIDA ###################
-    public double quantitat(Lloguer lloguer) {
-        double quantitat = lloguer.quantitat();
-        return quantitat;
     }
 }
