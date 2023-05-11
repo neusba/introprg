@@ -3,6 +3,7 @@
  */
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class Client {
     private static final double EUROS_PER_UNITAT_DE_COST = 30;
@@ -72,7 +73,7 @@ public class Client {
                 lloguer.getVehicle().getMarca() +
                 " " +
                 lloguer.getVehicle().getModel() + ": " +
-                (quantitat(lloguer) * EUROS_PER_UNITAT_DE_COST) + "€" + "\n";
+                (lloguer.calculQuantitatsPerLloguer() * EUROS_PER_UNITAT_DE_COST) + "€" + "\n";
         }
         return resultat;
     }
@@ -87,13 +88,21 @@ public class Client {
     public String informeHTML() {
         return composaCapsaleraHTML() + composaDetallHTML() + composaPeuHTML();
     }
-    private String composaCapsaleraHTML() {
-        return String.format("<p>Informe de lloguers del client <em>%s</em> (<strong>%s</strong>)</p>", this.getNom(), this.getNif());
+    public String composaCapsaleraHTML() {
+        return String.format("<p>Informe de lloguers del client <em>%s</em> (<strong>%s</strong>)</p>%n", this.getNom(), this.getNif());
     }
-    private String composaDetallHTML() {
-       return String.format("<table>%n <tr>%n  <td><strong>Marca</strong></td>%n  <td><strong>Model</strong></td>%n  <td><strong>Import</strong></td>%n </tr>%n <tr><td>Tata</td><td>Vista</td><td>90.0€</td></tr>%n <tr><td>Wolswagen</td><td>Passat</td><td>270.0€</td></tr>%n <tr><td>Mercedes</td><td>SLK 2.0</td><td>360.0€</td></tr>%n</table>");
+    public String composaDetallHTML() {
+        Locale.setDefault(Locale.US);
+        String doubleFormat;
+        String resultat = "<table>\n <tr>\n  <td><strong>Marca</strong></td>\n  <td><strong>Model</strong></td>\n  <td><strong>Import</strong></td>\n </tr>\n";
+        for (Lloguer lloguer : lloguers) {
+            resultat += String.format(" <tr><td>%s</td><td>%s</td><td>%s€</td></tr>\n", lloguer.getVehicle().getMarca(), lloguer.getVehicle().getModel(), String.format("%.1f", lloguer.calculQuantitatsPerLloguer() * EUROS_PER_UNITAT_DE_COST)); }
+        resultat += "</table>\n";
+        return resultat;
     }
-    private String composaPeuHTML() {
-        return String.format("<p>Import a pagar: <em>%f</em></p>%n<p>Punts guanyats: <em>%d</em></p>", this.importTotal(), this.bonificacionsTotal());
+    public String composaPeuHTML() {
+        Locale.setDefault(Locale.US);
+        String doubleFormat = String.format("%.1f", this.importTotal());
+        return String.format("<p>Import a pagar: <em>%s€</em></p>%n<p>Punts guanyats: <em>%d</em></p>", doubleFormat, this.bonificacionsTotal());
     } 
 }

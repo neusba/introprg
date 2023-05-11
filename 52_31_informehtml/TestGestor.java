@@ -159,11 +159,45 @@ public class TestGestor {
         Assertions.assertEquals(esperat, demo.informe());
     }
     // ############################################## INFORME HTML #################################################
-    /*@Test
-    public void informeHTMLDemo() {
+    @Test
+    public void comprovaCapseleraHTML() {
         Client demo = new Client("51590695Q", "Eugènia Salinas Roig", "93614214242");
-        String esperat = demo.informeHTMLDemo();
+        demo.getLloguers().add(new Lloguer(new Vehicle("Seat", "600", 1), 2));
+        String esperat = "<p>Informe de lloguers del client <em>Eugènia Salinas Roig</em> (<strong>51590695Q</strong>)</p>\n";
 
-        Assertions.assertEquals(esperat, demo.informeHTMLDemo());
-    }*/
+        Assertions.assertEquals(esperat, demo.composaCapsaleraHTML());
+    }
+    @Test
+    public void comprovaDetallHTML() {
+        Client demo = new Client("51590695Q", "Eugènia Salinas Roig", "93614214242");
+        demo.getLloguers().add(new Lloguer(new Vehicle("Tata", "Vista", 1), 5));
+        demo.getLloguers().add(new Lloguer(new Vehicle("Seat", "600", 1), 2));
+        String esperat = "<table>\n" + 
+                          " <tr>\n" +
+                          "  <td><strong>Marca</strong></td>\n" +
+                          "  <td><strong>Model</strong></td>\n" +
+                          "  <td><strong>Import</strong></td>\n" +
+                          " </tr>\n" +
+                          " <tr><td>Tata</td><td>Vista</td><td>180.0€</td></tr>\n" +
+                          " <tr><td>Seat</td><td>600</td><td>90.0€</td></tr>\n" +
+                          "</table>\n"; 
+
+        Assertions.assertEquals(esperat, demo.composaDetallHTML());
+    }
+    @Test
+    public void comprovaPeuHTML() {
+        Client demo = new Client("51590695Q", "Eugènia Salinas Roig", "93614214242");
+        demo.getLloguers().add(new Lloguer(new Vehicle("Tata", "Vista", 1), 5));
+        String esperat = "<p>Import a pagar: <em>180.0€</em></p>\n" +
+                         "<p>Punts guanyats: <em>1</em></p>";
+
+        Assertions.assertEquals(esperat, demo.composaPeuHTML());
+    }
+    @Test
+    public void comprovaInformeHTMLDemo() {
+        Client demo = new Client("51590695Q", "Eugènia Salinas Roig", "93614214242");
+        String esperat = demo.informeHTML();
+
+        Assertions.assertEquals(esperat, demo.informeHTML());
+    }
 }
