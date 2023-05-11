@@ -36,7 +36,7 @@ public class Client {
                 lloguer.getVehicle().getMarca() +
                 " " +
                 lloguer.getVehicle().getModel() + ": " +
-                (quantitat(lloguer) * 30) + "€" + "\n";
+                (lloguer.quantitat() * 30) + "€" + "\n";
         }
         // afegeix informació final
         resultat += "Import a pagar: " + importTotal() + "€\n" +
@@ -44,16 +44,12 @@ public class Client {
         return resultat;
     }
     // ############### REMPLAÇAMENT DE VARIABLES PER CRIDA ###################
-    public double quantitat(Lloguer lloguer) {
-        double quantitat = lloguer.quantitat();
-        return quantitat;
-    }
     // ############## ELIMINACIÓ DE VARIABLES ################################
     // Variable total
     private double importTotal() {
         double total = 0;
         for (Lloguer lloguer: lloguers) {
-            total += quantitat(lloguer) * 30;
+            total += lloguer.quantitat() * 30;
         }
         return total;
     }
