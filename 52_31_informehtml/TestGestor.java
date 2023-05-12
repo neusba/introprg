@@ -194,7 +194,7 @@ public class TestGestor {
         Assertions.assertEquals(esperat, demo.composaPeuHTML());
     }
     @Test
-    public void comprovaInformeHTMLDemo() {
+    public void informeHTMLDemo() {
         Client demo = new Client("51590695Q", "Eugènia Salinas Roig", "93614214242");
         String esperat = demo.informeHTML();
 
