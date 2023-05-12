@@ -6,13 +6,13 @@
  */
 // IMPORTS 
 public class Lloguer {
-    private static final double PREU_VEHICLE_BASIC = 3;
-    private static final double DIES_PER_VEHICLE_BASIC = 3;
+    private static final int PREU_VEHICLE_BASIC = 3;
+    private static final int DIES_PER_VEHICLE_BASIC = 3;
     private static final double MITJA_DIES_BASIC = 1.5;
-    private static final double PREU_VEHICLE_GENERAL = 4;
-    private static final double DIES_PER_VEHICLE_GENERAL = 2;
+    private static final int PREU_VEHICLE_GENERAL = 4;
+    private static final int DIES_PER_VEHICLE_GENERAL = 2;
     private static final double MITJA_DIES_GENERAL = 2.5;
-    private static final double DIES_PER_VEHICLE_LUXE = 6;
+    private static final int DIES_PER_VEHICLE_LUXE = 6;
     // Propietats
     private int dies;
     private Vehicle vehicle;
