@@ -82,10 +82,10 @@ public class Client {
     public String informeHTML() {
         return composaCapsaleraHTML() + composaDetallHTML() + composaPeuHTML();
     }
-    public String composaCapsaleraHTML() {
+    private String composaCapsaleraHTML() {
         return String.format("<p>Informe de lloguers del client <em>%s</em> (<strong>%s</strong>)</p>%n", this.getNom(), this.getNif());
     }
-    public String composaDetallHTML() {
+    private String composaDetallHTML() {
         Locale.setDefault(Locale.US);
         String doubleFormat;
         String resultat = "<table>\n  <tr>\n    <td><strong>Marca</strong></td>\n    <td><strong>Model</strong></td>\n    <td><strong>Import</strong></td>\n  </tr>\n";
@@ -94,7 +94,7 @@ public class Client {
         resultat += "</table>\n";
         return resultat;
     }
-    public String composaPeuHTML() {
+    private String composaPeuHTML() {
         Locale.setDefault(Locale.US);
         String doubleFormat = String.format("%.1f", this.importTotal());
         return String.format("<p>Import a pagar: <em>%s€</em></p>%n<p>Punts guanyats: <em>%d</em></p>", doubleFormat, this.bonificacionsTotal());

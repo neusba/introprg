@@ -159,7 +159,7 @@ public class TestGestor {
         Assertions.assertEquals(esperat, demo.informe());
     }
     // ############################################## INFORME HTML #################################################
-    @Test
+    /*@Test
     public void comprovaCapseleraHTML() {
         Client demo = new Client("51590695Q", "Eugènia Salinas Roig", "93614214242");
         demo.getLloguers().add(new Lloguer(new Vehicle("Seat", "600", 1), 2));
@@ -192,7 +192,7 @@ public class TestGestor {
                          "<p>Punts guanyats: <em>1</em></p>";
 
         Assertions.assertEquals(esperat, demo.composaPeuHTML());
-    }
+    }*/
     @Test
     public void informeHTMLDemo() {
         Client demo = new Client("51590695Q", "Eugènia Salinas Roig", "93614214242");
