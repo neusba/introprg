@@ -24,7 +24,7 @@ public class Categoria {
         if (id > 0) {
             this.id = id;
         } else {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("L'identificador ha de ser positiu");
         }
     }
     public boolean idIndefinit() { return id < 0; }
