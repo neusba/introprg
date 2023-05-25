@@ -14,11 +14,11 @@ public class ZooUtils {
         if (categories.size() == 0) {
             System.out.println("Cap categoria");
         } else {
+            System.out.println("Nombre de categories: " + comptaCategories);
             for (Categoria categoria : categories) {
                 comptaCategories += 1;
                 System.out.println(categoria);
             }
-            System.out.println("Nombre de categories: " + comptaCategories);
         }
     }
 }
