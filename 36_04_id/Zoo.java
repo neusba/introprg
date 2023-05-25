@@ -70,7 +70,7 @@ public class Zoo {
         ResultSet rs = st.getGeneratedKeys();
         rs.next();
         int id = rs.getInt(1);
-        categoria.setID(id);
+        categoria.setId(id);
     } finally {
         if (st != null) {
             st.close();

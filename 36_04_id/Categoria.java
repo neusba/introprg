@@ -20,7 +20,7 @@ public class Categoria {
         }
         this.id = id;
     }
-    public void setID(int id) {
+    public void setId(int id) {
         if (id > 0) {
             this.id = id;
         }
