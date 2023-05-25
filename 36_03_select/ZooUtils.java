@@ -10,8 +10,12 @@ import java.util.LinkedList;
 public class ZooUtils {
     // Mètode que mostra les categories existents a la base de dades actuals 
     public static void mostraCategories(List<Categoria> categories) {
-        for (Categoria categoria : categories) {
-            System.out.println(categoria);
+        if (categories.size() == 0) {
+            System.out.println("Cap categoria");
+        } else {
+            for (Categoria categoria : categories) {
+                System.out.println(categoria);
+            }
         }
     }
 }
