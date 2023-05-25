@@ -23,6 +23,8 @@ public class Categoria {
     public void setId(int id) {
         if (id > 0) {
             this.id = id;
+        } else {
+            throw new IllegalArgumentException();
         }
     }
     public boolean idIndefinit() { return id < 0; }
