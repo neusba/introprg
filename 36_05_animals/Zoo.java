@@ -35,7 +35,6 @@ public class Zoo {
                  "       nom       VARCHAR(40))";
     // Modificació per borrar la taula abans de crear-la si ja existeix"
     String sqlDropIfExists = "DROP TABLE IF EXISTS CATEGORIES;";
-
     Statement st = null;
     try {
         st = conn.createStatement();
