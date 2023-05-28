@@ -3,7 +3,7 @@
  */
 
 public class Categoria {
-    private int id = -1;  // -1 indica no assignat/indefinit
+    private int id = -1;  // -1 indica no assignat o indefinit
     private String nom;
 
     public Categoria(String nom) {
