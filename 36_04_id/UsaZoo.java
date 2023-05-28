@@ -1,3 +1,7 @@
+/* Fitxer qué conté el main per fer la prova de que les classes consegüents estan funcionant com haurien
+ *
+ */
+
 import java.sql.SQLException;
 public class UsaZoo {
     public static void main( String args[]) throws SQLException {
