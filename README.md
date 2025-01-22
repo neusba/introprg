@@ -1,6 +1,6 @@
 # WELCOME
 This repository contains all the activities related to Programming Fundamentals from my first year of study.
-## Which tecnology?
+## Which technology?
 Java!
 
 ## Contains:
